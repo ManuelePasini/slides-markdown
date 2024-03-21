@@ -12,7 +12,7 @@
 
 :::: {.columns}
 ::: {.column width="20%"}
-![](https://github.com/ManuelePasini/slides-markdown/blob/54b5e23a46e6eb5ba520af16ece79dc3538f6986/slides/images/big.png)
+![](https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/big.png?raw=true)
 :::
 ::::
 
@@ -50,7 +50,7 @@ Data platforms foster
 :::
 
 :::{.fragment data-fragment-index=1}
-![Some of the AWS Services](https://github.com/ManuelePasini/slides-markdown/blob/54b5e23a46e6eb5ba520af16ece79dc3538f6986/slides/images/aws_services.png)
+![Some of the AWS Services](https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/aws_services.png?raw=true)
 :::
 
 
@@ -69,13 +69,13 @@ Answering this question is hard since:
 ::: {.column width="50%"}
 
 :::{.fragment}
-![Some of the AWS Services](https://github.com/ManuelePasini/slides-markdown/blob/54b5e23a46e6eb5ba520af16ece79dc3538f6986/slides/images/aws_services.png)
+![Some of the AWS Services](https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/aws_services.png?raw=true)
 :::
 :::
 
 ::: {.column width="50%"}
 :::{.fragment}
-![Some of the Google Cloud Platform Services](https://github.com/ManuelePasini/slides-markdown/blob/54b5e23a46e6eb5ba520af16ece79dc3538f6986/slides/images/cloud_platform.png)
+![Some of the Google Cloud Platform Services](https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/cloud_platform.png?raw=true)
 :::
 :::
 ::::
@@ -187,7 +187,7 @@ The **taxonomy of tags** that characterize such services
 
 # "Alternative" bottom-up feeding
 
-![Using ChatGPT](https://github.com/ManuelePasini/slides-markdown/blob/54b5e23a46e6eb5ba520af16ece79dc3538f6986/slides/images/alternative_feeding.png)
+![Using ChatGPT](https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/alternative_feeding.png?raw=true)
 
 # Service graph
 
