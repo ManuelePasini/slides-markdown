@@ -348,15 +348,10 @@
 <li><em>Centralized</em> collection of <em>independent</em> and <em>well-integrated</em> services meeting the <em>end-to-end</em> needs of data pipelines
 <ul>
 <li><em>Centralized</em>: a data platform is conceptually a single and unified component</li>
-<li><em>Independent</em>: changes in the implementation of a service do not affect other services</li>
-<li><em>Well-integrated</em>: services have interfaces that enable easy and frictionless composition</li>
+<li><em>Independent</em>: changes in a a service do not affect others</li>
+<li><em>Well-integrated</em>: services have interfaces enabling a frictionless composition</li>
 <li><em>End-to-end</em>: services cover the entire data life cycle</li>
 </ul></li>
-</ul>
-<p>Data platforms foster</p>
-<ul>
-<li><em>Collaboration and shared governance</em>: being (conceptually) centralized, data is unified following some integration and it is easier to ensure compliance with data protection and privacy laws</li>
-<li><em>Scalability</em>: being implemented on a distributed infrastructure, it is easy to scale out</li>
 </ul>
 </section>
 
@@ -388,7 +383,6 @@
 <li>CSPs offer <em>different service categorizations</em> that can hardly be mapped together</li>
 <li>Evolution of cloud ecosystems is fast and <em>it is difficult to keep up with the pace</em></li>
 <li>Third parties can publish their own services on marketplaces (e.g., AWS Marketplace)</li>
-<li>Simply <em>selecting “all” engines is not viable</em> due to cost and management reasons</li>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -420,20 +414,11 @@
 <li>Choosing the <strong>optimal set of services</strong> is hard since <em>multiple solutions could fulfill the desiderata</em>
 <ul>
 <li>it requires deep knowledge of CSPs’ ecosystems</li>
-<li>… and requires vertical knowledge on the design of data pipelines
-<ul>
-<li>e.g., whether disjoint databases and data warehouses or a single Lakehouse should be used</li>
-</ul></li>
+<li>… and requires vertical knowledge on the design of data pipelines</li>
 </ul></li>
 <li>Several abstract big data architectures are available (e.g., NIST, Lambda, and Kappa).
 <ul>
 <li>They provide the necessary functionalities for big-data applications but not their implementation</li>
-</ul></li>
-<li>Some frameworks have been proposed in literature
-<ul>
-<li>Choosing a single service</li>
-<li>Cloud depoyment models</li>
-<li>CSP selection</li>
 </ul></li>
 </ul>
 </section>
@@ -444,8 +429,8 @@
 <div class="column" style="width:58%;">
 <p>The description of data-driven processes should drive such activity</p>
 <ul>
-<li><em>Data pipelines</em> are the backbone of a data platform and are congenial to designers since they encode many constraints on the choices to be made</li>
-<li>… and outline the data flows!</li>
+<li><em>Data pipelines</em> are the backbone of a data platform encode many constraints on the choices to be made</li>
+<li>… and outline data flows!</li>
 </ul>
 <p><strong>Research goal</strong>: <em>methodology to aid designers</em> in selecting the services necessary to implement clients’ data pipelines out of the “unstructured” lists of services from CSPs</p>
 <div class="fragment" data-fragment-index="2">
@@ -461,9 +446,9 @@
 <blockquote>
 <p><strong>Three types of users</strong> (stakeholders):</p>
 <ul>
-<li><em>Cloud service providers</em>: IT experts with in-depth knowledge of services available in the ecosystem</li>
-<li><em>Designers</em>: consultants or people with expertise in designing data flows but with no vertical knowledge on cloud/service ecosystems</li>
-<li><em>Clients</em> asking for the design of the data platform blueprint (e.g., partners involved in the same project)</li>
+<li><em>Cloud service providers</em>: IT experts with in-depth knowledge of services ecosystems</li>
+<li><em>Designers</em>: people with expertise in designing data flows but with no vertical knowledge on service ecosystems</li>
+<li><em>Clients</em> asking for the design of the data platform blueprint</li>
 </ul>
 </blockquote>
 </div>
@@ -478,8 +463,8 @@
 <div class="column" style="width:50%;">
 <p>The <strong>services</strong> to compose the blueprint of the data platform</p>
 <ul>
-<li>Many services, no necessity to consider all of them</li>
-<li>Services must cover the “basic” functionalities for a data platform such as the ones from NIST</li>
+<li>Not necessarily all of them…</li>
+<li>… but they must cover the “basic” functionalities for a data platform such as the ones from NIST!</li>
 </ul>
 <div style="font-size: 0.6em">
 <table>
@@ -651,10 +636,6 @@
 <div class="columns">
 <div class="column" style="width:65%;">
 <p>Services are organized in a directed property <em>service graph</em></p>
-<ul>
-<li>There are <em>dependencies</em> between services (a service requires another)</li>
-<li>There are <em>preferences</em> in their choice (performance/marketing reasons)</li>
-</ul>
 <p>A <em>directed property graph</em> is a tuple <span class="math inline">\(G = (N, A, P, L)\)</span> where</p>
 <ul>
 <li><span class="math inline">\(N=\{..., n_i, ...\}\)</span> is a set of <em>nodes</em></li>
@@ -665,7 +646,7 @@
 <div class="fragment">
 <p>Nodes are engines from the service ecosystem and are labeled as <em>Service</em></p>
 <ul>
-<li>Tag <code>(Preferred, True)</code> to specify whether a service should be considered more than others</li>
+<li>Nodes can be labelled as <em>preferred</em></li>
 <li>Since CSPs do not provide <em>identical engines</em>, no services have the same tags</li>
 </ul>
 <p>Arcs are alternatively labeled as <em>{Requires, IsCompatible}</em></p>
@@ -738,7 +719,7 @@
 <li>A <em>Data Flow Diagram (DFD)</em> is a directed property graph <span class="math inline">\(G^D\)</span>
 <ul>
 <li>Nodes are alternatively labeled as <em>{Agent, Repository, Process}</em></li>
-<li>Arcs are labeled as <em>Flow</em> and connect with at least one <em>Process</em></li>
+<li>Arcs are labeled as <em>Flow</em></li>
 </ul></li>
 <li><em>DFD</em> represents flows of data at a <em>high level of abstraction</em>
 <ul>
@@ -773,11 +754,13 @@
 
 <section id="enrich-the-dfd-with-service-tags" class="title-slide slide level1 center">
 <h1>(3) Enrich the DFD with service tags</h1>
-<p>Finding the candidate implementations for our data platform requires to match the DFD and service graphs</p>
+<p>Building our blueprint requires to match the DFD and service graphs</p>
 <p>To do so, <em>the two must share the same characterization</em></p>
 <ul>
-<li>Each process and repository in the DFD is enriched with the tags from the previously identified taxonomies</li>
-<li>To characterize them, clients answer an additional set of questions that are driven by the tag taxonomies</li>
+<li>Each process and repository in the DFD is enriched with the tags from the previously identified taxonomy
+<ul>
+<li>To characterize them, clients answer an additional set of questions driven by the tag taxonomy</li>
+</ul></li>
 </ul>
 <div class="fragment">
 <blockquote>
@@ -800,8 +783,6 @@
 <ul>
 <li>A DFD process or repository <em>matches</em> (can be implemented by) a service only <em>if the service has the same or more functionalities</em>
 <ul>
-<li>A DFD node <span class="math inline">\(n^D\)</span> matches a service node <span class="math inline">\(n^S\)</span> if each property in <span class="math inline">\(props(n^D)\)</span> matches a property in <span class="math inline">\(props(n^S)\)</span></li>
-<li>A property <span class="math inline">\((h_i,v_i)\)</span> matches another property <span class="math inline">\((h_j, v_j)\)</span> if <span class="math inline">\(h_i=h_j\)</span> and <span class="math inline">\(v_i \geq_{h} v_j\)</span></li>
 <li>If no match is found, we force it to a <em>default</em> (e.g., a VM where any functionality can be implemented)</li>
 </ul></li>
 </ul>
@@ -843,9 +824,11 @@ props(S3) =        \{&amp;(Data Model, File), (Volume, All)\}
 
 <section id="select-the-optimal-services" class="title-slide slide level1 center scrollable">
 <h1>(5) Select the optimal services</h1>
+<div class="columns">
+<div class="column" style="width:55%;">
 <p>Out of all matching services, only some of them must be selected</p>
 <ol type="1">
-<li>The amount of <em>selected services is minimized</em> (goal: minimize the economic and management cost of the platform)</li>
+<li>The amount of <em>selected services is minimized</em></li>
 <li><em>Coverage</em>: all processes and repositories in the DFD must be covered</li>
 <li><em>Dependency</em>: if a service is selected, all its required services must be (recursively) selected too</li>
 <li><em>Compatibility</em>: a service is selected only if it is compatible with the services selected for the previous/following nodes in the DFD</li>
@@ -854,8 +837,7 @@ props(S3) =        \{&amp;(Data Model, File), (Volume, All)\}
 <div class="fragment">
 <p>This is a <em>facility location optimization</em> linear programming problem (available on <a href="https://github.com/big-unibo/DataPlatformDesign">Github</a> w/ Python + CPlex library)</p>
 <div style="font-size: 0.6em">
-<p>Given a matched graph <span class="math inline">\(G^M=(N, A, P, L)\)</span></p>
-<p><span class="math inline">\(\begin{align}
+<p>Given a matched graph <span class="math inline">\(G^M=(N, A, P, L)\)</span> e <span class="math inline">\(\begin{align}
 min &amp;\sum_i w_i s_i\\
 s.t.~&amp;s_i \in \{0,1\} ~\forall n_i \in N, label(n_i) = Service\\
     &amp;s_{ij} \in \{0,1\} ~\forall a_{ij} \in A, label(a_{ij})= ImplementedBy\\
@@ -870,12 +852,21 @@ s.t.~&amp;s_i \in \{0,1\} ~\forall n_i \in N, label(n_i) = Service\\
 \end{align}\)</span></p>
 </div>
 </div>
+</div><div class="column" style="width:45%;">
+<div class="fragment">
+<blockquote>
+<p><strong>Optimal blueprint</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://w4bo.github.io/DOLAP-2024-DataPlat/img/graph.svg"></p>
+<figcaption>Services selected (in bold) for the blueprint of the data platform</figcaption>
+</figure>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
 </section>
-
-<section id="optimal-blueprint" class="title-slide slide level1 center">
-<h1>Optimal blueprint</h1>
-
-<img data-src="https://w4bo.github.io/DOLAP-2024-DataPlat/img/graph.svg" class="r-stretch quarto-figure-center"><p class="caption">Services selected (in bold) for the blueprint of the data platform</p></section>
 
 <section id="conclusion-and-future-works" class="title-slide slide level1 center">
 <h1>Conclusion and future works</h1>
@@ -888,7 +879,7 @@ s.t.~&amp;s_i \in \{0,1\} ~\forall n_i \in N, label(n_i) = Service\\
 <ul>
 <li><strong>Expressivenes</strong>: matching and selection should consider more complex architectural patterns (Lakehouse to replace both data lakes and warehouses) as well as support additional constraints (e.g., consider only some service vendors).</li>
 <li><strong>User evaluation</strong>: the produced blueprints should be compared with the ones recommended by expert designers.</li>
-<li><em>Resource provisioning</em>: additionally to selecting the services, a complete approach should also consider how many instances of a service are required (to do so, a cost model should be studied).</li>
+<li><em>Resource provisioning</em>: a complete approach should also consider how many instances of a service are required (to do so, a cost model should be studied).</li>
 <li><em>Metadata integration</em>: while catalog and meta-data management services do not directly introduce functionalities for data transformation and exploitation, the design should also recommend services helping in the management of the platform itself.</li>
 </ul>
 </section>
