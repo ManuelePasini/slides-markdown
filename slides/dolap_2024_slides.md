@@ -28,7 +28,7 @@ A **data platform** is an infrastructure that facilitates the ingestion, storage
     - *Centralized*: a data platform is conceptually a single and unified component;
     - *Independent*: changes in a a service do not affect others;
     - *Well-integrated*: services have interfaces enabling a frictionless composition;
-    - *End-to-end*: services cover the entire data life cycle;
+    - *End-to-end*: services cover the entire data life cycle.
 
 
 # Data platforms for analytics
@@ -58,7 +58,7 @@ Answering this question is hard since:
 - Each CSP offers *services with overlapping functionalities*;
 - CSPs offer *different service categorizations* that can hardly be mapped together;
 - Evolution of cloud ecosystems is fast and *it is difficult to keep up with the pace*;
-- Third parties can publish their own services on marketplaces (e.g., AWS Marketplace);
+- Third parties can publish their own services on marketplaces (e.g., AWS Marketplace).
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -81,7 +81,7 @@ The design of data platforms is mainly left to the expertise of practitioners in
 
 - Choosing the **optimal set of services** is hard since *multiple solutions could fulfill the desiderata*:
     - It requires deep knowledge of CSPs' ecosystems...
-    - ... and requires vertical knowledge on the design of data pipelines
+    - ... and requires vertical knowledge on the design of data pipelines.
 - Several abstract big data architectures are available (e.g., NIST, Lambda, and Kappa):
     - They provide the necessary functionalities for big-data applications but not their implementation.
 
