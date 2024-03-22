@@ -1,9 +1,12 @@
+
+
+
 # Towards a Process-Driven Design of Data Platforms
 
 <hr style="border: none; border-top: 1px solid #000;">
 
 <div style="text-align:center">
-<span style="font-size: larger;">Matteo Francia, Matteo Golfarelli, Manuele Pasini</span>
+<span style="font-size: larger;">Matteo Francia, Matteo Golfarelli, <b>Manuele Pasini</b></span>
 
 *{m.francia, matteo.golfarelli, manuele.pasini} @unibo.it*
 
@@ -38,7 +41,7 @@ Cloud DP are built out of *service ecosystems* offered by *Cloud Service Provide
 
 # Data platforms for analytics
 
-Data analytics nowadays mostly rely on cloud infrastructures and data platforms are facilitators of such analytics!
+Data analytics nowadays mostly rely on cloud infrastructures and data platforms act as facilitators of such analytics!
 
 :::: {.columns}
 ::: {.column width="40%"} 
@@ -209,7 +212,7 @@ A *directed property graph* is a tuple $G = (N, A, P, L)$ where:
 ::: {.fragment}
 Nodes are engines from the service ecosystem and can be labelled as *preferred*.
 
- - Each node is characterized with a set of properties from the previously determined taxonomy.
+ - Each node is characterized with a *set of properties* from the previously determined taxonomy.
 
 Arcs are alternatively labeled as *{Requires, IsCompatible}*:
 

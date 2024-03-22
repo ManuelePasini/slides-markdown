@@ -5,9 +5,12 @@ $presentation-h1-font-size: 1.9em;
 $presentation-h2-font-size: 1.8em;
 $presentation-h3-font-size: 1.7em;
 $presentation-h4-font-size: 1.6em;
-// $presentation-slide-text-align: center;
-// $presentation-title-slide-text-align: center; // center;
+//$presentation-slide-text-align: center;
+//$presentation-title-slide-text-align: center; // center;
 
+.slide:first-child h1 {
+    text-align: center; // Centra il testo del titolo
+  }
 /*-- scss:rules --*/
 
 strong { 
