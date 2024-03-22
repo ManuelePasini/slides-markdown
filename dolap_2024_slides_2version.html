@@ -399,7 +399,7 @@
 <section id="challenges-in-building-data-platforms" class="title-slide slide level1 center">
 <h1>Challenges in building data platforms</h1>
 <ul>
-<li>Each CSP offers <em>services with overlapping functionalities</em>;</li>
+<li>CSPs offer <em>services with overlapping functionalities</em>;</li>
 <li>CSPs offer <em>different service categorizations</em> that can hardly be mapped together;</li>
 <li>Evolution of cloud ecosystems is fast and <em>it is difficult to keep up with the pace</em>;</li>
 <li>Third parties can publish their own services on marketplaces (e.g., AWS Marketplace).</li>
@@ -427,7 +427,7 @@
 <div class="column" style="width:58%;">
 <p>The description of data-driven processes should drive such activity!</p>
 <ul>
-<li><em>Data pipelines</em> are the backbone of a data platform encode many constraints on the choices to be made…</li>
+<li><em>Data pipelines</em> encode many constraints on the choices to be made…</li>
 <li>… And outline data flows!</li>
 </ul>
 <p><strong>Research goal</strong>: <em>methodology to aid designers</em> in selecting the services necessary to implement clients’ data pipelines out of the “unstructured” lists of services from CSPs.</p>
@@ -625,46 +625,40 @@
 
 <section id="service-graph" class="title-slide slide level1 center">
 <h1>Service graph</h1>
-<div class="columns">
-<div class="column" style="width:65%;">
 <p>Services are organized in a directed property <em>service graph</em>.</p>
-<p>A <em>directed property graph</em> is a tuple <span class="math inline">\(G = (N, A, P, L)\)</span> where:</p>
 <ul>
-<li><span class="math inline">\(N=\{..., n_i, ...\}\)</span> is a set of <em>nodes</em>;</li>
-<li><span class="math inline">\(A=\{..., a_{ij}, ...\}\)</span> is a set of <em>arcs</em> connecting nodes;</li>
-<li><span class="math inline">\(P=\{..., (h, v), ...\}\)</span> is a set of key-value <em>properties</em>;</li>
-<li><span class="math inline">\(L\)</span> is a set of <em>labels</em>.</li>
-</ul>
-<p>Nodes are engines from the service ecosystem and can be labelled as <em>preferred</em>.</p>
+<li><p>Nodes are engines from the service ecosystem and can be labelled as <em>preferred</em>.</p>
 <ul>
 <li>Each node is characterized with a <em>set of properties</em> from the previously determined taxonomy.</li>
-</ul>
-<p>Arcs are alternatively labeled as <em>{Requires, IsCompatible}</em>:</p>
+</ul></li>
+<li><p>Arcs are alternatively labeled as <em>{Requires, IsCompatible}</em>:</p>
 <ul>
-<li><em>Requires</em>: represents whether a service mandatorily relies on another;</li>
-<li><em>IsCompatible</em>: represents whether a service natively interfaces with another.</li>
+<li><em>Requires</em>: a service mandatorily relies on another;</li>
+<li><em>IsCompatible</em>: a service natively interfaces with another.</li>
+</ul></li>
 </ul>
-</div><div class="column" style="width:35%;">
 <blockquote>
-<p><strong>Example</strong></p>
+<div class="columns">
+<div class="column" style="width:55%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="https://raw.githubusercontent.com/ManuelePasini/slides-markdown/9990069e4bae6eb4ca3be5034f105fdceff81a8b/slides/images/service_graph.svg"></p>
 <figcaption>Excerpt of service graph</figcaption>
 </figure>
 </div>
+</div><div class="column" style="width:45%;">
+<p><strong>Example</strong></p>
 <ul>
 <li><em>IsCompatible</em>: <code>SageMaker</code> natively R/W from/to <code>Redshift</code>;</li>
 <li><em>Requires</em>: <code>GeoServer</code> requires <code>EC2</code> since it is deployed on it.</li>
 </ul>
-<p><code>GeoServer</code> might be characterized by the following properties:</p>
 <p><span class="math inline">\(\begin{align}
 props(GeoServer) = \{&amp;(Data Model, File), \\
-  (Data Nature, Raster)\}\\
+(Data Nature, Raster)\}\\
 \end{align}\)</span></p>
+</div>
+</div>
 </blockquote>
-</div>
-</div>
 </section>
 
 <section id="input-clients-questionnaries" class="title-slide slide level1 center scrollable">
@@ -703,7 +697,7 @@ props(GeoServer) = \{&amp;(Data Model, File), \\
 <section id="formalize-the-requirements" class="title-slide slide level1 center">
 <h1>(2) Formalize the requirements</h1>
 <div class="columns">
-<div class="column" style="width:55%;">
+<div class="column" style="width:45%;">
 <p><em>Designers</em> refine the answers and <em>formalize the processes</em> into DFDs:</p>
 <ul>
 <li>A <em>Data Flow Diagram (DFD)</em> is a directed property graph <span class="math inline">\(G^D\)</span>:
@@ -716,13 +710,8 @@ props(GeoServer) = \{&amp;(Data Model, File), \\
 <li>Hide details such as decision points and interactions;</li>
 <li>Knowing <em>which types</em> of repositories/processes compose the processes is <em>enough to return a blueprint</em>.</li>
 </ul></li>
-<li>Decompose the data flows into <em>agents</em>, <em>processes</em>, and <em>repositories</em>:
-<ul>
-<li>Start from an aggregated overview;</li>
-<li>Recursively split candidate processes/repositories until each of them is characterized by homogeneous tags.</li>
-</ul></li>
 </ul>
-</div><div class="column" style="width:45%;">
+</div><div class="column" style="width:55%;">
 <blockquote>
 <p><strong>Example</strong></p>
 <div class="quarto-figure quarto-figure-center">
@@ -732,8 +721,8 @@ props(GeoServer) = \{&amp;(Data Model, File), \\
 </figure>
 </div>
 <ul>
-<li><code>Moisture Sensors</code> streams data into the platform while <code>Satellite</code> images are periodically downloaded;</li>
-<li><code>Sensor Data</code> and <code>Raw Images</code> cannot be grouped, they contain heterogeneous data types.</li>
+<li><code>Moisture Sensors</code> streams data into the platform; <code>Satellite</code> images are periodically downloaded;</li>
+<li><code>Sensor Data</code> and <code>Raw Images</code> contain heterogeneous data types.</li>
 </ul>
 </blockquote>
 </div>
@@ -782,13 +771,13 @@ props(Raw Images) = \{&amp;(Data Model, File), (Data Nature, Raster)\}
 props(GeoServer) = \{&amp;(Data Model, File), (Data Nature, Raster)\}\\
 props(S3) =        \{&amp;(Data Model, File), (Volume, All)\}
 \end{align}\)</span></p>
-<p><code>Raw Images</code> can be implemented by <code>GeoServer</code> but not in <code>S3</code> since the former is natively capable of managing geographical raster images (while <code>S3</code> would only provide storage for the images).</p>
+<p><code>Raw Images</code> can be implemented by <code>GeoServer</code> but not in <code>S3</code> since the former is natively capable of managing geographical raster images.</p>
 </blockquote>
 </section>
 
 <section id="matched-graph" class="title-slide slide level1 center">
 <h1>Matched graph</h1>
-<p>The <em>matched graph</em> is composed of the union of the nodes, and the union of the arcs plus additional arcs <em>IsImplementedBy</em> that represent candidate implementations for the DFD processes/repositories.</p>
+<p>The <em>matched graph</em> is composed of the union of the graphs plus additional arcs <em>IsImplementedBy</em> that represent candidate implementations for the DFD processes/repositories.</p>
 <blockquote>
 <p><strong>Example</strong></p>
 <div class="quarto-figure quarto-figure-center">
@@ -799,7 +788,7 @@ props(S3) =        \{&amp;(Data Model, File), (Volume, All)\}
 </div>
 <ul>
 <li><code>Consume</code> can be implemented by either <code>Lambda</code> or <code>Kinesis</code>;</li>
-<li><code>Churn Prediction</code> and <code>Athena</code> can be discarded a priori since they are not reachable (i.e., they are neither candidate implementations nor required by other services).</li>
+<li><code>Churn Prediction</code> and <code>Athena</code> can be discarded a priori since they are not reachable.</li>
 </ul>
 </blockquote>
 </section>
@@ -807,32 +796,17 @@ props(S3) =        \{&amp;(Data Model, File), (Volume, All)\}
 <section id="select-the-optimal-services" class="title-slide slide level1 center scrollable">
 <h1>(5) Select the optimal services</h1>
 <div class="columns">
-<div class="column" style="width:55%;">
+<div class="column" style="width:40%;">
 <p>Out of all matching services, only some of them must be selected:</p>
 <ol type="1">
 <li>The amount of <em>selected services is minimized</em>.</li>
-<li><em>Coverage</em>: all processes and repositories in the DFD must be covered.</li>
+<li><em>Coverage</em>: all processes/repositories in the DFD must be covered.</li>
 <li><em>Dependency</em>: if a service is selected, all its required services must be selected too.</li>
-<li><em>Compatibility</em>: a service can be selected only if it is compatible with the services selected for the previous/following nodes in the DFD.</li>
+<li><em>Compatibility</em>: a service can be selected only if it is compatible with the services selected for the adjacent nodes in the DFD.</li>
 <li><em>Preference</em>: preferred services should have more chances to be selected.</li>
 </ol>
 <p>This is a <em>facility location optimization</em> linear programming problem (available on <a href="https://github.com/big-unibo/DataPlatformDesign">Github</a> w/ Python + CPlex library).</p>
-<div style="font-size: 0.6em">
-<p>Given a matched graph <span class="math inline">\(G^M=(N, A, P, L)\)</span> e <span class="math inline">\(\begin{align}
-min &amp;\sum_i w_i s_i\\
-s.t.~&amp;s_i \in \{0,1\} ~\forall n_i \in N, label(n_i) = Service\\
-    &amp;s_{ij} \in \{0,1\} ~\forall a_{ij} \in A, label(a_{ij})= ImplementedBy\\
-    &amp; s_j \geq s_{ij} ~\forall s_{ij}\\
-    &amp;\sum_{j, label(a_{ij})=ImplementedBy, a_{ij} \in A} s_{ij}=1  ~\forall n_i \in N, label(n_i) \in \{Process, Repository\}\\
-    &amp;s_j\geq s_i  ~\forall a_{ij} \in A, label(a_{ij})= Requires \\
-    &amp;s_{ij}+s_{kh} \leq 1  ~\forall (a_{ik} \in A~s.t.~label(a_{ik})=Flow), (a_{jh}\notin A~s.t.~label(a_{jh})=IsCompatible)\\
-&amp;w_i=\begin{cases}
-0.5~if~(Preferred, True) \in props(n_i)\\
-1.0~otherwise
-\end{cases}
-\end{align}\)</span></p>
-</div>
-</div><div class="column" style="width:45%;">
+</div><div class="column" style="width:60%;">
 <blockquote>
 <p><strong>Optimal blueprint</strong></p>
 <div class="quarto-figure quarto-figure-center">
@@ -851,15 +825,15 @@ s.t.~&amp;s_i \in \{0,1\} ~\forall n_i \in N, label(n_i) = Service\\
 <p>The design of data platforms is a nontrivial task:</p>
 <ul>
 <li>We introduced a <strong>process-driven design methodology</strong> to <em>aid designers</em> in selecting the optimal set of services out of a service ecosystem;</li>
-<li>We have addressed such <strong>selection as a facility location optimization problem</strong>.</li>
+<li>We addressed such <strong>selection as a facility location optimization problem</strong>.</li>
 </ul>
 <p>Improvement in multiple aspects:</p>
 <ul>
-<li><strong>Expressivenes</strong>: matching and selection should consider more complex architectural patterns (Lakehouse to replace both data lakes and warehouses) as well as support additional constraints (e.g., consider only some service vendors).</li>
+<li><strong>Expressivenes</strong>: matching and selection should consider more complex architectural patterns as well as support additional constraints.</li>
 <li><strong>User evaluation</strong>: the produced blueprints should be compared with the ones recommended by expert designers.</li>
-<li><em>Resource provisioning</em>: a complete approach should also consider how many instances of a service are required (to do so, a cost model should be studied).</li>
-<li><em>Graphs formalization</em>: the definition both service graph and process graph relies on manual work, more automated techniques should be explored (e.g., NLPs)</li>
-<li><em>Metadata integration</em>: while catalog and meta-data management services do not directly introduce functionalities for data transformation and exploitation, the design should also recommend services helping in the management of the platform itself.</li>
+<li><em>Resource provisioning</em>: a complete approach should also consider how many instances of a service are required.</li>
+<li><em>Graphs formalization</em>: the definition both graphs relies on manual work, more automated techniques should be explored.</li>
+<li><em>Metadata integration</em>: the design should also recommend services helping in the management of the platform itself.</li>
 </ul>
 </section>
 
