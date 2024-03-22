@@ -39,7 +39,7 @@ Cloud DP are built out of *service ecosystems* offered by *Cloud Service Provide
 
 # Data platforms for analytics
 
-Data analytics nowadays mostly rely on cloud infrastructures!
+Data analytics nowadays mostly rely on cloud infrastructures.
 
 :::: {.columns}
 ::: {.column width="40%"} 
@@ -76,17 +76,17 @@ Data analytics nowadays mostly rely on cloud infrastructures!
 # Challenges in building data platforms
 
 - CSPs offer *services with overlapping functionalities*;
-- CSPs offer *different service categorizations* that can hardly be mapped together;
-- Evolution of cloud ecosystems is fast and *it is difficult to keep up with the pace*;
+- CSPs offer *different service categorizations*;
+- *Evolution* of cloud ecosystems is fast;
 - Third parties can publish their own services on marketplaces (e.g., AWS Marketplace).
 
 As if it was not hard enough...
 
 - *Multiple solutions could fulfill the desiderata*:
-    - It requires deep knowledge of CSPs' ecosystems...
-    - ... And requires vertical knowledge on the design of data pipelines.
+    - It requires vertical knowledge on the design of data pipelines...
+    - ... And also deep knowledge of CSPs' ecosystems.
 - Several abstract big data architectures are available (e.g., NIST, Lambda, and Kappa):
-    - They provide the necessary architecture for big-data applications but do not address their deployment!
+    - They not address their deployment!
 
 :::{.fragment data-fragment-index=3}
 <span style="font-size: larger">
@@ -152,7 +152,7 @@ The **services** to compose the blueprint of the data platform:
 ::: {.column width="50%"}
 
 
-The **taxonomy of tags** that characterize such services:
+The **taxonomy of tags** characterizing such services:
 
 - *Bottom-up* feeding: built out of the experience of the CSP and/or automatically extracted using NLP algorithms;
 - *Top-down*  feeding: from the literature (e.g., Vs of big data).
@@ -179,11 +179,11 @@ The **taxonomy of tags** that characterize such services:
 
 :::
 ::::
-
+<!--
 # "Alternative" bottom-up feeding
 
 ![Using ChatGPT](https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/alternative_feeding.png?raw=true)
-
+-->
 # Service graph
 
 Services are organized in a directed property *service graph*.
@@ -261,7 +261,7 @@ Clients compile questionnaires about their processes and the main *steps*, *subj
     - Arcs are labeled as *Flow*.
 - *DFD* represents flows of data at a *high level of abstraction*:
     - Hide details such as decision points and interactions;
-    - Knowing *which types* of repositories/processes compose the processes is *enough to return a blueprint*.
+- Knowing *which types* of repositories/processes compose the processes is **enough to return a blueprint**.
 
 :::
 ::: {.column width="55%"}
