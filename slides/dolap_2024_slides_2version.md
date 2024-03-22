@@ -335,7 +335,7 @@ The *matched graph* is composed of the union of the graphs plus additional arcs 
 
 # (5) Select the optimal services
 :::: {.columns}
-::: {.column width="40%"}
+::: {.column width="50%"}
 Out of all matching services, only some of them must be selected:
 
 1. The amount of *selected services is minimized*.
@@ -347,7 +347,7 @@ Out of all matching services, only some of them must be selected:
 This is a *facility location optimization* linear programming problem (available on [Github](https://github.com/big-unibo/DataPlatformDesign) w/ Python + CPlex library).
 
 :::
-::: {.column width="60%"}
+::: {.column width="50%"}
 
 
 > **Optimal blueprint**
