@@ -352,13 +352,11 @@ This is a *facility location optimization* linear programming problem (available
 
 > **Optimal blueprint**
 >
-> ![Services selected (in bold) for the blueprint of the data platform](https://w4bo.github.io/DOLAP-2024-DataPlat/img/graph.svg)
+> ![Services selected (in bold) for the blueprint of the data platform](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/da1422db0e16e1db09cc4c49b9611f7f1b7d23d6/slides/images/optimal.svg)
 
 
 :::
 ::::
-
-
 
 # Conclusion and future works
 
