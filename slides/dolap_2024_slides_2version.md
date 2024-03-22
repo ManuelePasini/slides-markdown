@@ -35,30 +35,23 @@ is an infrastructure that facilitates the ingestion, storage, management, and ex
 
 Cloud DP are built out of *service ecosystems* offered by *Cloud Service Providers* (CSPs).
 
-:::{.fragment data-fragment-index=1}
 ![Some of the AWS Services](https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/aws_services.png?raw=true)
-:::
 
 # Data platforms for analytics
 
-Data analytics nowadays mostly rely on cloud infrastructures and data platforms act as facilitators of such analytics!
+Data analytics nowadays mostly rely on cloud infrastructures!
 
 :::: {.columns}
 ::: {.column width="40%"} 
 
-:::{.fragment data-fragment-index=1}
-- Some CSPs categorize their services in relation to the role they play in a standard data pipeline...
+- Some CSPs categorize their services in relation to the role they play in an analytical data pipeline...
     - ... So data pipelines might serve as pivotal points in the design of data platforms!
     - But even for experienced data pipeline designers, this is a non trivial task...
-:::
-
 
 :::
 
 ::: {.column width="60%" }
-:::{.fragment data-fragment-index=1}
 ![Some of the Google Cloud Platform Services](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/master/slides/images/cloud_platform.bmp)
-:::
 :::
 ::::
 
@@ -112,20 +105,16 @@ The description of data-driven processes should drive such activity!
 
 **Research goal**: *methodology to aid designers* in selecting the services necessary to implement clients' data pipelines out of the "unstructured" lists of services from CSPs.
 
-::: {.fragment data-fragment-index=2}
 ![Methodology for the Design of Data Platforms](https://w4bo.github.io/DOLAP-2024-DataPlat/img/overview.svg)
-:::
 
 :::
 ::: {.column width="40%"}
 
-::: {.fragment data-fragment-index=1}
 >   **Three types of users** (stakeholders):
 >
 >   - *Cloud service providers*: IT experts with in-depth knowledge of services ecosystems;
 >   - *Designers*: people with expertise in designing data flows but with no vertical knowledge on service ecosystems;
 >   - *Clients* asking for the design of the data platform blueprint.
-:::
 
 
 :::
@@ -162,7 +151,7 @@ The **services** to compose the blueprint of the data platform:
 :::
 ::: {.column width="50%"}
 
-::: {.fragment}
+
 The **taxonomy of tags** that characterize such services:
 
 - *Bottom-up* feeding: built out of the experience of the CSP and/or automatically extracted using NLP algorithms;
@@ -186,7 +175,7 @@ The **taxonomy of tags** that characterize such services:
 | ...               | ...              | ...                 |
 : Examples of Tags
 </div>
-:::
+
 
 :::
 ::::
@@ -209,7 +198,6 @@ A *directed property graph* is a tuple $G = (N, A, P, L)$ where:
 - $P=\{..., (h, v), ...\}$ is a set of key-value *properties*;
 - $L$ is a set of *labels*.
 
-::: {.fragment}
 Nodes are engines from the service ecosystem and can be labelled as *preferred*.
 
  - Each node is characterized with a *set of properties* from the previously determined taxonomy.
@@ -219,15 +207,13 @@ Arcs are alternatively labeled as *{Requires, IsCompatible}*:
 - *Requires*: represents whether a service mandatorily relies on another;
 - *IsCompatible*: represents whether a service natively interfaces with another.
 :::
-:::
 
 ::: {.column width="35%"}
 
-::: {.fragment}
 
 > **Example**
 >
-> ![Excerpt of service graph](https://w4bo.github.io/DOLAP-2024-DataPlat/img/service.svg)
+> ![Excerpt of service graph](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/9990069e4bae6eb4ca3be5034f105fdceff81a8b/slides/images/service_graph.svg)
 >
 > - *IsCompatible*: `SageMaker` natively R/W from/to `Redshift`;
 > - *Requires*: `GeoServer` requires `EC2` since it is deployed on it.
@@ -238,7 +224,6 @@ Arcs are alternatively labeled as *{Requires, IsCompatible}*:
 > props(GeoServer) = \{&(Data Model, File), \\
 >   (Data Nature, Raster)\}\\
 > \end{align}$
-:::
 
 :::
 ::::
@@ -246,8 +231,6 @@ Arcs are alternatively labeled as *{Requires, IsCompatible}*:
 # Input: clients' questionnaries
 
 Clients compile questionnaires about their processes and the main *steps*, *subjects*, and *goals* of their analysis.
-
-::: {.fragment}
 
 > **Example**: deploy a data platform supporting analytic tasks from *8 clients* within the Agritech European project
 > 
@@ -261,7 +244,6 @@ Clients compile questionnaires about their processes and the main *steps*, *subj
 > 1. *Reports* are periodically generated *out of enriched data*.
 > 1. Given an optimal soil moisture matrix, the *enriched data* is used to *decide how much to irrigate the soil*.
 
-:::
 <!--
 # ... and ChatGPT
 
@@ -295,15 +277,12 @@ Clients compile questionnaires about their processes and the main *steps*, *subj
 
 :::
 ::: {.column width="45%"}
-::: {.fragment}
 > **Example**
 >
 > ![DFD of the Agritech Case Study](https://w4bo.github.io/DOLAP-2024-DataPlat/img/dfd.svg)
 >
 > - `Moisture Sensors` streams data into the platform while `Satellite` images are periodically downloaded;
 > - `Sensor Data` and `Raw Images` cannot be grouped, they contain heterogeneous data types.
-
-:::
 
 :::
 ::::
@@ -317,7 +296,6 @@ To do so, *the two must share the same characterization*:
 - Each process and repository in the DFD is enriched with the tags from the previously identified taxonomy:
     - To characterize them, clients answer an additional set of questions driven by the tag taxonomy.
 
-::: {.fragment}
 
 > **Example**: given a repository from the DFD, designers ask the question:
 > "What are the main types of collected data?"
@@ -330,7 +308,6 @@ To do so, *the two must share the same characterization*:
 > 
 > Answering "Satellite observations" tags the repository with the properties `(Volume, Big)`, `(Data Model, File)`, and `(Data Nature, Raster)` since earth observations are data-heavy files (e.g., around 1 GB for 100 $km^2$) and tags the process to download such data as `(Collection, Pull)` since files are downloaded from an FTP server.
 
-:::
 
 
 # (4) Match the DFD and service graphs
@@ -340,7 +317,6 @@ Since DFD and service graphs are characterized by the same taxonomy, we can *aut
 - A DFD process or repository *matches* (can be implemented by) a service only *if the service has the same or more functionalities*;
     - If no match is found, we force it to a *default* (e.g., a VM where any functionality can be implemented).
 
-::: {.fragment}
 
 > **Example**: given the node `Raw Images` from the DFD where
 >   
@@ -357,13 +333,9 @@ Since DFD and service graphs are characterized by the same taxonomy, we can *aut
 > 
 > `Raw Images` can be implemented by `GeoServer` but not in `S3` since the former is natively capable of managing geographical raster images (while `S3` would only provide storage for the images).
 
-:::
-
 # Matched graph
 
 The *matched graph* is composed of the union of the nodes, and the union of the arcs plus additional arcs *IsImplementedBy* that represent candidate implementations for the DFD processes/repositories.
-
-::: {.fragment}
 
 > **Example**
 > 
@@ -372,7 +344,6 @@ The *matched graph* is composed of the union of the nodes, and the union of the 
 > - `Consume` can be implemented by either `Lambda` or `Kinesis`;
 > - `Churn Prediction` and `Athena` can be discarded a priori since they are not reachable (i.e., they are neither candidate implementations nor required by other services).
 
-::: 
 
 # (5) Select the optimal services
 :::: {.columns}
@@ -385,7 +356,6 @@ Out of all matching services, only some of them must be selected:
 1. *Compatibility*: a service can be selected only if it is compatible with the services selected for the previous/following nodes in the DFD.
 1. *Preference*: preferred services should have more chances to be selected.
 
-::: {.fragment}
 This is a *facility location optimization* linear programming problem (available on [Github](https://github.com/big-unibo/DataPlatformDesign) w/ Python + CPlex library).
 
 <div style="font-size: 0.6em">
@@ -407,19 +377,15 @@ s.t.~&s_i \in \{0,1\} ~\forall n_i \in N, label(n_i) = Service\\
 </div>
 
 
-:::
 
 :::
 ::: {.column width="45%"}
 
-::: {.fragment}
 
 > **Optimal blueprint**
 >
 > ![Services selected (in bold) for the blueprint of the data platform](https://w4bo.github.io/DOLAP-2024-DataPlat/img/graph.svg)
 
-
-:::
 
 :::
 ::::
@@ -438,8 +404,8 @@ Improvement in multiple aspects:
 - **Expressivenes**: matching and selection should consider more complex architectural patterns (Lakehouse to replace both data lakes and warehouses) as well as support additional constraints (e.g., consider only some service vendors).
 - **User evaluation**: the produced blueprints should be compared with the ones recommended by expert designers. 
 - *Resource provisioning*: a complete approach should also consider how many instances of a service are required (to do so, a cost model should be studied).
+- *Graphs formalization*: the definition both service graph and process graph relies on manual work, more automated techniques should be explored (e.g., NLPs)
 - *Metadata integration*: while catalog and meta-data management services do not directly introduce functionalities for data transformation and exploitation, the design should also recommend services helping in the management of the platform itself.
-
 
 
 # *Thanks!*
