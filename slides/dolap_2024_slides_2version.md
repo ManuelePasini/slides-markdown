@@ -75,7 +75,7 @@ Data analytics nowadays mostly rely on cloud infrastructures!
 -->
 # Challenges in building data platforms
 
-- Each CSP offers *services with overlapping functionalities*;
+- CSPs offer *services with overlapping functionalities*;
 - CSPs offer *different service categorizations* that can hardly be mapped together;
 - Evolution of cloud ecosystems is fast and *it is difficult to keep up with the pace*;
 - Third parties can publish their own services on marketplaces (e.g., AWS Marketplace).
@@ -100,7 +100,7 @@ As if it was not hard enough...
 ::: {.column width="58%"}
 The description of data-driven processes should drive such activity!
 
-- *Data pipelines* are the backbone of a data platform encode many constraints on the choices to be made...
+- *Data pipelines* encode many constraints on the choices to be made...
 - ... And outline data flows!
 
 **Research goal**: *methodology to aid designers* in selecting the services necessary to implement clients' data pipelines out of the "unstructured" lists of services from CSPs.
@@ -186,47 +186,38 @@ The **taxonomy of tags** that characterize such services:
 
 # Service graph
 
-:::: {.columns}
-::: {.column width="65%"}
-
 Services are organized in a directed property *service graph*.
 
-A *directed property graph* is a tuple $G = (N, A, P, L)$ where:
+- Nodes are engines from the service ecosystem and can be labelled as *preferred*.
 
-- $N=\{..., n_i, ...\}$ is a set of *nodes*;
-- $A=\{..., a_{ij}, ...\}$ is a set of *arcs* connecting nodes;
-- $P=\{..., (h, v), ...\}$ is a set of key-value *properties*;
-- $L$ is a set of *labels*.
+    - Each node is characterized with a *set of properties* from the previously determined taxonomy.
 
-Nodes are engines from the service ecosystem and can be labelled as *preferred*.
+- Arcs are alternatively labeled as *{Requires, IsCompatible}*:
 
- - Each node is characterized with a *set of properties* from the previously determined taxonomy.
-
-Arcs are alternatively labeled as *{Requires, IsCompatible}*:
-
-- *Requires*: represents whether a service mandatorily relies on another;
-- *IsCompatible*: represents whether a service natively interfaces with another.
-:::
-
-::: {.column width="35%"}
+    - *Requires*: a service mandatorily relies on another;
+    - *IsCompatible*: a service natively interfaces with another.
 
 
-> **Example**
->
+> :::: {.columns}
+> ::: {.column width="55%"}
 > ![Excerpt of service graph](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/9990069e4bae6eb4ca3be5034f105fdceff81a8b/slides/images/service_graph.svg)
+> :::
+> ::: {.column width="45%"}
+>
+> **Example**
 >
 > - *IsCompatible*: `SageMaker` natively R/W from/to `Redshift`;
 > - *Requires*: `GeoServer` requires `EC2` since it is deployed on it.
 >
-> `GeoServer` might be characterized by the following properties:
-> 
-> $\begin{align}
+>
+>  $\begin{align}
 > props(GeoServer) = \{&(Data Model, File), \\
->   (Data Nature, Raster)\}\\
-> \end{align}$
-
+> (Data Nature, Raster)\}\\
+>  \end{align}$
 :::
-::::
+:::
+
+
 
 # Input: clients' questionnaries
 
@@ -262,7 +253,7 @@ Clients compile questionnaires about their processes and the main *steps*, *subj
 # (2) Formalize the requirements
 
 :::: {.columns}
-::: {.column width="55%"}
+::: {.column width="45%"}
 *Designers* refine the answers and *formalize the processes* into DFDs:
 
 - A *Data Flow Diagram (DFD)* is a directed property graph $G^D$:
@@ -271,18 +262,15 @@ Clients compile questionnaires about their processes and the main *steps*, *subj
 - *DFD* represents flows of data at a *high level of abstraction*:
     - Hide details such as decision points and interactions;
     - Knowing *which types* of repositories/processes compose the processes is *enough to return a blueprint*.
-- Decompose the data flows into *agents*, *processes*, and *repositories*:
-    - Start from an aggregated overview;
-    - Recursively split candidate processes/repositories until each of them is characterized by homogeneous tags.
 
 :::
-::: {.column width="45%"}
+::: {.column width="55%"}
 > **Example**
 >
 > ![DFD of the Agritech Case Study](https://w4bo.github.io/DOLAP-2024-DataPlat/img/dfd.svg)
 >
-> - `Moisture Sensors` streams data into the platform while `Satellite` images are periodically downloaded;
-> - `Sensor Data` and `Raw Images` cannot be grouped, they contain heterogeneous data types.
+> - `Moisture Sensors` streams data into the platform; `Satellite` images are periodically downloaded;
+> - `Sensor Data` and `Raw Images` contain heterogeneous data types.
 
 :::
 ::::
@@ -331,55 +319,35 @@ Since DFD and service graphs are characterized by the same taxonomy, we can *aut
 > props(S3) =        \{&(Data Model, File), (Volume, All)\}
 > \end{align}$
 > 
-> `Raw Images` can be implemented by `GeoServer` but not in `S3` since the former is natively capable of managing geographical raster images (while `S3` would only provide storage for the images).
+> `Raw Images` can be implemented by `GeoServer` but not in `S3` since the former is natively capable of managing geographical raster images.
 
 # Matched graph
 
-The *matched graph* is composed of the union of the nodes, and the union of the arcs plus additional arcs *IsImplementedBy* that represent candidate implementations for the DFD processes/repositories.
+The *matched graph* is composed of the union of the graphs plus additional arcs *IsImplementedBy* that represent candidate implementations for the DFD processes/repositories.
 
 > **Example**
 > 
 > ![Matched graph](https://w4bo.github.io/DOLAP-2024-DataPlat/img/match.svg)
 > 
 > - `Consume` can be implemented by either `Lambda` or `Kinesis`;
-> - `Churn Prediction` and `Athena` can be discarded a priori since they are not reachable (i.e., they are neither candidate implementations nor required by other services).
+> - `Churn Prediction` and `Athena` can be discarded a priori since they are not reachable.
 
 
 # (5) Select the optimal services
 :::: {.columns}
-::: {.column width="55%"}
+::: {.column width="40%"}
 Out of all matching services, only some of them must be selected:
 
 1. The amount of *selected services is minimized*.
-1. *Coverage*: all processes and repositories in the DFD must be covered.
+1. *Coverage*: all processes/repositories in the DFD must be covered.
 1. *Dependency*: if a service is selected, all its required services must be selected too.
-1. *Compatibility*: a service can be selected only if it is compatible with the services selected for the previous/following nodes in the DFD.
+1. *Compatibility*: a service can be selected only if it is compatible with the services selected for the adjacent nodes in the DFD.
 1. *Preference*: preferred services should have more chances to be selected.
 
 This is a *facility location optimization* linear programming problem (available on [Github](https://github.com/big-unibo/DataPlatformDesign) w/ Python + CPlex library).
 
-<div style="font-size: 0.6em">
-Given a matched graph $G^M=(N, A, P, L)$
-e
-$\begin{align}
-min &\sum_i w_i s_i\\
-s.t.~&s_i \in \{0,1\} ~\forall n_i \in N, label(n_i) = Service\\
-    &s_{ij} \in \{0,1\} ~\forall a_{ij} \in A, label(a_{ij})= ImplementedBy\\
-    & s_j \geq s_{ij} ~\forall s_{ij}\\
-    &\sum_{j, label(a_{ij})=ImplementedBy, a_{ij} \in A} s_{ij}=1  ~\forall n_i \in N, label(n_i) \in \{Process, Repository\}\\
-    &s_j\geq s_i  ~\forall a_{ij} \in A, label(a_{ij})= Requires \\
-    &s_{ij}+s_{kh} \leq 1  ~\forall (a_{ik} \in A~s.t.~label(a_{ik})=Flow), (a_{jh}\notin A~s.t.~label(a_{jh})=IsCompatible)\\
-&w_i=\begin{cases}
-0.5~if~(Preferred, True) \in props(n_i)\\
-1.0~otherwise
-\end{cases}
-\end{align}$
-</div>
-
-
-
 :::
-::: {.column width="45%"}
+::: {.column width="60%"}
 
 
 > **Optimal blueprint**
@@ -397,15 +365,15 @@ s.t.~&s_i \in \{0,1\} ~\forall n_i \in N, label(n_i) = Service\\
 The design of data platforms is a nontrivial task:
 
 - We introduced a **process-driven design methodology** to *aid designers* in selecting the optimal set of services out of a service ecosystem;
-- We have addressed such **selection as a facility location optimization problem**.
+- We addressed such **selection as a facility location optimization problem**.
 
 Improvement in multiple aspects:
 
-- **Expressivenes**: matching and selection should consider more complex architectural patterns (Lakehouse to replace both data lakes and warehouses) as well as support additional constraints (e.g., consider only some service vendors).
+- **Expressivenes**: matching and selection should consider more complex architectural patterns as well as support additional constraints.
 - **User evaluation**: the produced blueprints should be compared with the ones recommended by expert designers. 
-- *Resource provisioning*: a complete approach should also consider how many instances of a service are required (to do so, a cost model should be studied).
-- *Graphs formalization*: the definition both service graph and process graph relies on manual work, more automated techniques should be explored (e.g., NLPs)
-- *Metadata integration*: while catalog and meta-data management services do not directly introduce functionalities for data transformation and exploitation, the design should also recommend services helping in the management of the platform itself.
+- *Resource provisioning*: a complete approach should also consider how many instances of a service are required.
+- *Graphs formalization*: the definition both graphs relies on manual work, more automated techniques should be explored.
+- *Metadata integration*: the design should also recommend services helping in the management of the platform itself.
 
 
 # *Thanks!*
