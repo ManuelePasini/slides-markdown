@@ -329,29 +329,274 @@
 <section id="digital-twins-dt" class="title-slide slide level1 center">
 <h1>Digital Twins (DT)</h1>
 <ul>
-<li>Buzzword</li>
-<li>Rising number of publications</li>
-<li>Still no universally adopted vision</li>
-<li>Focus on last state!</li>
+<li>Differences between digital shadow, digital model, digital twin</li>
+<li>Enclosing on a definition…</li>
+<li>3 components: phyisical model, virtual model, communication services</li>
 </ul>
-<p># DT in academia</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="D:\Projects\slides-markdown\slides\images\dt\twin_model_shadow.png"></p>
+<figcaption>Differences between twins</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="D:\Projects\slides-markdown\slides\images\dt\dt.png"></p>
+<figcaption>DT components</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+
+<section id="dt-in-academia---1" class="title-slide slide level1 center">
+<h1>DT in academia - #1</h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Still a buzzword</li>
+<li>Rising number of publications</li>
+<li>Mostly non IT papers</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="D:\Projects\slides-markdown\slides\images\dt\dt_by_year.png"></p>
+<figcaption>DT by year (Fei, Tao 2022)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div>
+
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="D:\Projects\slides-markdown\slides\images\dt\dt_by_journal.png"></p>
+<figcaption>DT by journal (Fei, Tao 2022)</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="D:\Projects\slides-markdown\slides\images\dt\goal.png"></p>
+<figcaption>DT by goal (Fei, Tao 2022)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+
+<section id="dt-in-academia---2" class="title-slide slide level1 center">
+<h1>DT in academia - #2</h1>
 <ul>
 <li>Mostly manufacturing, smart cities, health domain</li>
-<li>Still mostly application oriented</li>
-<li>but, concept of data as a core component is arising</li>
-<li>Fei Fao, Univ. Beijing - aerospace (metti img architett dt)</li>
+<li>Presented as an “evolution” of CPS…</li>
+<li>Still mostly application oriented, focused on visualization (e.g.&nbsp;Unity3D)</li>
+<li>While concept of data as a core component is arising..</li>
+<li>… Still left unconsidered in research papers.</li>
+<li>Most cited: Fei Tao, Univ. of Beijing</li>
 </ul>
-<p># DT in industry <b>Azure Digital Twin</b> - FIWARE like - Digital Twin Definition Language (NGSI-LD, JSON-LD) - Offers interfaces to control the physical device (not supported) - Native support for a time series db - Not clear if it facilitates or provides integration with Azure big data services.</p>
-<p><b>AWS Twin Maker</b> - Similar to Azure Digital twins - more user friendly</p>
-<p># DT Data - Modeling - Mostly graphs - Initially pure linked data and semantic graphs (RDF, ontologies) - New standards (JSON-LD, NGSI-LD) to seamelessly integrate semi-structured data, graphs and semantic graphs (also supported by RDF) - e.g.&nbsp;Azure Digital Twin, AWS Twin Maker</p>
-<p># DT Data - Architectures - Most papers don’t even mention it! - When they do, they focus on entities last-state. - Is it really different from a Lambda-like big data architecture? - e.g.&nbsp;Digital Twin Data (Fei Tao)</p>
-<p># DT Data - Lifecycle - Something is starting to pop out (Fei, Tao metti immagine) - “Trash” literature (non IT academics) - Are we reinventing the wheel?h</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="D:\Projects\slides-markdown\slides\images\dt\5dim.png"></p>
+<figcaption>5-Dimensional DT (Fei, Tao 2020)</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="D:\Projects\slides-markdown\slides\images\dt\digital_model.png"></p>
+<figcaption>Virtual Entity architecture (Fei, Tao, 2020)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+
+<section id="dt-in-industry" class="title-slide slide level1 center">
+<h1>DT in industry</h1>
+<ul>
+<li><b>Azure Digital Twins</b></li>
+<li><b>AWS IoT Twin Maker</b></li>
+</ul>
+</section>
+
+<section id="azure-digital-twins" class="title-slide slide level1 center">
+<h1>Azure Digital Twins</h1>
+<ul>
+<li>FIWARE like</li>
+<li>Digital Twin Definition Language (DTDL)</li>
+<li>Offers interfaces to control the physical device (not supported)</li>
+<li>Native support for Azure Data Explorer (Relational, time-series, ingestion &amp; analytics)</li>
+<li>Not clear if it facilitates or provides integration with Azure big data services.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="D:\Projects\slides-markdown\slides\images\dt\dtdl.png"></p>
+<figcaption>Example of DTDL</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="D:\Projects\slides-markdown\slides\images\dt\azure_dt_historical.png"></p>
+<figcaption>Azure DT Platform</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+
+<section id="aws-iot-twin-maker" class="title-slide slide level1 center">
+<h1>AWS IoT Twin Maker</h1>
+<ul>
+<li>Similar to Azure Digital Twins (also JSON Entity-Component model)</li>
+<li>Different JSON semantics</li>
+<li>Also graph representation</li>
+<li>Native support for Grafana, AWS IoT Site Wise (which leverages AWS Timestream, a time-series DB)</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="D:\Projects\slides-markdown\slides\images\dt\aws_dt.png"></p>
+<figcaption>Key concept and components AWS IoT Twin Maker (<a href="https://docs.aws.amazon.com/iot-twinmaker/latest/guide/what-is-twinmaker.html">documentation here</a>)</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:30%;">
+<ul>
+<li><b>Component</b> JSON documents that describe the connection between a data source and AWS IoT Twin Maker. They access external datasource via a Lambda function defined in the JSON</li>
+<li>Each workspace is assigned an S3 Bucket</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="dt-data-related-aspects" class="title-slide slide level1 center">
+<h1>DT Data Related Aspects</h1>
+
+</section>
+
+<section id="dt-data---modeling" class="title-slide slide level1 center">
+<h1>DT Data - Modeling</h1>
+<ul>
+<li>Focused on entities last state</li>
+<li>In literature, wide spread of AutomationML, XML, etc.</li>
+<li>Mostly graphs (too many connections between data)</li>
+<li>Initially pure linked data and semantic graphs (RDF, ontologies)</li>
+<li>New standards (JSON-LD, NGSI-LD) to seamelessly integrate semi-structured data, property graphs and semantic graphs (also supported by RDF)</li>
+</ul>
+</section>
+
+<section id="dt-data---a-brief-history" class="title-slide slide level1 center">
+<h1>DT Data - A brief history</h1>
+
+<img data-src="D:\Projects\slides-markdown\slides\images\dt\history.png" class="r-stretch quarto-figure-center"><p class="caption">Simplified technology history</p></section>
+
+<section id="ngsi-ld-next-generation-service-interface-linked-data" class="title-slide slide level1 center">
+<h1>NGSI-LD (Next Generation Service Interface – Linked Data)</h1>
+<ul>
+<li>Evolution of NGSI v2, powered by FIWARE</li>
+<li>“id” now must be an URN (or an URI HTTP)</li>
+<li>The entity must have a “type” attribute which represent the class of the entity</li>
+<li>The class must then be defined in the <span class="citation" data-cites="context">@context</span></li>
+<li><span class="citation" data-cites="context">@context</span> implicitly includes the core <span class="citation" data-cites="context">@context</span> of NGSI-LD:</li>
+<li>Defines a <a href="https://www.etsi.org/deliver/etsi_gs/CIM/001_099/009/01.06.01_60/gs_CIM009v010601p.pdf">metamodel</a> and APIs (<a href="https://swagger.lab.fiware.org/">Swagger URL</a>) for property graphs</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="D:\Projects\slides-markdown\slides\images\dt\NGSI_LD_metamodel.png"></p>
+<figcaption>NGSI-LD Metamodel</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="D:\Projects\slides-markdown\slides\images\dt\ngsi_example.png"></p>
+<figcaption>NGSI-LD Entity Example</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+
+<section id="ngsi-ld-vs.-ngsiv2" class="title-slide slide level1 center">
+<h1>NGSI-LD vs.&nbsp;NGSIv2</h1>
+
+<img data-src="D:\Projects\slides-markdown\slides\images\dt\ngsi_ngsild.png" class="r-stretch quarto-figure-center"><p class="caption">Comparison NGSIv2 - NGSI-LD</p></section>
+
+<section id="json-ld" class="title-slide slide level1 center">
+<h1>JSON-LD</h1>
+<ul>
+<li>Make JSON machine-readable again!</li>
+<li>Defined to merge semantic data and commonly used JSON documents</li>
+<li>Standard for encoding linked data</li>
+<li>FIWARE is evolving as well… (<a href="https://github.com/FIWARE/context.Orion-LD?tab=readme-ov-file">Orion-LD</a>)</li>
+</ul>
+
+<img data-src="D:\Projects\slides-markdown\slides\images\dt\json_ld_example.png" class="r-stretch quarto-figure-center"><p class="caption">JSON-LD Example</p></section>
+
+<section id="dt-data---architectures" class="title-slide slide level1 center">
+<h1>DT Data - Architectures</h1>
+<ul>
+<li>Most papers don’t even mention it!</li>
+<li>When they do, they focus on entities last-state.</li>
+<li><b>Is it really different from a Lambda-like big data architecture?</b></li>
+<li>e.g.&nbsp;Digital Twin Data (Fei Tao)</li>
+</ul>
+</section>
+
+<section id="dt-data---lifecycle" class="title-slide slide level1 center">
+<h1>DT Data - Lifecycle</h1>
+<ul>
+<li>Something is starting to pop out</li>
+<li>“Trash” literature ? (non IT academics, e.g.&nbsp;<a href="https://www.sciencedirect.com/science/article/pii/S2405844024025349?via%3Dihub">Dihan et. al., 2024</a>)</li>
+<li>Are we reinventing the wheel?</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="D:\Projects\slides-markdown\slides\images\dt\dt_lifecycle.png"></p>
+<figcaption>Data Methodology (<a href="https://digitaltwin1.org/articles/1-2/v2">Fei, Tao 2023</a>)</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="D:\Projects\slides-markdown\slides\images\dt\dt_data.png"></p>
+<figcaption>Digital Twin Data (<a href="https://digitaltwin1.org/articles/1-2/v2">Fei, Tao 2023</a>)</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 
 <section id="what-next" class="title-slide slide level1 center">
 <h1>What next?</h1>
 <ul>
-<li></li>
+<li><b> Data Architectures </b>
+<ul>
+<li>Historicizing data</li>
+<li>Digital Twins Platforms (!!!)</li>
+</ul></li>
+<li><b> Data modeling </b> (two different abstraction levels)
+<ul>
+<li>Meta-Models for historicized data (domain driven?)</li>
+<li>Standardazing a wider concept (e.g.&nbsp;Web of Digital Twins)</li>
+</ul></li>
 </ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
