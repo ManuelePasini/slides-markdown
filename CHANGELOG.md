@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/ManuelePasini/slides-markdown/compare/1.0.0...1.1.0) (2024-09-03)
+
+
+### Features
+
+* digital twin slides ([3710fbe](https://github.com/ManuelePasini/slides-markdown/commit/3710fbedb89845a3223f8f8ee8f91dcb2a5773c3))
+
 ## 1.0.0 (2024-03-21)
 
 
