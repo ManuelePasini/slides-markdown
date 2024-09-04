@@ -63,7 +63,7 @@
 
 # Azure Digital Twins
   - FIWARE like
-  - Digital Twin Definition Language (DTDL) - JSON-LD/NGSI-LD
+  - Digital Twin Definition Language (DTDL) - JSON-LD/NGSI-LDgi
   - Offers interfaces to control the physical device (not supported)
   - Native support for Azure Data Explorer (Relational, time-series, ingestion & analytics)
   - Not clear if it facilitates or provides integration with Azure big data services.
@@ -107,12 +107,12 @@
 
 # NGSI-LD (Next Generation Service Interface – Linked Data)
   - Evolution of NGSI v2, powered by FIWARE
+  - Defines a [metamodel](https://www.etsi.org/deliver/etsi_gs/CIM/001_099/009/01.06.01_60/gs_CIM009v010601p.pdf) and APIs ([Swagger URL](https://swagger.lab.fiware.org/)) for property graphs
   - “id” now must be an URN (or an URI HTTP)
   - The entity must have a “type” attribute which represent the class of
   the entity
   - The class must then be defined in the @context
   - @context implicitly includes the core @context of NGSI-LD: 
-  - Defines a [metamodel](https://www.etsi.org/deliver/etsi_gs/CIM/001_099/009/01.06.01_60/gs_CIM009v010601p.pdf) and APIs ([Swagger URL](https://swagger.lab.fiware.org/)) for property graphs
 
 :::: {.columns}
 ::: {.column width="60%"}
