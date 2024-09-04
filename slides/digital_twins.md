@@ -19,6 +19,7 @@
  - Still a buzzword
  - Rising number of publications
  - Mostly non IT papers
+ - Not really twins...
 
 :::
 ::: {.column width="50%"}
@@ -40,10 +41,10 @@
 # DT in literature - #2
 
  - Mostly manufacturing, smart cities, health domain
- - Presented as an "evolution" of CPS...
  - Still mostly application oriented, focused on visualization (e.g. Unity3D)
  - While concept of data as a core component is arising..
  - ... Still left unconsidered in research papers.
+ - However, some standard models are emerging...
  - Most cited: Fei Tao, Univ.  of Beijing
 
 :::: {.columns}
