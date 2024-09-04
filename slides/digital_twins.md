@@ -5,10 +5,10 @@
 
 :::: {.columns}
 ::: {.column width="50%"}
-![Differences between twins](\slides\images\dt\twin_model_shadow.png)
+![Differences between twins](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/twin_model_shadow.png?raw=true)
 :::
 ::: {.column width="50%"}
-![DT components](D:\Projects\slides-markdown\slides\images\dt\dt.png)
+![DT components](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt.png?raw=true)
 :::
 ::::
 
@@ -22,7 +22,7 @@
 
 :::
 ::: {.column width="50%"}
-![DT by year (Fei, Tao 2022)](D:\Projects\slides-markdown\slides\images\dt\dt_by_year.png)
+![DT by year (Fei, Tao 2022)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt_by_year.png?raw=true)
 :::
 
 ::::
@@ -31,10 +31,10 @@
 
 :::: {.columns}
 ::: {.column width="50%"}
-  ![DT by journal (Fei, Tao 2022)](D:\Projects\slides-markdown\slides\images\dt\dt_by_journal.png)
+  ![DT by journal (Fei, Tao 2022)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt_by_journal.png?raw=true)
 :::
 ::: {.column width="50%"}
-  ![DT by goal (Fei, Tao 2022)](D:\Projects\slides-markdown\slides\images\dt\goal.png)
+  ![DT by goal (Fei, Tao 2022)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/goal.png?raw=true)
 :::
 ::::
 # DT in academia - #2
@@ -48,10 +48,10 @@
 
 :::: {.columns}
 ::: {.column width="50%"}
- ![5-Dimensional DT (Fei, Tao 2020)](D:\Projects\slides-markdown\slides\images\dt\5dim.png)
+ ![5-Dimensional DT (Fei, Tao 2020)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/5dim.png?raw=true)
 :::
 ::: {.column width="50%"}
-![Virtual Entity architecture (Fei, Tao, 2020)](D:\Projects\slides-markdown\slides\images\dt\digital_model.png)
+![Virtual Entity architecture (Fei, Tao, 2020)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/digital_model.png?raw=true)
 :::
 ::::
 
@@ -68,10 +68,10 @@
 
 :::: {.columns}
 ::: {.column width="50%"}
-  ![Example of DTDL](D:\Projects\slides-markdown\slides\images\dt\dtdl.png)
+  ![Example of DTDL](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dtdl.png?raw=true)
 :::
 ::: {.column width="50%"}
- ![Azure DT Platform](D:\Projects\slides-markdown\slides\images\dt\azure_dt_historical.png)
+ ![Azure DT Platform](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/azure_dt_historical.png?raw=true)
 :::
 ::::
 
@@ -83,7 +83,7 @@
 
 :::: {.columns}
 ::: {.column width="70%"}
-  ![Key concept and components AWS IoT Twin Maker ([documentation here](https://docs.aws.amazon.com/iot-twinmaker/latest/guide/what-is-twinmaker.html))](D:\Projects\slides-markdown\slides\images\dt\aws_dt.png)
+  ![Key concept and components AWS IoT Twin Maker ([documentation here](https://docs.aws.amazon.com/iot-twinmaker/latest/guide/what-is-twinmaker.html))](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/aws_dt.png?raw=true)
 :::
 ::: {.column width="30%"}
  - <b>Component</b> JSON documents that describe the connection between a data source and AWS IoT Twin Maker. They access external datasource via a Lambda function defined in the JSON
@@ -101,7 +101,7 @@
  - New standards (JSON-LD, NGSI-LD) to seamelessly integrate semi-structured data, property graphs and semantic graphs (also supported by RDF)
 
 # DT Data - A brief history 
-![Simplified technology history](D:\Projects\slides-markdown\slides\images\dt\history.png)
+![Simplified technology history](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/history.png?raw=true)
 
 # NGSI-LD (Next Generation Service Interface – Linked Data)
   - Evolution of NGSI v2, powered by FIWARE
@@ -114,17 +114,17 @@
 
 :::: {.columns}
 ::: {.column width="60%"}
-![NGSI-LD Metamodel](D:\Projects\slides-markdown\slides\images\dt\NGSI_LD_metamodel.png)
+![NGSI-LD Metamodel](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/NGSI_LD_metamodel.png?raw=true)
 :::
 
 ::: {.column width="40%"}
-![NGSI-LD Entity Example](D:\Projects\slides-markdown\slides\images\dt\ngsi_example.png)
+![NGSI-LD Entity Example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/ngsi_example.png?raw=true)
 :::
 ::::
  
 # NGSI-LD vs. NGSIv2  
 
-![Comparison NGSIv2 - NGSI-LD](D:\Projects\slides-markdown\slides\images\dt\ngsi_ngsild.png)
+![Comparison NGSIv2 - NGSI-LD](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/ngsi_ngsild.png?raw=true)
 
 
 # JSON-LD
@@ -133,7 +133,7 @@
   - Standard for encoding linked data
   - FIWARE is evolving as well... ([Orion-LD](https://github.com/FIWARE/context.Orion-LD?tab=readme-ov-file))
 
-![JSON-LD Example](D:\Projects\slides-markdown\slides\images\dt\json_ld_example.png)
+![JSON-LD Example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/json_ld_example.png?raw=true)
 
 # DT Data - Architectures
   - Most papers don't even mention it!
@@ -148,11 +148,11 @@
 
 :::: {.columns}
 ::: {.column width="50%"}
- ![Data Methodology ([Fei, Tao 2023](https://digitaltwin1.org/articles/1-2/v2))](D:\Projects\slides-markdown\slides\images\dt\dt_lifecycle.png)
+ ![Data Methodology ([Fei, Tao 2023](https://digitaltwin1.org/articles/1-2/v2))](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt_lifecycle.png?raw=true)
 :::
 
 ::: {.column width="50%"}
- ![Digital Twin Data ([Fei, Tao 2023](https://digitaltwin1.org/articles/1-2/v2))](D:\Projects\slides-markdown\slides\images\dt\dt_data.png)
+ ![Digital Twin Data ([Fei, Tao 2023](https://digitaltwin1.org/articles/1-2/v2))](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt_data.png?raw=true)
 :::
 ::::
 
