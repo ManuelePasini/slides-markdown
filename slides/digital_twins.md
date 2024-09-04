@@ -58,7 +58,8 @@
 # DT in industry
   - <b>Azure Digital Twins</b>
   - <b>AWS IoT Twin Maker</b>
-
+  - <b>Digital Twin Consortium</b>
+  
 # Azure Digital Twins
   - FIWARE like
   - Digital Twin Definition Language (DTDL)
@@ -140,7 +141,9 @@
   - When they do, they focus on entities last-state.
   - <b>Is it really different from a Lambda-like big data architecture?</b>
   - e.g. Digital Twin Data (Fei Tao)
- 
+
+ ![[Digital Twin Consortium Architecture](https://www.digitaltwinconsortium.org/)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt_cons_arch.png?raw=true)
+
 # DT Data - Lifecycle
  - Something is starting to pop out
  - "Trash" literature ? (non IT academics, e.g. [Dihan et. al., 2024](https://www.sciencedirect.com/science/article/pii/S2405844024025349?via%3Dihub))
