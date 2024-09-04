@@ -12,7 +12,7 @@
 :::
 ::::
 
-# DT in academia - #1
+# DT in literature - #1
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -37,7 +37,7 @@
   ![DT by goal (Fei, Tao 2022)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/goal.png?raw=true)
 :::
 ::::
-# DT in academia - #2
+# DT in literature - #2
 
  - Mostly manufacturing, smart cities, health domain
  - Presented as an "evolution" of CPS...
@@ -59,7 +59,7 @@
   - <b>Azure Digital Twins</b>
   - <b>AWS IoT Twin Maker</b>
   - <b>Digital Twin Consortium</b>
-  
+
 # Azure Digital Twins
   - FIWARE like
   - Digital Twin Definition Language (DTDL)
