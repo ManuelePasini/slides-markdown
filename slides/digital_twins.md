@@ -5,7 +5,7 @@
 
 :::: {.columns}
 ::: {.column width="50%"}
-![Differences between twins](D:\Projects\slides-markdown\slides\images\dt\twin_model_shadow.png)
+![Differences between twins](\slides\images\dt\twin_model_shadow.png)
 :::
 ::: {.column width="50%"}
 ![DT components](D:\Projects\slides-markdown\slides\images\dt\dt.png)
@@ -162,6 +162,9 @@
    - Historicizing data
    - Digital Twins Platforms (!!!)
 
- - <b> Data modeling </b> (two different abstraction levels)
+ - <b> Data modeling </b> (on two different abstraction levels)
    - Meta-Models for historicized data (domain driven?)
    - Standardazing a wider concept (e.g. Web of Digital Twins)
+  
+ - <b> Methodology </b>
+   - Watering Digital Twin
