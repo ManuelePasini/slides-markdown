@@ -140,7 +140,7 @@
   - Most papers don't even mention it!
   - When they do, they focus on entities last-state.
   - <b>Is it really different from a Lambda-like big data architecture?</b>
-  - e.g. Digital Twin Data (Fei Tao)
+  - e.g. Digital Twin Consortium
 
  ![[Digital Twin Consortium Architecture](https://www.digitaltwinconsortium.org/)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt_cons_arch.png?raw=true)
 
@@ -161,15 +161,25 @@
 
 
 # What next?
+
+:::: {.columns}
+::: {.column width="50%"}
  - <b> Data Architectures </b>
-   - Historicizing data
+   - Focus on historical data
    - Digital Twins Platforms (!!!)
 
  - <b> Data modeling </b> (on two different abstraction levels)
-   - Meta-Models for historicized data (domain driven?)
-   - Standardazing a wider concept (e.g. Web of Digital Twins)
+   - Meta-Models for historicized data in a DT (domain driven?)
+   - Standardazing a wider concept (e.g. interoperability between different DT)
   
  - <b> Methodology </b>
-   - Watering Digital Twin
+    - Watering Digital Twin
+:::
 
+::: {.column width="50%"}
 ![P.h.D. Proposal timeline](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/gantt.svg?raw=true)
+:::
+::::
+
+
+
