@@ -43,7 +43,7 @@
  - Mostly manufacturing, smart cities, health domain
  - Still mostly application oriented, focused on visualization (e.g. Unity3D)
  - While concept of data as a core component is arising..
- - ... Still left unconsidered in research papers.
+ - ... Still left unconsidered in most research papers.
  - However, some standard models are emerging...
  - Most cited: Fei Tao, Univ.  of Beijing
 
@@ -63,7 +63,7 @@
 
 # Azure Digital Twins
   - FIWARE like
-  - Digital Twin Definition Language (DTDL)
+  - Digital Twin Definition Language (DTDL) - JSON-LD/NGSI-LD
   - Offers interfaces to control the physical device (not supported)
   - Native support for Azure Data Explorer (Relational, time-series, ingestion & analytics)
   - Not clear if it facilitates or provides integration with Azure big data services.
