@@ -171,3 +171,5 @@
   
  - <b> Methodology </b>
    - Watering Digital Twin
+
+![P.h.D. Proposal timeline](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/gantt.svg?raw=true)
