@@ -1,3 +1,4 @@
+
 # Digital Twins (DT)
  - Differences between digital shadow, digital model, digital twin
  - Enclosing on a definition...
@@ -38,6 +39,8 @@
   ![DT by goal (Fei, Tao 2022)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/goal.png?raw=true)
 :::
 ::::
+
+
 # DT in literature - #2
 
  - Mostly manufacturing, smart cities, health domain
@@ -183,5 +186,59 @@
 :::
 ::::
 
+# Carbonaro 17/09
+
+- Loro usano property-knowledge graph
+- Open word assumption: solo in AND ...
+- CONSTRUCT (è quello che utilizzo per le "implementedBy")
+- Hanno necessità di separare ciò che è corrente e ciò che è passato.
+- SWRL + SPARQL
+- Utilizzano GraphDB  (hanno provato)
+- Dov'è il confine tra ciò che è nuovo e ciò che è passato? Tradeoff tra quanto velocemente cambiano le cose? Un sensore che cambia ogni 10ms non posso storicizzare.
 
 
+
+# Queries
+
+## Sensoriali
+
+- Dati tutti gli agenti di un certo tipo in un certo environment, trovare tutte le misurazioni dal timestamp X al timestamp Y.
+
+- Dato un environment, trovare le rilevazioni di tutti i device dal timestamp X al timestamp Y
+
+- Dato un environment, dammi tutti i measurement dei device di un certo tipo che superano una data soglia.
+
+- Dato un poligono, trovare tutti gli agent che hanno fatto task all'interno del poligono
+
+##### From [IoTAbench](https://dl.acm.org/doi/10.1145/2668930.2688055)
+
+- Total readings: counts the total number of readings (i.e., rows) for the given time period.
+
+- Create a sorted list of the aggregate consumption in each ten minute interval in the given time period.  -> Create a sorted list of the average measurement (?) in each hour interval in the given time period.  
+
+- Top consumers: create a list of the distinct consumers, sorted by their total (monthly) consumption. -> Top agent: create a list of the distinct agents, sorted by their total (monthly) measurements.
+
+- Time of Usage Billing: calculate the monthly bill for each consumer based on the time of usage. -> Time of Task: calculate the monthly time spent doing tasks for each agent.
+
+
+
+## Data architectures
+
+1. Metamodello Agritech (PostgreSQL ?)
+2. Wide-Column (?)
+3. Grafo + Relazionale (PostgreSQL + Apache AGE)
+4. Graph + Time Series (GraphDB + (ClickHouse || InfluxDB))
+
+
+## Scaletta
+- Come funziona modellazione dati nel GIS?
+
+### PostGIS
+
+#### Spatial Functions
+- Routing. With pgRouting and road data you can find optimal routes and do different network analytics;
+- Polygon skeletonization. This function enables you to build the medial axis of a polygon on the fly;
+- Geometry subdivision. Dividing your geometries for further processing can significantly speed up your processes;
+- Clustering. Find clusters and patterns from your data. With the AI hype at peak, the k-means might be even more interesting for some than before…
+
+ ![PostGIS Geometry Hierarchy](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/postgis/geometry_hierarchy.png?raw=true)
