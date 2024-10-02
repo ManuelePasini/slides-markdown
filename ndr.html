@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="digital_twins_files/libs/clipboard/clipboard.min.js"></script>
-<script src="digital_twins_files/libs/quarto-html/tabby.min.js"></script>
-<script src="digital_twins_files/libs/quarto-html/popper.min.js"></script>
-<script src="digital_twins_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="digital_twins_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="digital_twins_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="digital_twins_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="digital_twins_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="ndr_files/libs/clipboard/clipboard.min.js"></script>
+<script src="ndr_files/libs/quarto-html/tabby.min.js"></script>
+<script src="ndr_files/libs/quarto-html/popper.min.js"></script>
+<script src="ndr_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="ndr_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="ndr_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="ndr_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="ndr_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.549">
 
-  <title>digital_twins</title>
+  <title>ndr</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="digital_twins_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="digital_twins_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="ndr_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="ndr_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -29,11 +29,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="digital_twins_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="digital_twins_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="digital_twins_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="digital_twins_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="digital_twins_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="ndr_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="ndr_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="ndr_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="ndr_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="ndr_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -326,356 +326,22 @@
     <div class="slides">
 
 
-<section id="digital-twins-dt" class="title-slide slide level1 center">
-<h1>Digital Twins (DT)</h1>
-<ul>
-<li>Differences between digital shadow, digital model, digital twin</li>
-<li>Enclosing on a definition…</li>
-<li>3 components: phyisical model, virtual model, communication services</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/twin_model_shadow.png?raw=true"></p>
-<figcaption>Differences between twins</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt.png?raw=true"></p>
-<figcaption>DT components</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-
-<section id="dt-in-literature---1" class="title-slide slide level1 center">
-<h1>DT in literature - #1</h1>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>Still a buzzword</li>
-<li>Rising number of publications</li>
-<li>Mostly non IT papers</li>
-<li>Not really twins…</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt_by_year.png?raw=true"></p>
-<figcaption>DT by year (Fei, Tao 2022)</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div>
-
-</div>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt_by_journal.png?raw=true"></p>
-<figcaption>DT by journal (Fei, Tao 2022)</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/goal.png?raw=true"></p>
-<figcaption>DT by goal (Fei, Tao 2022)</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-
-<section id="dt-in-literature---2" class="title-slide slide level1 center">
-<h1>DT in literature - #2</h1>
-<ul>
-<li>Mostly manufacturing, smart cities, health domain</li>
-<li>Still mostly application oriented, focused on visualization (e.g.&nbsp;Unity3D)</li>
-<li>While concept of data as a core component is arising..</li>
-<li>… Still left unconsidered in most research papers.</li>
-<li>However, some standard models are emerging…</li>
-<li>Most cited: Fei Tao, Univ. of Beijing</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/5dim.png?raw=true"></p>
-<figcaption>5-Dimensional DT (Fei, Tao 2020)</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/digital_model.png?raw=true"></p>
-<figcaption>Virtual Entity architecture (Fei, Tao, 2020)</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-
-<section id="dt-in-industry" class="title-slide slide level1 center">
-<h1>DT in industry</h1>
-<ul>
-<li><b>Azure Digital Twins</b></li>
-<li><b>AWS IoT Twin Maker</b></li>
-<li><b>Digital Twin Consortium</b></li>
-</ul>
-</section>
-
-<section id="azure-digital-twins" class="title-slide slide level1 center">
-<h1>Azure Digital Twins</h1>
-<ul>
-<li>FIWARE like</li>
-<li>Digital Twin Definition Language (DTDL) - JSON-LD/NGSI-LDgi</li>
-<li>Offers interfaces to control the physical device (not supported)</li>
-<li>Native support for Azure Data Explorer (Relational, time-series, ingestion &amp; analytics)</li>
-<li>Not clear if it facilitates or provides integration with Azure big data services.</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dtdl.png?raw=true"></p>
-<figcaption>Example of DTDL</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/azure_dt_historical.png?raw=true"></p>
-<figcaption>Azure DT Platform</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-
-<section id="aws-iot-twin-maker" class="title-slide slide level1 center">
-<h1>AWS IoT Twin Maker</h1>
-<ul>
-<li>Similar to Azure Digital Twins (also JSON Entity-Component model)</li>
-<li>Different JSON semantics</li>
-<li>Also graph representation</li>
-<li>Native support for Grafana, AWS IoT Site Wise (which leverages AWS Timestream, a time-series DB)</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:70%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/aws_dt.png?raw=true"></p>
-<figcaption>Key concept and components AWS IoT Twin Maker (<a href="https://docs.aws.amazon.com/iot-twinmaker/latest/guide/what-is-twinmaker.html">documentation here</a>)</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:30%;">
-<ul>
-<li><b>Component</b> JSON documents that describe the connection between a data source and AWS IoT Twin Maker. They access external datasource via a Lambda function defined in the JSON</li>
-<li>Each workspace is assigned an S3 Bucket</li>
-</ul>
-</div>
-</div>
-</section>
-
-<section id="dt-data-related-aspects" class="title-slide slide level1 center">
-<h1>DT Data Related Aspects</h1>
-
-</section>
-
-<section id="dt-data---modeling" class="title-slide slide level1 center">
-<h1>DT Data - Modeling</h1>
-<ul>
-<li>Focused on entities last state</li>
-<li>In literature, wide spread of AutomationML, XML, etc.</li>
-<li>Mostly graphs (too many connections between data)</li>
-<li>Initially pure linked data and semantic graphs (RDF, ontologies)</li>
-<li>New standards (JSON-LD, NGSI-LD) to seamelessly integrate semi-structured data, property graphs and semantic graphs (also supported by RDF)</li>
-</ul>
-</section>
-
-<section id="dt-data---a-brief-history" class="title-slide slide level1 center">
-<h1>DT Data - A brief history</h1>
-
-<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/history.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Simplified technology history</p></section>
-
-<section id="ngsi-ld-next-generation-service-interface-linked-data" class="title-slide slide level1 center">
-<h1>NGSI-LD (Next Generation Service Interface – Linked Data)</h1>
-<ul>
-<li>Evolution of NGSI v2, powered by FIWARE</li>
-<li>Defines a <a href="https://www.etsi.org/deliver/etsi_gs/CIM/001_099/009/01.06.01_60/gs_CIM009v010601p.pdf">metamodel</a> and APIs (<a href="https://swagger.lab.fiware.org/">Swagger URL</a>) for property graphs</li>
-<li>“id” now must be an URN (or an URI HTTP)</li>
-<li>The entity must have a “type” attribute which represent the class of the entity</li>
-<li>The class must then be defined in the <span class="citation" data-cites="context">@context</span></li>
-<li><span class="citation" data-cites="context">@context</span> implicitly includes the core <span class="citation" data-cites="context">@context</span> of NGSI-LD:</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/NGSI_LD_metamodel.png?raw=true"></p>
-<figcaption>NGSI-LD Metamodel</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:40%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/ngsi_example.png?raw=true"></p>
-<figcaption>NGSI-LD Entity Example</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-
-<section id="ngsi-ld-vs.-ngsiv2" class="title-slide slide level1 center">
-<h1>NGSI-LD vs.&nbsp;NGSIv2</h1>
-
-<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/ngsi_ngsild.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Comparison NGSIv2 - NGSI-LD</p></section>
-
-<section id="json-ld" class="title-slide slide level1 center">
-<h1>JSON-LD</h1>
-<ul>
-<li>Make JSON machine-readable again!</li>
-<li>Defined to merge semantic data and commonly used JSON documents</li>
-<li>Standard for encoding linked data</li>
-<li>FIWARE is evolving as well… (<a href="https://github.com/FIWARE/context.Orion-LD?tab=readme-ov-file">Orion-LD</a>)</li>
-</ul>
-
-<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/json_ld_example.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">JSON-LD Example</p></section>
-
-<section id="dt-data---architectures" class="title-slide slide level1 center">
-<h1>DT Data - Architectures</h1>
-<ul>
-<li>Most papers don’t even mention it!</li>
-<li>When they do, they focus on entities last-state.</li>
-<li><b>Is it really different from a Lambda-like big data architecture?</b></li>
-<li>e.g.&nbsp;Digital Twin Consortium</li>
-</ul>
-
-<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt_cons_arch.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://www.digitaltwinconsortium.org/">Digital Twin Consortium Architecture</a></p></section>
-
-<section id="dt-data---lifecycle" class="title-slide slide level1 center">
-<h1>DT Data - Lifecycle</h1>
-<ul>
-<li>Something is starting to pop out</li>
-<li>“Trash” literature ? (non IT academics, e.g.&nbsp;<a href="https://www.sciencedirect.com/science/article/pii/S2405844024025349?via%3Dihub">Dihan et. al., 2024</a>)</li>
-<li>Are we reinventing the wheel?</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt_data.png?raw=true"></p>
-<figcaption>Digital Twin Data (<a href="https://digitaltwin1.org/articles/1-2/v2">Fei, Tao 2023</a>)</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt_lifecycle.png?raw=true"></p>
-<figcaption>Data Methodology (<a href="https://digitaltwin1.org/articles/1-2/v2">Fei, Tao 2023</a>)</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-
-<section id="what-next" class="title-slide slide level1 center">
-<h1>What next?</h1>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><b> Data Architectures </b>
-<ul>
-<li>Focus on historical data</li>
-<li>Digital Twins Platforms (!!!)</li>
-</ul></li>
-<li><b> Data modeling </b> (on two different abstraction levels)
-<ul>
-<li>Meta-Models for historicized data in a DT (domain driven?)</li>
-<li>Standardazing a wider concept (e.g.&nbsp;interoperability between different DT)</li>
-</ul></li>
-<li><b> Methodology </b>
-<ul>
-<li>Watering Digital Twin</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/gantt.svg?raw=true"></p>
-<figcaption>P.h.D. Proposal timeline</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-
-<section id="carbonaro-1709" class="title-slide slide level1 center">
-<h1>Carbonaro 17/09</h1>
-<ul>
-<li>Loro usano property-knowledge graph</li>
-<li>Open word assumption: solo in AND …</li>
-<li>CONSTRUCT (è quello che utilizzo per le “implementedBy”)</li>
-<li>Hanno necessità di separare ciò che è corrente e ciò che è passato.</li>
-<li>SWRL + SPARQL</li>
-<li>Utilizzano GraphDB (hanno provato)</li>
-<li>Dov’è il confine tra ciò che è nuovo e ciò che è passato? Tradeoff tra quanto velocemente cambiano le cose? Un sensore che cambia ogni 10ms non posso storicizzare.</li>
-</ul>
-</section>
-
 <section>
-<section id="queries" class="title-slide slide level1 center">
-<h1>Queries</h1>
+<section id="notte-dei-ricercatori-279" class="title-slide slide level1 center">
+<h1>Notte dei ricercatori 27/9</h1>
 
 </section>
-<section id="sensoriali" class="slide level2">
-<h2>Sensoriali</h2>
+<section id="cose-da-sistemare" class="slide level2">
+<h2>Cose da sistemare:</h2>
 <ul>
-<li><p>Dati tutti gli agenti di un certo tipo in un certo environment, trovare tutte le misurazioni dal timestamp X al timestamp Y.</p></li>
-<li><p>Dato un environment, trovare le rilevazioni di tutti i device dal timestamp X al timestamp Y</p></li>
-<li><p>Dato un environment, dammi tutti i measurement dei device di un certo tipo che superano una data soglia.</p></li>
-<li><p>Dato un poligono, trovare tutti gli agent che hanno fatto task all’interno del poligono</p></li>
+<li><p>Errore sul periodo.</p></li>
+<li><p>Se aggiorno la pagina, il frontend rimette lo slider a 50, lato backend rimane il vecchio, oppure asincronismo tra valore slider e backend<br>
+</p></li>
+<li><p>voglio umidità ottima e attuale ogni 500ms e errore ogni 15s</p></li>
+<li><p>Se passo da slider a matrice, l’ottimo viene calcolato male al primo ciclo, al secondo diventa corretto!</p></li>
+<li><p>Aggiornamento delle matrici in manuale fa si che l’ottimo ci metta più di un ciclo ad arrivare a destinazioneW</p></li>
 </ul>
-<h5 id="from-iotabench">From <a href="https://dl.acm.org/doi/10.1145/2668930.2688055">IoTAbench</a></h5>
-<ul>
-<li><p>Total readings: counts the total number of readings (i.e., rows) for the given time period.</p></li>
-<li><p>Create a sorted list of the aggregate consumption in each ten minute interval in the given time period. -&gt; Create a sorted list of the average measurement (?) in each hour interval in the given time period.</p></li>
-<li><p>Top consumers: create a list of the distinct consumers, sorted by their total (monthly) consumption. -&gt; Top agent: create a list of the distinct agents, sorted by their total (monthly) measurements.</p></li>
-<li><p>Time of Usage Billing: calculate the monthly bill for each consumer based on the time of usage. -&gt; Time of Task: calculate the monthly time spent doing tasks for each agent.</p></li>
-</ul>
-</section>
-<section id="data-architectures" class="slide level2 scrollable">
-<h2>Data architectures</h2>
-<ol type="1">
-<li>Metamodello Agritech (PostgreSQL ?)</li>
-<li>Wide-Column (?)</li>
-<li>Grafo + Relazionale (PostgreSQL + Apache AGE)</li>
-<li>Graph + Time Series (GraphDB + (ClickHouse || InfluxDB))</li>
-</ol>
-</section>
-<section id="scaletta" class="slide level2">
-<h2>Scaletta</h2>
-<ul>
-<li>Come funziona modellazione dati nel GIS?</li>
-</ul>
-<h3 id="postgis">PostGIS</h3>
-<h4 id="spatial-functions">Spatial Functions</h4>
-<ul>
-<li>Routing. With pgRouting and road data you can find optimal routes and do different network analytics;</li>
-<li>Polygon skeletonization. This function enables you to build the medial axis of a polygon on the fly;</li>
-<li>Geometry subdivision. Dividing your geometries for further processing can significantly speed up your processes;</li>
-<li>Clustering. Find clusters and patterns from your data. With the AI hype at peak, the k-means might be even more interesting for some than before…</li>
-</ul>
-
-<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/postgis/geometry_hierarchy.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">PostGIS Geometry Hierarchy</p><div class="quarto-auto-generated-content">
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
@@ -685,19 +351,19 @@
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="digital_twins_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="ndr_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="digital_twins_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="digital_twins_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="digital_twins_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="digital_twins_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="digital_twins_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="ndr_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="ndr_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="ndr_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="ndr_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="ndr_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="digital_twins_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="digital_twins_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="digital_twins_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="digital_twins_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="ndr_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="ndr_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="ndr_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="ndr_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
