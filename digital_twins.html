@@ -618,6 +618,7 @@
 </div>
 </section>
 
+<section>
 <section id="carbonaro-1709" class="title-slide slide level1 center">
 <h1>Carbonaro 17/09</h1>
 <ul>
@@ -630,14 +631,8 @@
 <li>Dov’è il confine tra ciò che è nuovo e ciò che è passato? Tradeoff tra quanto velocemente cambiano le cose? Un sensore che cambia ogni 10ms non posso storicizzare.</li>
 </ul>
 </section>
-
-<section>
-<section id="queries" class="title-slide slide level1 center">
-<h1>Queries</h1>
-
-</section>
-<section id="sensoriali" class="slide level2">
-<h2>Sensoriali</h2>
+<section id="workload" class="slide level2">
+<h2>Workload</h2>
 <ul>
 <li><p>Dati tutti gli agenti di un certo tipo in un certo environment, trovare tutte le misurazioni dal timestamp X al timestamp Y.</p></li>
 <li><p>Dato un environment, trovare le rilevazioni di tutti i device dal timestamp X al timestamp Y</p></li>
@@ -661,39 +656,35 @@
 <li>Graph + Time Series (GraphDB + (ClickHouse || InfluxDB))</li>
 <li>AeonG (?)</li>
 </ol>
+</section></section>
+<section>
+<section id="postgis" class="title-slide slide level1 center">
+<h1>PostGIS</h1>
+
 </section>
-<section id="postgis" class="slide level2">
-<h2>PostGIS</h2>
-<h3 id="spatial-functions">Spatial Functions</h3>
+<section id="spatial-functions" class="slide level2">
+<h2>Spatial Functions</h2>
 <ul>
 <li>Routing. With pgRouting and road data you can find optimal routes and do different network analytics;</li>
 <li>Polygon skeletonization. This function enables you to build the medial axis of a polygon on the fly;</li>
 <li>Geometry subdivision. Dividing your geometries for further processing can significantly speed up your processes;</li>
 <li>Clustering. Find clusters and patterns from your data. With the AI hype at peak, the k-means might be even more interesting for some than before…</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/postgis/geometry_hierarchy.png?raw=true"></p>
-<figcaption>PostGIS Geometry Hierarchy</figcaption>
-</figure>
-</div>
-<h3 id="indexing">Indexing</h3>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/postgis/geometry_hierarchy.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">PostGIS Geometry Hierarchy</p></section>
+<section id="indexing" class="slide level2">
+<h2>Indexing</h2>
 <ul>
 <li><p>Indexes have to perform quickly in order to be useful. So instead of providing exact results, as B-trees do, spatial indexes provide approximate results. The question “what lines are inside this polygon?” will be instead interpreted by a spatial index as “what lines have bounding boxes that are contained inside this polygon’s bounding box?”</p></li>
 <li><p>The most common implementations are the <a href="http://www.gitta.info/SpatPartitio/en/html/ObjOriDecomp_learningObject2.html">R-Tree</a> and Quadtree (used in PostGIS), but there are also grid-based indexes and GeoHash indexes implemented in other spatial databases.</p></li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/postgis/bbox.png?raw=true"></p>
-<figcaption>BBox Example</figcaption>
-</figure>
-</div>
-<ul>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/postgis/bbox.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">BBox Example</p><ul>
 <li>The way the database efficiently answers the question “what lines intersect the yellow star” is to first answer the question “what boxes intersect the yellow box” using the index (which is very fast) and then do an exact calculation of “what lines intersect the yellow star” only for those features returned by the first test.</li>
 </ul>
-</section>
-<section id="apache-age" class="slide level2">
-<h2>Apache AGE</h2>
+</section></section>
+<section id="apache-age" class="title-slide slide level1 center">
+<h1>Apache AGE</h1>
 <ul>
 <li>Extends PostgreSQL with graph semantics</li>
 <li>No graph data model!</li>
@@ -706,7 +697,7 @@
 
 </div>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
