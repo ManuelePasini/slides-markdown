@@ -662,13 +662,9 @@
 <li>AeonG (?)</li>
 </ol>
 </section>
-<section id="scaletta" class="slide level2">
-<h2>Scaletta</h2>
-<ul>
-<li>Come funziona modellazione dati nel GIS?</li>
-</ul>
-<h3 id="postgis">PostGIS</h3>
-<h4 id="spatial-functions">Spatial Functions</h4>
+<section id="postgis" class="slide level2">
+<h2>PostGIS</h2>
+<h3 id="spatial-functions">Spatial Functions</h3>
 <ul>
 <li>Routing. With pgRouting and road data you can find optimal routes and do different network analytics;</li>
 <li>Polygon skeletonization. This function enables you to build the medial axis of a polygon on the fly;</li>
@@ -681,7 +677,7 @@
 <figcaption>PostGIS Geometry Hierarchy</figcaption>
 </figure>
 </div>
-<h4 id="indexing">Indexing</h4>
+<h3 id="indexing">Indexing</h3>
 <ul>
 <li><p>Indexes have to perform quickly in order to be useful. So instead of providing exact results, as B-trees do, spatial indexes provide approximate results. The question “what lines are inside this polygon?” will be instead interpreted by a spatial index as “what lines have bounding boxes that are contained inside this polygon’s bounding box?”</p></li>
 <li><p>The most common implementations are the <a href="http://www.gitta.info/SpatPartitio/en/html/ObjOriDecomp_learningObject2.html">R-Tree</a> and Quadtree (used in PostGIS), but there are also grid-based indexes and GeoHash indexes implemented in other spatial databases.</p></li>
@@ -695,12 +691,17 @@
 <ul>
 <li>The way the database efficiently answers the question “what lines intersect the yellow star” is to first answer the question “what boxes intersect the yellow box” using the index (which is very fast) and then do an exact calculation of “what lines intersect the yellow star” only for those features returned by the first test.</li>
 </ul>
-<h3 id="apache-age">Apache AGE</h3>
+</section>
+<section id="apache-age" class="slide level2">
+<h2>Apache AGE</h2>
 <ul>
 <li>Extends PostgreSQL with graph semantics</li>
-<li>Wrapper upon PostgreSQL relational storage <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/apache_age/architecture.png?raw=true" alt="Apachce AGE under the hood architecture"></li>
+<li>No graph data model!</li>
+<li>Wrapper upon PostgreSQL relational storage</li>
+<li>A table for each node/vertex</li>
 </ul>
-<div class="quarto-auto-generated-content">
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/apache_age/architecture.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Apachce AGE under the hood architecture</p><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
