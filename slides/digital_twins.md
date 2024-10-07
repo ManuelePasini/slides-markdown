@@ -226,8 +226,9 @@
 
 1. Metamodello Agritech (PostgreSQL ?)
 2. Wide-Column (?)
-3. Grafo + Relazionale (PostgreSQL + Apache AGE)
+3. Grafo + Relazionale (PostgreSQL + PostGIS + Apache AGE)
 4. Graph + Time Series (GraphDB + (ClickHouse || InfluxDB))
+5. AeonG (?)
 
 
 ## Scaletta
@@ -242,3 +243,19 @@
 - Clustering. Find clusters and patterns from your data. With the AI hype at peak, the k-means might be even more interesting for some than before…
 
  ![PostGIS Geometry Hierarchy](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/postgis/geometry_hierarchy.png?raw=true)
+
+#### Indexing
+ - Indexes have to perform quickly in order to be useful. So instead of providing exact results, as B-trees do, spatial indexes provide approximate results. The question “what lines are inside this polygon?” will be instead interpreted by a spatial index as “what lines have bounding boxes that are contained inside this polygon’s bounding box?”
+
+ - The most common implementations are the [R-Tree](http://www.gitta.info/SpatPartitio/en/html/ObjOriDecomp_learningObject2.html) and Quadtree (used in PostGIS), but there are also grid-based indexes and GeoHash indexes implemented in other spatial databases.
+
+ ![BBox Example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/postgis/bbox.png?raw=true)
+
+ - The way the database efficiently answers the question “what lines intersect the yellow star” is to first answer the question “what boxes intersect the yellow box” using the index (which is very fast) and then do an exact calculation of “what lines intersect the yellow star” only for those features returned by the first test.
+
+### Apache AGE
+- Extends PostgreSQL with graph semantics
+- Wrapper upon PostgreSQL relational storage
+ ![Apachce AGE under the hood architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/apache_age/architecture.png?raw=true)
+
+
