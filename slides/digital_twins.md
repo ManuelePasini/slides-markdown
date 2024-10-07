@@ -231,12 +231,9 @@
 5. AeonG (?)
 
 
-## Scaletta
-- Come funziona modellazione dati nel GIS?
+## PostGIS
 
-### PostGIS
-
-#### Spatial Functions
+### Spatial Functions
 - Routing. With pgRouting and road data you can find optimal routes and do different network analytics;
 - Polygon skeletonization. This function enables you to build the medial axis of a polygon on the fly;
 - Geometry subdivision. Dividing your geometries for further processing can significantly speed up your processes;
@@ -244,7 +241,7 @@
 
  ![PostGIS Geometry Hierarchy](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/postgis/geometry_hierarchy.png?raw=true)
 
-#### Indexing
+### Indexing
  - Indexes have to perform quickly in order to be useful. So instead of providing exact results, as B-trees do, spatial indexes provide approximate results. The question “what lines are inside this polygon?” will be instead interpreted by a spatial index as “what lines have bounding boxes that are contained inside this polygon’s bounding box?”
 
  - The most common implementations are the [R-Tree](http://www.gitta.info/SpatPartitio/en/html/ObjOriDecomp_learningObject2.html) and Quadtree (used in PostGIS), but there are also grid-based indexes and GeoHash indexes implemented in other spatial databases.
@@ -253,9 +250,12 @@
 
  - The way the database efficiently answers the question “what lines intersect the yellow star” is to first answer the question “what boxes intersect the yellow box” using the index (which is very fast) and then do an exact calculation of “what lines intersect the yellow star” only for those features returned by the first test.
 
-### Apache AGE
+## Apache AGE
 - Extends PostgreSQL with graph semantics
+- No graph data model!
 - Wrapper upon PostgreSQL relational storage
+- A table for each node/vertex
+
  ![Apachce AGE under the hood architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/apache_age/architecture.png?raw=true)
 
 
