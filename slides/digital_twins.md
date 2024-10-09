@@ -277,7 +277,44 @@
 
  ![Apachce AGE under the hood architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/apache_age/architecture.png?raw=true)
 
+## Setup
 
+Create and load AGE extension
 
-- MobaXTerm
-- Acrobat Reader
+    CREATE EXTENSION IF NOT EXISTS age;
+    LOAD 'age';
+
+Allow user access to such path
+
+    SET search_path = ag_catalog, "$user", public;
+
+Create a node A
+
+    SELECT * 
+    FROM cypher('test_graph', $$
+        CREATE (:label {property:"Node A"})
+    $$) as (v agtype);
+
+Create a node B
+
+    SELECT * 
+    FROM cypher('test_graph', $$
+        CREATE (:label {property:"Node B"})
+    $$) as (v agtype);
+
+Create an edge between node A and node B
+
+    SELECT * 
+    FROM cypher('test_graph', $$
+        MATCH (a:label), (b:label)
+        WHERE a.property = 'Node A' AND b.property = 'Node B'
+        CREATE (a)-[e:RELTYPE {property:a.property + '<->' + b.property}]->(b)
+        RETURN e
+    $$) as (e agtype);
+
+Select those edges
+
+    SELECT * from cypher('test_graph', $$
+            MATCH (V)-[R]-(V2)
+            RETURN V,R,V2
+    $$) as (V agtype, R agtype, V2 agtype);
