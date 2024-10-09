@@ -704,6 +704,7 @@
 <li>The way the database efficiently answers the question “what lines intersect the yellow star” is to first answer the question “what boxes intersect the yellow box” using the index (which is very fast) and then do an exact calculation of “what lines intersect the yellow star” only for those features returned by the first test.</li>
 </ul>
 </section></section>
+<section>
 <section id="apache-age" class="title-slide slide level1 center">
 <h1>Apache AGE</h1>
 <ul>
@@ -713,16 +714,43 @@
 <li>A table for each node/vertex</li>
 </ul>
 
-<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/apache_age/architecture.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Apachce AGE under the hood architecture</p><ul>
-<li>MobaXTerm</li>
-<li>Acrobat Reader</li>
-</ul>
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/apache_age/architecture.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Apachce AGE under the hood architecture</p></section>
+<section id="setup" class="slide level2">
+<h2>Setup</h2>
+<p>Create and load AGE extension</p>
+<pre><code>CREATE EXTENSION IF NOT EXISTS age;
+LOAD 'age';</code></pre>
+<p>Allow user access to such path</p>
+<pre><code>SET search_path = ag_catalog, "$user", public;</code></pre>
+<p>Create a node A</p>
+<pre><code>SELECT * 
+FROM cypher('test_graph', $$
+    CREATE (:label {property:"Node A"})
+$$) as (v agtype);</code></pre>
+<p>Create a node B</p>
+<pre><code>SELECT * 
+FROM cypher('test_graph', $$
+    CREATE (:label {property:"Node B"})
+$$) as (v agtype);</code></pre>
+<p>Create an edge between node A and node B</p>
+<pre><code>SELECT * 
+FROM cypher('test_graph', $$
+    MATCH (a:label), (b:label)
+    WHERE a.property = 'Node A' AND b.property = 'Node B'
+    CREATE (a)-[e:RELTYPE {property:a.property + '&lt;-&gt;' + b.property}]-&gt;(b)
+    RETURN e
+$$) as (e agtype);</code></pre>
+<p>Select those edges</p>
+<pre><code>SELECT * from cypher('test_graph', $$
+        MATCH (V)-[R]-(V2)
+        RETURN V,R,V2
+$$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
