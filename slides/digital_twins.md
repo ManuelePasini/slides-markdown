@@ -244,7 +244,9 @@
 
 :::
 ::: {.column width="50%"}
-![SmartBench data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/data_model/smartbench.png?raw=true)
+![SmartBench data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/data_model/smartbench_user.png?raw=true)
+::: {.column width="50%"}
+![SmartBench data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/data_model/smartbench_sensor.png?raw=true)
 :::
 ::::
 
