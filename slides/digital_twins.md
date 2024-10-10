@@ -251,8 +251,9 @@
 
 
 ## Final queries v.0.1
+
 :::: {.columns}
-::: {.column width="75%"}
+::: {.column width="65%"}
 
 **Q1** Total measurements ($t_b$, $t_e$): counts the total number of measurements for each device during the period [$t_b$; $t_e$].
 
@@ -275,7 +276,7 @@
 **Q10** CoLocate($a$ &in; A, $t_b$, $t_e$): retrieves all agents who were in the same environment as agent $a$ during the specified time period.
 
 :::
-::: {.column width="25%"}
+::: {.column width="35%"}
 
 ![Workload overview](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/workload.png?raw=true)
 :::
