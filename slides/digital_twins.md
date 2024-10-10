@@ -290,11 +290,10 @@
 
 ## Data architectures
 
-1. Metamodello Agritech (PostgreSQL ?)
-2. Wide-Column (?)
-3. Grafo + Relazionale (PostgreSQL + PostGIS + Apache AGE)
-4. Graph + Time Series (GraphDB + (ClickHouse || InfluxDB))
-5. AeonG (?)
+* Wide-Column (?)
+* Grafo + Relazionale (PostgreSQL + PostGIS + Apache AGE)
+* Graph + Time Series (GraphDB + (ClickHouse || InfluxDB))
+* AeonG (?)
 
 
 # PostGIS
