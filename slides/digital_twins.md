@@ -248,7 +248,7 @@
 
 > **Optimal blueprint**
 >
-> ![SmartBench data model](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/da1422db0e16e1db09cc4c49b9611f7f1b7d23d6/slides/images/dt/data_model/smartbench.png?raw=true)
+> ![SmartBench data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/data_model/smartbench.png?raw=true)
 
 
 :::
