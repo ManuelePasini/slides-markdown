@@ -244,13 +244,7 @@
 
 :::
 ::: {.column width="50%"}
-
-
-> **Optimal blueprint**
->
-> ![SmartBench data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/data_model/smartbench.png?raw=true)
-
-
+![SmartBench data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/data_model/smartbench.png?raw=true)
 :::
 ::::
 
