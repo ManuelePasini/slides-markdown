@@ -218,7 +218,10 @@
 
 - Time of Usage Billing: calculate the monthly bill for each consumer based on the time of usage. -> Time of Task: calculate the monthly time spent doing tasks for each agent.
 
-## From [SmartBench](https://dl.acm.org/doi/abs/10.14778/3407790.3407791)
+## From [SmartBench, VLDB](https://dl.acm.org/doi/abs/10.14778/3407790.3407791)
+
+:::: {.columns}
+::: {.column width="50%"}
 
 - Coverage (s &in; Sensors): returns the location of a given sensor s.
 
@@ -238,6 +241,18 @@
 &eta;,
 
 - Continuous Query(&tau;, &alpha;, &beta;): retrieves, after every &alpha; seconds (hop size), the minimum, maximum, and average occupancy levels of locations of type &tau; in the last &beta; seconds (window size).
+
+:::
+::: {.column width="50%"}
+
+
+> **Optimal blueprint**
+>
+> ![SmartBench data model](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/da1422db0e16e1db09cc4c49b9611f7f1b7d23d6/slides/images/dt/data_model/smartbench.png?raw=true)
+
+
+:::
+::::
 
 ## Additional custom queries
 
