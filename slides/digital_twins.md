@@ -209,7 +209,7 @@
   - Analytical
 
 ## From [IoTAbench](https://dl.acm.org/doi/10.1145/2668930.2688055)
-
+![IoTABench data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/iota_model.png?raw=true)
 - Total readings: counts the total number of readings (i.e., rows) for the given time period.
 
 - Create a sorted list of the aggregate consumption in each ten minute interval in the given time period.  -> Create a sorted list of the average measurement (?) in each hour interval in the given time period.  
