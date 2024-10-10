@@ -660,8 +660,10 @@
 <li><p>Time of Usage Billing: calculate the monthly bill for each consumer based on the time of usage. -&gt; Time of Task: calculate the monthly time spent doing tasks for each agent.</p></li>
 </ul>
 </section>
-<section id="from-smartbench" class="slide level2">
-<h2>From <a href="https://dl.acm.org/doi/abs/10.14778/3407790.3407791">SmartBench</a></h2>
+<section id="from-smartbench-vldb" class="slide level2">
+<h2>From <a href="https://dl.acm.org/doi/abs/10.14778/3407790.3407791">SmartBench, VLDB</a></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li><p>Coverage (s ∈ Sensors): returns the location of a given sensor s.</p></li>
 <li><p>InverseCoverage(L, τ), where L is a list of locations, and τ is a sensor type: lists all sensors that can generate observations of a given type τ that can cover the locations specied in L.</p></li>
@@ -673,6 +675,18 @@
 <li><p>TimeSpent(<span class="math inline">\(u\)</span> ∈ Users, η, tb, te): retrieves the average time spent per day by subject <span class="math inline">\(u\)</span> in locations of type η,</p></li>
 <li><p>Continuous Query(τ, α, β): retrieves, after every α seconds (hop size), the minimum, maximum, and average occupancy levels of locations of type τ in the last β seconds (window size).</p></li>
 </ul>
+</div><div class="column" style="width:50%;">
+<blockquote>
+<p><strong>Optimal blueprint</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://raw.githubusercontent.com/ManuelePasini/slides-markdown/da1422db0e16e1db09cc4c49b9611f7f1b7d23d6/slides/images/dt/data_model/smartbench.png?raw=true"></p>
+<figcaption>SmartBench data model</figcaption>
+</figure>
+</div>
+</blockquote>
+</div>
+</div>
 </section>
 <section id="additional-custom-queries" class="slide level2">
 <h2>Additional custom queries</h2>
