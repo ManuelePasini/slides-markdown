@@ -208,7 +208,7 @@
   - Operational
   - Analytical
 
-## From [IoTAbench](https://dl.acm.org/doi/10.1145/2668930.2688055)
+## From [IoTAbench, ICPE 2015](https://dl.acm.org/doi/10.1145/2668930.2688055)
 
 ![IoTABench data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/data_model/iota_model.png?raw=true)
 
@@ -220,7 +220,7 @@
 
 - Time of Usage Billing: calculate the monthly bill for each consumer based on the time of usage. -> Time of Task: calculate the monthly time spent doing tasks for each agent.
 
-## From [SmartBench, VLDB](https://dl.acm.org/doi/abs/10.14778/3407790.3407791)
+## From [SmartBench, VLDB 2020](https://dl.acm.org/doi/abs/10.14778/3407790.3407791)
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -246,9 +246,11 @@
 
 :::
 ::: {.column width="50%"}
+
 ![SmartBench data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/data_model/smartbench_user.png?raw=true)
-::: {.column width="50%"}
+
 ![SmartBench data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/data_model/smartbench_sensor.png?raw=true)
+
 :::
 ::::
 
