@@ -214,7 +214,9 @@
 
 - Total readings: counts the total number of readings (i.e., rows) for the given time period.
 
-- Create a sorted list of the aggregate consumption in each ten minute interval in the given time period. 
+- Total consumption: sums the resource consumption for the given time period.
+
+- Peak consumption: Create a sorted list of the aggregate consumption in each ten minute interval in the given time period. 
 
 - Top consumers: create a list of the distinct consumers, sorted by their total (monthly) consumption.
 
