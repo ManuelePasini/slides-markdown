@@ -291,7 +291,7 @@
 ## Data architectures
 
 * Wide-Column (?)
-* Grafo + Relazionale (PostgreSQL + PostGIS + Apache AGE)
+* Graph + Relational (PostgreSQL + PostGIS + Apache AGE)
 * Graph + Time Series (GraphDB + (ClickHouse || InfluxDB))
 * AeonG (?)
 
