@@ -214,11 +214,11 @@
 
 - Total readings: counts the total number of readings (i.e., rows) for the given time period.
 
-- Create a sorted list of the aggregate consumption in each ten minute interval in the given time period.  -> Create a sorted list of the average measurement (?) in each hour interval in the given time period.  
+- Create a sorted list of the aggregate consumption in each ten minute interval in the given time period. 
 
-- Top consumers: create a list of the distinct consumers, sorted by their total (monthly) consumption. -> Top agent: create a list of the distinct agents, sorted by their total (monthly) measurements.
+- Top consumers: create a list of the distinct consumers, sorted by their total (monthly) consumption.
 
-- Time of Usage Billing: calculate the monthly bill for each consumer based on the time of usage. -> Time of Task: calculate the monthly time spent doing tasks for each agent.
+- Time of Usage Billing: calculate the monthly bill for each consumer based on the time of usage.
 
 ## From [SmartBench, VLDB 2020](https://dl.acm.org/doi/abs/10.14778/3407790.3407791)
 
