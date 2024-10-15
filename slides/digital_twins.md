@@ -295,7 +295,7 @@
 - Extends PostgreSQL with graph semantics
 - No graph data model!
 - Wrapper upon PostgreSQL relational storage
-- A table for each node/vertex
+- A table for each node/vertex label
 
  ![Apachce AGE under the hood architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/apache_age/architecture.png?raw=true)
 
