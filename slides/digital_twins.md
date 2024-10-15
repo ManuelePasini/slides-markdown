@@ -359,7 +359,7 @@ Select those edges
 ## Spatial DBMS
 
 :::: {.columns}
-::: {.column width="60%"}
+::: {.column width="50%"}
 
 ### RDBMS
 
@@ -372,7 +372,7 @@ processing massive trajectory data
 
 
 :::
-::: {.column width="40%"}
+::: {.column width="50%"}
 
 ### No-SQL DBMS
 
@@ -391,14 +391,14 @@ processing massive trajectory data
 
 ### Hadoop based
 
-![Taxonmy of Hadoop based systems for spatio-temporal data](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/spatiotemp_dbms/hadoop.png?raw=true)
+![Taxonmy of Hadoop based systems for spatial data](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/spatiotemp_dbms/hadoop.png?raw=true)
 
 :::
 ::: {.column width="50%"}
 
 ### Spark-based
 
-![Taxonmy of Spark based systems for spatio-temporal data](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/spatiotemp_dbms/spark.png?raw=true)
+![Taxonmy of Spark based systems for spatial data](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/spatiotemp_dbms/spark.png?raw=true)
 
 :::
 ::::
