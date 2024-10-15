@@ -795,10 +795,10 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </ul></li>
 </ul>
 </section>
-<section id="spatio-temporal-dbms" class="slide level2">
-<h2>Spatio-Temporal DBMS</h2>
+<section id="spatial-dbms" class="slide level2">
+<h2>Spatial DBMS</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:60%;">
 <h3 id="rdbms">RDBMS</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -806,19 +806,27 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <figcaption>Taxonmy of RDBMS for spatio-temporal data</figcaption>
 </figure>
 </div>
-</div><div class="column" style="width:50%;">
+<ul>
+<li>Due to the I/O bottleneck, lack of parallelism and scalability, the performance of these systems deteriorated with the increasing volume of data.</li>
+<li>PostgreSQL -&gt; PostgreXL</li>
+<li>MobilityDB was developed as an extension of PostgreSQL/PostGIS, providing support for storing and querying moving objects data (trajectory). This support includes spatio-temporal data types, indexing techniques, and query operations. Recently, MobilityDB emerged as a distributed system by integrating with Citus for processing massive trajectory data</li>
+</ul>
+</div><div class="column" style="width:40%;">
 <h3 id="no-sql-dbms">No-SQL DBMS</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/spatiotemp_dbms/nosql.png?raw=true"></p>
-<figcaption>Taxonmy of RDBMS for spatio-temporal data</figcaption>
+<figcaption>Taxonmy of No-SQL DBMS for spatio-temporal data</figcaption>
 </figure>
 </div>
+<ul>
+<li>Currently, the spatial support of NoSQL databases lacks available spatial operations compared to spatial RDBMSs.</li>
+</ul>
 </div>
 </div>
 </section>
-<section id="big-data-spatio-temporal-processing-infrastructures" class="slide level2">
-<h2>Big data spatio-temporal processing infrastructures</h2>
+<section id="big-spatio-temporal-data-processing-infrastructures" class="slide level2">
+<h2>Big spatio-temporal data processing infrastructures</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3 id="hadoop-based">Hadoop based</h3>
