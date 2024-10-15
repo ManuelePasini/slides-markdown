@@ -356,26 +356,35 @@ Select those edges
       - DASK
       - RAPIDS
 
-## Spatio-Temporal DBMS
+## Spatial DBMS
 
 :::: {.columns}
-::: {.column width="50%"}
+::: {.column width="60%"}
 
 ### RDBMS
 
 ![Taxonmy of RDBMS for spatio-temporal data](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/spatiotemp_dbms/rdbms.png?raw=true)
 
+- Due to the I/O bottleneck, lack of parallelism and scalability, the performance of these systems deteriorated with the increasing volume of data.
+- PostgreSQL -> PostgreXL
+- MobilityDB was developed as an extension of PostgreSQL/PostGIS, providing support for storing and querying moving objects data (trajectory). This support includes spatio-temporal data types, indexing techniques, and query operations. Recently, MobilityDB emerged as a distributed system by integrating with Citus for
+processing massive trajectory data
+
+
 :::
-::: {.column width="50%"}
+::: {.column width="40%"}
 
 ### No-SQL DBMS
 
-![Taxonmy of RDBMS for spatio-temporal data](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/spatiotemp_dbms/nosql.png?raw=true)
+![Taxonmy of No-SQL DBMS for spatio-temporal data](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/spatiotemp_dbms/nosql.png?raw=true)
+
+ - Currently, the spatial support of NoSQL databases lacks available spatial operations compared to spatial RDBMSs.
 
 :::
 ::::
 
-## Big data spatio-temporal processing infrastructures
+
+## Big spatio-temporal data processing infrastructures
 
 :::: {.columns}
 ::: {.column width="50%"}
