@@ -383,6 +383,37 @@ processing massive trajectory data
 :::
 ::::
 
+## RDBMS vs NoSQL for Spatial Data
+
+### Performance Evaluation of MongoDB and PostgreSQL for Spatio-temporal Data (EDBT/ICDT Workshops, 2019)
+
+![Dataset schema](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/spatiotemp_dbms/mongo_postgre_dataset_schema.png?raw=true)
+
+
+:::: {.columns}
+::: {.column width="50%"}
+
+#### Spatio-temporal Queries
+
+- Find coordinates of different amount of vessels from 1/May/2016 - 31/July/2016 (entire time window) within the whole bounded area, Q1;
+- Find coordinates of vessels for different time windows  within the whole bounded area, Q2;
+- Find coordinates of vessels for different geographical polygons within the entire time window, Q3.
+
+:::
+::: {.column width="50%"}
+
+#### Dataset Size
+
+- MongoDB: 116 GB
+- PostgreSQL: 32 GB
+:::
+::::
+
+-  The reason for this behavior is that the data stored in MongoDB are in GeoJson format and each record consist of many extra characters and a unique auto created id called ObjectId. Thus, each record is significant bigger in size than it was in its original CSV format. On the other hand, in PostgreSQL the data ingested in database as CSV, with the addition of the_geom column that contains the POINT geometries of each latitude and longitude.
+
+#### Results
+
+ - The results show that PostgreSQL with the PostGIS extension, outperforms MongoDB in all queries.
 
 ## Big spatio-temporal data processing infrastructures
 
