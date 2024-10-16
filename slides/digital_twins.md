@@ -267,22 +267,22 @@
 
 ##### Spatio-Temporal
 
-- BerlinMOD: A benchmark for moving object databases, <b>VLDB Journal 2009</b>
-- Benchmarking moving object functionalities of DBMSs using real-world spatiotemporal workload, <b>International Conference on Mobile Data Management 2022</b>
-- Performance Evaluation of MongoDB and PostgreSQL for spatio-temporal data, <b>EDBT/ICDT Workshops 2019</b>
-- How to manage massive spatiotemporal dataset from stationary and non-stationary sensors in commercial DBMS?, <b>Knowledge and Information Systems 2024</b>
+- BerlinMOD: A benchmark for moving object databases, <b style="color: blue;">VLDB Journal 2009</b>
+- Benchmarking moving object functionalities of DBMSs using real-world spatiotemporal workload, <b style="color: blue;">International Conference on Mobile Data Management 2022</b>
+- Performance Evaluation of MongoDB and PostgreSQL for spatio-temporal data, <b style="color: blue;">EDBT/ICDT Workshops 2019</b>
+- How to manage massive spatiotemporal dataset from stationary and non-stationary sensors in commercial DBMS?, <b style="color: blue;">Knowledge and Information Systems 2024</b>
 
 ##### Time Series DB
 
-- TS-Benchmark: A Benchmark for Time Series Databases, <b>ICDE 2021</b>
-- SciTS: A Benchmark for Time-Series Databases in Scientific Experiments and Industrial Internet of Things,  <b>International Conference on Scientific and Statistical Database Management 2022 (SSDBM) </b>
-- TSM-Bench: Benchmarking Time Series Database Systems for Monitoring Applications, <b> VLDB 2023 </b>
+- TS-Benchmark: A Benchmark for Time Series Databases, <b style="color: blue;">ICDE 2021</b>
+- SciTS: A Benchmark for Time-Series Databases in Scientific Experiments and Industrial Internet of Things,  <b style="color: blue;">International Conference on Scientific and Statistical Database Management 2022 (SSDBM) </b>
+- TSM-Bench: Benchmarking Time Series Database Systems for Monitoring Applications, <b style="color: blue;"> VLDB 2023 </b>
 
 
 ##### Spatial DB
 
-- The SEQUOIA 2000 Storage Benchmark, <b>SIGMOD 1993</b>
-- Building a ScalableGee-SpatialDBMS: Technology, Implementation,and Evaluation <b>SIGMOD 1997</b>
+- The SEQUOIA 2000 Storage Benchmark, <b style="color: blue;">SIGMOD 1993</b>
+- Building a ScalableGee-SpatialDBMS: Technology, Implementation,and Evaluation <b style="color: blue;">SIGMOD 1997</b>
 
 
 
