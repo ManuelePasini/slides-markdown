@@ -282,16 +282,6 @@
 - Performance Evaluation of MongoDB and PostgreSQL for spatio-temporal data, <b style="color: blue;">EDBT/ICDT Workshops 2019</b>
 - How to manage massive spatiotemporal dataset from stationary and non-stationary sensors in commercial DBMS?, <b style="color: blue;">Knowledge and Information Systems 2024</b>
 
-
-
-## Data architectures
-
-* Wide-Column (?)
-* Graph + Relational (PostgreSQL + PostGIS + Apache AGE)
-* Graph + Time Series (GraphDB + (ClickHouse || InfluxDB))
-* AeonG (?)
-
-
 # PostGIS
 
 ## Spatial Functions
