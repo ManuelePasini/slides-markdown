@@ -497,9 +497,9 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
 
 ### Other Research Trends
 
-##### ML for sharding and query optimization
+##### ML for query optimization
 
-- Spatial Query Optimization With Learning, VLD 2024
+- Spatial Query Optimization With Learning, VLDB 2024
 
 ##### Indexing
 
