@@ -694,6 +694,27 @@
 </div>
 </div>
 </section>
+<section id="other-benchmarks" class="slide level2">
+<h2>Other benchmarks</h2>
+<h5 id="spatio-temporal">Spatio-Temporal</h5>
+<ul>
+<li>BerlinMOD: A benchmark for moving object databases, <b>VLDB Journal 2009</b></li>
+<li>Benchmarking moving object functionalities of DBMSs using real-world spatiotemporal workload, <b>International Conference on Mobile Data Management 2022</b></li>
+<li>Performance Evaluation of MongoDB and PostgreSQL for spatio-temporal data, <b>EDBT/ICDT Workshops 2019</b></li>
+<li>How to manage massive spatiotemporal dataset from stationary and non-stationary sensors in commercial DBMS?, <b>Knowledge and Information Systems 2024</b></li>
+</ul>
+<h5 id="time-series-db">Time Series DB</h5>
+<ul>
+<li>TS-Benchmark: A Benchmark for Time Series Databases, <b>ICDE 2021</b></li>
+<li>SciTS: A Benchmark for Time-Series Databases in Scientific Experiments and Industrial Internet of Things, <b>International Conference on Scientific and Statistical Database Management 2022 (SSDBM) </b></li>
+<li>TSM-Bench: Benchmarking Time Series Database Systems for Monitoring Applications, <b> VLDB 2023 </b></li>
+</ul>
+<h5 id="spatial-db">Spatial DB</h5>
+<ul>
+<li>The SEQUOIA 2000 Storage Benchmark, <b>SIGMOD 1993</b></li>
+<li>Building a ScalableGee-SpatialDBMS: Technology, Implementation,and Evaluation <b>SIGMOD 1997</b></li>
+</ul>
+</section>
 <section id="data-architectures" class="slide level2">
 <h2>Data architectures</h2>
 <ul>
@@ -770,13 +791,18 @@ $$) as (e agtype);</code></pre>
         MATCH (V)-[R]-(V2)
         RETURN V,R,V2
 $$) as (V agtype, R agtype, V2 agtype);</code></pre>
+</section></section>
+<section>
+<section id="spatio-temporal-dbms" class="title-slide slide level1 center">
+<h1>Spatio Temporal DBMS</h1>
+
 </section>
 <section id="a-survey-on-spatio-temporal-data-analytics-systems-acm-surveys-2022" class="slide level2">
-<h2>A Survey on Spatio-temporal Data Analytics Systems (ACM Surveys, 2022)</h2>
+<h2><a href="https://dl.acm.org/doi/full/10.1145/3507904">A Survey on Spatio-temporal Data Analytics Systems, ACM Surveys 2022</a></h2>
 <ul>
-<li>Categorizes spatio-temporal dmbs in groups:
+<li>Categorizes spatio-temporal DBMSs in groups:
 <ul>
-<li>Spatio-temporal DBMS:
+<li>Spatial DBMS:
 <ul>
 <li>RDBMS</li>
 <li>No-SQL DBMS</li>
@@ -808,7 +834,7 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </div>
 <ul>
 <li>Due to the I/O bottleneck, lack of parallelism and scalability, the performance of these systems deteriorated with the increasing volume of data.</li>
-<li>PostgreSQL -&gt; PostgreXL</li>
+<li>PostgreSQL -&gt; PostgresXL</li>
 <li>MobilityDB was developed as an extension of PostgreSQL/PostGIS, providing support for storing and querying moving objects data (trajectory). This support includes spatio-temporal data types, indexing techniques, and query operations. Recently, MobilityDB emerged as a distributed system by integrating with Citus for processing massive trajectory data</li>
 </ul>
 </div><div class="column" style="width:50%;">
@@ -827,28 +853,31 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </section>
 <section id="rdbms-vs-nosql-for-spatial-data" class="slide level2">
 <h2>RDBMS vs NoSQL for Spatial Data</h2>
-<h3 id="performance-evaluation-of-mongodb-and-postgresql-for-spatio-temporal-data-edbticdt-workshops-2019">Performance Evaluation of MongoDB and PostgreSQL for Spatio-temporal Data (EDBT/ICDT Workshops, 2019)</h3>
-
-<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/spatiotemp_dbms/mongo_postgre_dataset_schema.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Dataset schema</p><div class="columns">
-<div class="column" style="width:50%;">
-<h4 id="spatio-temporal-queries">Spatio-temporal Queries</h4>
+<p><a href="https://ceur-ws.org/Vol-2322/BMDA_3.pdf">Performance Evaluation of MongoDB and PostgreSQL for Spatio-temporal Data, EDBT/ICDT Workshops 2019</a></p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<h5 id="dataset-size">Dataset Size</h5>
+<ul>
+<li>11 GB, 43 288 vessels, 146.491.511 records</li>
+<li>MongoDB: 116 GB</li>
+<li>PostgreSQL: 32 GB</li>
+</ul>
+</div><div class="column" style="width:35%;">
+<h5 id="dataset-schema">Dataset Schema</h5>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/spatiotemp_dbms/mongo_postgre_dataset_schema.png?raw=true"></p>
+</div><div class="column" style="width:35%;">
+<h5 id="spatio-temporal-queries">Spatio-temporal Queries</h5>
 <ul>
 <li>Find coordinates of different amount of vessels from 1/May/2016 - 31/July/2016 (entire time window) within the whole bounded area, Q1;</li>
 <li>Find coordinates of vessels for different time windows within the whole bounded area, Q2;</li>
 <li>Find coordinates of vessels for different geographical polygons within the entire time window, Q3.</li>
 </ul>
-</div><div class="column" style="width:50%;">
-<h4 id="dataset-size">Dataset Size</h4>
-<ul>
-<li>MongoDB: 116 GB</li>
-<li>PostgreSQL: 32 GB</li>
-</ul>
 </div>
 </div>
 <ul>
-<li>The reason for this behavior is that the data stored in MongoDB are in GeoJson format and each record consist of many extra characters and a unique auto created id called ObjectId. Thus, each record is significant bigger in size than it was in its original CSV format. On the other hand, in PostgreSQL the data ingested in database as CSV, with the addition of the_geom column that contains the POINT geometries of each latitude and longitude.</li>
+<li>MongoDB stores data in GeoJson format, each record has many extra characters + unique auto created ObjectId. PostgreSQL ingests data as CSV, with adding the_geom column that contains the POINT geometries for latitude and longitude.</li>
 </ul>
-<h4 id="results">Results</h4>
+<h5 id="results">Results</h5>
 <ul>
 <li>The results show that PostgreSQL with the PostGIS extension, outperforms MongoDB in all queries.</li>
 </ul>
@@ -864,6 +893,12 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <figcaption>Taxonmy of Hadoop based systems for spatial data</figcaption>
 </figure>
 </div>
+<ul>
+<li>Due to the lack of spatio-temporal data types, partitioning, and indexing techniques, Hadoop-GIS &amp; SpatialHadoop suffer querying spatio-temporal datasets</li>
+<li>ST-Hadoop was developed by considering attributes of discrete spatio-temporal point data, not trajectory data. So data might be wrong-sharded when indexed.</li>
+<li>Summit is an extension of ST-Hadoop to include data types, partitioning and indexing techniques, and operations, for processing trajectory data.</li>
+<li>Bakli et al.&nbsp;[27] have proposed HadoopTrajectory, which adds a diverse set of data types and operators into the core of Hadoop to store and process trajectory data.</li>
+</ul>
 </div><div class="column" style="width:50%;">
 <h3 id="spark-based">Spark-based</h3>
 <div class="quarto-figure quarto-figure-center">
@@ -872,8 +907,47 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <figcaption>Taxonmy of Spark based systems for spatial data</figcaption>
 </figure>
 </div>
+<ul>
+<li>First five spatial data processing solutions are not fully compliant with the ISO standard and OGC specifications.</li>
+<li>STARK integrates spatio-temporal support to Spark RDDs</li>
+<li>DiStRDF is a distributed system for processing spatio-temporal RDF data; however, these last two focus on discrete data points and not trajectories.</li>
+<li>TrajSpark does not have any support for SQL-like queries.</li>
+<li>UITraMan has added an off-heap key-value store, Chronicle Map</li>
+<li>Among TrajSpark, DITA, and UITraMan, only TrajSpark alleviates the overhead of repartitioning the whole dataset when a new batch of dataset arrives. Thus, TrajSpark achieves near real-time trajectory processing capability. Besides, this newbatch of data is loaded as RDDs in Spark, which are immutable, and any updates on RDD create a new RDD, which is costly.</li>
+<li>Dragoon [93] is a hybrid system for processing both historical (offline) and streaming (online) trajectories. The offline module of Dragoon is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way that it works for both historical and streaming trajectories.</li>
+<li><b> All these systems are for processing vector spatial and spatio-temporal data. None of these systems has support for raster data except Apache Sedona. </b></li>
+<li>Beast supports both vector and raster data with multidimensional data types and partition and index structures.</li>
+</ul>
 </div>
 </div>
+</section>
+<section id="big-spatio-temporal-data-processing-infrastructures-1" class="slide level2">
+<h2>Big spatio-temporal data processing infrastructures</h2>
+<h3 id="nosql-based">NoSQL based</h3>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/spatiotemp_dbms/nosql_big.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Taxonmy of NoSql based big systems for spatial data</p><ul>
+<li>GeoMesa linearizes the keyspace by transforming multi-dimensional data (location, timestamp) into 1D keys using space-filling curves.</li>
+<li>JUST incorporates leverages HBase, GeoMesa, and Spark. Introduces two new indexing techniques, Z2T and XZ2T and efficient compression mechanism that improves the query performance significantly.</li>
+<li>TrajMesa, horizontal storage schema (H-Store) is proposed. Allowing to store an entire trajectory in one-row with compression.</li>
+</ul>
+</section>
+<section id="recent-literature" class="slide level2">
+<h2>Recent literature</h2>
+<ul>
+<li>SpaceTimeDB (commercial, (?))</li>
+<li>Springbok, ICDE 2024</li>
+<li>Cupid, Future Generation Computer Systems 2024</li>
+<li>TMan, ICDE 2024</li>
+</ul>
+<h3 id="other-research-trends">Other Research Trends</h3>
+<h5 id="ml-for-sharding-and-query-optimization">ML for sharding and query optimization</h5>
+<ul>
+<li>Spatial Query Optimization With Learning, VLD 2024</li>
+</ul>
+<h5 id="indexing-1">Indexing</h5>
+<ul>
+<li>A Time-Identified R-Tree: A Workload-Controllable Dynamic Spatio-Temporal Index Scheme for Streaming Processing, International Journal of Geo-Information 2024</li>
+</ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
