@@ -204,7 +204,6 @@
 - **Dimensions**
   - Spatial
   - Temporal
-  - Frequency (?)
   
 - **Workload**:
   - Operational
