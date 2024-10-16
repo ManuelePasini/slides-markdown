@@ -491,7 +491,7 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
 
 - SpaceTimeDB (commercial, (?))
 - Springbok, ICDE 2024
-- Cupid, Future Generation Computer Systems 2024
+- CUPID, Future Generation Computer Systems 2024
 - TMan, ICDE 2024
 
 ### Other Research Trends
