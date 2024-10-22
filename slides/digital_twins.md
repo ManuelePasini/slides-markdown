@@ -493,3 +493,22 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
 ##### Indexing
 
 - A Time-Identified R-Tree: A Workload-Controllable Dynamic Spatio-Temporal Index Scheme for Streaming Processing, International Journal of Geo-Information 2024
+
+
+## A case study for Digital Twins
+
+- Graph + TimeSeries (Apache AGE + PostgreSQL + PostGIS + Timescale)
+- MobilityDB (PostgreSQL + PostGIS + trajectory data support)
+- Beast 
+- CUPID
+- Springbok
+
+## Case study 0 - Apache Age + TimescaleDB + PostGIS
+
+### Emerged considerations
+ - Given a FIWARE document, what's a Property and what's an Edge?
+    - Should the graph enforce some kind of schema?  E.g. metamodel
+    - If not, Do I have to check wether a FIWARE key-value pair links to a node?
+      - But then, I have to check all properties, understand if its an edge or a property, remove it from the entity if it's an edge, check if the edge destination already exists and if it does not, create it and link it to the source node-
+    - What about device composition? e.g. moisture grid
+ - What about Ids? Apache AGE uses its own custom IDs that <b> cannot </b> be disabled.
