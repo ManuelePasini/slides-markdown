@@ -938,6 +938,32 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <ul>
 <li>A Time-Identified R-Tree: A Workload-Controllable Dynamic Spatio-Temporal Index Scheme for Streaming Processing, International Journal of Geo-Information 2024</li>
 </ul>
+</section>
+<section id="a-case-study-for-digital-twins" class="slide level2">
+<h2>A case study for Digital Twins</h2>
+<ul>
+<li>Graph + TimeSeries (Apache AGE + PostgreSQL + PostGIS + Timescale)</li>
+<li>MobilityDB (PostgreSQL + PostGIS + trajectory data support)</li>
+<li>Beast</li>
+<li>CUPID</li>
+<li>Springbok</li>
+</ul>
+</section>
+<section id="case-study-0---apache-age-timescaledb-postgis" class="slide level2">
+<h2>Case study 0 - Apache Age + TimescaleDB + PostGIS</h2>
+<h3 id="emerged-considerations">Emerged considerations</h3>
+<ul>
+<li>Given a FIWARE document, what’s a Property and what’s an Edge?
+<ul>
+<li>Should the graph enforce some kind of schema? E.g. metamodel</li>
+<li>If not, Do I have to check wether a FIWARE key-value pair links to a node?
+<ul>
+<li>But then, I have to check all properties, understand if its an edge or a property, remove it from the entity if it’s an edge, check if the edge destination already exists and if it does not, create it and link it to the source node-</li>
+</ul></li>
+<li>What about device composition? e.g.&nbsp;moisture grid</li>
+</ul></li>
+<li>What about Ids? Apache AGE uses its own custom IDs that <b> cannot </b> be disabled.</li>
+</ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
