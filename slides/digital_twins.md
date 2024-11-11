@@ -532,11 +532,12 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
 - Builds a connection to a Apache Age + PostGIS + Timescale DBMSs.
 - Processes JSON entities following the NGSI schema.
 
- #### Entity required schema
+ ##### Entity required schema
+
  - "id": follows the NGSI standard (urn-ngsi-[...]) and define the existence of an entity in the graph
  - "type": defines the label of the node in the graph.
 
-#### Entity optional schema
+##### Entity optional schema
 
 - "hasDevice": defines device composition. Each value of this key needs to be a json representing an entity.
 
@@ -544,13 +545,14 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
 - Each entity key that has an ID as a value becomes an edge.
 - IDs follow the NGSI standard.
 
-#### Parsing into measurement
+##### Parsing into measurement
 
 Measurement = TimescaleTable(timestamp, device_id, controlledProperty, value, raw_value)
 
 - A mapping can defined for each entity "type": it's a Python functions that extracts the measurements from a JSON entity with the Measurement table structure
 
 
+## Random considerations (constantly updated)
 
 Se la property è una e ha un array di valori, come la storicizzo? e.g. status del robot, la mia chiave è timestamp,device,property...
 
