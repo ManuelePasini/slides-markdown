@@ -951,19 +951,98 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </section>
 <section id="case-study-0---apache-age-timescaledb-postgis" class="slide level2">
 <h2>Case study 0 - Apache Age + TimescaleDB + PostGIS</h2>
-<h3 id="emerged-considerations">Emerged considerations</h3>
+<p>()[] ### Emerged considerations - Given a FIWARE document, what’s a Property and what’s an Edge? - Should the graph enforce some kind of schema? E.g. metamodel - If not, Do I have to check wether a FIWARE key-value pair links to a node? - But then, I have to check all properties, understand if its an edge or a property, remove it from the entity if it’s an edge, check if the edge destination already exists and if it does not, create it and link it to the source node- - What about device composition? e.g.&nbsp;moisture grid - What about Ids? Apache AGE uses its own custom IDs that <b> cannot </b> be disabled - <b> What happens when a new measurements comes by?</b> - I have to check if such node exists, if not, it’s a new edge, if it is - An entity comes in: there’s already a node with such id; is it an update? Is it a measurement?</p>
+<p>### Modellazioni Measurement</p>
 <ul>
-<li>Given a FIWARE document, what’s a Property and what’s an Edge?
-<ul>
-<li>Should the graph enforce some kind of schema? E.g. metamodel</li>
-<li>If not, Do I have to check wether a FIWARE key-value pair links to a node?
-<ul>
-<li>But then, I have to check all properties, understand if its an edge or a property, remove it from the entity if it’s an edge, check if the edge destination already exists and if it does not, create it and link it to the source node-</li>
-</ul></li>
-<li>What about device composition? e.g.&nbsp;moisture grid</li>
-</ul></li>
-<li>What about Ids? Apache AGE uses its own custom IDs that <b> cannot </b> be disabled.</li>
+<li>AgriRobot non è un device, come capisco se qualcosa ha dei measurement da storicizzare?</li>
+<li>Agri robot non storicizza le controlled property, come faccio a capire cosa devo storicizzare?</li>
+<li>Cosa succede sul grafo se il nodo esiste già? Lo aggiorno, ma in che modo? Sovrascrivo il vecchio? Aggiungo le diff? E le diff in negativo vanno tolte? Cosa succede ai suoi archi? Se nella nuova versione non vedo un arco?</li>
 </ul>
+<p>## Problemi sui dati</p>
+<ul>
+<li>I dati dei pinotech hanno il dateObserved sbagliato (“Z” alla fine della data)</li>
+<li>Per creare un arco, devo prima avere entrambi i nodi altrimenti non funzia</li>
+</ul>
+</section>
+<section id="age-middleware" class="slide level2">
+<h2>Age Middleware</h2>
+<ul>
+<li>Builds a connection to a Apache Age + PostGIS + Timescale DBMSs.</li>
+<li>Processes JSON entities following the NGSI schema.</li>
+</ul>
+<p>#### Entity required schema - “id”: follows the NGSI standard (urn-ngsi-[…]) and define the existence of an entity in the graph - “type”: defines the label of the node in the graph.</p>
+<h4 id="entity-optional-schema">Entity optional schema</h4>
+<ul>
+<li><p>“hasDevice”: defines device composition. Each value of this key needs to be a json representing an entity.</p></li>
+<li><p>Each entity gets mapped into the graph as a node.</p></li>
+<li><p>Each entity key that has an ID as a value becomes an edge.</p></li>
+<li><p>IDs follow the NGSI standard.</p></li>
+</ul>
+<h4 id="parsing-into-measurement">Parsing into measurement</h4>
+<p>Measurement = TimescaleTable(timestamp, device_id, controlledProperty, value, raw_value)</p>
+<ul>
+<li>A mapping can defined for each entity “type”: it’s a Python functions that extracts the measurements from a JSON entity with the Measurement table structure</li>
+</ul>
+<p>Se la property è una e ha un array di valori, come la storicizzo? e.g.&nbsp;status del robot, la mia chiave è timestamp,device,property…</p>
+<p>Il protocollo per estrarre i measurement di un device, vale anche per i suoi subdevice?</p>
+<p>CREATE EXTENSION IF NOT EXISTS age; CREATE EXTENSION IF NOT EXISTS postgis; LOAD ‘age’;</p>
+<p>SET search_path = ag_catalog, “$user”, public;</p>
+<p>SELECT postgis_full_version();</p>
+<p>SELECT * FROM cypher(‘watering_adf_graph’, <span class="math display">\[
+    MATCH (v:test_node)
+    DELETE v
+\]</span>) as (v agtype);</p>
+<p>SELECT * FROM cypher(‘watering_adf_graph’, <span class="math display">\[
+    MATCH (v)
+    DETACH DELETE v
+\]</span>) as (v agtype);</p>
+<p>SELECT * FROM ag_catalog.drop_graph(‘watering_adf_graph’, cascade := true);</p>
+<p>CREATE TABLE Measurements( timestamp timestamp NOT NULL, device_id text NOT NULL, controlledProperty text NOT NULL, location geometry, value float NOT NULL )</p>
+<p>SELECT create_hypertable(‘Measurements’, ‘timestamp’); SELECT * from measurements INSERT INTO ag_catalog.measurements VALUES (to_timestamp(1717541105.0), ‘urn:ngsi-ld:Device:unibo:f7b82d1d75e79188f5efc73c7a6d34f6’, ‘wind_gust_max’, ST_GeomFromGeoJSON(‘{“type”: “Point”, “coordinates”: [11.798998, 44.235024]}’), 0)</p>
+<p>SELECT * FROM cypher(‘watering_adf_graph’, <span class="math display">\[
+    MATCH (n)
+    WHERE n.id = 'urn:ngsi-ld:Device:unibo:ace4b1adb69da4c71c3e02e6509e859e'
+    DETACH DELETE n
+\]</span>) AS (n agtype);</p>
+<p>SELECT * FROM cypher(‘watering_adf_graph’, <span class="math display">\[
+    MATCH (n:Device)
+    RETURN n.location.coordinates[0]
+\]</span>) AS (n agtype);</p>
+<p>create table spatial_measurements ( timestamp timestamp DEFAULT CURRENT_TIMESTAMP, device_id text, controlled_property text, location geometry, value float );</p>
+<p>CREATE INDEX geom_index ON spatial_measurements USING GIST (location);</p>
+<p>SELECT * FROM cypher(‘watering_adf_graph’, <span class="math display">\[
+                MATCH (n:Device {id: 'urn:ngsi-ld:Device:unibo:a316ef4f55a925842cca39af7280f4d8'})
+                SET n.location = st_geomfromgeojson('{"type": "Point", "coordinates": [11.45345, 44.235024]}')
+                RETURN n
+                \]</span>) AS (ne agtype);</p>
+<p>SELECT * FROM cypher(‘watering_adf_graph’, <span class="math display">\[
+                CREATE (n:Device {id: 'urn:ngsi-ld:Device:unibo:a316ef4f55a925842cca39af7280f4d8',
+                type: 'Device',
+                belongsTo: 'urn:ngsi-ld:AgriParcel:unibo:647c399b2188ff484f7416389f94885c',
+                controlledProperty: ['dripper'],
+                dateCreated: '2024-10-17T07:00:02',
+                dateObserved: '2024-10-15T12:45:09',
+                deviceCategory: ['sensor'],
+                domain: 'unibo',
+                location: st_geomfromtext('{"type": "Point", "coordinates": [11.798998, 44.235024]}'),
+                name: 'Dripper Fondo Errano 2024 T0 T0',
+                namespace: 'unibo.watering.',
+                unixtimestampCreated: 1729141203,
+                unixtimestampModified: 1728989109,
+                value: [0]})
+                RETURN n
+                \]</span>) AS (ne agtype);</p>
+<p>INSERT INTO ag_catalog.measurements VALUES (to_timestamp(1728989109.0), ‘urn:ngsi-ld:Device:unibo:a316ef4f55a925842cca39af7280f4d8’, ‘dripper’, st_geomfromtext(‘POINT(11.798998 44.235024)’), 0)</p>
+<p>SELECT * FROM cypher(‘watering_adf_graph’, <span class="math display">\[  
+MATCH (n:Device {id: 'urn:ngsi-ld:Device:unibo:a316ef4f55a925842cca39af7280f4d8'})
+SET n.id = 'urn:ngsi-ld:Device:unibo:a316ef4f55a925842cca39af7280f4d8',
+n.type = 'Device', n.belongsTo = 'urn:ngsi-ld:AgriParcel:unibo:647c399b2188ff484f7416389f94885c',
+n.controlledProperty = ['dripper'],
+n.dateCreated = '2024-10-17T07:00:02',
+n.dateObserved = '2024-10-15T12:45:09',
+n.deviceCategory = ['sensor'],
+n.domain = 'unibo',
+n.location = st_geomfromgeojson('{"type": "Point", "coordinates": [11.798998, 44.235024]}')::geometry, n.name = 'Dripper Fondo Errano 2024 T0 T0', n.namespace = 'unibo.watering.', n.unixtimestampCreated = 1729141203, n.unixtimestampModified = 1728989109, n.value = [0]                 RETURN n                 \]</span>) AS (n agtype);</p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
