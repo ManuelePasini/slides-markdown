@@ -504,7 +504,7 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
 - Springbok
 
 ## Case study 0 - Apache Age + TimescaleDB + PostGIS
-()[]
+
 ### Emerged considerations
  - Given a FIWARE document, what's a Property and what's an Edge?
     - Should the graph enforce some kind of schema?  E.g. metamodel
@@ -516,13 +516,13 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
     - I have to check if such node exists, if not, it's a new edge, if it is
  - An entity comes in: there's already a node with such id; is it an update? Is it a measurement?
 
- ### Modellazioni Measurement
+### Modellazioni Measurement
 
  - AgriRobot non è un device, come capisco se qualcosa ha dei measurement da storicizzare?
  - Agri robot non storicizza le controlled property, come faccio a capire cosa devo storicizzare?
  - Cosa succede sul grafo se il nodo esiste già? Lo aggiorno, ma in che modo? Sovrascrivo il vecchio? Aggiungo le diff? E le diff in negativo vanno tolte? Cosa succede ai suoi archi? Se nella nuova versione non vedo un arco?
 
- ## Problemi sui dati
+### Problemi sui dati
 
  - I dati dei pinotech hanno il dateObserved sbagliato ("Z" alla fine della data)
  - Per creare un arco, devo prima avere entrambi i nodi altrimenti non funzia
