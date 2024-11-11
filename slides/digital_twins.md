@@ -542,6 +542,7 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
   - "hasDevice": defines device composition. Each value of this key needs to be a json representing an entity.
 
 ##### Building the graph
+
 - Each distinct entity (unique "id") gets mapped into the graph as a node.
 - Each entity key that has an ID as a value becomes an edge.
 - If an entity with the given "id" exists, update such entity in the graph
