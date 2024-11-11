@@ -951,14 +951,31 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </section>
 <section id="case-study-0---apache-age-timescaledb-postgis" class="slide level2">
 <h2>Case study 0 - Apache Age + TimescaleDB + PostGIS</h2>
-<p>()[] ### Emerged considerations - Given a FIWARE document, what’s a Property and what’s an Edge? - Should the graph enforce some kind of schema? E.g. metamodel - If not, Do I have to check wether a FIWARE key-value pair links to a node? - But then, I have to check all properties, understand if its an edge or a property, remove it from the entity if it’s an edge, check if the edge destination already exists and if it does not, create it and link it to the source node- - What about device composition? e.g.&nbsp;moisture grid - What about Ids? Apache AGE uses its own custom IDs that <b> cannot </b> be disabled - <b> What happens when a new measurements comes by?</b> - I have to check if such node exists, if not, it’s a new edge, if it is - An entity comes in: there’s already a node with such id; is it an update? Is it a measurement?</p>
-<p>### Modellazioni Measurement</p>
+<h3 id="emerged-considerations">Emerged considerations</h3>
+<ul>
+<li>Given a FIWARE document, what’s a Property and what’s an Edge?
+<ul>
+<li>Should the graph enforce some kind of schema? E.g. metamodel</li>
+<li>If not, Do I have to check wether a FIWARE key-value pair links to a node?
+<ul>
+<li>But then, I have to check all properties, understand if its an edge or a property, remove it from the entity if it’s an edge, check if the edge destination already exists and if it does not, create it and link it to the source node-</li>
+</ul></li>
+<li>What about device composition? e.g.&nbsp;moisture grid</li>
+</ul></li>
+<li>What about Ids? Apache AGE uses its own custom IDs that <b> cannot </b> be disabled</li>
+<li><b> What happens when a new measurements comes by?</b>
+<ul>
+<li>I have to check if such node exists, if not, it’s a new edge, if it is</li>
+</ul></li>
+<li>An entity comes in: there’s already a node with such id; is it an update? Is it a measurement?</li>
+</ul>
+<h3 id="modellazioni-measurement">Modellazioni Measurement</h3>
 <ul>
 <li>AgriRobot non è un device, come capisco se qualcosa ha dei measurement da storicizzare?</li>
 <li>Agri robot non storicizza le controlled property, come faccio a capire cosa devo storicizzare?</li>
 <li>Cosa succede sul grafo se il nodo esiste già? Lo aggiorno, ma in che modo? Sovrascrivo il vecchio? Aggiungo le diff? E le diff in negativo vanno tolte? Cosa succede ai suoi archi? Se nella nuova versione non vedo un arco?</li>
 </ul>
-<p>## Problemi sui dati</p>
+<h3 id="problemi-sui-dati">Problemi sui dati</h3>
 <ul>
 <li>I dati dei pinotech hanno il dateObserved sbagliato (“Z” alla fine della data)</li>
 <li>Per creare un arco, devo prima avere entrambi i nodi altrimenti non funzia</li>
