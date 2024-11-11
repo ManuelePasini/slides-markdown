@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/ManuelePasini/slides-markdown/compare/1.1.0...1.2.0) (2024-10-22)
+
+
+### Features
+
+* added some considerations to Apache Age ([f3d22ce](https://github.com/ManuelePasini/slides-markdown/commit/f3d22ce3b2412bcf46a7c4cb74a77f91807b053e))
+
 ## [1.1.0](https://github.com/ManuelePasini/slides-markdown/compare/1.0.0...1.1.0) (2024-09-03)
 
 
