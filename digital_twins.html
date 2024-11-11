@@ -970,19 +970,26 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li>Builds a connection to a Apache Age + PostGIS + Timescale DBMSs.</li>
 <li>Processes JSON entities following the NGSI schema.</li>
 </ul>
-<p>#### Entity required schema - “id”: follows the NGSI standard (urn-ngsi-[…]) and define the existence of an entity in the graph - “type”: defines the label of the node in the graph.</p>
-<h4 id="entity-optional-schema">Entity optional schema</h4>
+<p>##### Entity required schema</p>
+<ul>
+<li>“id”: follows the NGSI standard (urn-ngsi-[…]) and define the existence of an entity in the graph</li>
+<li>“type”: defines the label of the node in the graph.</li>
+</ul>
+<h5 id="entity-optional-schema">Entity optional schema</h5>
 <ul>
 <li><p>“hasDevice”: defines device composition. Each value of this key needs to be a json representing an entity.</p></li>
 <li><p>Each entity gets mapped into the graph as a node.</p></li>
 <li><p>Each entity key that has an ID as a value becomes an edge.</p></li>
 <li><p>IDs follow the NGSI standard.</p></li>
 </ul>
-<h4 id="parsing-into-measurement">Parsing into measurement</h4>
+<h5 id="parsing-into-measurement">Parsing into measurement</h5>
 <p>Measurement = TimescaleTable(timestamp, device_id, controlledProperty, value, raw_value)</p>
 <ul>
 <li>A mapping can defined for each entity “type”: it’s a Python functions that extracts the measurements from a JSON entity with the Measurement table structure</li>
 </ul>
+</section>
+<section id="random-considerations-constantly-updated" class="slide level2">
+<h2>Random considerations (constantly updated)</h2>
 <p>Se la property è una e ha un array di valori, come la storicizzo? e.g.&nbsp;status del robot, la mia chiave è timestamp,device,property…</p>
 <p>Il protocollo per estrarre i measurement di un device, vale anche per i suoi subdevice?</p>
 <p>CREATE EXTENSION IF NOT EXISTS age; CREATE EXTENSION IF NOT EXISTS postgis; LOAD ‘age’;</p>
