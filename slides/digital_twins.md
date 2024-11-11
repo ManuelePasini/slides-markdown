@@ -532,7 +532,7 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
 - Builds a connection to a Apache Age + PostGIS + Timescale DBMSs.
 - Processes JSON entities following the NGSI schema.
 
- ##### Entity required schema
+##### Entity required schema
 
  - "id": follows the NGSI standard (urn-ngsi-[...]) and define the existence of an entity in the graph
  - "type": defines the label of the node in the graph.
