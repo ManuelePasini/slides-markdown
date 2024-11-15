@@ -559,7 +559,19 @@ CREATE EXTENSION IF NOT EXISTS age;
 CREATE EXTENSION IF NOT EXISTS postgis;
 LOAD 'age';
 SET search_path = ag_catalog, “$user”, public;
+
+CREATE TABLE measurements(
+	timestamp timestamp,
+	device_id text,
+	controlled_property text,
+	location geometry,
+	value float,
+	raw_value text
+)
 SELECT create_hypertable('measurements', 'timestamp');
+
+ALTER TABLE measurement
+ADD PRIMARY KEY(timestamp, device_id, controlled_property)
 
 CREATE INDEX location_index
   ON measurements
