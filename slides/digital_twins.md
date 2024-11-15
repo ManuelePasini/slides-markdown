@@ -506,8 +506,8 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
 ## Case study 0 - Apache Age + TimescaleDB + PostGIS
 
 ### Emerged considerations
- - Given a FIWARE document, what's a Property and what's an Edge?
-    - Should the graph enforce some kind of schema?  E.g. metamodel
+ - Given a FIWARE document, what's a Property and what's an Edge? - It's an edge if it links to an NGSI URN
+    - Should the graph enforce some kind of schema?  E.g. metamodel - I beleve so but dunno
     - If not, Do I have to check wether a FIWARE key-value pair links to a node?
       - But then, I have to check all properties, understand if its an edge or a property, remove it from the entity if it's an edge, check if the edge destination already exists and if it does not, create it and link it to the source node-
     - What about device composition? e.g. moisture grid
@@ -553,8 +553,23 @@ Measurement = TimescaleTable(timestamp, device_id, controlledProperty, value, ra
 
 - A mapping can defined for each entity "type": it's a Python functions that extracts the measurements from a JSON entity with the Measurement table structure
 
+## Environment setup
 
-## Random considerations (constantly updated)
+CREATE EXTENSION IF NOT EXISTS age;
+CREATE EXTENSION IF NOT EXISTS postgis;
+LOAD 'age';
+SET search_path = ag_catalog, “$user”, public;
+SELECT create_hypertable('measurements', 'timestamp');
+
+CREATE INDEX location_index
+  ON measurements
+  USING GIST (timestamp);
+
+## Random considerations
+
+-
+
+# Random considerations (constantly updated)
 
 Se la property è una e ha un array di valori, come la storicizzo? e.g. status del robot, la mia chiave è timestamp,device,property...
 
