@@ -579,7 +579,11 @@ CREATE INDEX location_index
 
 ## Random considerations
 
--
+- Si Cypher dentro SQL, no SQL dentro Cypher
+- Comunque, Cypher lavora con json/agtype, SQL con relazionale -> mismatch!
+- Devi sempre sapere cosa è sopra e cosa è sotto
+- La modellazione non è uniforme, ogni interazione tra i due modelli è ad-hoc: data una query, devo sempre capire se devo entrare dai meas o dal grafo e trovare il punto d'incontro (che è un join solitamente).
+- Se parti dal grafo arrivi ad un punto in cui joini sul relazionale, va fatta attenzione alla query su grafo in quanto è molto facile ritorni un insieme di valori ridondanti che fanno esplodere il tempo computazionale
 
 # Random considerations (constantly updated)
 
