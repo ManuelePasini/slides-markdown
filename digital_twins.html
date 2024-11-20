@@ -1018,7 +1018,11 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <section id="random-considerations" class="slide level2">
 <h2>Random considerations</h2>
 <ul>
-<li></li>
+<li>Si Cypher dentro SQL, no SQL dentro Cypher</li>
+<li>Comunque, Cypher lavora con json/agtype, SQL con relazionale -&gt; mismatch!</li>
+<li>Devi sempre sapere cosa è sopra e cosa è sotto</li>
+<li>La modellazione non è uniforme, ogni interazione tra i due modelli è ad-hoc: data una query, devo sempre capire se devo entrare dai meas o dal grafo e trovare il punto d’incontro (che è un join solitamente).</li>
+<li>Se parti dal grafo arrivi ad un punto in cui joini sul relazionale, va fatta attenzione alla query su grafo in quanto è molto facile ritorni un insieme di valori ridondanti che fanno esplodere il tempo computazionale</li>
 </ul>
 </section></section>
 <section id="random-considerations-constantly-updated" class="title-slide slide level1 center">
