@@ -600,7 +600,7 @@ Tre cause delle problematiche:
 
 - Based on hypertables
   - Logical table
-  - Organizes the data in chunks (of a predefined time range) based on some column of the table 
+  - Organizes the data in chunks (of a predefined time range) based on some time/bigint column of the table
 
 ### Query language
 
@@ -609,15 +609,26 @@ Uses standard SQL with a few more operators:
 - time_bucket('1 hour', column_name): same as date_trunc in postgres
 
 ## Further functionalities
+:::: {.columns}
+::: {.column width="40%"}
 
-- Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data
+- Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data.
+- Column-Oriented data can still be performed DML/DDL operations upon.
 ![Timescale Hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true)
 
-###### Hybrid model optimizations:
+:::
 
+::: {.column width="60%"}
 - segmentby: partions data in a chunk based on [column1, ...]
   ![Timescale Hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
   
 - orderby: orders data within a chunk based on time and stores metadata w.r.t min/max values in the chunk (similar to Databricks data-skipping)
 
 - Together: data is first grouped by the segmentby column, then ordered based on the orderby parameter, and finally divided into smaller, timestamp-ordered “mini-batches,” each containing up to 1,000 rows.
+:::
+
+::::
+
+
+###### Hybrid model optimizations:
+
