@@ -601,6 +601,7 @@ Tre cause delle problematiche:
 - Based on hypertables
   - Logical table
   - Organizes the data in chunks (of a predefined time range) based on some time/bigint column of the table
+  - Support for distributed hypertables
 
 ### Query language
 
@@ -611,6 +612,7 @@ Uses standard SQL with a few more operators:
   - Time-weighted averages;
   - Percentile approximation;
 
+![Timescale Hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hypertables.png?raw=true)
 
 ## Further functionalities
 
@@ -645,5 +647,5 @@ Together: data is first grouped by the segmentby column, then ordered based on t
 - Automatically (in background) maintain the results from the query.
 - TRefreshed automatically in the background as new data is added, or old data is modified.
 
-![Creating a continuous view [doc](https://www.timescale.com/blog/continuous-aggregates-faster-queries-with-automatically-maintained-materialized-views/)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
+![Creating a continuous view ](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
   
