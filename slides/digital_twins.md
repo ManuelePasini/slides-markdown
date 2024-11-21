@@ -610,5 +610,14 @@ Uses standard SQL with a few more operators:
 
 ## Further functionalities
 
-- Hybrid row-column oriented data model + segmentby, orderby
+- Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data
 ![Timescale Hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true)
+
+###### Hybrid model optimizations:
+
+- segmentby: partions data in a chunk based on [column1, ...]
+  ![Timescale Hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
+  
+- orderby: orders data within a chunk based on time and stores metadata w.r.t min/max values in the chunk (similar to Databricks data-skipping)
+
+- Together: data is first grouped by the segmentby column, then ordered based on the orderby parameter, and finally divided into smaller, timestamp-ordered “mini-batches,” each containing up to 1,000 rows.
