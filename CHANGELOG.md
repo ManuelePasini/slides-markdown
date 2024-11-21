@@ -1,3 +1,10 @@
+## [1.10.0](https://github.com/ManuelePasini/slides-markdown/compare/1.9.0...1.10.0) (2024-11-21)
+
+
+### Features
+
+* documenting timescale ([f5690f3](https://github.com/ManuelePasini/slides-markdown/commit/f5690f32ae1fc03648e9e29f0fb32d43cf75ff17))
+
 ## [1.9.0](https://github.com/ManuelePasini/slides-markdown/compare/1.8.0...1.9.0) (2024-11-21)
 
 
