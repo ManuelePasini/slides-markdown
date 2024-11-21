@@ -604,33 +604,32 @@ Tre cause delle problematiche:
   - Support for distributed hypertables
   - Supports a large set of PostgreSQL extensions (e.g. PostGIS, PostGIS_Raster)
 
-### Query language
+## Query language
 
 - Uses standard SQL with a few more operators:
+- time_bucket('1 hour', column_name): same as date_trunc in postgres
+- [Hyperfunctions](https://docs.timescale.com/api/latest/hyperfunctions/):
+  - Time-weighted averages;
+  - Percentile approximation;
+
+![Hyperfunctions](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hyperfunctions.png?raw=true)
 
 :::: {.columns}
 
-::: {.column width="0%"}
+::: {.column width="60%"}
 
 - Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data.
 - Column-Oriented data can still be performed DML/DDL operations upon.
 
 :::
 
-::: {.column width="20%"}
+::: {.column width="40%"}
 
 ![Timescale Hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true)
 
 :::
 
 ::::
-
-- time_bucket('1 hour', column_name): same as date_trunc in postgres
-- [Hyperfunctions](https://docs.timescale.com/api/latest/hyperfunctions/):
-  - Time-weighted averages;
-  - Percentile approximation;
-
-![Hyperfunctions](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hypertables.png?raw=true)
 
 ## Further functionalities
 
@@ -640,8 +639,6 @@ Tre cause delle problematiche:
 
 - Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data.
 - Column-Oriented data can still be performed DML/DDL operations upon.
-
-![Timescale Hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hyperfunctions.png?raw=true)
 
 :::
 
