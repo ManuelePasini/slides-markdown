@@ -1040,26 +1040,11 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li>Supports a large set of PostgreSQL extensions (e.g.&nbsp;PostGIS, PostGIS_Raster)</li>
 </ul></li>
 </ul>
-<h3 id="query-language">Query language</h3>
+</section>
+<section id="query-language" class="slide level2">
+<h2>Query language</h2>
 <ul>
 <li>Uses standard SQL with a few more operators:</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:0%;">
-<ul>
-<li>Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data.</li>
-<li>Column-Oriented data can still be performed DML/DDL operations upon.</li>
-</ul>
-</div><div class="column" style="width:20%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true"></p>
-<figcaption>Timescale Hybrid model</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<ul>
 <li>time_bucket(‘1 hour’, column_name): same as date_trunc in postgres</li>
 <li><a href="https://docs.timescale.com/api/latest/hyperfunctions/">Hyperfunctions</a>:
 <ul>
@@ -1069,9 +1054,24 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hypertables.png?raw=true"></p>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hyperfunctions.png?raw=true"></p>
 <figcaption>Hyperfunctions</figcaption>
 </figure>
+</div>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data.</li>
+<li>Column-Oriented data can still be performed DML/DDL operations upon.</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true"></p>
+<figcaption>Timescale Hybrid model</figcaption>
+</figure>
+</div>
+</div>
 </div>
 </section>
 <section id="further-functionalities" class="slide level2">
@@ -1082,12 +1082,6 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li>Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data.</li>
 <li>Column-Oriented data can still be performed DML/DDL operations upon.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hyperfunctions.png?raw=true"></p>
-<figcaption>Timescale Hybrid model</figcaption>
-</figure>
-</div>
 </div><div class="column" style="width:60%;">
 <h6 id="hybrid-model-optimizations">Hybrid model optimizations:</h6>
 <ul>
