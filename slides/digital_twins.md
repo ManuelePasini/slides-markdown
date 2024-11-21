@@ -606,16 +606,21 @@ Tre cause delle problematiche:
 
 ### Query language
 
-Uses standard SQL with a few more operators:
+- Uses standard SQL with a few more operators:
+
 :::: {.columns}
 
-::: {.column width="80%"}
+::: {.column width="0%"}
+
 - Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data.
 - Column-Oriented data can still be performed DML/DDL operations upon.
+
 :::
 
 ::: {.column width="20%"}
+
 ![Timescale Hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true)
+
 :::
 
 ::::
@@ -625,7 +630,7 @@ Uses standard SQL with a few more operators:
   - Time-weighted averages;
   - Percentile approximation;
 
-![Timescale Hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hyperfunctions.png?raw=true)
+![Hyperfunctions](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hypertables.png?raw=true)
 
 ## Further functionalities
 
@@ -636,7 +641,7 @@ Uses standard SQL with a few more operators:
 - Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data.
 - Column-Oriented data can still be performed DML/DDL operations upon.
 
-![Timescale Hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true)
+![Timescale Hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hyperfunctions.png?raw=true)
 
 :::
 
@@ -654,12 +659,12 @@ Together: data is first grouped by the segmentby column, then ordered based on t
 
 ::::
 
-## Further functionalities
+## Further functionalities .2
 
 ### Continuous aggregates
 
 - Automatically (in background) maintain the results from the query.
 - TRefreshed automatically in the background as new data is added, or old data is modified.
 
-![Creating a continuous view ](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
+![Creating a continuous view [doc](https://docs.timescale.com/use-timescale/latest/continuous-aggregates/about-continuous-aggregates/)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
   
