@@ -606,30 +606,14 @@ Tre cause delle problematiche:
 
 ## Query language
 
-- Uses standard SQL with a few more operators:
-- time_bucket('1 hour', column_name): same as date_trunc in postgres
+- Uses standard SQL with a more operators/functions:
+- time_bucket('1 hour', column_name): same as date_trunc in PostgreSQL
 - [Hyperfunctions](https://docs.timescale.com/api/latest/hyperfunctions/):
   - Time-weighted averages;
   - Percentile approximation;
 
-![Hyperfunctions](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hyperfunctions.png?raw=true)
+![Hyperfunctions list](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hyperfunctions.png?raw=true)
 
-:::: {.columns}
-
-::: {.column width="60%"}
-
-- Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data.
-- Column-Oriented data can still be performed DML/DDL operations upon.
-
-:::
-
-::: {.column width="40%"}
-
-![Timescale Hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true)
-
-:::
-
-::::
 
 ## Further functionalities
 
