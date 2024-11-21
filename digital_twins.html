@@ -973,7 +973,6 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <ul>
 <li>AgriRobot non è un device, come capisco se qualcosa ha dei measurement da storicizzare?</li>
 <li>Agri robot non storicizza le controlled property, come faccio a capire cosa devo storicizzare?</li>
-<li>Cosa succede sul grafo se il nodo esiste già? Lo aggiorno, ma in che modo? Sovrascrivo il vecchio? Aggiungo le diff? E le diff in negativo vanno tolte? Cosa succede ai suoi archi? Se nella nuova versione non vedo un arco?</li>
 </ul>
 <h3 id="problemi-sui-dati">Problemi sui dati</h3>
 <ul>
@@ -989,7 +988,7 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <h5 id="entity-required-schema">Entity required schema</h5>
 <ul>
 <li>“id”: follows the NGSI standard (urn-ngsi-[…]) and define the existence of an entity in the graph</li>
-<li>“type”: defines the label of the node in the graph.</li>
+<li>“type”: defines the label of the node/edge in the graph.</li>
 </ul>
 <h5 id="entity-optional-schema">Entity optional schema</h5>
 <ul>
@@ -999,7 +998,7 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <h5 id="building-the-graph">Building the graph</h5>
 <ul>
 <li>Each distinct entity (unique “id”) gets mapped into the graph as a node.</li>
-<li>Each entity key that has an ID as a value becomes an edge.</li>
+<li>Each entity key that has an ID as a value becomes an edge with the key as the edge label.</li>
 <li>If an entity with the given “id” exists, update such entity in the graph</li>
 </ul>
 <h5 id="parsing-into-measurement">Parsing into measurement</h5>
@@ -1015,84 +1014,47 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <p>ALTER TABLE measurement ADD PRIMARY KEY(timestamp, device_id, controlled_property)</p>
 <p>CREATE INDEX location_index ON measurements USING GIST (timestamp);</p>
 </section>
-<section id="random-considerations" class="slide level2">
-<h2>Random considerations</h2>
+<section id="problematiche" class="slide level2">
+<h2>Problematiche</h2>
+<p>Tre cause delle problematiche: - Modellazione concettuale (e.g.&nbsp;no tipo di device in measurements) - Architetturale (Apache Age) - Ottimizzazione query (e.g.&nbsp;no tabella location ausiliaria)</p>
+<h3 id="espressività">Espressività</h3>
 <ul>
-<li>Si Cypher dentro SQL, no SQL dentro Cypher</li>
-<li>Comunque, Cypher lavora con json/agtype, SQL con relazionale -&gt; mismatch!</li>
-<li>Devi sempre sapere cosa è sopra e cosa è sotto</li>
-<li>La modellazione non è uniforme, ogni interazione tra i due modelli è ad-hoc: data una query, devo sempre capire se devo entrare dai meas o dal grafo e trovare il punto d’incontro (che è un join solitamente).</li>
-<li>Se parti dal grafo arrivi ad un punto in cui joini sul relazionale, va fatta attenzione alla query su grafo in quanto è molto facile ritorni un insieme di valori ridondanti che fanno esplodere il tempo computazionale</li>
+<li>Mancanza di un’interfaccia uniforme sul modello, devi interfacciarti e integrare due tipologie di modelli dati diversi</li>
+<li>No storicizzazione di ciò che non è measurement</li>
 </ul>
-</section></section>
-<section id="random-considerations-constantly-updated" class="title-slide slide level1 center">
-<h1>Random considerations (constantly updated)</h1>
-<p>Se la property è una e ha un array di valori, come la storicizzo? e.g.&nbsp;status del robot, la mia chiave è timestamp,device,property…</p>
-<p>Il protocollo per estrarre i measurement di un device, vale anche per i suoi subdevice?</p>
-<p>CREATE EXTENSION IF NOT EXISTS age; CREATE EXTENSION IF NOT EXISTS postgis; LOAD ‘age’;</p>
-<p>SET search_path = ag_catalog, “$user”, public;</p>
-<p>SELECT postgis_full_version();</p>
-<p>SELECT * FROM cypher(‘watering_adf_graph’, <span class="math display">\[
-    MATCH (v:test_node)
-    DELETE v
-\]</span>) as (v agtype);</p>
-<p>SELECT * FROM cypher(‘watering_adf_graph’, <span class="math display">\[
-    MATCH (v)
-    DETACH DELETE v
-\]</span>) as (v agtype);</p>
-<p>SELECT * FROM ag_catalog.drop_graph(‘watering_adf_graph’, cascade := true);</p>
-<p>CREATE TABLE Measurements( timestamp timestamp NOT NULL, device_id text NOT NULL, controlledProperty text NOT NULL, location geometry, value float NOT NULL )</p>
-<p>SELECT create_hypertable(‘Measurements’, ‘timestamp’); SELECT * from measurements INSERT INTO ag_catalog.measurements VALUES (to_timestamp(1717541105.0), ‘urn:ngsi-ld:Device:unibo:f7b82d1d75e79188f5efc73c7a6d34f6’, ‘wind_gust_max’, ST_GeomFromGeoJSON(‘{“type”: “Point”, “coordinates”: [11.798998, 44.235024]}’), 0)</p>
-<p>SELECT * FROM cypher(‘watering_adf_graph’, <span class="math display">\[
-    MATCH (n)
-    WHERE n.id = 'urn:ngsi-ld:Device:unibo:ace4b1adb69da4c71c3e02e6509e859e'
-    DETACH DELETE n
-\]</span>) AS (n agtype);</p>
-<p>SELECT * FROM cypher(‘watering_adf_graph’, <span class="math display">\[
-    MATCH (n:Device)
-    RETURN n.location.coordinates[0]
-\]</span>) AS (n agtype);</p>
-<p>create table spatial_measurements ( timestamp timestamp DEFAULT CURRENT_TIMESTAMP, device_id text, controlled_property text, location geometry, value float );</p>
-<p>CREATE INDEX geom_index ON spatial_measurements USING GIST (location);</p>
-<p>SELECT * FROM cypher(‘watering_adf_graph’, <span class="math display">\[
-                MATCH (n:Device {id: 'urn:ngsi-ld:Device:unibo:a316ef4f55a925842cca39af7280f4d8'})
-                SET n.location = st_geomfromgeojson('{"type": "Point", "coordinates": [11.45345, 44.235024]}')
-                RETURN n
-                \]</span>) AS (ne agtype);</p>
-<p>SELECT * FROM cypher(‘watering_adf_graph’, <span class="math display">\[
-                CREATE (n:Device {id: 'urn:ngsi-ld:Device:unibo:a316ef4f55a925842cca39af7280f4d8',
-                type: 'Device',
-                belongsTo: 'urn:ngsi-ld:AgriParcel:unibo:647c399b2188ff484f7416389f94885c',
-                controlledProperty: ['dripper'],
-                dateCreated: '2024-10-17T07:00:02',
-                dateObserved: '2024-10-15T12:45:09',
-                deviceCategory: ['sensor'],
-                domain: 'unibo',
-                location: st_geomfromtext('{"type": "Point", "coordinates": [11.798998, 44.235024]}'),
-                name: 'Dripper Fondo Errano 2024 T0 T0',
-                namespace: 'unibo.watering.',
-                unixtimestampCreated: 1729141203,
-                unixtimestampModified: 1728989109,
-                value: [0]})
-                RETURN n
-                \]</span>) AS (ne agtype);</p>
-<p>INSERT INTO ag_catalog.measurements VALUES (to_timestamp(1728989109.0), ‘urn:ngsi-ld:Device:unibo:a316ef4f55a925842cca39af7280f4d8’, ‘dripper’, st_geomfromtext(‘POINT(11.798998 44.235024)’), 0)</p>
-<p>SELECT * FROM cypher(‘watering_adf_graph’, <span class="math display">\[  
-MATCH (n:Device {id: 'urn:ngsi-ld:Device:unibo:a316ef4f55a925842cca39af7280f4d8'})
-SET n.id = 'urn:ngsi-ld:Device:unibo:a316ef4f55a925842cca39af7280f4d8',
-n.type = 'Device', n.belongsTo = 'urn:ngsi-ld:AgriParcel:unibo:647c399b2188ff484f7416389f94885c',
-n.controlledProperty = ['dripper'],
-n.dateCreated = '2024-10-17T07:00:02',
-n.dateObserved = '2024-10-15T12:45:09',
-n.deviceCategory = ['sensor'],
-n.domain = 'unibo',
-n.location = st_geomfromgeojson('{"type": "Point", "coordinates": [11.798998, 44.235024]}')::geometry, n.name = 'Dripper Fondo Errano 2024 T0 T0', n.namespace = 'unibo.watering.', n.unixtimestampCreated = 1729141203, n.unixtimestampModified = 1728989109, n.value = [0]                 RETURN n                 \]</span>) AS (n agtype);</p>
+<h3 id="modellazione">Modellazione</h3>
+<ul>
+<li>Se parti dal grafo arrivi ad un punto in cui joini sul relazionale, va fatta attenzione alla query su grafo in quanto è molto facile ritorni un insieme di valori ridondanti che fanno esplodere il tempo computazionale</li>
+<li>Cosa succede sul grafo se il nodo esiste già? Lo aggiorno, ma in che modo? Sovrascrivo il vecchio? Aggiungo le diff? E le diff in negativo vanno tolte? Cosa succede ai suoi archi? Se nella nuova versione non vedo un arco?</li>
+</ul>
+<h3 id="random-considerations-constantly-updated">Random considerations (constantly updated)</h3>
+</section>
+<section id="timescale-db" class="slide level2">
+<h2>Timescale DB</h2>
+<ul>
+<li>Based on hypertables
+<ul>
+<li>Logical table</li>
+<li>Organizes the data in chunks (of a predefined time range) based on some column of the table</li>
+</ul></li>
+</ul>
+<h3 id="query-language">Query language</h3>
+<p>Uses standard SQL with a few more operators:</p>
+<ul>
+<li>time_bucket(‘1 hour’, column_name): same as date_trunc in postgres</li>
+</ul>
+</section>
+<section id="further-functionalities" class="slide level2">
+<h2>Further functionalities</h2>
+<ul>
+<li>Hybrid row-column oriented data model + segmentby, orderby <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true" alt="Timescale Hybrid model"></li>
+</ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
