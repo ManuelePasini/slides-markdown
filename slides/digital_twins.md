@@ -619,16 +619,24 @@ Uses standard SQL with a few more operators:
 :::
 
 ::: {.column width="60%"}
-- segmentby: partions data in a chunk based on [column1, ...]
-  ![Timescale Hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
-  
-- orderby: orders data within a chunk based on time and stores metadata w.r.t min/max values in the chunk (similar to Databricks data-skipping)
+###### Hybrid model optimizations:
 
-- Together: data is first grouped by the segmentby column, then ordered based on the orderby parameter, and finally divided into smaller, timestamp-ordered “mini-batches,” each containing up to 1,000 rows.
+- <b>segmentby<\b>: partions data in a chunk based on [column1, ...]
+  ![Segmeny-by example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
+  
+- <b>orderby<\b>: orders data within a chunk based on time and stores metadata w.r.t min/max values in the chunk (similar to Databricks data-skipping)
+
+Together: data is first grouped by the segmentby column, then ordered based on the orderby parameter, and finally divided into smaller, timestamp-ordered “mini-batches,” each containing up to 1,000 rows.
 :::
 
 ::::
 
+## Further functionalities
 
-###### Hybrid model optimizations:
+### Continuous aggregates
 
+- Automatically (in background) maintain the results from the query.
+- TRefreshed automatically in the background as new data is added, or old data is modified.
+
+![Creating a continuous view [doc](https://www.timescale.com/blog/continuous-aggregates-faster-queries-with-automatically-maintained-materialized-views/)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
+  
