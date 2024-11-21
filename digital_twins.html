@@ -1053,22 +1053,31 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li>Column-Oriented data can still be performed DML/DDL operations upon. <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true" alt="Timescale Hybrid model"></li>
 </ul>
 </div><div class="column" style="width:60%;">
-<ul>
-<li><p>segmentby: partions data in a chunk based on [column1, …] <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true" alt="Timescale Hybrid model"></p></li>
-<li><p>orderby: orders data within a chunk based on time and stores metadata w.r.t min/max values in the chunk (similar to Databricks data-skipping)</p></li>
-<li><p>Together: data is first grouped by the segmentby column, then ordered based on the orderby parameter, and finally divided into smaller, timestamp-ordered “mini-batches,” each containing up to 1,000 rows.</p></li>
-</ul>
-</div>
-</div>
 <h6 id="hybrid-model-optimizations">Hybrid model optimizations:</h6>
-<div class="quarto-auto-generated-content">
+<ul>
+<li><p><b>segmentby&lt;: partions data in a chunk based on [column1, …] <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true" alt="Segmeny-by example"></b></p></li><b>
+<li><p><b>orderby&lt;: orders data within a chunk based on time and stores metadata w.r.t min/max values in the chunk (similar to Databricks data-skipping)</b></p></li><b>
+</b></b></ul><b><b>
+<p>Together: data is first grouped by the segmentby column, then ordered based on the orderby parameter, and finally divided into smaller, timestamp-ordered “mini-batches,” each containing up to 1,000 rows.</p>
+</b></b></div><b><b>
+</b></b></div><b><b>
+</b></b></section><b><b>
+<section id="further-functionalities-1" class="slide level2">
+<h2>Further functionalities</h2>
+<h3 id="continuous-aggregates">Continuous aggregates</h3>
+<ul>
+<li>Automatically (in background) maintain the results from the query.</li>
+<li>TRefreshed automatically in the background as new data is added, or old data is modified.</li>
+</ul>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Creating a continuous view <a href="https://www.timescale.com/blog/continuous-aggregates-faster-queries-with-automatically-maintained-materialized-views/">doc</a></p><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section></section>
-    </div>
-  </div>
+</section></b></b></section><b><b>
+    </b></b></div><b><b>
+  </b></b></div><b><b>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="digital_twins_files/libs/revealjs/dist/reveal.js"></script>
@@ -1433,4 +1442,4 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
     </script>
     
 
-</body></html>
+</b></b></body></html>
