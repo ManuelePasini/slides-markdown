@@ -520,7 +520,6 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
 
  - AgriRobot non è un device, come capisco se qualcosa ha dei measurement da storicizzare?
  - Agri robot non storicizza le controlled property, come faccio a capire cosa devo storicizzare?
- - Cosa succede sul grafo se il nodo esiste già? Lo aggiorno, ma in che modo? Sovrascrivo il vecchio? Aggiungo le diff? E le diff in negativo vanno tolte? Cosa succede ai suoi archi? Se nella nuova versione non vedo un arco?
 
 ### Problemi sui dati
 
@@ -535,7 +534,7 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
   ##### Entity required schema
 
   - "id": follows the NGSI standard (urn-ngsi-[...]) and define the existence of an entity in the graph
-  - "type": defines the label of the node in the graph.
+  - "type": defines the label of the node/edge in the graph.
 
   ##### Entity optional schema
 
@@ -544,7 +543,7 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
 ##### Building the graph
 
 - Each distinct entity (unique "id") gets mapped into the graph as a node.
-- Each entity key that has an ID as a value becomes an edge.
+- Each entity key that has an ID as a value becomes an edge with the key as the edge label.
 - If an entity with the given "id" exists, update such entity in the graph
 
 ##### Parsing into measurement
@@ -577,116 +576,39 @@ CREATE INDEX location_index
   ON measurements
   USING GIST (timestamp);
 
-## Random considerations
+## Problematiche
 
-- Si Cypher dentro SQL, no SQL dentro Cypher
-- Comunque, Cypher lavora con json/agtype, SQL con relazionale -> mismatch!
-- Devi sempre sapere cosa è sopra e cosa è sotto
-- La modellazione non è uniforme, ogni interazione tra i due modelli è ad-hoc: data una query, devo sempre capire se devo entrare dai meas o dal grafo e trovare il punto d'incontro (che è un join solitamente).
+Tre cause delle problematiche:
+- Modellazione concettuale (e.g. no tipo di device in measurements)
+- Architetturale (Apache Age)
+- Ottimizzazione query (e.g. no tabella location ausiliaria)
+
+
+### Espressività
+
+- Mancanza di un'interfaccia uniforme sul modello, devi interfacciarti e integrare due tipologie di modelli dati diversi
+- No storicizzazione di ciò che non è measurement
+
+### Modellazione
+
 - Se parti dal grafo arrivi ad un punto in cui joini sul relazionale, va fatta attenzione alla query su grafo in quanto è molto facile ritorni un insieme di valori ridondanti che fanno esplodere il tempo computazionale
+- Cosa succede sul grafo se il nodo esiste già? Lo aggiorno, ma in che modo? Sovrascrivo il vecchio? Aggiungo le diff? E le diff in negativo vanno tolte? Cosa succede ai suoi archi? Se nella nuova versione non vedo un arco?
 
-# Random considerations (constantly updated)
+### Random considerations (constantly updated)
 
-Se la property è una e ha un array di valori, come la storicizzo? e.g. status del robot, la mia chiave è timestamp,device,property...
+## Timescale DB
 
-Il protocollo per estrarre i measurement di un device, vale anche per i suoi subdevice?
+- Based on hypertables
+  - Logical table
+  - Organizes the data in chunks (of a predefined time range) based on some column of the table 
 
+### Query language
 
-CREATE EXTENSION IF NOT EXISTS age;
-CREATE EXTENSION IF NOT EXISTS postgis;
-LOAD 'age';
+Uses standard SQL with a few more operators:
 
-SET search_path = ag_catalog, "$user", public;
+- time_bucket('1 hour', column_name): same as date_trunc in postgres
 
-SELECT postgis_full_version();
+## Further functionalities
 
-SELECT * 
-FROM cypher('watering_adf_graph', $$
-	MATCH (v:test_node)
-	DELETE v
-$$) as (v agtype);
-
-SELECT * 
-FROM cypher('watering_adf_graph', $$
-	MATCH (v)
-	DETACH DELETE v
-$$) as (v agtype);
-
-SELECT * FROM ag_catalog.drop_graph('watering_adf_graph', cascade := true);
-
-CREATE TABLE Measurements(
-	timestamp timestamp NOT NULL,
-	device_id text NOT NULL,
-	controlledProperty text NOT NULL,
-	location geometry,
-	value float NOT NULL
-)
-
-SELECT create_hypertable('Measurements', 'timestamp');
-SELECT * from measurements
-INSERT INTO ag_catalog.measurements VALUES (to_timestamp(1717541105.0), 'urn:ngsi-ld:Device:unibo:f7b82d1d75e79188f5efc73c7a6d34f6', 'wind_gust_max', ST_GeomFromGeoJSON('{"type": "Point", "coordinates": [11.798998, 44.235024]}'), 0)
-
-SELECT * FROM cypher('watering_adf_graph', $$
-    MATCH (n)
-    WHERE n.id = 'urn:ngsi-ld:Device:unibo:ace4b1adb69da4c71c3e02e6509e859e'
-    DETACH DELETE n
-$$) AS (n agtype);
-
-
-SELECT * 
-FROM cypher('watering_adf_graph', $$
-    MATCH (n:Device) 
-    RETURN n.location.coordinates[0]
-$$) AS (n agtype);
-
-
-create table spatial_measurements (
-timestamp timestamp DEFAULT CURRENT_TIMESTAMP,
-device_id text,
-controlled_property text,
-location geometry,
-value float
-);
-
-CREATE INDEX geom_index
-  ON spatial_measurements
-  USING GIST (location);
-
-SELECT * FROM cypher('watering_adf_graph', $$
-                MATCH (n:Device {id: 'urn:ngsi-ld:Device:unibo:a316ef4f55a925842cca39af7280f4d8'})
-                SET n.location = st_geomfromgeojson('{"type": "Point", "coordinates": [11.45345, 44.235024]}')
-                RETURN n
-                $$) AS (ne agtype);
-				
-SELECT * FROM cypher('watering_adf_graph', $$
-                CREATE (n:Device {id: 'urn:ngsi-ld:Device:unibo:a316ef4f55a925842cca39af7280f4d8',
-				type: 'Device',
-				belongsTo: 'urn:ngsi-ld:AgriParcel:unibo:647c399b2188ff484f7416389f94885c',
-				controlledProperty: ['dripper'],
-				dateCreated: '2024-10-17T07:00:02',
-				dateObserved: '2024-10-15T12:45:09',
-				deviceCategory: ['sensor'],
-				domain: 'unibo',
-				location: st_geomfromtext('{"type": "Point", "coordinates": [11.798998, 44.235024]}'),
-				name: 'Dripper Fondo Errano 2024 T0 T0',
-				namespace: 'unibo.watering.',
-				unixtimestampCreated: 1729141203,
-				unixtimestampModified: 1728989109,
-				value: [0]})
-                RETURN n
-                $$) AS (ne agtype); 
-
-INSERT INTO ag_catalog.measurements VALUES (to_timestamp(1728989109.0), 'urn:ngsi-ld:Device:unibo:a316ef4f55a925842cca39af7280f4d8', 'dripper', st_geomfromtext('POINT(11.798998 44.235024)'), 0)
-
-SELECT * FROM cypher('watering_adf_graph', $$  
-MATCH (n:Device {id: 'urn:ngsi-ld:Device:unibo:a316ef4f55a925842cca39af7280f4d8'})
-SET n.id = 'urn:ngsi-ld:Device:unibo:a316ef4f55a925842cca39af7280f4d8',
-n.type = 'Device', n.belongsTo = 'urn:ngsi-ld:AgriParcel:unibo:647c399b2188ff484f7416389f94885c',
-n.controlledProperty = ['dripper'],
-n.dateCreated = '2024-10-17T07:00:02',
-n.dateObserved = '2024-10-15T12:45:09',
-n.deviceCategory = ['sensor'],
-n.domain = 'unibo',
-n.location = st_geomfromgeojson('{"type": "Point", "coordinates": [11.798998, 44.235024]}')::geometry, n.name = 'Dripper Fondo Errano 2024 T0 T0', n.namespace = 'unibo.watering.', n.unixtimestampCreated = 1729141203, n.unixtimestampModified = 1728989109, n.value = [0]                 RETURN n                 $$) AS (n agtype); 
-
-				
+- Hybrid row-column oriented data model + segmentby, orderby
+![Timescale Hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true)
