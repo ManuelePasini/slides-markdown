@@ -607,9 +607,15 @@ Tre cause delle problematiche:
 Uses standard SQL with a few more operators:
 
 - time_bucket('1 hour', column_name): same as date_trunc in postgres
+- [Hyperfunctions](https://docs.timescale.com/api/latest/hyperfunctions/):
+  - Time-weighted averages;
+  - Percentile approximation;
+
 
 ## Further functionalities
+
 :::: {.columns}
+
 ::: {.column width="40%"}
 
 - Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data.
@@ -619,6 +625,7 @@ Uses standard SQL with a few more operators:
 :::
 
 ::: {.column width="60%"}
+
 ###### Hybrid model optimizations:
 
 - <b>segmentby<\b>: partions data in a chunk based on [column1, ...]
