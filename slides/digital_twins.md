@@ -596,20 +596,20 @@ Tre cause delle problematiche:
 
 ### Random considerations (constantly updated)
 
-## [Timescale DB](https://docs.timescale.com/use-timescale/latest/extensions/)
+## [TimescaleDB](https://docs.timescale.com/use-timescale/latest/extensions/)
 
 - Build upon a PostgreSQL instance.
 - Based on <b>hypertables</b>:
   - Logical table
-  - Organizes the data in chunks (of a predefined time range) based on some time/bigint column of the table
-  - Other columns can be added in partitioning columns
+  - Organizes the data in chunks (of a predefined time range) based on some time/bigint column of the table (B-Tree)
+  - Other columns can be added in partitioning columns 
   - Support for distributed hypertables
   - Supports a large set of PostgreSQL extensions (e.g. PostGIS, PostGIS_Raster)
 
 ![Table organization in chunks](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/chunks.png?raw=true)
 
 
-## Query language
+## TimescaleDB - Query language
 
 :::: {.columns}
 
@@ -633,7 +633,7 @@ Tre cause delle problematiche:
 
 ::::
 
-## Further functionalities
+## TimescaleDB - Further functionalities
 
 :::: {.columns}
 
@@ -648,7 +648,7 @@ Tre cause delle problematiche:
 
 ::: {.column width="50%"}
 
-##### Hybrid model optimizations
+##### TimescaleDB - Hybrid model optimizations
 
 - <b>segmentby</b>: partion data inside chunk on [column1, ...]
 
@@ -662,7 +662,7 @@ Together: data is first grouped by the segmentby column, then ordered based on t
 
 ::::
 
-## Further functionalities
+## TimescaleDB - Further functionalities
 
 ##### Continuous aggregates
 
@@ -678,3 +678,26 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ## InfluxDB
 
+- Not based upon the relational model (organizes data in tags and fields)
+- Not really CRUD db: more like a CR-ud, prioritizing the creating and reading data over update and destroy
+
+## InfluxDB - Data Model
+
+- <b>Bucket</b>: Named location where time series data is stored. A bucket can contain multiple measurements.
+  - <b>Measurement: Logical grouping for time series data. All points in a given measurement should have the same tags. A measurement contains multiple tags and fields.
+    - <b>Tags</b>: Key-value pairs with values that differ, but do not change often. Tags are meant for storing metadata for each point–for example, something to identify the source of the data like host, location, station, etc.
+    - <b>Fields</b>: Key-value pairs with values that change over time–for example: temperature, pressure, stock price, etc.
+    - <b>Timestamp</b>: Timestamp associated with the data. When stored on disk and queried, all data is ordered by time.
+
+- <b>Point</b>: Single data record identified by its measurement, tag keys, tag values, field key, and timestamp.
+- <b>Series</b>: A group of points with the same measurement, tag keys, and tag values.
+
+## InfluxDB - Query language
+
+- Flux: non-SQL-like syntax
+- InfluxQL: SQL-like but with less operatiors (e.g. no UNION, JOIN and HAVING)
+
+## Timescale vs. InfluxDB
+
+- Schema variability: while on a TimescaleDB table schema has to be defined upfront (can't add dimensions to a non-empty table), InfluxDB is much more flexible
+- SQL JOINs aren’t available for InfluxDB measurements in InfluxQL, they are with Flux. ![doc](https://docs.influxdata.com/influxdb/v1/concepts/crosswalk/)
