@@ -1029,8 +1029,8 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </ul>
 <h3 id="random-considerations-constantly-updated">Random considerations (constantly updated)</h3>
 </section>
-<section id="timescale-db-doc" class="slide level2">
-<h2>Timescale DB <a href="https://docs.timescale.com/use-timescale/latest/extensions/">doc</a></h2>
+<section id="timescale-db" class="slide level2">
+<h2><a href="https://docs.timescale.com/use-timescale/latest/extensions/">Timescale DB</a></h2>
 <ul>
 <li>Based on hypertables
 <ul>
@@ -1043,51 +1043,78 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </section>
 <section id="query-language" class="slide level2">
 <h2>Query language</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
 <ul>
-<li>Uses standard SQL with a more operators/functions:</li>
-<li>time_bucket(‘1 hour’, column_name): same as date_trunc in PostgreSQL</li>
-<li><a href="https://docs.timescale.com/api/latest/hyperfunctions/">Hyperfunctions</a>:
+<li>Uses standard SQL with a more operators/functions:
+<ul>
+<li><p>time_bucket(‘1 hour’, column_name): same as date_trunc in PostgreSQL</p></li>
+<li><p><a href="https://docs.timescale.com/api/latest/hyperfunctions/">Hyperfunctions</a>:</p>
 <ul>
 <li>Time-weighted averages;</li>
 <li>Percentile approximation;</li>
 </ul></li>
+</ul></li>
 </ul>
-
-<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hyperfunctions.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Hyperfunctions list</p></section>
+</div><div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hyperfunctions.png?raw=true"></p>
+<figcaption>Hyperfunctions list</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="further-functionalities" class="slide level2">
 <h2>Further functionalities</h2>
 <div class="columns">
-<div class="column" style="width:40%;">
+<div class="column" style="width:50%;">
 <ul>
-<li>Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data.</li>
+<li>Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data.
+<ul>
 <li>Column-Oriented data can still be performed DML/DDL operations upon.</li>
+</ul></li>
 </ul>
-</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true"></p>
+<figcaption>Segmeny-by example</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
 <h6 id="hybrid-model-optimizations">Hybrid model optimizations:</h6>
 <ul>
-<li><p><b>segmentby&lt;: partions data in a chunk based on [column1, …] <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true" alt="Segmeny-by example"></b></p></li><b>
-<li><p><b>orderby&lt;: orders data within a chunk based on time and stores metadata w.r.t min/max values in the chunk (similar to Databricks data-skipping)</b></p></li><b>
-</b></b></ul><b><b>
+<li><b>segmentby</b>: partions data in a chunk based on [column1, …]</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true"></p>
+<figcaption>Segmeny-by example</figcaption>
+</figure>
+</div>
+<ul>
+<li><b>orderby</b>: orders data within a chunk based on time and stores metadata w.r.t min/max values in the chunk (similar to Databricks data-skipping)</li>
+</ul>
 <p>Together: data is first grouped by the segmentby column, then ordered based on the orderby parameter, and finally divided into smaller, timestamp-ordered “mini-batches,” each containing up to 1,000 rows.</p>
-</b></b></div><b><b>
-</b></b></div><b><b>
-</b></b></section><b><b>
+</div>
+</div>
+</section>
 <section id="further-functionalities-.2" class="slide level2">
 <h2>Further functionalities .2</h2>
 <h3 id="continuous-aggregates">Continuous aggregates</h3>
 <ul>
 <li>Automatically (in background) maintain the results from the query.</li>
-<li>TRefreshed automatically in the background as new data is added, or old data is modified.</li>
+<li>Refreshed automatically in the background as new data is added, or old data is modified.</li>
 </ul>
-
-<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Creating a continuous view <a href="https://docs.timescale.com/use-timescale/latest/continuous-aggregates/about-continuous-aggregates/">doc</a></p><div class="quarto-auto-generated-content">
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section></b></b></section><b><b>
-    </b></b></div><b><b>
-  </b></b></div><b><b>
+</section></section>
+    </div>
+  </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="digital_twins_files/libs/revealjs/dist/reveal.js"></script>
@@ -1452,4 +1479,4 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
     </script>
     
 
-</b></b></body></html>
+</body></html>
