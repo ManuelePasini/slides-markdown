@@ -596,7 +596,7 @@ Tre cause delle problematiche:
 
 ### Random considerations (constantly updated)
 
-## Timescale DB [doc](https://docs.timescale.com/use-timescale/latest/extensions/)
+## [Timescale DB](https://docs.timescale.com/use-timescale/latest/extensions/)
 
 - Based on hypertables
   - Logical table
@@ -606,36 +606,52 @@ Tre cause delle problematiche:
 
 ## Query language
 
+:::: {.columns}
+
+::: {.column width="70%"}
+
 - Uses standard SQL with a more operators/functions:
-- time_bucket('1 hour', column_name): same as date_trunc in PostgreSQL
-- [Hyperfunctions](https://docs.timescale.com/api/latest/hyperfunctions/):
-  - Time-weighted averages;
-  - Percentile approximation;
+  - time_bucket('1 hour', column_name): same as date_trunc in PostgreSQL
+
+  - [Hyperfunctions](https://docs.timescale.com/api/latest/hyperfunctions/):
+    - Time-weighted averages;
+    - Percentile approximation;
+
+:::
+
+::: {.column width="30%"}
 
 ![Hyperfunctions list](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hyperfunctions.png?raw=true)
 
+:::
+
+::::
 
 ## Further functionalities
 
 :::: {.columns}
 
-::: {.column width="40%"}
+::: {.column width="50%"}
 
 - Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data.
-- Column-Oriented data can still be performed DML/DDL operations upon.
+  - Column-Oriented data can still be performed DML/DDL operations upon.
+
+![Segmeny-by example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
 
 :::
 
-::: {.column width="60%"}
+::: {.column width="50%"}
 
 ###### Hybrid model optimizations:
 
-- <b>segmentby<\b>: partions data in a chunk based on [column1, ...]
-  ![Segmeny-by example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
+- <b>segmentby</b>: partions data in a chunk based on [column1, ...]
+
+![Segmeny-by example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true)
   
-- <b>orderby<\b>: orders data within a chunk based on time and stores metadata w.r.t min/max values in the chunk (similar to Databricks data-skipping)
+- <b>orderby</b>: orders data within a chunk based on time and stores metadata w.r.t min/max values in the chunk (similar to Databricks data-skipping)
 
 Together: data is first grouped by the segmentby column, then ordered based on the orderby parameter, and finally divided into smaller, timestamp-ordered “mini-batches,” each containing up to 1,000 rows.
+
 :::
 
 ::::
@@ -645,7 +661,4 @@ Together: data is first grouped by the segmentby column, then ordered based on t
 ### Continuous aggregates
 
 - Automatically (in background) maintain the results from the query.
-- TRefreshed automatically in the background as new data is added, or old data is modified.
-
-![Creating a continuous view [doc](https://docs.timescale.com/use-timescale/latest/continuous-aggregates/about-continuous-aggregates/)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
-  
+- Refreshed automatically in the background as new data is added, or old data is modified.
