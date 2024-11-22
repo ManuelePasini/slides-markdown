@@ -612,10 +612,11 @@ Tre cause delle problematiche:
 
 :::: {.columns}
 
-::: {.column width="60%"}
+::: {.column width="50%"}
 
 - Uses standard SQL with a more operators/functions:
-  - time_bucket('1 hour', column_name): same as date_trunc in PostgreSQL
+  - time_bucket('1 hour', column_name): same as date_trunc in PostgreSQL but with custom granularity
+  - ...
 
   - [Hyperfunctions](https://docs.timescale.com/api/latest/hyperfunctions/):
     - Time-weighted averages;
@@ -623,7 +624,7 @@ Tre cause delle problematiche:
 
 :::
 
-::: {.column width="40%"}
+::: {.column width="50%"}
 
 ![Hyperfunctions list](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hyperfunctions.png?raw=true)
 
