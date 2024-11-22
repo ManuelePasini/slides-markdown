@@ -673,7 +673,7 @@ Together: data is first grouped by the segmentby column, then ordered based on t
 
 Move least-accessed data into a different tablespace, in order to reduce the volume of data in highly-accessed data
 
-![Segmentby example - partition by device id](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/tiered_storage.png?raw=true)
+![Tiered architecture example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/tiered_storage.png?raw=true)
 
 ## InfluxDB
 
