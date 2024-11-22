@@ -605,6 +605,9 @@ Tre cause delle problematiche:
   - Support for distributed hypertables
   - Supports a large set of PostgreSQL extensions (e.g. PostGIS, PostGIS_Raster)
 
+![Table organization in chunks](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/chunks.png?raw=true)
+
+
 ## Query language
 
 :::: {.columns}
