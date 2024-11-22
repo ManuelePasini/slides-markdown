@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/ManuelePasini/slides-markdown/compare/1.12.0...1.12.1) (2024-11-22)
+
+
+### Bug Fixes
+
+* dt visualisation issues ([3df0f32](https://github.com/ManuelePasini/slides-markdown/commit/3df0f329481383d5606fbcde77f9ef1638bf68e3))
+
 ## [1.12.0](https://github.com/ManuelePasini/slides-markdown/compare/1.11.0...1.12.0) (2024-11-21)
 
 
