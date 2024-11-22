@@ -666,6 +666,7 @@ Together: data is first grouped by the segmentby column, then ordered based on t
 
 ##### Continuous aggregates
 
+- Like a continuous materialized view
 - Automatically (in background) maintain the results from the query.
 - Refreshed automatically in the background as new data is added, or old data is modified.
 
