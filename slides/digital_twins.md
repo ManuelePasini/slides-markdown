@@ -638,7 +638,7 @@ Tre cause delle problematiche:
 
 ::: {.column width="50%"}
 
-- Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data.
+- <b>Hybrid row-column oriented data model</b>: define a retention period where data older will be stored as column-oriented data.
   - Column-Oriented data can still be performed DML/DDL operations upon.
 
 ![Timescale hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true)
@@ -651,7 +651,7 @@ Tre cause delle problematiche:
 
 - <b>segmentby</b>: partion data inside chunk on [column1, ...]
 
-![Segmentby example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
+![Segmentby example - partition by device id](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
   
 - <b>orderby</b>: orders data within a chunk based on time and stores metadata w.r.t min/max values in the chunk (similar to Databricks data-skipping)
 
@@ -661,7 +661,7 @@ Together: data is first grouped by the segmentby column, then ordered based on t
 
 ::::
 
-## Further functionalities .2
+## Further functionalities
 
 ### Continuous aggregates
 
