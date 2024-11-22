@@ -598,6 +598,7 @@ Tre cause delle problematiche:
 
 ## [Timescale DB](https://docs.timescale.com/use-timescale/latest/extensions/)
 
+- Build upon a PostgreSQL instance.
 - Based on <b>hypertables</b>:
   - Logical table
   - Organizes the data in chunks (of a predefined time range) based on some time/bigint column of the table
@@ -667,3 +668,12 @@ Together: data is first grouped by the segmentby column, then ordered based on t
 
 - Automatically (in background) maintain the results from the query.
 - Refreshed automatically in the background as new data is added, or old data is modified.
+
+### Tiered storage
+
+Move least-accessed data into a different tablespace, in order to reduce the volume of data in highly-accessed data
+
+![Segmentby example - partition by device id](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/tiered_storage.png?raw=true)
+
+## InfluxDB
+
