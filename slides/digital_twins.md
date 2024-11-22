@@ -664,12 +664,12 @@ Together: data is first grouped by the segmentby column, then ordered based on t
 
 ## Further functionalities
 
-### Continuous aggregates
+##### Continuous aggregates
 
 - Automatically (in background) maintain the results from the query.
 - Refreshed automatically in the background as new data is added, or old data is modified.
 
-### Tiered storage
+##### Tiered storage
 
 Move least-accessed data into a different tablespace, in order to reduce the volume of data in highly-accessed data
 
