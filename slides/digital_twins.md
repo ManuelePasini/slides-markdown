@@ -598,7 +598,7 @@ Tre cause delle problematiche:
 
 ## [Timescale DB](https://docs.timescale.com/use-timescale/latest/extensions/)
 
-- Based on hypertables
+- Based on <b>hypertables</b>:
   - Logical table
   - Organizes the data in chunks (of a predefined time range) based on some time/bigint column of the table
   - Support for distributed hypertables
@@ -636,8 +636,8 @@ Tre cause delle problematiche:
 - Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data.
   - Column-Oriented data can still be performed DML/DDL operations upon.
 
-![Segmeny-by example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
-
+![Timescale hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true)hybrid_model
+hybrid_model
 :::
 
 ::: {.column width="50%"}
@@ -646,7 +646,7 @@ Tre cause delle problematiche:
 
 - <b>segmentby</b>: partions data in a chunk based on [column1, ...]
 
-![Segmeny-by example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true)
+![Segmeny-by example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
   
 - <b>orderby</b>: orders data within a chunk based on time and stores metadata w.r.t min/max values in the chunk (similar to Databricks data-skipping)
 
