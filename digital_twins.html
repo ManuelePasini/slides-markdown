@@ -1029,14 +1029,14 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </ul>
 <h3 id="random-considerations-constantly-updated">Random considerations (constantly updated)</h3>
 </section>
-<section id="timescale-db" class="slide level2">
-<h2><a href="https://docs.timescale.com/use-timescale/latest/extensions/">Timescale DB</a></h2>
+<section id="timescaledb" class="slide level2">
+<h2><a href="https://docs.timescale.com/use-timescale/latest/extensions/">TimescaleDB</a></h2>
 <ul>
 <li>Build upon a PostgreSQL instance.</li>
 <li>Based on <b>hypertables</b>:
 <ul>
 <li>Logical table</li>
-<li>Organizes the data in chunks (of a predefined time range) based on some time/bigint column of the table</li>
+<li>Organizes the data in chunks (of a predefined time range) based on some time/bigint column of the table (B-Tree)</li>
 <li>Other columns can be added in partitioning columns</li>
 <li>Support for distributed hypertables</li>
 <li>Supports a large set of PostgreSQL extensions (e.g.&nbsp;PostGIS, PostGIS_Raster)</li>
@@ -1044,8 +1044,8 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </ul>
 
 <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/chunks.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Table organization in chunks</p></section>
-<section id="query-language" class="slide level2">
-<h2>Query language</h2>
+<section id="timescaledb---query-language" class="slide level2">
+<h2>TimescaleDB - Query language</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -1070,8 +1070,8 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </div>
 </div>
 </section>
-<section id="further-functionalities" class="slide level2">
-<h2>Further functionalities</h2>
+<section id="timescaledb---further-functionalities" class="slide level2">
+<h2>TimescaleDB - Further functionalities</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -1087,7 +1087,7 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
-<h5 id="hybrid-model-optimizations">Hybrid model optimizations</h5>
+<h5 id="timescaledb---hybrid-model-optimizations">TimescaleDB - Hybrid model optimizations</h5>
 <ul>
 <li><b>segmentby</b>: partion data inside chunk on [column1, …]</li>
 </ul>
@@ -1104,8 +1104,8 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </div>
 </div>
 </section>
-<section id="further-functionalities-1" class="slide level2">
-<h2>Further functionalities</h2>
+<section id="timescaledb---further-functionalities-1" class="slide level2">
+<h2>TimescaleDB - Further functionalities</h2>
 <h5 id="continuous-aggregates">Continuous aggregates</h5>
 <ul>
 <li>Like a continuous materialized view</li>
@@ -1118,14 +1118,48 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/tiered_storage.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Tiered architecture example</p></section>
 <section id="influxdb" class="slide level2">
 <h2>InfluxDB</h2>
+<ul>
+<li>Not based upon the relational model (organizes data in tags and fields)</li>
+<li>Not really CRUD db: more like a CR-ud, prioritizing the creating and reading data over update and destroy</li>
+</ul>
+</section>
+<section id="influxdb---data-model" class="slide level2">
+<h2>InfluxDB - Data Model</h2>
+<ul>
+<li><b>Bucket</b>: Named location where time series data is stored. A bucket can contain multiple measurements.
+<ul>
+<li><b>Measurement: Logical grouping for time series data. All points in a given measurement should have the same tags. A measurement contains multiple tags and fields.
+<ul>
+<li><b>Tags</b>: Key-value pairs with values that differ, but do not change often. Tags are meant for storing metadata for each point–for example, something to identify the source of the data like host, location, station, etc.</li>
+<li><b>Fields</b>: Key-value pairs with values that change over time–for example: temperature, pressure, stock price, etc.</li>
+<li><b>Timestamp</b>: Timestamp associated with the data. When stored on disk and queried, all data is ordered by time.</li>
+</ul></b></li><b>
+</b></ul></li><b>
+<li><b>Point</b>: Single data record identified by its measurement, tag keys, tag values, field key, and timestamp.</li>
+<li><b>Series</b>: A group of points with the same measurement, tag keys, and tag values.</li>
+</b></ul><b>
+</b></section><b>
+<section id="influxdb---query-language" class="slide level2">
+<h2>InfluxDB - Query language</h2>
+<ul>
+<li>Flux: non-SQL-like syntax</li>
+<li>InfluxQL: SQL-like but with less operatiors (e.g.&nbsp;no UNION, JOIN and HAVING)</li>
+</ul>
+</section>
+<section id="timescale-vs.-influxdb" class="slide level2">
+<h2>Timescale vs.&nbsp;InfluxDB</h2>
+<ul>
+<li>Schema variability: while on a TimescaleDB table schema has to be defined upfront (can’t add dimensions to a non-empty table), InfluxDB is much more flexible</li>
+<li>SQL JOINs aren’t available for InfluxDB measurements in InfluxQL, they are with Flux. <img data-src="https://docs.influxdata.com/influxdb/v1/concepts/crosswalk/" alt="doc"></li>
+</ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section></section>
-    </div>
-  </div>
+</section></b></section><b>
+    </b></div><b>
+  </b></div><b>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="digital_twins_files/libs/revealjs/dist/reveal.js"></script>
@@ -1490,4 +1524,4 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
     </script>
     
 
-</body></html>
+</b></body></html>
