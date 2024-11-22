@@ -636,15 +636,15 @@ Tre cause delle problematiche:
 - Hybrid row-column oriented data model: define a retention period where data older will be stored as column-oriented data.
   - Column-Oriented data can still be performed DML/DDL operations upon.
 
-![Timescale hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true)hybrid_model
-hybrid_model
+![Timescale hybrid model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hybrid_model.png?raw=true)
+
 :::
 
 ::: {.column width="50%"}
 
-###### Hybrid model optimizations:
+##### Hybrid model optimizations
 
-- <b>segmentby</b>: partions data in a chunk based on [column1, ...]
+- <b>segmentby</b>: partion data inside chunk on [column1, ...]
 
 ![Segmeny-by example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
   
