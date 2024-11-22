@@ -684,7 +684,7 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 ## InfluxDB - Data Model
 
 - <b>Bucket</b>: Named location where time series data is stored. A bucket can contain multiple measurements.
-  - <b>Measurement: Logical grouping for time series data. All points in a given measurement should have the same tags. A measurement contains multiple tags and fields.
+  - <b>Measurement</b>: Logical grouping for time series data. Points in a given measurement share the tags. A measurement contains multiple tags and fields.
     - <b>Tags</b>: Key-value pairs with values that differ, but do not change often. Tags are meant for storing metadata for each point–for example, something to identify the source of the data like host, location, station, etc.
     - <b>Fields</b>: Key-value pairs with values that change over time–for example: temperature, pressure, stock price, etc.
     - <b>Timestamp</b>: Timestamp associated with the data. When stored on disk and queried, all data is ordered by time.
