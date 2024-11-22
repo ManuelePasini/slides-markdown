@@ -601,6 +601,7 @@ Tre cause delle problematiche:
 - Based on <b>hypertables</b>:
   - Logical table
   - Organizes the data in chunks (of a predefined time range) based on some time/bigint column of the table
+  - Other columns can be added in partitioning columns
   - Support for distributed hypertables
   - Supports a large set of PostgreSQL extensions (e.g. PostGIS, PostGIS_Raster)
 
@@ -608,7 +609,7 @@ Tre cause delle problematiche:
 
 :::: {.columns}
 
-::: {.column width="70%"}
+::: {.column width="60%"}
 
 - Uses standard SQL with a more operators/functions:
   - time_bucket('1 hour', column_name): same as date_trunc in PostgreSQL
@@ -619,7 +620,7 @@ Tre cause delle problematiche:
 
 :::
 
-::: {.column width="30%"}
+::: {.column width="40%"}
 
 ![Hyperfunctions list](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/hyperfunctions.png?raw=true)
 
@@ -646,7 +647,7 @@ Tre cause delle problematiche:
 
 - <b>segmentby</b>: partion data inside chunk on [column1, ...]
 
-![Segmeny-by example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
+![Segmentby example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/segmentby.png?raw=true)
   
 - <b>orderby</b>: orders data within a chunk based on time and stores metadata w.r.t min/max values in the chunk (similar to Databricks data-skipping)
 
