@@ -699,8 +699,10 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - Writes and retrieves data from disk; four components:
   - Write Ahead Log (WAL):  retains data when storage engine restarts. Ensures data is durable in case of unexpected failure.
   - Cache: in-memory copy of data points currently stored in the WAL.
-  - Organizes points by key (measurement, tag set, and unique field)
-  - Gets queried at runtime and merged with the data stored in Time Structured Merge (.tsm) files and Time Structured Index (.tsi) files, which index the .tsm files.
+    - Organizes points by key (measurement, tag set, and unique field)
+    - Gets queried at runtime and merged with the data stored in Time Structured Merge (.tsm) files
+  - Time Structured Merge Tree (.tsm) files 
+  - Time Structured Index (.tsi) files
 - Each write requests follows:
   - Is appended to the end of the WAL file;
   - The write request is stored in an in-memory cache and data is sorted by key (measurement name, tag set and unique field key).
