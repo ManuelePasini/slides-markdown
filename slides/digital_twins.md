@@ -724,3 +724,13 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 - Schema variability: while on a TimescaleDB table schema has to be defined upfront (can't add dimensions to a non-empty table), InfluxDB is much more flexible
 - SQL JOINs aren’t available for InfluxDB measurements in InfluxQL, they are with Flux. [doc](https://docs.influxdata.com/influxdb/v1/concepts/crosswalk/)
+
+
+## Overall
+
+- Timeseries DBMS (TSDBMS) are optimized for temporal data, each TSDBMS follows its own philosophy.
+- Very-High frequency of writes
+- Most read queries are range-scan queries;
+- Very few/none update/delete queries.  
+- Focus on data compression (!! since volumes easily become in the order of PB, ZB), and since most queries focus on recent data, e.g. retention policies
+- Focus on data-skipping
