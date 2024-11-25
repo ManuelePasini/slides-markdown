@@ -702,13 +702,15 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
  - Time-Structured Merge Tree (TSM)
  - Time Series Index (TSI)
 
+ ![InfluxDB data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/data_model_explained.png?raw=true)
+
 ## InfluxDB - Time Structured Merge Tree (TSM)
 
 - Specialization of a Log-Structured Merge Tree
 - Stores each series data in a columnar format
 - To improve efficiency, the storage engine only stores differences (or deltas) between values in a series.
 
-![InfluxDB data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/data_model.png?raw=true)
+![InfluxDB TSM organization](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/data_model.png?raw=true)
 
 ## InfluxDB - Time Structured Merge Index (TSI)
 
