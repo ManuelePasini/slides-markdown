@@ -1146,9 +1146,13 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li>Writes and retrieves data from disk; four components:
 <ul>
 <li>Write Ahead Log (WAL): retains data when storage engine restarts. Ensures data is durable in case of unexpected failure.</li>
-<li>Cache: in-memory copy of data points currently stored in the WAL.</li>
+<li>Cache: in-memory copy of data points currently stored in the WAL.
+<ul>
 <li>Organizes points by key (measurement, tag set, and unique field)</li>
-<li>Gets queried at runtime and merged with the data stored in Time Structured Merge (.tsm) files and Time Structured Index (.tsi) files, which index the .tsm files.</li>
+<li>Gets queried at runtime and merged with the data stored in Time Structured Merge (.tsm) files</li>
+</ul></li>
+<li>Time Structured Merge Tree (.tsm) files</li>
+<li>Time Structured Index (.tsi) files</li>
 </ul></li>
 <li>Each write requests follows:
 <ul>
