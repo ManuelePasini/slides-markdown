@@ -766,7 +766,3 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - Very few/none update/delete operations.  
 - Focus on data compression (!! since volumes easily become in the order of PB, and since most queries focus on recent data), e.g. retention policies
 - Focus on opimizations, e.g. data-skipping, downsampling, user-defined-functions (e.g. hyperfunctions in Timescale)
-
-## LSM Tree - Overall
-
--
