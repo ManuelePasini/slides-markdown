@@ -743,8 +743,7 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 ## Log-Structured Merge Tree (LSM Tree)
 
 - Append only
-- Data is first written to an in-memory structure (MemTable)
-- Data is moved to disk in batches in form of SSTables, minimizing disk accesses.
+- Data is first written to an in-memory structure (MemTable), then moved to disk in batches in form of SSTables.
 
 ![Writing data in a LSM tree](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/lsm_tree.png?raw=true)
 
