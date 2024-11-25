@@ -703,7 +703,7 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
   - Gets queried at runtime and merged with the data stored in Time Structured Merge (.tsm) files and Time Structured Index (.tsi) files, which index the .tsm files.
 - Each write requests follows:
   - Is appended to the end of the WAL file;
-  - The write request is stored in an in-memory cache and sorted by key (measurement name, the tag set and the unique field key).
+  - The write request is stored in an in-memory cache and data is sorted by key (measurement name, tag set and unique field key).
   - Once cache's size is above a threshold, a snapshot is taken and saved as .tsm file. Corresponding WAL entries are removed
 - .tsi files are created with a similar procedure WAL + cache.
 
@@ -712,6 +712,7 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - Specialization of a Log-Structured Merge Tree
 - Stores each series data in a columnar format
 - To improve efficiency, the storage engine only stores differences (or deltas) between values in a series.
+- <b>Series</b>: A group of points with the same measurement, tag keys, and tag values.
 
 ![InfluxDB TSM organization](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/data_model.png?raw=true)
 
