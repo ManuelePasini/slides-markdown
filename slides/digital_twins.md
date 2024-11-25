@@ -601,7 +601,8 @@ Tre cause delle problematiche:
 - Build upon a PostgreSQL instance.
 - Based on <b>hypertables</b>:
   - Logical table
-  - Organizes the data in chunks (of a predefined time range) based on some time/bigint column of the table (B-Tree)
+  - Organizes the data in chunks (of a predefined time range) based on some time/bigint column of the table (B-Tree).
+  - Each chunk gets mapped into a table. So indexes grows with the chunk size.
   - Other columns can be added in partitioning columns 
   - Support for distributed hypertables
   - Supports a large set of PostgreSQL extensions (e.g. PostGIS, PostGIS_Raster)
@@ -680,6 +681,32 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 - Not based upon the relational model (organizes data in tags and fields)
 - Not really CRUD db: more like a CR-ud, prioritizing the creating and reading data over update and destroy
+- Leverages an Log-Structured Merge Tree like data structure.
+
+## Log-Structured Merge Tree (LSM Tree)
+
+- Data is first written to an in-memory structure (MemTable), then moved to disk in batches in form of immutable SSTables.
+- Each SSTable gets a correspective index (usually kept in-memory) that describes the keys and the offset in the table they can be found.
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![Writing data in a LSM tree](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/lsm_tree.png?raw=true)
+
+:::
+
+::: {.column width="60%"}
+
+- <b>MemTable</b>: in-memory temporary sorting area. As it fills up, its contents are flushed to disk in a batch of sorted data structures called Sorted String Tables (SSTables).
+- <b>Sorted String Tables (SSTables)</b>: They store data in sorted order, enabling efficient queries and range scans. Each SSTable represents a snapshot of data at a specific point in time.
+- <b>Levels</b>: SSTables are organized into levels. Lower levels contain more recent data, while higher levels store compacted data.
+
+:::
+
+- <u><b>Compaction becomes vital!</u></b>
+
+::::
 
 ## InfluxDB - Data Model
 
@@ -736,19 +763,10 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - Timeseries DBMS (TSDBMS) are optimized for temporal data, each TSDBMS follows its own philosophy.
 - Very-High frequency of writes
 - Most read queries are range-scan queries;
-- Very few/none update/delete queries.  
+- Very few/none update/delete operations.  
 - Focus on data compression (!! since volumes easily become in the order of PB, and since most queries focus on recent data), e.g. retention policies
 - Focus on opimizations, e.g. data-skipping, downsampling, user-defined-functions (e.g. hyperfunctions in Timescale)
 
-## Log-Structured Merge Tree (LSM Tree)
+## LSM Tree - Overall
 
-- Append only
-- Data is first written to an in-memory structure (MemTable), then moved to disk in batches in form of SSTables.
-
-![Writing data in a LSM tree](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/lsm_tree.png?raw=true)
-
-- <b>MemTable</b>: in-memory temporary sorting area. As it fills up, its contents are flushed to disk in a batch of sorted data structures called Sorted String Tables (SSTables).
-- <b>Sorted String Tables (SSTables)</b>: They store data in sorted order, enabling efficient queries and range scans. Each SSTable represents a snapshot of data at a specific point in time.
-- <b>Levels</b>: SSTables are organized into levels. Lower levels contain more recent data, while higher levels store compacted data.
-
-- <u><b>Compaction becomes vital!</u></b>
+-
