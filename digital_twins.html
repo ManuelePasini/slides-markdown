@@ -1177,6 +1177,18 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li>Schema variability: while on a TimescaleDB table schema has to be defined upfront (can’t add dimensions to a non-empty table), InfluxDB is much more flexible</li>
 <li>SQL JOINs aren’t available for InfluxDB measurements in InfluxQL, they are with Flux. <a href="https://docs.influxdata.com/influxdb/v1/concepts/crosswalk/">doc</a></li>
 </ul>
+</section>
+<section id="overall" class="slide level2">
+<h2>Overall</h2>
+<ul>
+<li>Timeseries DBMS (TSDBMS) are optimized for temporal data, each TSDBMS follows its own philosophy.</li>
+<li>Very-High frequency of writes</li>
+<li>Most read queries are range-scan queries;</li>
+<li>Very few/none update/delete queries.<br>
+</li>
+<li>Focus on data compression (!! since volumes easily become in the order of PB, ZB), and since most queries focus on recent data, e.g.&nbsp;retention policies</li>
+<li>Focus on data-skipping</li>
+</ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
