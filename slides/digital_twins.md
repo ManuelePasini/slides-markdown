@@ -692,6 +692,26 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - <b>Point</b>: Single data record identified by its measurement, tag keys, tag values, field key, and timestamp.
 - <b>Series</b>: A group of points with the same measurement, tag keys, and tag values.
 
+## InfluxDB - Storage Engine
+
+Writes and retrieves data from disk; four components:
+ - Write Ahead Log (WAL):  retains data when storage engine restarts. Ensures data is durable in case of unexpected failure.
+ - Cache: in-memory copy of data points currently stored in the WAL.
+  - Organizes points by key (measurement, tag set, and unique field)
+  - Gets queried at runtime and merged with the data stored in TSM files.
+ - Time-Structured Merge Tree (TSM)
+ - Time Series Index (TSI)
+
+## InfluxDB - Time Structured Merge Tree (TSM)
+
+- Specialization of a Log-Structured Merge Tree
+- Stores each series data in a columnar format
+
+![InfluxDB data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/data_model.png?raw=true)
+
+## InfluxDB - Time Structured Merge Index (TSI)
+
+
 ## InfluxDB - Query language
 
 - Flux: non-SQL-like syntax
@@ -700,4 +720,4 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 ## Timescale vs. InfluxDB
 
 - Schema variability: while on a TimescaleDB table schema has to be defined upfront (can't add dimensions to a non-empty table), InfluxDB is much more flexible
-- SQL JOINs aren’t available for InfluxDB measurements in InfluxQL, they are with Flux. ![doc](https://docs.influxdata.com/influxdb/v1/concepts/crosswalk/)
+- SQL JOINs aren’t available for InfluxDB measurements in InfluxQL, they are with Flux. [doc](https://docs.influxdata.com/influxdb/v1/concepts/crosswalk/)
