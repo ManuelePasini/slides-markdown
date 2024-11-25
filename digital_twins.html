@@ -1151,7 +1151,7 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li>Each write requests follows:
 <ul>
 <li>Is appended to the end of the WAL file;</li>
-<li>The write request is stored in an in-memory cache and sorted by key (measurement name, the tag set and the unique field key).</li>
+<li>The write request is stored in an in-memory cache and data is sorted by key (measurement name, tag set and unique field key).</li>
 <li>Once cache’s size is above a threshold, a snapshot is taken and saved as .tsm file. Corresponding WAL entries are removed</li>
 </ul></li>
 <li>.tsi files are created with a similar procedure WAL + cache.</li>
@@ -1163,6 +1163,7 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li>Specialization of a Log-Structured Merge Tree</li>
 <li>Stores each series data in a columnar format</li>
 <li>To improve efficiency, the storage engine only stores differences (or deltas) between values in a series.</li>
+<li><b>Series</b>: A group of points with the same measurement, tag keys, and tag values.</li>
 </ul>
 
 <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/data_model.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">InfluxDB TSM organization</p></section>
