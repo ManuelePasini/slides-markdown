@@ -1143,11 +1143,13 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <section id="influxdb---storage-engine" class="slide level2">
 <h2>InfluxDB - Storage Engine</h2>
 <ul>
-<li>Writes and retrieves data from disk; four components:</li>
+<li>Writes and retrieves data from disk; four components:
+<ul>
 <li>Write Ahead Log (WAL): retains data when storage engine restarts. Ensures data is durable in case of unexpected failure.</li>
 <li>Cache: in-memory copy of data points currently stored in the WAL.</li>
 <li>Organizes points by key (measurement, tag set, and unique field)</li>
 <li>Gets queried at runtime and merged with the data stored in Time Structured Merge (.tsm) files and Time Structured Index (.tsi) files, which index the .tsm files.</li>
+</ul></li>
 <li>Each write requests follows:
 <ul>
 <li>Is appended to the end of the WAL file;</li>
