@@ -697,8 +697,8 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 ## InfluxDB - Storage Engine
 
 - Writes and retrieves data from disk; four components:
- - Write Ahead Log (WAL):  retains data when storage engine restarts. Ensures data is durable in case of unexpected failure.
- - Cache: in-memory copy of data points currently stored in the WAL.
+  - Write Ahead Log (WAL):  retains data when storage engine restarts. Ensures data is durable in case of unexpected failure.
+  - Cache: in-memory copy of data points currently stored in the WAL.
   - Organizes points by key (measurement, tag set, and unique field)
   - Gets queried at runtime and merged with the data stored in Time Structured Merge (.tsm) files and Time Structured Index (.tsi) files, which index the .tsm files.
 - Each write requests follows:
@@ -729,7 +729,6 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - Schema variability: while on a TimescaleDB table schema has to be defined upfront (can't add dimensions to a non-empty table), InfluxDB is much more flexible
 - SQL JOINs aren’t available for InfluxDB measurements in InfluxQL, they are with Flux. [doc](https://docs.influxdata.com/influxdb/v1/concepts/crosswalk/)
 
-
 ## Overall
 
 - Timeseries DBMS (TSDBMS) are optimized for temporal data, each TSDBMS follows its own philosophy.
@@ -738,6 +737,5 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - Very few/none update/delete queries.  
 - Focus on data compression (!! since volumes easily become in the order of PB, and since most queries focus on recent data), e.g. retention policies
 - Focus on data-skipping
-
 
 ## Log-Structured Merge Tree (LSM Tree)
