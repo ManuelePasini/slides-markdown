@@ -1199,11 +1199,23 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li>Very few/none update/delete queries.<br>
 </li>
 <li>Focus on data compression (!! since volumes easily become in the order of PB, and since most queries focus on recent data), e.g.&nbsp;retention policies</li>
-<li>Focus on data-skipping</li>
+<li>Focus on opimizations, e.g.&nbsp;data-skipping, downsampling, user-defined-functions (e.g.&nbsp;hyperfunctions in Timescale)</li>
 </ul>
 </section>
 <section id="log-structured-merge-tree-lsm-tree" class="slide level2">
 <h2>Log-Structured Merge Tree (LSM Tree)</h2>
+<ul>
+<li>Append only</li>
+<li>Data is first written to an in-memory structure (MemTable)</li>
+<li>Data is moved to disk in batches in form of SSTables, minimizing disk accesses.</li>
+</ul>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/lsm_tree.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Writing data in a LSM tree</p><ul>
+<li><p><b>MemTable</b>: in-memory temporary sorting area. As it fills up, its contents are flushed to disk in a batch of sorted data structures called Sorted String Tables (SSTables).</p></li>
+<li><p><b>Sorted String Tables (SSTables)</b>: They store data in sorted order, enabling efficient queries and range scans. Each SSTable represents a snapshot of data at a specific point in time.</p></li>
+<li><p><b>Levels</b>: SSTables are organized into levels. Lower levels contain more recent data, while higher levels store compacted data.</p></li>
+<li><p><u><b>Compaction becomes vital!</b></u></p></li>
+</ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
