@@ -1139,6 +1139,21 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li><b>Series</b>: A group of points with the same measurement, tag keys, and tag values.</li>
 </ul>
 </section>
+<section id="influxdb---storage-engine" class="slide level2">
+<h2>InfluxDB - Storage Engine</h2>
+<p>Writes and retrieves data from disk; four components: - Write Ahead Log (WAL): retains data when storage engine restarts. Ensures data is durable in case of unexpected failure. - Cache: in-memory copy of data points currently stored in the WAL. - Organizes points by key (measurement, tag set, and unique field) - Gets queried at runtime and merged with the data stored in TSM files. - Time-Structured Merge Tree (TSM) - Time Series Index (TSI)</p>
+</section>
+<section id="influxdb---time-structured-merge-tree-tsm" class="slide level2">
+<h2>InfluxDB - Time Structured Merge Tree (TSM)</h2>
+<ul>
+<li>Specialization of a Log-Structured Merge Tree</li>
+<li>Stores each series data in a columnar format</li>
+</ul>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/data_model.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">InfluxDB data model</p></section>
+<section id="influxdb---time-structured-merge-index-tsi" class="slide level2">
+<h2>InfluxDB - Time Structured Merge Index (TSI)</h2>
+</section>
 <section id="influxdb---query-language" class="slide level2">
 <h2>InfluxDB - Query language</h2>
 <ul>
@@ -1150,7 +1165,7 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <h2>Timescale vs.&nbsp;InfluxDB</h2>
 <ul>
 <li>Schema variability: while on a TimescaleDB table schema has to be defined upfront (can’t add dimensions to a non-empty table), InfluxDB is much more flexible</li>
-<li>SQL JOINs aren’t available for InfluxDB measurements in InfluxQL, they are with Flux. <img data-src="https://docs.influxdata.com/influxdb/v1/concepts/crosswalk/" alt="doc"></li>
+<li>SQL JOINs aren’t available for InfluxDB measurements in InfluxQL, they are with Flux. <a href="https://docs.influxdata.com/influxdb/v1/concepts/crosswalk/">doc</a></li>
 </ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
