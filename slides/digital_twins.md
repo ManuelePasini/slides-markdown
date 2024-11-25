@@ -694,7 +694,7 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ## InfluxDB - Storage Engine
 
-Writes and retrieves data from disk; four components:
+- Writes and retrieves data from disk; four components:
  - Write Ahead Log (WAL):  retains data when storage engine restarts. Ensures data is durable in case of unexpected failure.
  - Cache: in-memory copy of data points currently stored in the WAL.
   - Organizes points by key (measurement, tag set, and unique field)
@@ -706,6 +706,7 @@ Writes and retrieves data from disk; four components:
 
 - Specialization of a Log-Structured Merge Tree
 - Stores each series data in a columnar format
+- To improve efficiency, the storage engine only stores differences (or deltas) between values in a series.
 
 ![InfluxDB data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/data_model.png?raw=true)
 
