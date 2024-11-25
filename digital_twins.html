@@ -1206,8 +1206,7 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <h2>Log-Structured Merge Tree (LSM Tree)</h2>
 <ul>
 <li>Append only</li>
-<li>Data is first written to an in-memory structure (MemTable)</li>
-<li>Data is moved to disk in batches in form of SSTables, minimizing disk accesses.</li>
+<li>Data is first written to an in-memory structure (MemTable), then moved to disk in batches in form of SSTables.</li>
 </ul>
 
 <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/lsm_tree.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Writing data in a LSM tree</p><ul>
