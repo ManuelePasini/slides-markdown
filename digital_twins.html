@@ -1141,13 +1141,22 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </section>
 <section id="influxdb---storage-engine" class="slide level2">
 <h2>InfluxDB - Storage Engine</h2>
-<p>Writes and retrieves data from disk; four components: - Write Ahead Log (WAL): retains data when storage engine restarts. Ensures data is durable in case of unexpected failure. - Cache: in-memory copy of data points currently stored in the WAL. - Organizes points by key (measurement, tag set, and unique field) - Gets queried at runtime and merged with the data stored in TSM files. - Time-Structured Merge Tree (TSM) - Time Series Index (TSI)</p>
+<ul>
+<li>Writes and retrieves data from disk; four components:</li>
+<li>Write Ahead Log (WAL): retains data when storage engine restarts. Ensures data is durable in case of unexpected failure.</li>
+<li>Cache: in-memory copy of data points currently stored in the WAL.</li>
+<li>Organizes points by key (measurement, tag set, and unique field)</li>
+<li>Gets queried at runtime and merged with the data stored in TSM files.</li>
+<li>Time-Structured Merge Tree (TSM)</li>
+<li>Time Series Index (TSI)</li>
+</ul>
 </section>
 <section id="influxdb---time-structured-merge-tree-tsm" class="slide level2">
 <h2>InfluxDB - Time Structured Merge Tree (TSM)</h2>
 <ul>
 <li>Specialization of a Log-Structured Merge Tree</li>
 <li>Stores each series data in a columnar format</li>
+<li>To improve efficiency, the storage engine only stores differences (or deltas) between values in a series.</li>
 </ul>
 
 <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/data_model.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">InfluxDB data model</p></section>
