@@ -692,6 +692,8 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - <b>Point</b>: Single data record identified by its measurement, tag keys, tag values, field key, and timestamp.
 - <b>Series</b>: A group of points with the same measurement, tag keys, and tag values.
 
+ ![InfluxDB data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/data_model_explained.png?raw=true)
+
 ## InfluxDB - Storage Engine
 
 - Writes and retrieves data from disk; four components:
@@ -701,8 +703,6 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
   - Gets queried at runtime and merged with the data stored in TSM files.
  - Time-Structured Merge Tree (TSM)
  - Time Series Index (TSI)
-
- ![InfluxDB data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/data_model_explained.png?raw=true)
 
 ## InfluxDB - Time Structured Merge Tree (TSM)
 
