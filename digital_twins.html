@@ -1150,7 +1150,8 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li>Time-Structured Merge Tree (TSM)</li>
 <li>Time Series Index (TSI)</li>
 </ul>
-</section>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/data_model_explained.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">InfluxDB data model</p></section>
 <section id="influxdb---time-structured-merge-tree-tsm" class="slide level2">
 <h2>InfluxDB - Time Structured Merge Tree (TSM)</h2>
 <ul>
@@ -1159,7 +1160,7 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li>To improve efficiency, the storage engine only stores differences (or deltas) between values in a series.</li>
 </ul>
 
-<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/data_model.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">InfluxDB data model</p></section>
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/data_model.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">InfluxDB TSM organization</p></section>
 <section id="influxdb---time-structured-merge-index-tsi" class="slide level2">
 <h2>InfluxDB - Time Structured Merge Index (TSI)</h2>
 </section>
