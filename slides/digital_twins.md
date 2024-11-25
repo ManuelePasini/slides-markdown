@@ -738,6 +738,18 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - Most read queries are range-scan queries;
 - Very few/none update/delete queries.  
 - Focus on data compression (!! since volumes easily become in the order of PB, and since most queries focus on recent data), e.g. retention policies
-- Focus on data-skipping
+- Focus on opimizations, e.g. data-skipping, downsampling, user-defined-functions (e.g. hyperfunctions in Timescale)
 
 ## Log-Structured Merge Tree (LSM Tree)
+
+- Append only
+- Data is first written to an in-memory structure (MemTable)
+- Data is moved to disk in batches in form of SSTables, minimizing disk accesses.
+
+![Writing data in a LSM tree](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/lsm_tree.png?raw=true)
+
+- <b>MemTable</b>: in-memory temporary sorting area. As it fills up, its contents are flushed to disk in a batch of sorted data structures called Sorted String Tables (SSTables).
+- <b>Sorted String Tables (SSTables)</b>: They store data in sorted order, enabling efficient queries and range scans. Each SSTable represents a snapshot of data at a specific point in time.
+- <b>Levels</b>: SSTables are organized into levels. Lower levels contain more recent data, while higher levels store compacted data.
+
+- <u><b>Compaction becomes vital!</u></b>
