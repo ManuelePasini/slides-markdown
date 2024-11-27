@@ -602,7 +602,7 @@ Tre cause delle problematiche:
 - Based on <b>hypertables</b>:
   - Logical table
   - Organizes the data in chunks (of a predefined time range) based on some time/bigint column of the table (B-Tree).
-  - Each chunk gets mapped into a table. So indexes grows with the chunk size.
+  - Each chunk gets mapped into a table.
   - Other columns can be added in partitioning columns 
   - Support for distributed hypertables
   - Supports a large set of PostgreSQL extensions (e.g. PostGIS, PostGIS_Raster)
@@ -707,6 +707,16 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - <u><b>Compaction becomes vital!</u></b>
 
 ::::
+
+## LSM Tree - Pro & Cons
+
+##### Pro
+
+- Efficient for write-heavy workloads by minimizing the number of disk writes
+
+##### Cons
+
+- Poor read performances on random accesses on small chunks of data
 
 ## InfluxDB - Data Model
 
