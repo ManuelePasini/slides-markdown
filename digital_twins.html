@@ -427,7 +427,7 @@
 <ul>
 <li><b>Azure Digital Twins</b></li>
 <li><b>AWS IoT Twin Maker</b></li>
-<li><b>Digital Twin Consortium</b></li>
+<li><b>Digital Twin Consortium</b>f</li>
 </ul>
 </section>
 
@@ -1128,8 +1128,10 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <section id="log-structured-merge-tree-lsm-tree" class="slide level2">
 <h2>Log-Structured Merge Tree (LSM Tree)</h2>
 <ul>
+<li>Organizes data in multiple levels</li>
 <li>Data is first written to an in-memory structure (MemTable), then moved to disk in batches in form of immutable SSTables.</li>
-<li>Each SSTable gets a correspective index (usually kept in-memory) that describes the keys and the offset in the table they can be found.</li>
+<li>Each SSTable gets a correspective index file (usually kept in-memory) that describes the keys and the offset in the table they can be found.</li>
+<li>Whenever a given level is full, data is compressed and reorganized into the following level</li>
 </ul>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -1158,7 +1160,9 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </ul>
 <h5 id="cons">Cons</h5>
 <ul>
-<li>Poor read performances on random accesses on small chunks of data</li>
+<li>Poor read performances on random accesses on small chunks of data (bloom filters are used to mitigate)</li>
+<li>Requires constant compaction and compression</li>
+<li>Read/space amplification</li>
 </ul>
 </section>
 <section id="influxdb---data-model" class="slide level2">
