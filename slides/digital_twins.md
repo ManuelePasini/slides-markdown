@@ -62,7 +62,7 @@
 # DT in industry
   - <b>Azure Digital Twins</b>
   - <b>AWS IoT Twin Maker</b>
-  - <b>Digital Twin Consortium</b>
+  - <b>Digital Twin Consortium</b>f
 
 # Azure Digital Twins
   - FIWARE like
@@ -685,8 +685,10 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ## Log-Structured Merge Tree (LSM Tree)
 
+- Organizes data in multiple levels
 - Data is first written to an in-memory structure (MemTable), then moved to disk in batches in form of immutable SSTables.
-- Each SSTable gets a correspective index (usually kept in-memory) that describes the keys and the offset in the table they can be found.
+- Each SSTable gets a correspective index file (usually kept in-memory) that describes the keys and the offset in the table they can be found.
+- Whenever a given level is full, data is compressed and reorganized into the following level
 
 :::: {.columns}
 
@@ -716,7 +718,9 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ##### Cons
 
-- Poor read performances on random accesses on small chunks of data
+- Poor read performances on random accesses on small chunks of data (bloom filters are used to mitigate)
+- Requires constant compaction and compression
+- Read/space amplification
 
 ## InfluxDB - Data Model
 
