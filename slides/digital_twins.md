@@ -806,4 +806,20 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - Relationships are doubly linked list.
 - A relationship "belongs" to two nodes.
 
-![Neo4j nodes and relationships organization](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/nodes_rel.png?raw=true)
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+![Neo4j nodes and relationships storage](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/nodes_rel.png?raw=true)
+
+:::
+
+::: {.column width="40%"}
+
+![Example of Neo4j storage](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/nodes_rel_explained.png?raw=true)
+
+
+:::
+
+::::
