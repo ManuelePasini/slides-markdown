@@ -1132,6 +1132,7 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li>Data is first written to an in-memory structure (MemTable), then moved to disk in batches in form of immutable SSTables.</li>
 <li>Each SSTable gets a correspective index file (usually kept in-memory) that describes the keys and the offset in the table they can be found.</li>
 <li>Whenever a given level is full, data is compressed and reorganized into the following level</li>
+<li>Out-of-Place Updates and Deletes: updates and deletes are handled as new inserts, and are applied lazily to the base data.</li>
 </ul>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -1163,6 +1164,12 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li>Poor read performances on random accesses on small chunks of data (bloom filters are used to mitigate)</li>
 <li>Requires constant compaction and compression</li>
 <li>Read/space amplification</li>
+</ul>
+<h5 id="optimizations">Optimizations</h5>
+<ul>
+<li>Optimizing interactions with hardware (e..g., NVMEs SSDs)</li>
+<li>Compaction algorithms</li>
+<li></li>
 </ul>
 </section>
 <section id="influxdb---data-model" class="slide level2">
@@ -1243,6 +1250,15 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li>Focus on data compression (!! since volumes easily become in the order of PB, and since most queries focus on recent data), e.g.&nbsp;retention policies</li>
 <li>Focus on opimizations, e.g.&nbsp;data-skipping, downsampling, user-defined-functions (e.g.&nbsp;hyperfunctions in Timescale)</li>
 </ul>
+</section>
+<section id="soil-tests" class="slide level2 scrollable">
+<h2>Soil tests</h2>
+<h3 id="tessitura-sand-silt-clay">Tessitura (Sand, Silt, Clay)</h3>
+<ol type="1">
+<li>Errano: 30, 30, 40</li>
+<li>Mix_1: 30, 40, 30</li>
+<li>Mix_3: 40, 30, 30</li>
+</ol>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
