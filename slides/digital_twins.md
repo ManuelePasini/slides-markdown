@@ -801,9 +801,9 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ## Neo4j - Nodes and Relationships
 
-- Fixed sized records.
-- Each entity gets an ID
-- Fixed size records allow fast lookups (node_id:100, its record begins at 100*9 bytes)
-- Relationships are doubly linked list
+- Each entity is assigned an ID.
+- Fixed sized records, allowing fast lookups (node_id:100, its record begins at 100*9 bytes).
+- Relationships are doubly linked list.
+- A relationship "belongs" to two nodes.
 
 ![Neo4j nodes and relationships organization](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/nodes_rel.png?raw=true)
