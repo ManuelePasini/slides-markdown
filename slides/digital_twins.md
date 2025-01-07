@@ -790,10 +790,20 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 
 
-## Soil tests
+## Neo4j - Data model
 
-### Tessitura (Sand, Silt, Clay)
+- Leverages <b>index-free adjacency</b>: bidirectional joins are precomputed and stored in the database as relationships, as opposed to RDBMS where joins need to be materialized during query time via foreign keys.
+- Data organized in <i>store files</i>:
+  - nodes;
+  - relationships;
+  - labels;
+  - properties.
 
-1. Errano: 30, 30, 40
-2. Mix_1: 30, 40, 30
-3. Mix_3: 40, 30, 30
+## Neo4j - Nodes and Relationships
+
+- Fixed sized records.
+- Each entity gets an ID
+- Fixed size records allow fast lookups (node_id:100, its record begins at 100*9 bytes)
+- Relationships are doubly linked list
+
+![Neo4j nodes and relationships organization](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/nodes_rel.png?raw=true)
