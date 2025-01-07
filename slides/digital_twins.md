@@ -689,6 +689,7 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - Data is first written to an in-memory structure (MemTable), then moved to disk in batches in form of immutable SSTables.
 - Each SSTable gets a correspective index file (usually kept in-memory) that describes the keys and the offset in the table they can be found.
 - Whenever a given level is full, data is compressed and reorganized into the following level
+- Out-of-Place Updates and Deletes: updates and deletes are handled as new inserts, and are applied lazily to the base data.
 
 :::: {.columns}
 
@@ -721,6 +722,12 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - Poor read performances on random accesses on small chunks of data (bloom filters are used to mitigate)
 - Requires constant compaction and compression
 - Read/space amplification
+
+##### Optimizations
+
+- Optimizing interactions with hardware (e..g., NVMEs SSDs)
+- Compaction algorithms
+-
 
 ## InfluxDB - Data Model
 
@@ -780,3 +787,13 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - Very few/none update/delete operations.  
 - Focus on data compression (!! since volumes easily become in the order of PB, and since most queries focus on recent data), e.g. retention policies
 - Focus on opimizations, e.g. data-skipping, downsampling, user-defined-functions (e.g. hyperfunctions in Timescale)
+
+
+
+## Soil tests
+
+### Tessitura (Sand, Silt, Clay)
+
+1. Errano: 30, 30, 40
+2. Mix_1: 30, 40, 30
+3. Mix_3: 40, 30, 30
