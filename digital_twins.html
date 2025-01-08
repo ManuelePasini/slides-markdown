@@ -1153,17 +1153,17 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </ul>
 </div>
 </section>
-<section id="lsm-tree---merging" class="slide level2">
-<h2>LSM Tree - Merging</h2>
+<section id="lsm-tree---merging-and-compaction" class="slide level2">
+<h2>LSM Tree - Merging and Compaction</h2>
 <ul>
 <li>Two main paradigms:
 <ul>
-<li><b>Stack-based</b>: components are organized as a stack, where the most recent components are higher in the stack.
+<li><b>Size-tiered</b>: newer and smaller SSTables are successively merged into older and larger SSTables
 <ul>
 <li>better write performance</li>
 <li>good read performance.</li>
 </ul></li>
-<li><b>Leveled</b>: use fixed-size components, with newer components on higher levels; lower levels have more components per level.
+<li><b>Leveled</b>: use fixed-size components, the key range is split up into smaller SSTables and older data is moved into separate “levels,” which allows the compaction to proceed more incrementally and use less disk space
 <ul>
 <li>most popular;</li>
 <li>very good read performance;</li>
@@ -1176,13 +1176,16 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <h2>LSM Tree - Pro &amp; Cons</h2>
 <h5 id="pro">Pro</h5>
 <ul>
-<li>Efficient for write-heavy workloads by minimizing the number of disk writes</li>
+<li>Efficient for write-heavy workloads by minimizing the number of disk writes.</li>
+<li>High throughput;</li>
+<li>High level of compression;</li>
 </ul>
 <h5 id="cons">Cons</h5>
 <ul>
 <li>Poor read performances on random accesses on small chunks of data (bloom filters are used to mitigate)</li>
-<li>Requires constant compaction and compression</li>
-<li>Read/space amplification</li>
+<li>Requires constant compaction and compression (resource wise)</li>
+<li>Read amplification</li>
+<li>Write/space amplification, specifically bad for SSDs</li>
 </ul>
 <h5 id="optimizations">Optimizations</h5>
 <ul>
@@ -1190,6 +1193,11 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li>Compaction algorithms</li>
 <li></li>
 </ul>
+</section></section>
+<section>
+<section id="influxdb-1" class="title-slide slide level1 center">
+<h1>InfluxDB</h1>
+
 </section>
 <section id="influxdb---data-model" class="slide level2">
 <h2>InfluxDB - Data Model</h2>
