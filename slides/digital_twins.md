@@ -711,13 +711,13 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ::::
 
-## LSM Tree - Merging
+## LSM Tree - Merging and Compaction
 
 - Two main paradigms:
-  - <b>Stack-based</b>: components are organized as a stack, where the most recent components are higher in the stack.
+  - <b>Size-tiered</b>: newer and smaller SSTables are successively merged into older and larger SSTables
     - better write performance
     - good read performance.
-  - <b>Leveled</b>: use fixed-size components, with newer components on higher levels; lower levels have more components per level.
+  - <b>Leveled</b>: use fixed-size components, the key range is split up into smaller SSTables and older data is moved into separate “levels,” which allows the compaction to proceed more incrementally and use less disk space
     - most popular;
     - very good read performance;
     - higher write amplification.
@@ -726,19 +726,24 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ##### Pro
 
-- Efficient for write-heavy workloads by minimizing the number of disk writes
+- Efficient for write-heavy workloads by minimizing the number of disk writes.
+- High throughput;
+- High level of compression;
 
 ##### Cons
 
 - Poor read performances on random accesses on small chunks of data (bloom filters are used to mitigate)
-- Requires constant compaction and compression
-- Read/space amplification
+- Requires constant compaction and compression (resource wise)
+- Read amplification
+- Write/space amplification, specifically bad for SSDs
 
 ##### Optimizations
 
 - Optimizing interactions with hardware (e..g., NVMEs SSDs)
 - Compaction algorithms
 -
+
+# InfluxDB
 
 ## InfluxDB - Data Model
 
