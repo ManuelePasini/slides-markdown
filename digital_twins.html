@@ -1149,9 +1149,28 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li><b>Levels</b>: SSTables are organized into levels. Lower levels contain more recent data, while higher levels store compacted data.</li>
 </ul>
 </div><ul>
-<li><u><b>Compaction becomes vital!</b></u></li>
+<li><u><b>Compaction and merging become vital!</b></u></li>
 </ul>
 </div>
+</section>
+<section id="lsm-tree---merging" class="slide level2">
+<h2>LSM Tree - Merging</h2>
+<ul>
+<li>Two main paradigms:
+<ul>
+<li><b>Stack-based</b>: components are organized as a stack, where the most recent components are higher in the stack.
+<ul>
+<li>better write performance</li>
+<li>good read performance.</li>
+</ul></li>
+<li><b>Leveled</b>: use fixed-size components, with newer components on higher levels; lower levels have more components per level.
+<ul>
+<li>most popular;</li>
+<li>very good read performance;</li>
+<li>higher write amplification.</li>
+</ul></li>
+</ul></li>
+</ul>
 </section>
 <section id="lsm-tree---pro-cons" class="slide level2">
 <h2>LSM Tree - Pro &amp; Cons</h2>
@@ -1256,8 +1275,8 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <h1>Neo4j</h1>
 
 </section>
-<section id="neo4j---data-model" class="slide level2">
-<h2>Neo4j - Data model</h2>
+<section id="neo4j---data-layout" class="slide level2">
+<h2>Neo4j - Data layout</h2>
 <ul>
 <li>Leverages <b>index-free adjacency</b>: bidirectional joins are precomputed and stored in the database as relationships, as opposed to RDBMS where joins need to be materialized during query time via foreign keys.</li>
 <li>Data organized in <i>store files</i>:
@@ -1294,6 +1313,9 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </div>
 </div>
 </div>
+</section>
+<section id="neo4j---block-format" class="slide level2">
+<h2>Neo4j - Block Format</h2>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
