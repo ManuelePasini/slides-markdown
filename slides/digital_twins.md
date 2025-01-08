@@ -764,15 +764,28 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - Overall, a ton of LSM-tree based data structure have been proposed, playing with the trade-offs offered by the native implementation.
   
 ## LSM Tree - Partitioning
+:::: {.columns}
 
+::: {.column width="50%"}
 - Breaks a large component merge operation into multiple smaller ones.
 - To merge an SSTable from level L into level L + 1:
   - all overlapping SSTables at level L + 1 are selected;
   - then merged with it to produce new SSTables still at level L + 1
-
 - Could be applied to tiered merge policy;
   - However, each level can contain multiple SSTables with overlapping key ranges.
 
+
+:::
+
+::: {.column width="50%"}
+
+###### Pro
+
+- Reduces time, resources and disk utilization during merging
+- For skewed updates, the merge frequency of the components with cold update ranges can be greatly reduced.
+:::
+
+::::
 
 ![Partitioning example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/lsm_tree/partitioning.png?raw=true)
 
