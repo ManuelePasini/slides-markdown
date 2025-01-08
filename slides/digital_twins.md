@@ -707,9 +707,20 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 :::
 
-- <u><b>Compaction becomes vital!</u></b>
+- <u><b>Compaction and merging become vital!</u></b>
 
 ::::
+
+## LSM Tree - Merging
+
+- Two main paradigms:
+  - <b>Stack-based</b>: components are organized as a stack, where the most recent components are higher in the stack.
+    - better write performance
+    - good read performance.
+  - <b>Leveled</b>: use fixed-size components, with newer components on higher levels; lower levels have more components per level.
+    - most popular;
+    - very good read performance;
+    - higher write amplification.
 
 ## LSM Tree - Pro & Cons
 
@@ -790,7 +801,7 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 # Neo4j
 
-## Neo4j - Data model
+## Neo4j - Data layout
 
 - Leverages <b>index-free adjacency</b>: bidirectional joins are precomputed and stored in the database as relationships, as opposed to RDBMS where joins need to be materialized during query time via foreign keys.
 - Data organized in <i>store files</i>:
@@ -819,7 +830,9 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ![Example of Neo4j storage](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/nodes_rel_explained.png?raw=true)
 
-
 :::
 
 ::::
+
+
+## Neo4j - Block Format
