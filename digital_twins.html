@@ -1138,7 +1138,7 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/lsm_tree.png?raw=true"></p>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/lsm_tree/lsm_tree.png?raw=true"></p>
 <figcaption>Writing data in a LSM tree</figcaption>
 </figure>
 </div>
@@ -1156,22 +1156,26 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <section id="lsm-tree---merging-and-compaction" class="slide level2">
 <h2>LSM Tree - Merging and Compaction</h2>
 <ul>
-<li>Two main paradigms:
+<li>Two main policies, both organize disk components into logical levels (or tiers) and are controlled by a size ratio T:
 <ul>
-<li><b>Size-tiered</b>: newer and smaller SSTables are successively merged into older and larger SSTables
+<li><b>Tiering</b> merge: maintains up to T components per level:
 <ul>
-<li>better write performance</li>
+<li>When level L is full, its T components are merged into a new component at level L + 1;</li>
+<li>better write performance;</li>
 <li>good read performance.</li>
 </ul></li>
-<li><b>Leveled</b>: use fixed-size components, the key range is split up into smaller SSTables and older data is moved into separate “levels,” which allows the compaction to proceed more incrementally and use less disk space
+<li><b>Leveling</b> merge: each level only maintains one component:
 <ul>
-<li>most popular;</li>
-<li>very good read performance;</li>
+<li>component at level L is T times larger than the component at level L − 1;</li>
+<li>component at level L will be merged multiple times with incoming components at level L − 1;</li>
+<li>When it fills up, it will then be mergedinto level L + 1;</li>
+<li>better read performance;</li>
 <li>higher write amplification.</li>
 </ul></li>
 </ul></li>
 </ul>
-</section>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/lsm_tree/merge_techniques.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Example of merging techniques</p></section>
 <section id="lsm-tree---pro-cons" class="slide level2">
 <h2>LSM Tree - Pro &amp; Cons</h2>
 <h5 id="pro">Pro</h5>
@@ -1191,7 +1195,7 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <ul>
 <li>Optimizing interactions with hardware (e..g., NVMEs SSDs)</li>
 <li>Compaction algorithms</li>
-<li></li>
+<li>Partitioning</li>
 </ul>
 </section></section>
 <section>
