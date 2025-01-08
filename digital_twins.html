@@ -1155,27 +1155,37 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </section>
 <section id="lsm-tree---merging-and-compaction" class="slide level2">
 <h2>LSM Tree - Merging and Compaction</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
 <ul>
 <li>Two main policies, both organize disk components into logical levels (or tiers) and are controlled by a size ratio T:
 <ul>
 <li><b>Tiering</b> merge: maintains up to T components per level:
 <ul>
 <li>When level L is full, its T components are merged into a new component at level L + 1;</li>
-<li>better write performance;</li>
-<li>good read performance.</li>
+<li>Better write performance;</li>
+<li>Good read performance.</li>
 </ul></li>
 <li><b>Leveling</b> merge: each level only maintains one component:
 <ul>
-<li>component at level L is T times larger than the component at level L − 1;</li>
-<li>component at level L will be merged multiple times with incoming components at level L − 1;</li>
+<li>Component at level L is T times larger than the component at level L − 1;</li>
+<li>Component at level L will be merged multiple times with incoming components at level L − 1;</li>
 <li>When it fills up, it will then be mergedinto level L + 1;</li>
-<li>better read performance;</li>
-<li>higher write amplification.</li>
+<li>Better read performance;</li>
+<li>Higher write amplification.</li>
 </ul></li>
 </ul></li>
 </ul>
-
-<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/lsm_tree/merge_techniques.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Example of merging techniques</p></section>
+</div><div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/lsm_tree/merge_techniques.png?raw=true"></p>
+<figcaption>Example of merging techniques</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="lsm-tree---pro-cons" class="slide level2">
 <h2>LSM Tree - Pro &amp; Cons</h2>
 <h5 id="pro">Pro</h5>
@@ -1187,17 +1197,34 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <h5 id="cons">Cons</h5>
 <ul>
 <li>Poor read performances on random accesses on small chunks of data (bloom filters are used to mitigate)</li>
-<li>Requires constant compaction and compression (resource wise)</li>
+<li>Requires constant merging and compression (resource wise)</li>
 <li>Read amplification</li>
-<li>Write/space amplification, specifically bad for SSDs</li>
+<li>Write amplification, specifically bad for SSDs</li>
 </ul>
 <h5 id="optimizations">Optimizations</h5>
 <ul>
-<li>Optimizing interactions with hardware (e..g., NVMEs SSDs)</li>
-<li>Compaction algorithms</li>
-<li>Partitioning</li>
+<li><p>Optimizing interactions with hardware (e..g., NVMEs SSDs)</p></li>
+<li><p>Compaction algorithms</p></li>
+<li><p>Partitioning: range-partition the disk components (SSTables) of LSM-trees into multiple (usually fixed-size) small partitions.</p></li>
+<li><p>Overall, a ton of LSM-tree based data structure have been proposed, playing with the trade-offs offered by the native implementation.</p></li>
 </ul>
-</section></section>
+</section>
+<section id="lsm-tree---partitioning" class="slide level2">
+<h2>LSM Tree - Partitioning</h2>
+<ul>
+<li>Breaks a large component merge operation into multiple smaller ones.</li>
+<li>To merge an SSTable from level L into level L + 1:
+<ul>
+<li>all overlapping SSTables at level L + 1 are selected;</li>
+<li>then merged with it to produce new SSTables still at level L + 1</li>
+</ul></li>
+<li>Could be applied to tiered merge policy;
+<ul>
+<li>However, each level can contain multiple SSTables with overlapping key ranges.</li>
+</ul></li>
+</ul>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/lsm_tree/partitioning.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Partitioning example</p></section></section>
 <section>
 <section id="influxdb-1" class="title-slide slide level1 center">
 <h1>InfluxDB</h1>
