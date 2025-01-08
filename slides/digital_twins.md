@@ -720,14 +720,14 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - Two main policies, both organize disk components into logical levels (or tiers) and are controlled by a size ratio T:
   - <b>Tiering</b> merge: maintains up to T components per level:
     - When level L is full, its T components are merged into a new component at level L + 1;
-    - better write performance;
-    - good read performance.
+    - Better write performance;
+    - Good read performance.
   - <b>Leveling</b> merge: each level only maintains one component:
-    - component at level L is T times larger than the component at level L − 1;
-    - component at level L will be merged multiple times with incoming components at level L − 1;
+    - Component at level L is T times larger than the component at level L − 1;
+    - Component at level L will be merged multiple times with incoming components at level L − 1;
     - When it fills up, it will then be mergedinto level L + 1;
-    - better read performance;
-    - higher write amplification.
+    - Better read performance;
+    - Higher write amplification.
 :::
 
 ::: {.column width="30%"}
@@ -753,9 +753,9 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 ##### Cons
 
 - Poor read performances on random accesses on small chunks of data (bloom filters are used to mitigate)
-- Requires constant compaction and compression (resource wise)
+- Requires constant merging and compression (resource wise)
 - Read amplification
-- Write/space amplification, specifically bad for SSDs
+- Write amplification, specifically bad for SSDs
 
 ##### Optimizations
 
