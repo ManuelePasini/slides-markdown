@@ -746,7 +746,11 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 - Optimizing interactions with hardware (e..g., NVMEs SSDs)
 - Compaction algorithms
-- Partitioning
+- Partitioning: range-partition the disk components (SSTables) of LSM-trees into multiple (usually fixed-size) small partitions.
+  - breaks a large component merge operation into multiple smaller ones.
+
+![Partitioning example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/lsm_tree/merge_techniques.png?raw=true)
+
 
 # InfluxDB
 
