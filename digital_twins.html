@@ -1117,8 +1117,8 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <p>Move least-accessed data into a different tablespace, in order to reduce the volume of data in highly-accessed data</p>
 
 <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/tiered_storage.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Tiered architecture example</p></section>
-<section id="influxdb" class="slide level2">
-<h2>InfluxDB</h2>
+<section id="time-series-dbmss---influxdb" class="slide level2">
+<h2>Time Series DBMSs - InfluxDB</h2>
 <ul>
 <li>Not based upon the relational model (organizes data in tags and fields)</li>
 <li>Not really CRUD db: more like a CR-ud, prioritizing the creating and reading data over update and destroy</li>
@@ -1240,9 +1240,9 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li>A lot of LSM-tree based data structure have been proposed, playing with the trade-offs offered by the native implementation.</li>
 </ul>
 
-<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/lsm_tree/partitioning.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Considerations on LSM based variants</p></section></section>
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/lsm_tree/lsm_evolutions.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Considerations on LSM based variants</p></section></section>
 <section>
-<section id="influxdb-1" class="title-slide slide level1 center">
+<section id="influxdb" class="title-slide slide level1 center">
 <h1>InfluxDB</h1>
 
 </section>
