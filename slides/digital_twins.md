@@ -737,8 +737,6 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 :::
 
-- <u><b>Compaction and merging become vital!</u></b>
-
 ::::
 
 
