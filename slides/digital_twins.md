@@ -713,6 +713,10 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ## LSM Tree - Merging and Compaction
 
+:::: {.columns}
+
+::: {.column width="70%"}
+
 - Two main policies, both organize disk components into logical levels (or tiers) and are controlled by a size ratio T:
   - <b>Tiering</b> merge: maintains up to T components per level:
     - When level L is full, its T components are merged into a new component at level L + 1;
@@ -724,8 +728,19 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
     - When it fills up, it will then be mergedinto level L + 1;
     - better read performance;
     - higher write amplification.
+:::
+
+::: {.column width="30%"}
 
 ![Example of merging techniques](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/lsm_tree/merge_techniques.png?raw=true)
+
+
+:::
+
+- <u><b>Compaction and merging become vital!</u></b>
+
+::::
+
 
 ## LSM Tree - Pro & Cons
 
@@ -747,7 +762,17 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - Optimizing interactions with hardware (e..g., NVMEs SSDs)
 - Compaction algorithms
 - Partitioning: range-partition the disk components (SSTables) of LSM-trees into multiple (usually fixed-size) small partitions.
-  - breaks a large component merge operation into multiple smaller ones.
+  
+## LSM Tree - Partitioning
+
+- Breaks a large component merge operation into multiple smaller ones.
+- To merge an SSTable from level L into level L + 1:
+  - all overlapping SSTables at level L + 1 are selected;
+  - then merged with it to produce new SSTables still at level L + 1
+
+- Could be applied to tiered merge policy;
+  - However, each level can contain multiple SSTables with overlapping key ranges.
+
 
 ![Partitioning example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/lsm_tree/partitioning.png?raw=true)
 
