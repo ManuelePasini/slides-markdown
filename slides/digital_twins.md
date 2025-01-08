@@ -695,7 +695,7 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ::: {.column width="40%"}
 
-![Writing data in a LSM tree](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/influx_db/lsm_tree.png?raw=true)
+![Writing data in a LSM tree](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/lsm_tree/lsm_tree.png?raw=true)
 
 :::
 
@@ -713,14 +713,19 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ## LSM Tree - Merging and Compaction
 
-- Two main paradigms:
-  - <b>Size-tiered</b>: newer and smaller SSTables are successively merged into older and larger SSTables
-    - better write performance
+- Two main policies, both organize disk components into logical levels (or tiers) and are controlled by a size ratio T:
+  - <b>Tiering</b> merge: maintains up to T components per level:
+    - When level L is full, its T components are merged into a new component at level L + 1;
+    - better write performance;
     - good read performance.
-  - <b>Leveled</b>: use fixed-size components, the key range is split up into smaller SSTables and older data is moved into separate “levels,” which allows the compaction to proceed more incrementally and use less disk space
-    - most popular;
-    - very good read performance;
+  - <b>Leveling</b> merge: each level only maintains one component:
+    - component at level L is T times larger than the component at level L − 1;
+    - component at level L will be merged multiple times with incoming components at level L − 1;
+    - When it fills up, it will then be mergedinto level L + 1;
+    - better read performance;
     - higher write amplification.
+
+![Example of merging techniques](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/lsm_tree/merge_techniques.png?raw=true)
 
 ## LSM Tree - Pro & Cons
 
@@ -741,7 +746,7 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 - Optimizing interactions with hardware (e..g., NVMEs SSDs)
 - Compaction algorithms
--
+- Partitioning
 
 # InfluxDB
 
