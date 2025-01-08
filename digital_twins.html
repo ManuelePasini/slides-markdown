@@ -1128,11 +1128,11 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <section id="log-structured-merge-tree-lsm-tree" class="slide level2">
 <h2>Log-Structured Merge Tree (LSM Tree)</h2>
 <ul>
-<li>Organizes data in multiple levels</li>
-<li>Data is first written to an in-memory structure (MemTable), then moved to disk in batches in form of immutable SSTables.</li>
-<li>Each SSTable gets a correspective index file (usually kept in-memory) that describes the keys and the offset in the table they can be found.</li>
+<li>Two storage areas: in memory and on disk.</li>
+<li>Data is first written to an in-memory structure (MemTable, usually an AVL tree), then moved to disk in batches in form of immutable SSTables (Sorted String Table).</li>
+<li>Each SSTable gets a correspective <b>sparse-index</b> file (usually kept in-memory) that describes the keys and the offset in the table they can be found.</li>
 <li>Whenever a given level is full, data is compressed and reorganized into the following level</li>
-<li>Out-of-Place Updates and Deletes: updates and deletes are handled as new inserts, and are applied lazily to the base data.</li>
+<li>Out-of-Place Updates and Deletes: updates and deletes are handled as new inserts, and are applied lazily.</li>
 </ul>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -1145,7 +1145,7 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </div><div class="column" style="width:60%;">
 <ul>
 <li><b>MemTable</b>: in-memory temporary sorting area. As it fills up, its contents are flushed to disk in a batch of sorted data structures called Sorted String Tables (SSTables).</li>
-<li><b>Sorted String Tables (SSTables)</b>: They store data in sorted order, enabling efficient queries and range scans. Each SSTable represents a snapshot of data at a specific point in time.</li>
+<li><b>Sorted String Tables (SSTables)</b>: They store key-value data in sorted order (by key), enabling efficient queries and range scans. Each SSTable represents a snapshot of data at a specific point in time.</li>
 <li><b>Levels</b>: SSTables are organized into levels. Lower levels contain more recent data, while higher levels store compacted data.</li>
 </ul>
 </div><ul>
