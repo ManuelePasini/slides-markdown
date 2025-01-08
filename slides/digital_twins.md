@@ -707,7 +707,7 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 :::
 
-- <u><b>Compaction and merging become vital!</u></b>
+- **Compaction and merging become vital!**
 
 ::::
 
@@ -721,13 +721,13 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
   - <b>Tiering</b> merge: maintains up to T components per level:
     - When level L is full, its T components are merged into a new component at level L + 1;
     - Better write performance;
-    - Good read performance.
   - <b>Leveling</b> merge: each level only maintains one component:
     - Component at level L is T times larger than the component at level L − 1;
     - Component at level L will be merged multiple times with incoming components at level L − 1;
     - When it fills up, it will then be mergedinto level L + 1;
     - Better read performance;
     - Higher write amplification.
+    - Most common.
 :::
 
 ::: {.column width="30%"}
@@ -760,20 +760,19 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - Optimizing interactions with hardware (e..g., NVMEs SSDs)
 - Compaction algorithms
 - Partitioning: range-partition the disk components (SSTables) of LSM-trees into multiple (usually fixed-size) small partitions.
-
-- Overall, a ton of LSM-tree based data structure have been proposed, playing with the trade-offs offered by the native implementation.
   
 ## LSM Tree - Partitioning
+
 :::: {.columns}
 
 ::: {.column width="50%"}
+
 - Breaks a large component merge operation into multiple smaller ones.
 - To merge an SSTable from level L into level L + 1:
   - all overlapping SSTables at level L + 1 are selected;
   - then merged with it to produce new SSTables still at level L + 1
 - Could be applied to tiered merge policy;
   - However, each level can contain multiple SSTables with overlapping key ranges.
-
 
 :::
 
@@ -783,12 +782,18 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 - Reduces time, resources and disk utilization during merging
 - For skewed updates, the merge frequency of the components with cold update ranges can be greatly reduced.
+
 :::
 
 ::::
 
 ![Partitioning example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/lsm_tree/partitioning.png?raw=true)
 
+## LSM Tree - Evolutions
+
+- A lot of LSM-tree based data structure have been proposed, playing with the trade-offs offered by the native implementation.
+
+![Considerations on LSM based variants](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/lsm_tree/partitioning.png?raw=true)
 
 # InfluxDB
 
