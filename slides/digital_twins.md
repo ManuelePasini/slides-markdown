@@ -685,11 +685,11 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ## Log-Structured Merge Tree (LSM Tree)
 
-- Organizes data in multiple levels
-- Data is first written to an in-memory structure (MemTable), then moved to disk in batches in form of immutable SSTables.
-- Each SSTable gets a correspective index file (usually kept in-memory) that describes the keys and the offset in the table they can be found.
+- Two storage areas: in memory and on disk.
+- Data is first written to an in-memory structure (MemTable, usually an AVL tree), then moved to disk in batches in form of immutable SSTables (Sorted String Table).
+- Each SSTable gets a correspective <b>sparse-index</b> file (usually kept in-memory) that describes the keys and the offset in the table they can be found.
 - Whenever a given level is full, data is compressed and reorganized into the following level
-- Out-of-Place Updates and Deletes: updates and deletes are handled as new inserts, and are applied lazily to the base data.
+- Out-of-Place Updates and Deletes: updates and deletes are handled as new inserts, and are applied lazily.
 
 :::: {.columns}
 
@@ -702,7 +702,7 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 ::: {.column width="60%"}
 
 - <b>MemTable</b>: in-memory temporary sorting area. As it fills up, its contents are flushed to disk in a batch of sorted data structures called Sorted String Tables (SSTables).
-- <b>Sorted String Tables (SSTables)</b>: They store data in sorted order, enabling efficient queries and range scans. Each SSTable represents a snapshot of data at a specific point in time.
+- <b>Sorted String Tables (SSTables)</b>: They store key-value data in sorted order (by key), enabling efficient queries and range scans. Each SSTable represents a snapshot of data at a specific point in time.
 - <b>Levels</b>: SSTables are organized into levels. Lower levels contain more recent data, while higher levels store compacted data.
 
 :::
