@@ -760,6 +760,8 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 - Optimizing interactions with hardware (e..g., NVMEs SSDs)
 - Compaction algorithms
 - Partitioning: range-partition the disk components (SSTables) of LSM-trees into multiple (usually fixed-size) small partitions.
+
+- Overall, a ton of LSM-tree based data structure have been proposed, playing with the trade-offs offered by the native implementation.
   
 ## LSM Tree - Partitioning
 
