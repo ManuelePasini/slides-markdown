@@ -677,7 +677,7 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ![Tiered architecture example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/timescale/tiered_storage.png?raw=true)
 
-## InfluxDB
+## Time Series DBMSs - InfluxDB
 
 - Not based upon the relational model (organizes data in tags and fields)
 - Not really CRUD db: more like a CR-ud, prioritizing the creating and reading data over update and destroy
@@ -793,7 +793,7 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 - A lot of LSM-tree based data structure have been proposed, playing with the trade-offs offered by the native implementation.
 
-![Considerations on LSM based variants](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/lsm_tree/partitioning.png?raw=true)
+![Considerations on LSM based variants](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/lsm_tree/lsm_evolutions.png?raw=true)
 
 # InfluxDB
 
