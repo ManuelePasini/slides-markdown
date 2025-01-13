@@ -1382,6 +1382,68 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/legacy_format.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Example of Neo4j legacy format access pattern</p></section>
 <section id="neo4j---block-format" class="slide level2">
 <h2>Neo4j - Block Format</h2>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/block_format.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Example of Neo4j block format</p><ul>
+<li>Available ATM only in Neo4j enterprise edition;</li>
+<li>Leverages <b>data co-location</b>: graph local-data is stored together on disk;</li>
+<li>Organizes data in three storage: small store, dynamic store and dense store;</li>
+<li>Data is organized w.r.t. its size.</li>
+</ul>
+</section>
+<section id="neo4j-block-format---small-store" class="slide level2">
+<h2>Neo4j block format - Small store</h2>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/small_store.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Neo4j small store</p><ul>
+<li>In most dataset, the majority of nodes fit in this layout</li>
+<li>Up to 10 labels/properties and 5 relationships</li>
+<li>Static <b>128 B</b> blocks
+<ul>
+<li><b>64B Node data</b>: labels and properties</li>
+<li><b>64B Relationships data</b>: relationships and properties</li>
+</ul></li>
+<li>But not all nodes fit in this store…</li>
+</ul>
+</section>
+<section id="neo4j-block-format---dynamic-store" class="slide level2">
+<h2>Neo4j block format - Dynamic store</h2>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/dynamic_store.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Neo4j dynamic store</p><ul>
+<li>Grows and shrinks in units of 128B blocks</li>
+<li>Two different stores for nodes and relationships</li>
+<li><b> Dynamic node store</b>:
+<ul>
+<li>Up to 8192 B records;</li>
+<li>Used when labels/properties exceed small store capacity.</li>
+</ul></li>
+<li><b> Dynamic relationship store</b>:
+<ul>
+<li>Up to 2048 B records;</li>
+<li>Used when relations exceed small store capacity;</li>
+<li>or node has at least one dense relationship type.</li>
+</ul></li>
+<li>But a node might have thousands or milions of relationships…</li>
+</ul>
+</section>
+<section id="neo4j-block-format---dense-store" class="slide level2">
+<h2>Neo4j block format - Dense store</h2>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/dense_store.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Neo4j dense store</p><ul>
+<li>Based on multi-root generational B+Tree</li>
+<li>Dense relationship store
+<ul>
+<li>A tree for each node</li>
+<li>Effectively a map of {this node, type, direction, other node} -&gt; properties</li>
+<li>Used when relationships of a type exceed the dynamic store capacity</li>
+</ul></li>
+</ul>
+</section>
+<section id="neo4j---community-edition" class="slide level2">
+<h2>Neo4j - Community Edition</h2>
+<ul>
+<li>Open source version of Neo4j</li>
+<li><b>Aligned</b> data layout</li>
+<li>No info whatsoever available anywhere</li>
+</ul>
 </section>
 <section id="nice-considerations" class="slide level2">
 <h2>Nice considerations</h2>
