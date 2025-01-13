@@ -942,9 +942,17 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 - Based on multi-root generational B+Tree
 - Dense relationship store
-  - A tree for each node
+  - <b>Separate root for each node</b>
   - Effectively a map of {this node, type, direction, other node} -> properties
   - Used when relationships of a type exceed the dynamic store capacity
+
+## Neo4j block format - Key improvements
+
+![Accessing block format](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/block_format_access.png?raw=true)
+
+- <b>Fast queries</b>: Fewer disk/memory accesses.
+- <b>More memory efficient</b>: Data colocations means performance gains; fewer pages need to be loaded -> fewer page faults, fewer I/O operations
+- <b>Faster property access</b>: Properties inlined with nodes/relationships
 
 ## Neo4j - Community Edition
 
