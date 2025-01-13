@@ -900,9 +900,57 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ![Example of Neo4j legacy format access pattern](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/legacy_format.png?raw=true)
 
-
 ## Neo4j - Block Format
 
+![Example of Neo4j block format](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/block_format.png?raw=true)
+
+- Available ATM only in Neo4j enterprise edition;
+- Leverages <b>data co-location</b>: graph local-data is stored together on disk;
+- Organizes data in three storage: small store, dynamic store and dense store;
+- Data is organized w.r.t. its size.
+
+## Neo4j block format - Small store
+
+![Neo4j small store](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/small_store.png?raw=true)
+
+- In most dataset, the majority of nodes fit in this layout
+- Up to 10 labels/properties and 5 relationships
+- Static <b>128 B</b> blocks
+  - <b>64B Node data</b>: labels and properties
+  - <b>64B Relationships data</b>: relationships and properties
+- But not all nodes fit in this store...
+
+## Neo4j block format - Dynamic store
+
+![Neo4j dynamic store](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/dynamic_store.png?raw=true)
+
+- Grows and shrinks in units of 128B blocks
+- Two different stores for nodes and relationships
+- <b> Dynamic node store</b>:
+  - Up to 8192 B records;
+  - Used when labels/properties exceed small store capacity.
+- <b> Dynamic relationship store</b>:
+  - Up to 2048 B records;
+  - Used when relations exceed small store capacity;
+  - or node has at least one dense relationship type.
+
+- But a node might have thousands or milions of relationships...
+
+## Neo4j block format - Dense store
+
+![Neo4j dense store](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/dense_store.png?raw=true)
+
+- Based on multi-root generational B+Tree
+- Dense relationship store
+  - A tree for each node
+  - Effectively a map of {this node, type, direction, other node} -> properties
+  - Used when relationships of a type exceed the dynamic store capacity
+
+## Neo4j - Community Edition
+
+- Open source version of Neo4j
+- <b>Aligned</b> data layout
+- No info whatsoever available anywhere
 
 ## Nice considerations
 
