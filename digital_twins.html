@@ -1158,20 +1158,20 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <div class="columns">
 <div class="column" style="width:70%;">
 <ul>
-<li>Two main policies, both organize disk components into logical levels (or tiers) and are controlled by a size ratio T:
+<li>Two main policies, both organize disk components into logical levels (or tiers):
 <ul>
-<li><b>Tiering</b> merge: maintains up to T components per level:
+<li><b>Tiering merge</b>: maintains up to T components per level:
 <ul>
 <li>When level L is full, its T components are merged into a new component at level L + 1;</li>
 <li>Better write performance;</li>
 </ul></li>
-<li><b>Leveling</b> merge: each level only maintains one component:
+<li><b>Leveling merge</b>: fixed size level, each level only maintains one sorted component, components are constantly merged to avoid key overlaps between components:
 <ul>
 <li>Component at level L is T times larger than the component at level L − 1;</li>
 <li>Component at level L will be merged multiple times with incoming components at level L − 1;</li>
 <li>When it fills up, it will then be mergedinto level L + 1;</li>
 <li>Better read performance;</li>
-<li>Higher write amplification.</li>
+<li>Higher write amplification;</li>
 <li>Most common.</li>
 </ul></li>
 </ul></li>
@@ -1196,15 +1196,15 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </ul>
 <h5 id="cons">Cons</h5>
 <ul>
-<li>Poor read performances on random accesses on small chunks of data (bloom filters are used to mitigate)</li>
-<li>Requires constant merging and compression (resource wise)</li>
-<li>Read amplification</li>
-<li>Write amplification, specifically bad for SSDs</li>
+<li>Poor read performances on random accesses on small chunks of data (bloom filters are used to mitigate);</li>
+<li>Requires constant merging and compression (resource wise);</li>
+<li>Read amplification;</li>
+<li>Write amplification, specifically bad for SSDs.</li>
 </ul>
 <h5 id="optimizations">Optimizations</h5>
 <ul>
-<li>Optimizing interactions with hardware (e..g., NVMEs SSDs)</li>
-<li>Compaction algorithms</li>
+<li>Optimizing interactions with hardware (e..g., NVMEs SSDs);</li>
+<li>Compaction algorithms;</li>
 <li>Partitioning: range-partition the disk components (SSTables) of LSM-trees into multiple (usually fixed-size) small partitions.</li>
 </ul>
 </section>
@@ -1369,8 +1369,25 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </div>
 </div>
 </section>
+<section id="neo4j---legacy-format" class="slide level2">
+<h2>Neo4j - Legacy Format</h2>
+<ul>
+<li>Data spread multiple files, in different records;</li>
+<li>Accessing data can cause multiple page faults;</li>
+<li>Performance deegrades over time as data turns fragmented;</li>
+<li>Performance degrades quickly when ratio of store size to pagecache increases;</li>
+<li>When page fault occurs, need to access data on disk.</li>
+</ul>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/legacy_format.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Example of Neo4j legacy format access pattern</p></section>
 <section id="neo4j---block-format" class="slide level2">
 <h2>Neo4j - Block Format</h2>
+</section>
+<section id="nice-considerations" class="slide level2">
+<h2>Nice considerations</h2>
+<ul>
+<li>In addition to the organization of the local index discussed above, which determines how data is organized in a single LSM component (file), another key design choice for spatial LSM indexes is the merge policy, which determines when and how components are merged. The</li>
+</ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
