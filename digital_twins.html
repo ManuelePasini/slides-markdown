@@ -1431,10 +1431,19 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li>Based on multi-root generational B+Tree</li>
 <li>Dense relationship store
 <ul>
-<li>A tree for each node</li>
+<li><b>Separate root for each node</b></li>
 <li>Effectively a map of {this node, type, direction, other node} -&gt; properties</li>
 <li>Used when relationships of a type exceed the dynamic store capacity</li>
 </ul></li>
+</ul>
+</section>
+<section id="neo4j-block-format---key-improvements" class="slide level2">
+<h2>Neo4j block format - Key improvements</h2>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/block_format_access.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Accessing block format</p><ul>
+<li><b>Fast queries</b>: Fewer disk/memory accesses.</li>
+<li><b>More memory efficient</b>: Data colocations means performance gains; fewer pages need to be loaded -&gt; fewer page faults, fewer I/O operations</li>
+<li><b>Faster property access</b>: Properties inlined with nodes/relationships</li>
 </ul>
 </section>
 <section id="neo4j---community-edition" class="slide level2">
