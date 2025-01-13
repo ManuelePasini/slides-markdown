@@ -717,16 +717,16 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ::: {.column width="70%"}
 
-- Two main policies, both organize disk components into logical levels (or tiers) and are controlled by a size ratio T:
-  - <b>Tiering</b> merge: maintains up to T components per level:
+- Two main policies, both organize disk components into logical levels (or tiers):
+  - <b>Tiering merge</b>: maintains up to T components per level:
     - When level L is full, its T components are merged into a new component at level L + 1;
     - Better write performance;
-  - <b>Leveling</b> merge: each level only maintains one component:
+  - <b>Leveling merge</b>: fixed size level, each level only maintains one sorted component, components are constantly merged to avoid key overlaps between components:
     - Component at level L is T times larger than the component at level L − 1;
     - Component at level L will be merged multiple times with incoming components at level L − 1;
     - When it fills up, it will then be mergedinto level L + 1;
     - Better read performance;
-    - Higher write amplification.
+    - Higher write amplification;
     - Most common.
 :::
 
@@ -739,7 +739,6 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ::::
 
-
 ## LSM Tree - Pro & Cons
 
 ##### Pro
@@ -750,15 +749,15 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ##### Cons
 
-- Poor read performances on random accesses on small chunks of data (bloom filters are used to mitigate)
-- Requires constant merging and compression (resource wise)
-- Read amplification
-- Write amplification, specifically bad for SSDs
+- Poor read performances on random accesses on small chunks of data (bloom filters are used to mitigate);
+- Requires constant merging and compression (resource wise);
+- Read amplification;
+- Write amplification, specifically bad for SSDs.
 
 ##### Optimizations
 
-- Optimizing interactions with hardware (e..g., NVMEs SSDs)
-- Compaction algorithms
+- Optimizing interactions with hardware (e..g., NVMEs SSDs);
+- Compaction algorithms;
 - Partitioning: range-partition the disk components (SSTables) of LSM-trees into multiple (usually fixed-size) small partitions.
   
 ## LSM Tree - Partitioning
@@ -891,5 +890,24 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ::::
 
+## Neo4j - Legacy Format
+
+ - Data spread multiple files, in different records;
+ - Accessing data can cause multiple page faults;
+ - Performance deegrades over time as data turns fragmented;
+ - Performance degrades quickly when ratio of store size to pagecache increases;
+ - When page fault occurs, need to access data on disk.
+
+![Example of Neo4j legacy format access pattern](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/legacy_format.png?raw=true)
+
 
 ## Neo4j - Block Format
+
+
+## Nice considerations
+
+- In addition to the organization of the local index discussed
+above, which determines how data is organized in a single
+LSM component (file), another key design choice for spatial
+LSM indexes is the merge policy, which determines when and
+how components are merged. The
