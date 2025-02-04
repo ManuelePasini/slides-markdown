@@ -989,6 +989,7 @@ how components are merged. The
     - Retrieve a set of PKs
 - JSON based data model (ADM)
 - Asterix Query Language (AQL) as query language
+
 > AsterixDB stores information about the field defined a priori as separate metadata; information about fields that are ”just there” in instances of open Datatypes is stored within each instance.
 
 ## AsterixDB - Data Model
