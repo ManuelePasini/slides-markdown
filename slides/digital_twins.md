@@ -1033,8 +1033,8 @@ The final state of insertion, flushing, then deletion applied to a secondary LSM
 
 | Comparison | AsterixDB | RocksDB |
 |:-----------|:-----------:|------------:|
-| Stats    | Data 2      | Data 3      |
-| Compaction | Data 5      | Data 6      |
-| Partitioning     | Data 2      | Data 3      |
-| Queries     | Data 5      | Data 6      |
-| Workload balancing     | Data 5      | Data 6      |
+| Stats      | None      | None      |
+| Compaction | focus on managing updates      | key-based     |
+| Partitioning| Hash-partitioning      | None      |
+| Queries     | SQL-Like      | KV DBMS      |
+| Workload balancing| Native (hash-partitioning on keys)  | None   |
