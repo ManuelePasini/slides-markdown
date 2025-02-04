@@ -985,8 +985,8 @@ how components are merged. The
 - Distributed LSM-based DBMS
   - Hash-partitioning on primary key
   - Secondary indexes are node-local
-  - Secondary indexes retrieve a set of PKs
-  - Secondary indexes queries are run in parallel
+    - Run in parallel    
+    - Retrieve a set of PKs
 - JSON based data model (ADM)
 - Asterix Query Language (AQL) as query language
 > AsterixDB stores information about the field defined a priori as separate metadata; information about fields that are ”just there” in instances of open Datatypes is stored within each instance.
@@ -1000,7 +1000,6 @@ how components are merged. The
 - <b>Dataset</b>: stored collection of data instances of a Datatype
 
 **Data is stored (and indexed) as a B<sup>+</sup>-Tree keyed on primary key**
-
 
 :::: {.columns}
 
@@ -1018,4 +1017,10 @@ how components are merged. The
 
 ::::
 
+
+## AsterixDB - Internals
+
+- Secondary indexes are standard <i>LSM-ified</i> indexes (e.g. LSM-B<sup>+</sup>Tree)
+- Given its LSM-based representation, big focus on handling updates and granting ACID properties (<u>row level acidity</u>)
+![The final state of insertion, flushing, then deletion applied to a secondary LSM R-tree and a secondary LSM B<sup>+</sup>-Tree. Both indexes are storing entries of the form <SK; PKi> where SK is a secondary key and PK is the associated primary key. The LSM R-tree handles deletion by inserting the primary keys of the deleted entries in its deleted-key B<sup>+</sup>-tree, while the LSM B<sup>+</sup>-tree handles it by inserting a control entry, denoted by <SK;PKi> into its memory component.](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/asterixdb/lsmified_trees.png?raw=true)
 
