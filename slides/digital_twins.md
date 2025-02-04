@@ -983,10 +983,15 @@ how components are merged. The
 ## AsterixDB - Introduction
 
 - Distributed LSM-based DBMS
-- JSON based data model (ADM - )
+  - Hash-partitioning on primary key
+  - Secondary indexes are node-local
+  - Secondary indexes retrieve a set of PKs
+  - Secondary indexes queries are run in parallel
+- JSON based data model (ADM)
 - Asterix Query Language (AQL) as query language
+> AsterixDB stores information about the field defined a priori as separate metadata; information about fields that are ”just there” in instances of open Datatypes is stored within each instance.
 
-#### Data Model
+## AsterixDB - Data Model
 
 - <b>Dataverse</b>: akin to a DB in RDBMS; place to create and manage Datatypes and Datasets
 - <b>Datatype</b>:  specifies what its definer wants AsterixDB to know, a priori, about a kind of data that it will be asked to store.
@@ -995,6 +1000,7 @@ how components are merged. The
 - <b>Dataset</b>: stored collection of data instances of a Datatype
 - **Data is stored (and indexed) as a B<sup>+</sup>-Tree keyed on primary key**
 
+## AsterixDB - Distributed DBMS
 
 :::: {.columns}
 
