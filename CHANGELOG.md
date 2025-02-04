@@ -1,3 +1,10 @@
+## [1.13.0](https://github.com/ManuelePasini/slides-markdown/compare/1.12.1...1.13.0) (2025-02-04)
+
+
+### Features
+
+* started writing  asterixdb slides ([29afa0d](https://github.com/ManuelePasini/slides-markdown/commit/29afa0d74696ad8a86786bd365268b5c2fa7f157))
+
 ## [1.12.1](https://github.com/ManuelePasini/slides-markdown/compare/1.12.0...1.12.1) (2024-11-22)
 
 
