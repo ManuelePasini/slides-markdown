@@ -1027,3 +1027,14 @@ how components are merged. The
 ![Example of secondary LSM B<sup>+</sup>-Tree and LSM R-tree](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/asterixdb/lsmified_trees.png?raw=true)
 
 The final state of insertion, flushing, then deletion applied to a secondary LSM R-tree and a secondary LSM B<sup>+</sup>-Tree. Both indexes are storing entries of the form <SK; PKi> where SK is a secondary key and PK is the associated primary key. The LSM R-tree handles deletion by inserting the primary keys of the deleted entries in its deleted-key B<sup>+</sup>-tree, while the LSM B<sup>+</sup>-tree handles it by inserting a control entry, denoted by <SK;PKi> into its memory component.
+
+
+# RocksDB vs. AsterixDB
+
+| Comparison | AsterixDB | RocksDB |
+|:-----------|:-----------:|------------:|
+| Stats    | Data 2      | Data 3      |
+| Compaction | Data 5      | Data 6      |
+| Partitioning     | Data 2      | Data 3      |
+| Queries     | Data 5      | Data 6      |
+| Workload balancing     | Data 5      | Data 6      |
