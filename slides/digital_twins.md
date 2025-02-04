@@ -998,9 +998,9 @@ how components are merged. The
   - <i>Closed Datatype</i>:prevents users from storing objects with extra or illegally missing data.
   - <i>Open Datatype</i>: instances are allowed to have additional content, beyond what the type specifies
 - <b>Dataset</b>: stored collection of data instances of a Datatype
-- **Data is stored (and indexed) as a B<sup>+</sup>-Tree keyed on primary key**
 
-## AsterixDB - Distributed DBMS
+**Data is stored (and indexed) as a B<sup>+</sup>-Tree keyed on primary key**
+
 
 :::: {.columns}
 
