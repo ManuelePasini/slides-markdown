@@ -1186,6 +1186,12 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </div>
 </div>
 </section>
+<section id="lsm-tree---merging-v.2" class="slide level2">
+<h2>LSM Tree - Merging v.2</h2>
+<ul>
+<li>The two main merge paradigms considered are stack-based and leveled. In stack-based policies, components are organized as a stack, where the most recent components are higher in the stack. Leveled policies use (almost) fixedsize components, with newer components on higher levels; lower levels have more components per level. Stack-based LSM trees usually have better write performance and good read performance. Leveled LSM tree is the most popular paradigm in the industry with very good read performance, but higher write amplification in general</li>
+</ul>
+</section>
 <section id="lsm-tree---pro-cons" class="slide level2">
 <h2>LSM Tree - Pro &amp; Cons</h2>
 <h5 id="pro">Pro</h5>
@@ -1442,7 +1448,7 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 
 <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/block_format_access.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Accessing block format</p><ul>
 <li><b>Fast queries</b>: Fewer disk/memory accesses.</li>
-<li><b>More memory efficient</b>: Data colocations means performance gains; fewer pages need to be loaded -&gt; fewer page faults, fewer I/O operations</li>
+<li><b>More memory efficient</b>: Data colocations means performance gains; fewer pages need to be loaded -&gt; fewer page faults -&gt; fewer I/O operations</li>
 <li><b>Faster property access</b>: Properties inlined with nodes/relationships</li>
 </ul>
 </section>
@@ -1459,6 +1465,47 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <ul>
 <li>In addition to the organization of the local index discussed above, which determines how data is organized in a single LSM component (file), another key design choice for spatial LSM indexes is the merge policy, which determines when and how components are merged. The</li>
 </ul>
+</section></section>
+<section>
+<section id="asterixdb" class="title-slide slide level1 center">
+<h1>AsterixDB</h1>
+
+</section>
+<section id="asterixdb---introduction" class="slide level2">
+<h2>AsterixDB - Introduction</h2>
+<ul>
+<li>Distributed LSM-based DBMS</li>
+<li>JSON based data model (ADM - )</li>
+<li>Asterix Query Language (AQL) as query language</li>
+</ul>
+<h4 id="data-model">Data Model</h4>
+<ul>
+<li><b>Dataverse</b>: akin to a DB in RDBMS; place to create and manage Datatypes and Datasets</li>
+<li><b>Datatype</b>: specifies what its definer wants AsterixDB to know, a priori, about a kind of data that it will be asked to store.
+<ul>
+<li><i>Closed Datatype</i>:prevents users from storing objects with extra or illegally missing data.</li>
+<li><i>Open Datatype</i>: instances are allowed to have additional content, beyond what the type specifies</li>
+</ul></li>
+<li><b>Dataset</b>: stored collection of data instances of a Datatype</li>
+<li><strong>Data is stored (and indexed) as a B<sup>+</sup>-Tree keyed on primary key</strong></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/asterixdb/datatype.png?raw=true"></p>
+<figcaption>AsterixDB Datatype example</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/asterixdb/dataset.png?raw=true"></p>
+<figcaption>AsterixDB Dataset example</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
