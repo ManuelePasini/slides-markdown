@@ -1474,11 +1474,19 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <section id="asterixdb---introduction" class="slide level2">
 <h2>AsterixDB - Introduction</h2>
 <ul>
-<li>Distributed LSM-based DBMS</li>
-<li>JSON based data model (ADM - )</li>
-<li>Asterix Query Language (AQL) as query language</li>
+<li>Distributed LSM-based DBMS
+<ul>
+<li>Hash-partitioning on primary key</li>
+<li>Secondary indexes are node-local</li>
+<li>Secondary indexes retrieve a set of PKs</li>
+<li>Secondary indexes queries are run in parallel</li>
+</ul></li>
+<li>JSON based data model (ADM)</li>
+<li>Asterix Query Language (AQL) as query language &gt; AsterixDB stores information about the field defined a priori as separate metadata; information about fields that are ”just there” in instances of open Datatypes is stored within each instance.</li>
 </ul>
-<h4 id="data-model">Data Model</h4>
+</section>
+<section id="asterixdb---data-model" class="slide level2">
+<h2>AsterixDB - Data Model</h2>
 <ul>
 <li><b>Dataverse</b>: akin to a DB in RDBMS; place to create and manage Datatypes and Datasets</li>
 <li><b>Datatype</b>: specifies what its definer wants AsterixDB to know, a priori, about a kind of data that it will be asked to store.
@@ -1489,6 +1497,9 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <li><b>Dataset</b>: stored collection of data instances of a Datatype</li>
 <li><strong>Data is stored (and indexed) as a B<sup>+</sup>-Tree keyed on primary key</strong></li>
 </ul>
+</section>
+<section id="asterixdb---distributed-dbms" class="slide level2">
+<h2>AsterixDB - Distributed DBMS</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
