@@ -739,6 +739,16 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 
 ::::
 
+## LSM Tree - Merging v.2
+
+- The two main merge paradigms considered are stack-based
+and leveled. In stack-based policies, components are organized as a stack, where the
+most recent components are higher in the stack. Leveled policies use (almost) fixedsize
+components, with newer components on higher levels; lower levels have more
+components per level. Stack-based LSM trees usually have better write performance
+and good read performance. Leveled LSM tree is the most popular paradigm in the
+industry with very good read performance, but higher write amplification in general
+
 ## LSM Tree - Pro & Cons
 
 ##### Pro
@@ -951,7 +961,7 @@ Move least-accessed data into a different tablespace, in order to reduce the vol
 ![Accessing block format](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/neo4j/block_format_access.png?raw=true)
 
 - <b>Fast queries</b>: Fewer disk/memory accesses.
-- <b>More memory efficient</b>: Data colocations means performance gains; fewer pages need to be loaded -> fewer page faults, fewer I/O operations
+- <b>More memory efficient</b>: Data colocations means performance gains; fewer pages need to be loaded -> fewer page faults -> fewer I/O operations
 - <b>Faster property access</b>: Properties inlined with nodes/relationships
 
 ## Neo4j - Community Edition
@@ -967,3 +977,39 @@ above, which determines how data is organized in a single
 LSM component (file), another key design choice for spatial
 LSM indexes is the merge policy, which determines when and
 how components are merged. The
+
+# AsterixDB
+
+## AsterixDB - Introduction
+
+- Distributed LSM-based DBMS
+- JSON based data model (ADM - )
+- Asterix Query Language (AQL) as query language
+
+#### Data Model
+
+- <b>Dataverse</b>: akin to a DB in RDBMS; place to create and manage Datatypes and Datasets
+- <b>Datatype</b>:  specifies what its definer wants AsterixDB to know, a priori, about a kind of data that it will be asked to store.
+  - <i>Closed Datatype</i>:prevents users from storing objects with extra or illegally missing data.
+  - <i>Open Datatype</i>: instances are allowed to have additional content, beyond what the type specifies
+- <b>Dataset</b>: stored collection of data instances of a Datatype
+- **Data is stored (and indexed) as a B<sup>+</sup>-Tree keyed on primary key**
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![AsterixDB Datatype example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/asterixdb/datatype.png?raw=true)
+
+:::
+
+::: {.column width="50%"}
+
+![AsterixDB Dataset example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/asterixdb/dataset.png?raw=true)
+
+:::
+
+::::
+
+
