@@ -1643,35 +1643,41 @@ on Measurements(location) type rtree;</code></pre>
 </ul>
 <h5 id="t-gql---vldb-journal-2023"><a href="https://ri.itba.edu.ar/server/api/core/bitstreams/06cfb092-353f-40bf-8ff7-789102b54146/content">T-GQL</a> - VLDB Journal, 2023</h5>
 <ul>
-<li><p>A collection of operators for computing different kinds of temporal paths in a graph, capturing different temporal path semantics.</p>
+<li>A collection of operators for computing different kinds of temporal paths in a graph, capturing different temporal path semantics.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:33%;">
 <ul>
 <li><b>SNAPSHOT</b></li>
 </ul>
 <p>Who where the friends of the friends of Cathy in 2018?</p>
-<pre><code>SELECT p2.Name as friend_name
-  MATCH (p1:Person) - [:Friend*2] -&gt; (p2:Person)
-  WHERE p1.Name = ’Cathy Van Bourne’
-  SNAPSHOT ’2018’</code></pre>
+<pre><code>  SELECT p2.Name as friend_name
+    MATCH (p1:Person) - [:Friend*2] -&gt; (p2:Person)
+    WHERE p1.Name = ’Cathy Van Bourne’
+    SNAPSHOT ’2018’</code></pre>
+</div><div class="column" style="width:33%;">
 <ul>
 <li><b>BETWEEN</b></li>
 </ul>
 <p>Where did the friends of Pauline live between 2000 and 2004?</p>
-<pre><code>SELECT c.Name
-MATCH (p1:Person) - [:Friend] -&gt; (p2:Person),
-(p2) - [:LivedIn] -&gt; (c:City)
-WHERE p1.Name = ’Pauline Boutler’
-BETWEEN ’2000’ and ’2004’</code></pre>
+<pre><code>  SELECT c.Name
+  MATCH (p1:Person) - [:Friend] -&gt; (p2:Person),
+  (p2) - [:LivedIn] -&gt; (c:City)
+  WHERE p1.Name = ’Pauline Boutler’
+  BETWEEN ’2000’ and ’2004’</code></pre>
+</div><div class="column" style="width:33%;">
 <ul>
 <li><b>WHEN</b></li>
 </ul>
 <p>Who were friends of Mary while she was living in Antwerp?</p>
-<pre><code>SELECT p2.Name as friend_name
-MATCH (p1:Person) - [:Friend] -&gt; (p2:Person)
-WHERE p1.Name = ’Mary Smith-Taylor’
-WHEN
-MATCH (p1) - [e:LivedIn] -&gt; (c:City)
-WHERE c.Name = ’Antwerp’</code></pre></li>
-</ul>
+<pre><code>  SELECT p2.Name as friend_name
+  MATCH (p1:Person) - [:Friend] -&gt; (p2:Person)
+  WHERE p1.Name = ’Mary Smith-Taylor’
+  WHEN
+  MATCH (p1) - [e:LivedIn] -&gt; (c:City)
+  WHERE c.Name = ’Antwerp’</code></pre>
+</div>
+</div>
 </section>
 <section id="temporal-graphs-2" class="slide level2">
 <h2>Temporal graphs</h2>
