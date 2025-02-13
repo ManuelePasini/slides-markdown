@@ -1630,7 +1630,10 @@ on Measurements(location) type rtree;</code></pre>
 <li><b>Snapshot-based temporal graphs (SBTG)</b>: A temporal graph <span class="math inline">\(G[t_i, t_j]\)</span> in a time interval <span class="math inline">\([t_i, t_j]\)</span>, is a sequence {<span class="math inline">\(G_{t_i}, G_{t_i+1} ,..., G_{t_j}\)</span>} of graph snapshots.</li>
 </ul>
 
-<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/temporal_graphs/duration_temporal_graph.png?raw=true" class="r-stretch"><h5 id="aeong---vldb-2024"><a href="https://www.vldb.org/pvldb/vol17/p1515-lu.pdf">AeonG</a> - VLDB, 2024</h5>
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/temporal_graphs/duration_temporal_graph.png?raw=true" class="r-stretch"></section>
+<section id="temporal-graphs-1" class="slide level2">
+<h2>Temporal graphs</h2>
+<h5 id="aeong---vldb-2024"><a href="https://www.vldb.org/pvldb/vol17/p1515-lu.pdf">AeonG</a> - VLDB, 2024</h5>
 <ul>
 <li>introduces two temporal syntax extensions in the MATCH clause:
 <ul>
@@ -1644,18 +1647,16 @@ on Measurements(location) type rtree;</code></pre>
 <ul>
 <li><b>SNAPSHOT</b></li>
 </ul>
-<pre><code>Who where the friends of the friends of Cathy in 2018?
-
- SELECT p2.Name as friend_name
+<p>Who where the friends of the friends of Cathy in 2018?</p>
+<pre><code>SELECT p2.Name as friend_name
   MATCH (p1:Person) - [:Friend*2] -&gt; (p2:Person)
   WHERE p1.Name = ’Cathy Van Bourne’
   SNAPSHOT ’2018’</code></pre>
 <ul>
 <li><b>BETWEEN</b></li>
 </ul>
-<pre><code>Where did the friends of Pauline live between 2000 and 2004?
-
-SELECT c.Name
+<p>Where did the friends of Pauline live between 2000 and 2004?</p>
+<pre><code>SELECT c.Name
 MATCH (p1:Person) - [:Friend] -&gt; (p2:Person),
 (p2) - [:LivedIn] -&gt; (c:City)
 WHERE p1.Name = ’Pauline Boutler’
@@ -1663,14 +1664,18 @@ BETWEEN ’2000’ and ’2004’</code></pre>
 <ul>
 <li><b>WHEN</b></li>
 </ul>
-<pre><code>Who were friends of Mary while she was living in Antwerp?
-
-SELECT c.Name
-MATCH (p1:Person) - [:Friend] -&gt; (p2:Person),
-(p2) - [:LivedIn] -&gt; (c:City)
-WHERE p1.Name = ’Pauline Boutler’
-BETWEEN ’2000’ and ’2004’</code></pre></li>
+<p>Who were friends of Mary while she was living in Antwerp?</p>
+<pre><code>SELECT p2.Name as friend_name
+MATCH (p1:Person) - [:Friend] -&gt; (p2:Person)
+WHERE p1.Name = ’Mary Smith-Taylor’
+WHEN
+MATCH (p1) - [e:LivedIn] -&gt; (c:City)
+WHERE c.Name = ’Antwerp’</code></pre></li>
 </ul>
+</section>
+<section id="temporal-graphs-2" class="slide level2">
+<h2>Temporal graphs</h2>
+<h5 id="clock-g">Clock-G</h5>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
