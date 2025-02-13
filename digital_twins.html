@@ -1525,13 +1525,13 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <h2>AsterixDB - Internals</h2>
 <ul>
 <li>Secondary indexes are standard <i>LSM-ified</i> indexes (e.g.&nbsp;LSM-B<sup>+</sup>Tree)</li>
-<li>Given its LSM-based representation, big focus on handling updates and granting ACID properties (<u>row level acidity</u>)</li>
+<li>Given its LSM-based representation, big focus on handling updates and granting ACID properties (<u>record-level consistency</u>)</li>
 </ul>
 
 <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/asterixdb/lsmified_trees.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Example of secondary LSM B<sup>+</sup>-Tree and LSM R-tree</p><p>The final state of insertion, flushing, then deletion applied to a secondary LSM R-tree and a secondary LSM B<sup>+</sup>-Tree. Both indexes are storing entries of the form &lt;SK; PKi&gt; where SK is a secondary key and PK is the associated primary key. The LSM R-tree handles deletion by inserting the primary keys of the deleted entries in its deleted-key B<sup>+</sup>-tree, while the LSM B<sup>+</sup>-tree handles it by inserting a control entry, denoted by &lt;SK;PKi&gt; into its memory component.</p>
-</section></section>
-<section id="rocksdb-vs.-asterixdb" class="title-slide slide level1 center">
-<h1>RocksDB vs.&nbsp;AsterixDB</h1>
+</section>
+<section id="rocksdb-vs.-asterixdb" class="slide level2">
+<h2>RocksDB vs.&nbsp;AsterixDB</h2>
 <table>
 <thead>
 <tr class="header">
@@ -1568,12 +1568,115 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="asterixdb---deploy" class="slide level2">
+<h2>AsterixDB - Deploy</h2>
+<pre><code>git clone https://github.com/ManuelePasini/asterixdb.git
+cd asterixdb</code></pre>
+<p>Install maven if not present</p>
+<pre><code>sudo apt install maven</code></pre>
+<p>Install jdk21</p>
+<pre><code>sudo apt install openjdk-21-jdk -y
+sudo update-alternatives --config java</code></pre>
+<p>Build AsterixDB</p>
+<pre><code>mvn clean package -DskipTests</code></pre>
+<p>Run AsterixDB</p>
+<pre><code>cd asterixdb/asterixdb/asterix-server/target/apache-asterixdb-0.9.10-SNAPSHOT
+
+// Deploy node controller
+bin/asterixncservice &gt; red-service.log 2&gt;&amp;1 &amp;
+
+// Deploy cluster controller
+bin/asterixcc -config-file opt/local/conf/cc.conf &gt; cc.log 2&gt;&amp;1 &amp;l</code></pre>
+<p>Kill AsterixDB</p>
+<pre><code>ps aux | grep asterix | grep -v grep | awk '{print $2}' | xargs kill -9</code></pre>
+</section>
+<section id="asterixdb---measurements-dataverse-setup" class="slide level2">
+<h2>AsterixDB - Measurements dataverse setup</h2>
+<pre><code>drop dataverse Measurements_Dataverse if exists;
+create dataverse Measurements_Dataverse;
+use Measurements_Dataverse;
+
+create type PunctualMeasurement as closed {
+  meas_id: string, // device_id + meas_type + timestamp
+  timestamp: datetime,      
+  device_id: string,
+  controlled_property: string,
+  `value`: int,
+  location: point
+};  
+
+create type SpatialMasurement as closed {
+  meas_id: string, // device_id + meas_type + timestamp
+  dateObserved: datetime,       
+  device_id: string,
+  controlled_property: string,
+  `value`: int,
+  location: polygon
+};
+
+create dataset Measurements(PunctualMeasurement)
+primary key meas_id;
+
+create index meas_location
+on Measurements(location) type rtree;</code></pre>
+</section>
+<section id="temporal-graphs" class="slide level2">
+<h2>Temporal graphs</h2>
+<p>Three basic approaches:</p>
+<ul>
+<li><b>Duration-labeled temporal graphs (DLTG&lt;)</b> : edges are labeled with a value representing the duration of the relationship between two nodes</li>
+<li><b>Interval-labeled temporal graphs (ILTG)</b>: each edge is a temporal edge representing a relationship from a vertex <i>u</i> to another vertex <i>v</i>, valid during a time interval <span class="math inline">\(I = [t_ZZs, t_e]\)</span>.</li>
+<li><b>Snapshot-based temporal graphs (SBTG)</b>: A temporal graph <span class="math inline">\(G[t_i, t_j]\)</span> in a time interval <span class="math inline">\([t_i, t_j]\)</span>, is a sequence {<span class="math inline">\(G_{t_i}, G_{t_i+1} ,..., G_{t_j}\)</span>} of graph snapshots.</li>
+</ul>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/temporal_graphs/duration_temporal_graph.png?raw=true" class="r-stretch"><h5 id="aeong---vldb-2024"><a href="https://www.vldb.org/pvldb/vol17/p1515-lu.pdf">AeonG</a> - VLDB, 2024</h5>
+<ul>
+<li>introduces two temporal syntax extensions in the MATCH clause:
+<ul>
+<li><b>Time-Point queries</b>: FOR <i>TT</i> AS OF <i>𝑡</i> , which retrieves all graph objects legal at time <i>𝑡</i></li>
+<li><b>Time-Slice queries</b>: FOR <i>TT</i> FROM <i>𝑡1</i> TO <i>𝑡2</i>, which locates all graph objects consistently legal within the time range from <i>𝑡1</i> to <i>𝑡2</i>.</li>
+</ul></li>
+</ul>
+<h5 id="t-gql---vldb-journal-2023"><a href="https://ri.itba.edu.ar/server/api/core/bitstreams/06cfb092-353f-40bf-8ff7-789102b54146/content">T-GQL</a> - VLDB Journal, 2023</h5>
+<ul>
+<li><p>A collection of operators for computing different kinds of temporal paths in a graph, capturing different temporal path semantics.</p>
+<ul>
+<li><b>SNAPSHOT</b></li>
+</ul>
+<pre><code>Who where the friends of the friends of Cathy in 2018?
+
+ SELECT p2.Name as friend_name
+  MATCH (p1:Person) - [:Friend*2] -&gt; (p2:Person)
+  WHERE p1.Name = ’Cathy Van Bourne’
+  SNAPSHOT ’2018’</code></pre>
+<ul>
+<li><b>BETWEEN</b></li>
+</ul>
+<pre><code>Where did the friends of Pauline live between 2000 and 2004?
+
+SELECT c.Name
+MATCH (p1:Person) - [:Friend] -&gt; (p2:Person),
+(p2) - [:LivedIn] -&gt; (c:City)
+WHERE p1.Name = ’Pauline Boutler’
+BETWEEN ’2000’ and ’2004’</code></pre>
+<ul>
+<li><b>WHEN</b></li>
+</ul>
+<pre><code>Who were friends of Mary while she was living in Antwerp?
+
+SELECT c.Name
+MATCH (p1:Person) - [:Friend] -&gt; (p2:Person),
+(p2) - [:LivedIn] -&gt; (c:City)
+WHERE p1.Name = ’Pauline Boutler’
+BETWEEN ’2000’ and ’2004’</code></pre></li>
+</ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
