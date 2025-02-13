@@ -1022,19 +1022,139 @@ how components are merged. The
 ## AsterixDB - Internals
 
 - Secondary indexes are standard <i>LSM-ified</i> indexes (e.g. LSM-B<sup>+</sup>Tree)
-- Given its LSM-based representation, big focus on handling updates and granting ACID properties (<u>row level acidity</u>)
+- Given its LSM-based representation, big focus on handling updates and granting ACID properties (<u>record-level consistency</u>)
 
 ![Example of secondary LSM B<sup>+</sup>-Tree and LSM R-tree](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/asterixdb/lsmified_trees.png?raw=true)
 
 The final state of insertion, flushing, then deletion applied to a secondary LSM R-tree and a secondary LSM B<sup>+</sup>-Tree. Both indexes are storing entries of the form <SK; PKi> where SK is a secondary key and PK is the associated primary key. The LSM R-tree handles deletion by inserting the primary keys of the deleted entries in its deleted-key B<sup>+</sup>-tree, while the LSM B<sup>+</sup>-tree handles it by inserting a control entry, denoted by <SK;PKi> into its memory component.
 
 
-# RocksDB vs. AsterixDB
+## RocksDB vs. AsterixDB
 
 | Comparison | AsterixDB | RocksDB |
 |:-----------|:-----------:|------------:|
-| Stats      | None      | None      |
-| Compaction | focus on managing updates      | key-based     |
-| Partitioning| Hash-partitioning      | None      |
-| Queries     | SQL-Like      | KV DBMS      |
-| Workload balancing| Native (hash-partitioning on keys)  | None   |
+| Stats      | None      | None  |
+| Compaction | focus on managing updates      | key-based |
+| Partitioning| Hash-partitioning      | None  |
+| Queries     | SQL-Like      | KV DBMS  |
+| Workload balancing| Native (hash-partitioning on keys)  | None |
+
+
+## AsterixDB - Deploy
+```
+git clone https://github.com/ManuelePasini/asterixdb.git
+cd asterixdb
+```
+Install maven if not present
+```
+sudo apt install maven
+```
+Install jdk21
+```
+sudo apt install openjdk-21-jdk -y
+sudo update-alternatives --config java
+```
+Build AsterixDB
+```
+mvn clean package -DskipTests
+```
+Run AsterixDB
+```
+cd asterixdb/asterixdb/asterix-server/target/apache-asterixdb-0.9.10-SNAPSHOT
+
+// Deploy node controller
+bin/asterixncservice > red-service.log 2>&1 &
+
+// Deploy cluster controller
+bin/asterixcc -config-file opt/local/conf/cc.conf > cc.log 2>&1 &l
+```
+
+Kill AsterixDB
+```
+ps aux | grep asterix | grep -v grep | awk '{print $2}' | xargs kill -9
+```
+
+
+## AsterixDB - Measurements dataverse setup
+
+    drop dataverse Measurements_Dataverse if exists;
+    create dataverse Measurements_Dataverse;
+    use Measurements_Dataverse;
+
+    create type PunctualMeasurement as closed {
+      meas_id: string, // device_id + meas_type + timestamp
+      timestamp: datetime,		
+      device_id: string,
+      controlled_property: string,
+      `value`: int,
+      location: point
+    };	
+
+    create type SpatialMasurement as closed {
+      meas_id: string, // device_id + meas_type + timestamp
+      dateObserved: datetime,		
+      device_id: string,
+      controlled_property: string,
+      `value`: int,
+      location: polygon
+    };
+
+    create dataset Measurements(PunctualMeasurement)
+    primary key meas_id;
+
+    create index meas_location
+    on Measurements(location) type rtree;
+
+
+
+## Temporal graphs
+
+Three basic approaches:
+
+- <b>Duration-labeled temporal graphs (DLTG<)</b> : edges are labeled with a value representing the duration of the relationship between two nodes
+- <b>Interval-labeled temporal graphs (ILTG)</b>: each edge  is a temporal edge representing a relationship from a vertex <i>u</i> to another vertex <i>v</i>, valid during a time interval $I = [t_ZZs, t_e]$.
+- <b>Snapshot-based temporal graphs (SBTG)</b>:  A temporal graph $G[t_i, t_j]$ in a time interval $[t_i, t_j]$, is a sequence {$G_{t_i}, G_{t_i+1} ,..., G_{t_j}$} of graph snapshots.
+
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/temporal_graphs/duration_temporal_graph.png?raw=true)
+
+
+##### [AeonG](https://www.vldb.org/pvldb/vol17/p1515-lu.pdf) - VLDB, 2024
+
+- introduces two temporal syntax extensions in the MATCH clause:
+  - <b>Time-Point queries</b>: FOR <i>TT</i> AS OF <i>𝑡</i> , which retrieves all graph objects legal at time <i>𝑡</i>
+  - <b>Time-Slice queries</b>: FOR <i>TT</i> FROM <i>𝑡1</i> TO <i>𝑡2</i>, which locates all graph objects consistently legal within the time range from <i>𝑡1</i> to <i>𝑡2</i>.
+
+##### [T-GQL](https://ri.itba.edu.ar/server/api/core/bitstreams/06cfb092-353f-40bf-8ff7-789102b54146/content) - VLDB Journal, 2023
+
+- A collection of operators for computing different kinds of temporal paths in a graph, capturing different temporal path semantics.
+
+  - <b>SNAPSHOT</b>
+  ```
+  Who where the friends of the friends of Cathy in 2018?
+
+   SELECT p2.Name as friend_name
+    MATCH (p1:Person) - [:Friend*2] -> (p2:Person)
+    WHERE p1.Name = ’Cathy Van Bourne’
+    SNAPSHOT ’2018’
+  ```
+
+  - <b>BETWEEN</b>
+  ```
+  Where did the friends of Pauline live between 2000 and 2004?
+
+  SELECT c.Name
+  MATCH (p1:Person) - [:Friend] -> (p2:Person),
+  (p2) - [:LivedIn] -> (c:City)
+  WHERE p1.Name = ’Pauline Boutler’
+  BETWEEN ’2000’ and ’2004’
+  ```
+  - <b>WHEN</b>
+  ```
+  Who were friends of Mary while she was living in Antwerp?
+
+  SELECT c.Name
+  MATCH (p1:Person) - [:Friend] -> (p2:Person),
+  (p2) - [:LivedIn] -> (c:City)
+  WHERE p1.Name = ’Pauline Boutler’
+  BETWEEN ’2000’ and ’2004’
+  ```
