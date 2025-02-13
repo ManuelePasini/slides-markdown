@@ -1117,6 +1117,7 @@ Three basic approaches:
 
 ![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/temporal_graphs/duration_temporal_graph.png?raw=true)
 
+## Temporal graphs
 
 ##### [AeonG](https://www.vldb.org/pvldb/vol17/p1515-lu.pdf) - VLDB, 2024
 
@@ -1129,32 +1130,36 @@ Three basic approaches:
 - A collection of operators for computing different kinds of temporal paths in a graph, capturing different temporal path semantics.
 
   - <b>SNAPSHOT</b>
-  ```
+
   Who where the friends of the friends of Cathy in 2018?
 
-   SELECT p2.Name as friend_name
-    MATCH (p1:Person) - [:Friend*2] -> (p2:Person)
-    WHERE p1.Name = ’Cathy Van Bourne’
-    SNAPSHOT ’2018’
-  ```
+      SELECT p2.Name as friend_name
+        MATCH (p1:Person) - [:Friend*2] -> (p2:Person)
+        WHERE p1.Name = ’Cathy Van Bourne’
+        SNAPSHOT ’2018’
+
 
   - <b>BETWEEN</b>
-  ```
+
   Where did the friends of Pauline live between 2000 and 2004?
 
-  SELECT c.Name
-  MATCH (p1:Person) - [:Friend] -> (p2:Person),
-  (p2) - [:LivedIn] -> (c:City)
-  WHERE p1.Name = ’Pauline Boutler’
-  BETWEEN ’2000’ and ’2004’
-  ```
+      SELECT c.Name
+      MATCH (p1:Person) - [:Friend] -> (p2:Person),
+      (p2) - [:LivedIn] -> (c:City)
+      WHERE p1.Name = ’Pauline Boutler’
+      BETWEEN ’2000’ and ’2004’
+
   - <b>WHEN</b>
-  ```
+
   Who were friends of Mary while she was living in Antwerp?
 
-  SELECT c.Name
-  MATCH (p1:Person) - [:Friend] -> (p2:Person),
-  (p2) - [:LivedIn] -> (c:City)
-  WHERE p1.Name = ’Pauline Boutler’
-  BETWEEN ’2000’ and ’2004’
-  ```
+      SELECT p2.Name as friend_name
+      MATCH (p1:Person) - [:Friend] -> (p2:Person)
+      WHERE p1.Name = ’Mary Smith-Taylor’
+      WHEN
+      MATCH (p1) - [e:LivedIn] -> (c:City)
+      WHERE c.Name = ’Antwerp’
+
+## Temporal graphs
+
+##### Clock-G
