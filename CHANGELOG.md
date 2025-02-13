@@ -1,3 +1,21 @@
+## [1.15.0](https://github.com/ManuelePasini/slides-markdown/compare/1.14.0...1.15.0) (2025-02-13)
+
+
+### Features
+
+* adding temporal graphs ([69b7c03](https://github.com/ManuelePasini/slides-markdown/commit/69b7c033e8a683d23ccd399cfdb14e429f3383c5))
+
+
+### General maintenance
+
+* working on asterixdb slides ([4917f8a](https://github.com/ManuelePasini/slides-markdown/commit/4917f8a65eb095bb919e599aedfc9e03096106eb))
+* working on asterixdb slides ([9d597ce](https://github.com/ManuelePasini/slides-markdown/commit/9d597ce55ac7c2df2db759c5f0a5569fe7fba248))
+* working on asterixdb slides ([54eb9ec](https://github.com/ManuelePasini/slides-markdown/commit/54eb9ec299b9b7ffcc463f3149001edcf20929bc))
+* working on asterixdb slides ([a00dff4](https://github.com/ManuelePasini/slides-markdown/commit/a00dff4c8fe6d5c352f9050ee9052c60defb7f49))
+* working on asterixdb slides ([45c459b](https://github.com/ManuelePasini/slides-markdown/commit/45c459bf805a0c21163cc17cc88ee8482e258d3e))
+* working on asterixdb slides ([0a4d1e6](https://github.com/ManuelePasini/slides-markdown/commit/0a4d1e622a1ab47335a49df49dfd7ed77406dfb4))
+* working on asterixdb slides ([885b788](https://github.com/ManuelePasini/slides-markdown/commit/885b788bd7a9b71f8039390f155e469834841a7f))
+
 ## [1.14.0](https://github.com/ManuelePasini/slides-markdown/compare/1.13.0...1.14.0) (2025-02-04)
 
 
