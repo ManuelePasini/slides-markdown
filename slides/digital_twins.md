@@ -1129,6 +1129,11 @@ Three basic approaches:
 
 - A collection of operators for computing different kinds of temporal paths in a graph, capturing different temporal path semantics.
 
+
+:::: {.columns}
+
+::: {.column width="33%"}
+
   - <b>SNAPSHOT</b>
 
   Who where the friends of the friends of Cathy in 2018?
@@ -1138,6 +1143,11 @@ Three basic approaches:
         WHERE p1.Name = ’Cathy Van Bourne’
         SNAPSHOT ’2018’
 
+
+
+:::
+
+::: {.column width="33%"}
 
   - <b>BETWEEN</b>
 
@@ -1149,6 +1159,10 @@ Three basic approaches:
       WHERE p1.Name = ’Pauline Boutler’
       BETWEEN ’2000’ and ’2004’
 
+:::
+
+::: {.column width="33%"}
+
   - <b>WHEN</b>
 
   Who were friends of Mary while she was living in Antwerp?
@@ -1159,6 +1173,13 @@ Three basic approaches:
       WHEN
       MATCH (p1) - [e:LivedIn] -> (c:City)
       WHERE c.Name = ’Antwerp’
+:::
+
+
+::::
+
+
+
 
 ## Temporal graphs
 
