@@ -1,3 +1,10 @@
+## [1.17.0](https://github.com/ManuelePasini/slides-markdown/compare/1.16.0...1.17.0) (2025-02-13)
+
+
+### Features
+
+* adding temporal graphs ([7fe98ba](https://github.com/ManuelePasini/slides-markdown/commit/7fe98badb7b3369d2f440b9ba11e1639d82cb956))
+
 ## [1.16.0](https://github.com/ManuelePasini/slides-markdown/compare/1.15.0...1.16.0) (2025-02-13)
 
 
