@@ -1621,6 +1621,62 @@ primary key meas_id;
 create index meas_location
 on Measurements(location) type rtree;</code></pre>
 </section>
+<section id="asterixdb---open-measurements-setup" class="slide level2">
+<h2>AsterixDB - Open measurements setup</h2>
+<pre><code>create type PunctualOpenMeasurement as open {
+  meas_id: string, 
+  timestamp: datetime,      
+  device_id: string,
+  controlled_property: string,
+  `value`: int,
+  location: point
+};</code></pre>
+<div class="columns">
+<div class="column" style="width:33%;">
+<ul>
+<li><p>1 Dataset</p>
+<pre><code>//meas_id = device_id + meas_type + timestamp
+
+use Measurements_Dataverse;
+
+create dataset OpenMeasurements(PunctuaOpenMeasurement)
+primary key meas_id;
+
+create index meas_location
+on OpenMeasurements(location) type rtree;</code></pre></li>
+</ul>
+</div><div class="column" style="width:33%;">
+<ul>
+<li><p>1 Dataset x Device</p>
+<pre><code>//meas_id = meas_type + timestamp
+
+use Measurements_Dataverse;
+
+create dataset {Dev_id}_OpenMeasurements(PunctuaOpenMeasurement)
+primary key meas_id;
+
+create index meas_location
+on OpenMeasurements(location) type rtree;</code></pre></li>
+</ul>
+</div><div class="column" style="width:33%;">
+<ul>
+<li><p>1 Dataset x TimeSeries</p>
+<pre><code>//meas_id = timestamp
+
+use Measurements_Dataverse;
+
+create dataset {Dev_id}_{prop}_OpenMeasurements(PunctuaOpenMeasurement)
+primary key meas_id;
+
+create index meas_location
+on OpenMeasurements(location) type rtree;</code></pre></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="asterixdb---device-measurement" class="slide level2">
+<h2>AsterixDB - Device Measurement</h2>
+</section>
 <section id="temporal-graphs" class="slide level2">
 <h2>Temporal graphs</h2>
 <p>Three basic approaches:</p>
