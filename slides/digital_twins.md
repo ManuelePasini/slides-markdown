@@ -1105,6 +1105,74 @@ ps aux | grep asterix | grep -v grep | awk '{print $2}' | xargs kill -9
     create index meas_location
     on Measurements(location) type rtree;
 
+## AsterixDB - Open measurements setup
+
+    create type PunctualOpenMeasurement as open {
+      meas_id: string, 
+      timestamp: datetime,		
+      device_id: string,
+      controlled_property: string,
+      `value`: int,
+      location: point
+    };
+
+
+:::: {.columns}
+
+::: {.column width="33%"}
+
+- 1 Dataset
+
+      //meas_id = device_id + meas_type + timestamp
+
+      use Measurements_Dataverse;
+
+      create dataset OpenMeasurements(PunctuaOpenMeasurement)
+      primary key meas_id;
+
+      create index meas_location
+      on OpenMeasurements(location) type rtree;
+
+
+:::
+
+::: {.column width="33%"}
+
+- 1 Dataset x Device
+
+      //meas_id = meas_type + timestamp
+
+      use Measurements_Dataverse;
+
+      create dataset {Dev_id}_OpenMeasurements(PunctuaOpenMeasurement)
+      primary key meas_id;
+
+      create index meas_location
+      on OpenMeasurements(location) type rtree;
+
+:::
+
+::: {.column width="33%"}
+
+- 1 Dataset x TimeSeries
+
+      //meas_id = timestamp
+
+      use Measurements_Dataverse;
+
+      create dataset {Dev_id}_{prop}_OpenMeasurements(PunctuaOpenMeasurement)
+      primary key meas_id;
+
+      create index meas_location
+      on OpenMeasurements(location) type rtree;
+
+:::
+
+
+::::
+
+## AsterixDB - Device Measurement
+
 
 
 ## Temporal graphs
