@@ -1106,6 +1106,9 @@ ps aux | grep asterix | grep -v grep | awk '{print $2}' | xargs kill -9
     on Measurements(location) type rtree;
 
 ## AsterixDB - Open measurements setup
+:::: {.columns}
+
+::: {.column width="50%"}
 
     create type PunctualOpenMeasurement as open {
       meas_id: string, 
@@ -1115,6 +1118,24 @@ ps aux | grep asterix | grep -v grep | awk '{print $2}' | xargs kill -9
       `value`: int,
       location: point
     };
+
+    CREATE DATASET OpenMeasurements(Measurement)IF NOT EXISTS primary key id;
+    create index measurement_location on OpenMeasurements(location) type rtree;
+:::
+
+::: {.column width="50%"}
+
+      CREATE TYPE NodeRelationship AS CLOSED {
+          id: int,
+          `type`: string,
+          toN: bigint,
+          fromNextRel: int?,
+          toNextRel: int?
+      };
+
+:::
+
+::::
 
 
 :::: {.columns}
@@ -1173,7 +1194,30 @@ ps aux | grep asterix | grep -v grep | awk '{print $2}' | xargs kill -9
 
 ## AsterixDB - Device Measurement
 
+ - Se metto tutto in un tabellone è una merda in lettura perchè devo, al netto di filtrare su t4imestamp e location, filtrare su una regex della chiave per prendere solamente quel tipo di ts.
+ - Posso pushare sotto la tsId come attributo per fare un match secco, oppure portare giù anche i singoli attributi che compongono la chiave, ma è ridontante...
 
+      DROP dataverse Measurements_Dataverse IF EXISTS;
+      CREATE DATAVERSE Measurements_Dataverse;
+      USE Measurements_Dataverse;
+      CREATE TYPE NodeRelationship AS CLOSED {
+          id: int,
+          `type`: string,
+          toN: bigint,
+          fromNextRel: int?,
+          toNextRel: int?
+      };
+      CREATE TYPE Measurement AS OPEN {
+          id: STRING,
+          timestamp: DATETIME,
+          property: STRING,
+          location: POINT,
+          relationships: [NodeRelationship],
+          `value`: FLOAT
+      };
+
+      CREATE DATASET OpenMeasurements(Measurement)IF NOT EXISTS primary key id;
+      create index measurement_location on OpenMeasurements(location) type rtree;
 
 ## Temporal graphs
 
