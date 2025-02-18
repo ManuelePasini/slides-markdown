@@ -1623,6 +1623,8 @@ on Measurements(location) type rtree;</code></pre>
 </section>
 <section id="asterixdb---open-measurements-setup" class="slide level2">
 <h2>AsterixDB - Open measurements setup</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <pre><code>create type PunctualOpenMeasurement as open {
   meas_id: string, 
   timestamp: datetime,      
@@ -1630,7 +1632,20 @@ on Measurements(location) type rtree;</code></pre>
   controlled_property: string,
   `value`: int,
   location: point
-};</code></pre>
+};
+
+CREATE DATASET OpenMeasurements(Measurement)IF NOT EXISTS primary key id;
+create index measurement_location on OpenMeasurements(location) type rtree;</code></pre>
+</div><div class="column" style="width:50%;">
+<pre><code>  CREATE TYPE NodeRelationship AS CLOSED {
+      id: int,
+      `type`: string,
+      toN: bigint,
+      fromNextRel: int?,
+      toNextRel: int?
+  };</code></pre>
+</div>
+</div>
 <div class="columns">
 <div class="column" style="width:33%;">
 <ul>
@@ -1676,6 +1691,12 @@ on OpenMeasurements(location) type rtree;</code></pre></li>
 </section>
 <section id="asterixdb---device-measurement" class="slide level2">
 <h2>AsterixDB - Device Measurement</h2>
+<ul>
+<li><p>Se metto tutto in un tabellone è una merda in lettura perchè devo, al netto di filtrare su t4imestamp e location, filtrare su una regex della chiave per prendere solamente quel tipo di ts.</p></li>
+<li><p>Posso pushare sotto la tsId come attributo per fare un match secco, oppure portare giù anche i singoli attributi che compongono la chiave, ma è ridontante…</p>
+<p>DROP dataverse Measurements_Dataverse IF EXISTS; CREATE DATAVERSE Measurements_Dataverse; USE Measurements_Dataverse; CREATE TYPE NodeRelationship AS CLOSED { id: int, <code>type</code>: string, toN: bigint, fromNextRel: int?, toNextRel: int? }; CREATE TYPE Measurement AS OPEN { id: STRING, timestamp: DATETIME, property: STRING, location: POINT, relationships: [NodeRelationship], <code>value</code>: FLOAT };</p>
+<p>CREATE DATASET OpenMeasurements(Measurement)IF NOT EXISTS primary key id; create index measurement_location on OpenMeasurements(location) type rtree;</p></li>
+</ul>
 </section>
 <section id="temporal-graphs" class="slide level2">
 <h2>Temporal graphs</h2>
