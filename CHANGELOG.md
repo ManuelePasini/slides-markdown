@@ -1,3 +1,15 @@
+## [1.18.0](https://github.com/ManuelePasini/slides-markdown/compare/1.17.0...1.18.0) (2025-02-18)
+
+
+### Features
+
+* updated dt slides ([cc7c195](https://github.com/ManuelePasini/slides-markdown/commit/cc7c195ff1a4e33813ca4f77591f61b1224bc5c5))
+
+
+### General maintenance
+
+* working on asterxdb deploy ([b6645cf](https://github.com/ManuelePasini/slides-markdown/commit/b6645cf6393aa67388987e9eca95b4909b6222ea))
+
 ## [1.17.0](https://github.com/ManuelePasini/slides-markdown/compare/1.16.0...1.17.0) (2025-02-13)
 
 
