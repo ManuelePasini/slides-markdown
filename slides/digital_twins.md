@@ -1231,6 +1231,7 @@ Three basic approaches:
 
 ## Temporal graphs
 
+##### [Clock-G](https://ieeexplore.ieee.org/document/9835183) - ICDE 2022
 ##### [AeonG](https://www.vldb.org/pvldb/vol17/p1515-lu.pdf) - VLDB, 2024
 
 - introduces two temporal syntax extensions in the MATCH clause:
