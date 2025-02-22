@@ -1200,19 +1200,48 @@ ps aux | grep asterix | grep -v grep | awk '{print $2}' | xargs kill -9
       DROP dataverse Measurements_Dataverse IF EXISTS;
       CREATE DATAVERSE Measurements_Dataverse;
       USE Measurements_Dataverse;
+
+      CREATE TYPE PropertyValue AS OPEN {
+          stringValue: string?,
+          doubleValue: double?,
+          intValue: int?
+      };
+
+      CREATE TYPE Property AS CLOSED {
+          id: int,
+          sourceId: bigint,
+          sourceType: Boolean,
+          `key`: string,
+          `value`: PropertyValue,
+          `type`: int,
+          fromTimestamp: DATETIME,
+          toTimestamp: DATETIME
+      };
+
       CREATE TYPE NodeRelationship AS CLOSED {
           id: int,
           `type`: string,
+          fromN: bigint,
           toN: bigint,
           fromNextRel: int?,
-          toNextRel: int?
+          toNextRel: int?,
+          fromTimestamp: DATETIME,
+          toTimestamp: DATETIME,
+          nextProp: int?,
+          properties: [Property]?
       };
+
       CREATE TYPE Measurement AS OPEN {
           id: STRING,
           timestamp: DATETIME,
+          nextRel: int?,
+          nextProp: int?,
           property: STRING,
           location: POINT,
           relationships: [NodeRelationship],
+          properties: [Property]
+          fromTimestamp: DATETIME,
+          toTimestamp: DATETIME,
           `value`: FLOAT
       };
 
