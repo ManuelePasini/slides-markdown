@@ -998,7 +998,7 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <h5 id="building-the-graph">Building the graph</h5>
 <ul>
 <li>Each distinct entity (unique “id”) gets mapped into the graph as a node.</li>
-<li>Each entity key that has an ID as a value becomes an edge with the key as the edge label.</li>
+<li>Each entity key that has an NGSI ID as a value becomes an edge with the key as the edge label.</li>
 <li>If an entity with the given “id” exists, update such entity in the graph</li>
 </ul>
 <h5 id="parsing-into-measurement">Parsing into measurement</h5>
@@ -1696,9 +1696,9 @@ on OpenMeasurements(location) type rtree;</code></pre></li>
 <li><p>Posso pushare sotto la tsId come attributo per fare un match secco, oppure portare giù anche i singoli attributi che compongono la chiave, ma è ridontante…</p>
 <p>DROP dataverse Measurements_Dataverse IF EXISTS; CREATE DATAVERSE Measurements_Dataverse; USE Measurements_Dataverse;</p>
 <p>CREATE TYPE PropertyValue AS OPEN { stringValue: string?, doubleValue: double?, intValue: int? };</p>
-<p>CREATE TYPE Property AS CLOSED { id: int, sourceId: bigint, sourceType: Boolean, <code>key</code>: string, <code>value</code>: PropertyValue, <code>type</code>: int, fromTimestamp: DATETIME, toTimestamp: DATETIME };</p>
-<p>CREATE TYPE NodeRelationship AS CLOSED { id: int, <code>type</code>: string, fromN: bigint, toN: bigint, fromNextRel: int?, toNextRel: int?, fromTimestamp: DATETIME, toTimestamp: DATETIME, nextProp: int?, properties: [Property]? };</p>
-<p>CREATE TYPE Measurement AS OPEN { id: STRING, timestamp: DATETIME, nextRel: int?, nextProp: int?, property: STRING, location: POINT, relationships: [NodeRelationship], properties: [Property] fromTimestamp: DATETIME, toTimestamp: DATETIME, <code>value</code>: FLOAT };</p>
+<p>CREATE TYPE Property AS CLOSED { id: int, sourceId: bigint, sourceType: Boolean, <code>key</code>: string, <code>value</code>: PropertyValue, <code>type</code>: int, fromTimestamp: DATETIME?, toTimestamp: DATETIME? };</p>
+<p>CREATE TYPE NodeRelationship AS CLOSED { id: int, <code>type</code>: string, fromN: bigint, toN: bigint, fromNextRel: int?, toNextRel: int?, fromTimestamp: DATETIME?, toTimestamp: DATETIME?, nextProp: int?, properties: [Property]? };</p>
+<p>CREATE TYPE Measurement AS OPEN { id: STRING, timestamp: DATETIME, nextRel: int?, nextProp: int?, property: STRING, location: geometry, relationships: [NodeRelationship], properties: [Property] fromTimestamp: DATETIME, toTimestamp: DATETIME, <code>value</code>: FLOAT };</p>
 <p>CREATE DATASET OpenMeasurements(Measurement)IF NOT EXISTS primary key id; create index measurement_location on OpenMeasurements(location) type rtree;</p></li>
 </ul>
 </section>
@@ -1727,37 +1727,13 @@ on OpenMeasurements(location) type rtree;</code></pre></li>
 <ul>
 <li>A collection of operators for computing different kinds of temporal paths in a graph, capturing different temporal path semantics.</li>
 </ul>
-<div class="columns">
+<p>:::: {.columns}</p>
 <div class="column" style="width:33%;">
-<ul>
-<li><b>SNAPSHOT</b></li>
-</ul>
-<p>Who where the friends of the friends of Cathy in 2018?</p>
-<pre><code>  SELECT p2.Name as friend_name
-    MATCH (p1:Person) - [:Friend*2] -&gt; (p2:Person)
-    WHERE p1.Name = ’Cathy Van Bourne’
-    SNAPSHOT ’2018’</code></pre>
-</div><div class="column" style="width:33%;">
-<ul>
-<li><b>BETWEEN</b></li>
-</ul>
-<p>Where did the friends of Pauline live between 2000 and 2004?</p>
-<pre><code>  SELECT c.Name
-  MATCH (p1:Person) - [:Friend] -&gt; (p2:Person),
-  (p2) - [:LivedIn] -&gt; (c:City)
-  WHERE p1.Name = ’Pauline Boutler’
-  BETWEEN ’2000’ and ’2004’</code></pre>
-</div><div class="column" style="width:33%;">
-<ul>
-<li><b>WHEN</b></li>
-</ul>
-<p>Who were friends of Mary while she was living in Antwerp?</p>
-<pre><code>  SELECT p2.Name as friend_name
-  MATCH (p1:Person) - [:Friend] -&gt; (p2:Person)
-  WHERE p1.Name = ’Mary Smith-Taylor’
-  WHEN
-  MATCH (p1) - [e:LivedIn] -&gt; (c:City)
-  WHERE c.Name = ’Antwerp’</code></pre>
+
+</div>
+<div class="column" style="width:33%;">
+<div class="column" style="width:33%;">
+
 </div>
 </div>
 </section>
