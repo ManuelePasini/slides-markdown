@@ -543,7 +543,7 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
 ##### Building the graph
 
 - Each distinct entity (unique "id") gets mapped into the graph as a node.
-- Each entity key that has an ID as a value becomes an edge with the key as the edge label.
+- Each entity key that has an NGSI ID as a value becomes an edge with the key as the edge label.
 - If an entity with the given "id" exists, update such entity in the graph
 
 ##### Parsing into measurement
@@ -1214,8 +1214,8 @@ ps aux | grep asterix | grep -v grep | awk '{print $2}' | xargs kill -9
           `key`: string,
           `value`: PropertyValue,
           `type`: int,
-          fromTimestamp: DATETIME,
-          toTimestamp: DATETIME
+          fromTimestamp: DATETIME?,
+          toTimestamp: DATETIME?
       };
 
       CREATE TYPE NodeRelationship AS CLOSED {
@@ -1225,8 +1225,8 @@ ps aux | grep asterix | grep -v grep | awk '{print $2}' | xargs kill -9
           toN: bigint,
           fromNextRel: int?,
           toNextRel: int?,
-          fromTimestamp: DATETIME,
-          toTimestamp: DATETIME,
+          fromTimestamp: DATETIME?,
+          toTimestamp: DATETIME?,
           nextProp: int?,
           properties: [Property]?
       };
@@ -1237,7 +1237,7 @@ ps aux | grep asterix | grep -v grep | awk '{print $2}' | xargs kill -9
           nextRel: int?,
           nextProp: int?,
           property: STRING,
-          location: POINT,
+          location: geometry,
           relationships: [NodeRelationship],
           properties: [Property]
           fromTimestamp: DATETIME,
@@ -1276,45 +1276,15 @@ Three basic approaches:
 
 ::: {.column width="33%"}
 
-  - <b>SNAPSHOT</b>
-
-  Who where the friends of the friends of Cathy in 2018?
-
-      SELECT p2.Name as friend_name
-        MATCH (p1:Person) - [:Friend*2] -> (p2:Person)
-        WHERE p1.Name = ’Cathy Van Bourne’
-        SNAPSHOT ’2018’
-
-
 
 :::
 
 ::: {.column width="33%"}
 
-  - <b>BETWEEN</b>
 
-  Where did the friends of Pauline live between 2000 and 2004?
-
-      SELECT c.Name
-      MATCH (p1:Person) - [:Friend] -> (p2:Person),
-      (p2) - [:LivedIn] -> (c:City)
-      WHERE p1.Name = ’Pauline Boutler’
-      BETWEEN ’2000’ and ’2004’
-
-:::
 
 ::: {.column width="33%"}
 
-  - <b>WHEN</b>
-
-  Who were friends of Mary while she was living in Antwerp?
-
-      SELECT p2.Name as friend_name
-      MATCH (p1:Person) - [:Friend] -> (p2:Person)
-      WHERE p1.Name = ’Mary Smith-Taylor’
-      WHEN
-      MATCH (p1) - [e:LivedIn] -> (c:City)
-      WHERE c.Name = ’Antwerp’
 :::
 
 
