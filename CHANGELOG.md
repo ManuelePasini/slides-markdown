@@ -1,3 +1,10 @@
+## [1.20.0](https://github.com/ManuelePasini/slides-markdown/compare/1.19.0...1.20.0) (2025-02-22)
+
+
+### Features
+
+* add thesis proposal scaletta ([6fb221b](https://github.com/ManuelePasini/slides-markdown/commit/6fb221b58baccbd2b842ad2d24ee97cbacce187b))
+
 ## [1.19.0](https://github.com/ManuelePasini/slides-markdown/compare/1.18.0...1.19.0) (2025-02-19)
 
 
