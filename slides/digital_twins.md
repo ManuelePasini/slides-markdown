@@ -530,41 +530,49 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
 
 - Builds a connection to a Apache Age + PostGIS + Timescale DBMSs.
 - Processes JSON entities following the NGSI schema.
+- Graph holds the <b>last</b> state of entities (**debatable**)
+
+#### Timescale Table
+
+- Single TimeSeries Table
+  - Measurement = Hypertable(timestamp, device_id, controlledProperty, value, location, raw_value)
+  - PrimaryKey: (timestamp, device_id, controlledProperty)
+- R-Tree index on location
+
+## Age Middleware - Mapping
 
 :::: {.columns}
 
-::: {.column width="30%"}
+::: {.column width="40%"}
 
-![Hyperfunctions list](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/apache_age/fiwareEntity.png?raw=true)
+![Fiware entity example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/apache_age/fiwareEntity.png?raw=true)
 
 :::
 
-::: {.column width="70%"}
+::: {.column width="60%"}
 
-  ##### Entity required schema
+##### Entity required schema
 
-  - "id": follows the NGSI standard (urn-ngsi-[...]) and define the existence of an entity in the graph
-  - "type": defines the label of the node/edge in the graph.
+- "id": NGSI standard (urn-ngsi-[...]); define the existence of an entity in the graph
+- "type": defines the label of the node/edge in the graph
 
-  ##### Entity optional schema
+##### Entity optional schema
 
-  - "hasDevice": defines device composition. Each value of this key needs to be a json representing an entity.
-
-  ##### Building the graph
-
-  - Each distinct entity (unique "id") gets mapped into the graph as a node.
-  - Each entity key that has an NGSI ID as a value becomes an edge with the key as the edge label.
-  - If an entity with the given "id" exists, update such entity in the graph
-
-  ##### Parsing into measurement
-
-  Measurement = TimescaleTable(timestamp, device_id, controlledProperty, value, raw_value)
-
-  - A mapping can defined for each entity "type": it's a Python functions that extracts the measurements from a JSON entity with the Measurement table structure
+- "hasDevice": defines device composition. Each value of this key is a json representing an entity.
 
 :::
 
 ::::
+
+##### Building the graph
+
+- Each distinct entity (unique "id") gets mapped into the graph as a node.
+- Each JSON key that has an NGSI ID as a value becomes an edge with the key as the edge label.
+- If an entity with the given "id" exists, update it in the graph
+
+##### Parsing into Time-Series
+
+- One mapping for each entity "type": function that extracts a Measurement schema from a JSON entity
 
 ## Environment setup
 
@@ -572,6 +580,8 @@ CREATE EXTENSION IF NOT EXISTS age;
 CREATE EXTENSION IF NOT EXISTS postgis;
 LOAD 'age';
 SET search_path = ag_catalog, “$user”, public;
+
+SELECT create_graph('agri_graph');
 
 CREATE TABLE measurements(
 	timestamp timestamp,
@@ -590,9 +600,6 @@ CREATE INDEX location_index
   ON measurements
   USING GIST (location);
 
-## Creating Graph
-
-SELECT create_graph('agri_graph');
 
 ## Problematiche
 
@@ -600,7 +607,6 @@ Tre cause delle problematiche:
 - Modellazione concettuale (e.g. no tipo di device in measurements)
 - Architetturale (Apache Age)
 - Ottimizzazione query (e.g. no tabella location ausiliaria)
-
 
 ### Espressività
 
