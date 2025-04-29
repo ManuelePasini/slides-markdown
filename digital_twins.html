@@ -983,29 +983,40 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <section id="age-middleware" class="slide level2">
 <h2>Age Middleware</h2>
 <ul>
-<li><p>Builds a connection to a Apache Age + PostGIS + Timescale DBMSs.</p></li>
-<li><p>Processes JSON entities following the NGSI schema.</p>
-<h5 id="entity-required-schema">Entity required schema</h5>
+<li>Builds a connection to a Apache Age + PostGIS + Timescale DBMSs.</li>
+<li>Processes JSON entities following the NGSI schema.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/apache_age/fiwareEntity.png?raw=true"></p>
+<figcaption>Hyperfunctions list</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:70%;">
+<p>##### Entity required schema</p>
 <ul>
 <li>“id”: follows the NGSI standard (urn-ngsi-[…]) and define the existence of an entity in the graph</li>
 <li>“type”: defines the label of the node/edge in the graph.</li>
 </ul>
-<h5 id="entity-optional-schema">Entity optional schema</h5>
+<p>##### Entity optional schema</p>
 <ul>
 <li>“hasDevice”: defines device composition. Each value of this key needs to be a json representing an entity.</li>
-</ul></li>
 </ul>
-<h5 id="building-the-graph">Building the graph</h5>
+<p>##### Building the graph</p>
 <ul>
 <li>Each distinct entity (unique “id”) gets mapped into the graph as a node.</li>
 <li>Each entity key that has an NGSI ID as a value becomes an edge with the key as the edge label.</li>
 <li>If an entity with the given “id” exists, update such entity in the graph</li>
 </ul>
-<h5 id="parsing-into-measurement">Parsing into measurement</h5>
+<p>##### Parsing into measurement</p>
 <p>Measurement = TimescaleTable(timestamp, device_id, controlledProperty, value, raw_value)</p>
 <ul>
 <li>A mapping can defined for each entity “type”: it’s a Python functions that extracts the measurements from a JSON entity with the Measurement table structure</li>
 </ul>
+</div>
+</div>
 </section>
 <section id="environment-setup" class="slide level2">
 <h2>Environment setup</h2>
@@ -1013,6 +1024,10 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <p>CREATE TABLE measurements( timestamp timestamp, device_id text, controlled_property text, location geometry, value float, raw_value text ) SELECT create_hypertable(‘measurements’, ‘timestamp’);</p>
 <p>ALTER TABLE measurement ADD PRIMARY KEY(timestamp, device_id, controlled_property)</p>
 <p>CREATE INDEX location_index ON measurements USING GIST (location);</p>
+</section>
+<section id="creating-graph" class="slide level2">
+<h2>Creating Graph</h2>
+<p>SELECT create_graph(‘agri_graph’);</p>
 </section>
 <section id="problematiche" class="slide level2">
 <h2>Problematiche</h2>
