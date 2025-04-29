@@ -531,6 +531,16 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
 - Builds a connection to a Apache Age + PostGIS + Timescale DBMSs.
 - Processes JSON entities following the NGSI schema.
 
+:::: {.columns}
+
+::: {.column width="30%"}
+
+![Hyperfunctions list](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/apache_age/fiwareEntity.png?raw=true)
+
+:::
+
+::: {.column width="70%"}
+
   ##### Entity required schema
 
   - "id": follows the NGSI standard (urn-ngsi-[...]) and define the existence of an entity in the graph
@@ -540,17 +550,21 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
 
   - "hasDevice": defines device composition. Each value of this key needs to be a json representing an entity.
 
-##### Building the graph
+  ##### Building the graph
 
-- Each distinct entity (unique "id") gets mapped into the graph as a node.
-- Each entity key that has an NGSI ID as a value becomes an edge with the key as the edge label.
-- If an entity with the given "id" exists, update such entity in the graph
+  - Each distinct entity (unique "id") gets mapped into the graph as a node.
+  - Each entity key that has an NGSI ID as a value becomes an edge with the key as the edge label.
+  - If an entity with the given "id" exists, update such entity in the graph
 
-##### Parsing into measurement
+  ##### Parsing into measurement
 
-Measurement = TimescaleTable(timestamp, device_id, controlledProperty, value, raw_value)
+  Measurement = TimescaleTable(timestamp, device_id, controlledProperty, value, raw_value)
 
-- A mapping can defined for each entity "type": it's a Python functions that extracts the measurements from a JSON entity with the Measurement table structure
+  - A mapping can defined for each entity "type": it's a Python functions that extracts the measurements from a JSON entity with the Measurement table structure
+
+:::
+
+::::
 
 ## Environment setup
 
@@ -575,6 +589,10 @@ ADD PRIMARY KEY(timestamp, device_id, controlled_property)
 CREATE INDEX location_index
   ON measurements
   USING GIST (location);
+
+## Creating Graph
+
+SELECT create_graph('agri_graph');
 
 ## Problematiche
 
