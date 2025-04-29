@@ -985,49 +985,58 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <ul>
 <li>Builds a connection to a Apache Age + PostGIS + Timescale DBMSs.</li>
 <li>Processes JSON entities following the NGSI schema.</li>
+<li>Graph holds the <b>last</b> state of entities (<strong>debatable</strong>)</li>
 </ul>
+<h4 id="timescale-table">Timescale Table</h4>
+<ul>
+<li>Single TimeSeries Table
+<ul>
+<li>Measurement = Hypertable(timestamp, device_id, controlledProperty, value, location, raw_value)</li>
+<li>PrimaryKey: (timestamp, device_id, controlledProperty)</li>
+</ul></li>
+<li>R-Tree index on location</li>
+</ul>
+</section>
+<section id="age-middleware---mapping" class="slide level2">
+<h2>Age Middleware - Mapping</h2>
 <div class="columns">
-<div class="column" style="width:30%;">
+<div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/apache_age/fiwareEntity.png?raw=true"></p>
-<figcaption>Hyperfunctions list</figcaption>
+<figcaption>Fiware entity example</figcaption>
 </figure>
 </div>
-</div><div class="column" style="width:70%;">
-<p>##### Entity required schema</p>
+</div><div class="column" style="width:60%;">
+<h5 id="entity-required-schema">Entity required schema</h5>
 <ul>
-<li>“id”: follows the NGSI standard (urn-ngsi-[…]) and define the existence of an entity in the graph</li>
-<li>“type”: defines the label of the node/edge in the graph.</li>
+<li>“id”: NGSI standard (urn-ngsi-[…]); define the existence of an entity in the graph</li>
+<li>“type”: defines the label of the node/edge in the graph</li>
 </ul>
-<p>##### Entity optional schema</p>
+<h5 id="entity-optional-schema">Entity optional schema</h5>
 <ul>
-<li>“hasDevice”: defines device composition. Each value of this key needs to be a json representing an entity.</li>
+<li>“hasDevice”: defines device composition. Each value of this key is a json representing an entity.</li>
 </ul>
-<p>##### Building the graph</p>
+</div>
+</div>
+<h5 id="building-the-graph">Building the graph</h5>
 <ul>
 <li>Each distinct entity (unique “id”) gets mapped into the graph as a node.</li>
-<li>Each entity key that has an NGSI ID as a value becomes an edge with the key as the edge label.</li>
-<li>If an entity with the given “id” exists, update such entity in the graph</li>
+<li>Each JSON key that has an NGSI ID as a value becomes an edge with the key as the edge label.</li>
+<li>If an entity with the given “id” exists, update it in the graph</li>
 </ul>
-<p>##### Parsing into measurement</p>
-<p>Measurement = TimescaleTable(timestamp, device_id, controlledProperty, value, raw_value)</p>
+<h5 id="parsing-into-time-series">Parsing into Time-Series</h5>
 <ul>
-<li>A mapping can defined for each entity “type”: it’s a Python functions that extracts the measurements from a JSON entity with the Measurement table structure</li>
+<li>One mapping for each entity “type”: function that extracts a Measurement schema from a JSON entity</li>
 </ul>
-</div>
-</div>
 </section>
 <section id="environment-setup" class="slide level2">
 <h2>Environment setup</h2>
 <p>CREATE EXTENSION IF NOT EXISTS age; CREATE EXTENSION IF NOT EXISTS postgis; LOAD ‘age’; SET search_path = ag_catalog, “$user”, public;</p>
+<p>SELECT create_graph(‘agri_graph’);</p>
 <p>CREATE TABLE measurements( timestamp timestamp, device_id text, controlled_property text, location geometry, value float, raw_value text ) SELECT create_hypertable(‘measurements’, ‘timestamp’);</p>
 <p>ALTER TABLE measurement ADD PRIMARY KEY(timestamp, device_id, controlled_property)</p>
 <p>CREATE INDEX location_index ON measurements USING GIST (location);</p>
-</section>
-<section id="creating-graph" class="slide level2">
-<h2>Creating Graph</h2>
-<p>SELECT create_graph(‘agri_graph’);</p>
 </section>
 <section id="problematiche" class="slide level2">
 <h2>Problematiche</h2>
