@@ -553,12 +553,12 @@ is similar to UITraMan, but Dragoon has utilized Chronicle Map in such a way tha
 
 ##### Entity required schema
 
-- "id": NGSI standard (urn-ngsi-[...]); define the existence of an entity in the graph
-- "type": defines the label of the node/edge in the graph
+- <b>id</b>: NGSI standard (urn-ngsi-[...]); define the existence of an entity in the graph
+- <b>type</b>: defines the label of the node/edge in the graph
 
 ##### Entity optional schema
 
-- "hasDevice": defines device composition. Each value of this key is a json representing an entity.
+- <b>hasDevice</b>: defines device composition. Each value of this key is a json representing an entity.
 
 :::
 
