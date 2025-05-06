@@ -1038,6 +1038,30 @@ $$) as (V agtype, R agtype, V2 agtype);</code></pre>
 <p>ALTER TABLE measurement ADD PRIMARY KEY(timestamp, device_id, controlled_property)</p>
 <p>CREATE INDEX location_index ON measurements USING GIST (location);</p>
 </section>
+<section id="schema" class="slide level2">
+<h2>Schema</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li>Distinct types:
+<ul>
+<li>AgriFarm</li>
+<li>AgriParcel</li>
+<li>AgriTree</li>
+<li>Device</li>
+<li>AgriRobot</li>
+<li>DeviceModel</li>
+<li>Province</li>
+<li>Region</li>
+<li><span style="color: red;"><b>Task</b></span></li>
+<li><span style="color: red;"><b>Camera</b></span></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:60%;">
+
+</div>
+</div>
+</section>
 <section id="problematiche" class="slide level2">
 <h2>Problematiche</h2>
 <p>Tre cause delle problematiche: - Modellazione concettuale (e.g.&nbsp;no tipo di device in measurements) - Architetturale (Apache Age) - Ottimizzazione query (e.g.&nbsp;no tabella location ausiliaria)</p>
