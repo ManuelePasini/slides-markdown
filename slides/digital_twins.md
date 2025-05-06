@@ -600,6 +600,34 @@ CREATE INDEX location_index
   ON measurements
   USING GIST (location);
 
+## Schema
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+- Distinct types:
+  - AgriFarm
+  - AgriParcel
+  - AgriTree
+  - Device
+  - AgriRobot
+  - DeviceModel
+  - Province
+  - Region
+  - <span style="color: red;"><b>Task</b></span>
+  - <span style="color: red;"><b>Camera</b></span>
+
+:::
+
+::: {.column width="60%"}
+
+
+
+:::
+
+::::
+
 
 ## Problematiche
 
