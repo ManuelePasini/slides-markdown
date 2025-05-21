@@ -1836,6 +1836,43 @@ on OpenMeasurements(location) type rtree;</code></pre></li>
 </div>
 </div>
 </section>
+<section id="evaluating-dtgraph---evaluation-configuration" class="slide level2">
+<h2>Evaluating DTGraph - Evaluation configuration</h2>
+<h5 id="ingestion">Ingestion</h5>
+<ul>
+<li><b>Volume</b>: [1, 10, 100] GB</li>
+<li><b>Cluster Machines</b>: [1, 2, 4] slaves</li>
+<li><b>Data Sources</b>: [1, 10, 100]</li>
+<li><b>Mode</b>: [offline, online]</li>
+</ul>
+<h5 id="storage">Storage</h5>
+<ul>
+<li>Storage consumption for the WHOLE dataset (replication=1)</li>
+</ul>
+<h5 id="query-workload">Query workload</h5>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><b>Parameters</b>
+<ul>
+<li>Elapsed time</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><b>Query aspects</b>
+<ul>
+<li>Predicate pushdown:
+<ul>
+<li>Filter predicates (normal + spatial)</li>
+<li>Aggregation predicates</li>
+</ul></li>
+<li>Historical queries on graph</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
 <section id="evaluatin-dtgraph---queries" class="slide level2 scrollable">
 <h2>Evaluatin DTGraph - Queries</h2>
 <ol type="1">
