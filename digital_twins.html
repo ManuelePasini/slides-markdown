@@ -1838,7 +1838,7 @@ on OpenMeasurements(location) type rtree;</code></pre></li>
 </section>
 <section id="evaluating-dtgraph---evaluation-configuration" class="slide level2">
 <h2>Evaluating DTGraph - Evaluation configuration</h2>
-<p><strong><em>Ingestion</em></strong></p>
+<p><strong>Ingestion</strong></p>
 <ul>
 <li><b>Volume</b>: [1, 10, 100] GB</li>
 <li><b>Cluster Machines</b>: [1, 2, 4] slaves</li>
@@ -1865,7 +1865,8 @@ on OpenMeasurements(location) type rtree;</code></pre></li>
 <li>Predicate pushdown:
 <ul>
 <li>Filter predicates (normal + spatial)</li>
-<li>Aggregation predicates</li>
+<li>Aggregation predicates (group by attributes)</li>
+<li>Join between TS</li>
 </ul></li>
 <li>Historical queries on graph</li>
 </ul></li>
