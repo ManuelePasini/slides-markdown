@@ -1390,7 +1390,7 @@ Three basic approaches:
 
 ## Evaluating DTGraph - Evaluation configuration
 
-***Ingestion*** 
+**Ingestion** 
 
 - <b>Volume</b>: [1, 10, 100] GB
 - <b>Cluster Machines</b>: [1, 2, 4] slaves
@@ -1417,7 +1417,8 @@ Three basic approaches:
 - <b>Query aspects</b>
   - Predicate pushdown:
     - Filter predicates (normal + spatial)
-    - Aggregation predicates
+    - Aggregation predicates (group by attributes)
+    - Join between TS
   - Historical queries on graph
 
 :::
