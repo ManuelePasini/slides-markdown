@@ -1391,7 +1391,7 @@ Three basic approaches:
 ## Evaluatin DTGraph - Queries
 
 1. EnvironmentCoverage(L, 𝜏), where L is a list of locations, and 𝜏 is a measurement type: lists all agents that can generate measurements of a given type 𝜏 that cancover the environments/locations specified in L.
-2. EnvironmentAggregate(𝜖, 𝜏, 𝑡𝑎, 𝑡𝑏 ): where 𝜖 is an environment. List, for each agent currently in the environment 𝜖, the average hourly value of type 𝜏 during the period [𝑡𝑎, 𝑡𝑏 [.
+2. EnvironmentAggregate(𝜖, 𝜏, 𝑡𝑎, 𝑡𝑏 ): where 𝜖 is an environment. List, for each agent currently in the environment 𝜖, the average  <b style="color: red;">hourly</b> value of type 𝜏 during the period [𝑡𝑎, 𝑡𝑏 [.
 3. AgentHistory(𝐴): where A is a set of agents. List, for each 𝛼 ∈ 𝐴, the average value for measurements for each environment in the past 24 hours.
 4. AgentCoverage(𝐴): where 𝐴 is a set of agents. For each 𝛼 ∈ 𝐴, list all environments 𝜖 for which 𝛼 generated measurements in.
 5. CurrenteAgentLocation(𝑡𝑎, 𝑡𝑏 ): list the current location for the agents that performed measurements during [𝑡𝑎, 𝑡𝑏 [.
