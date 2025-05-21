@@ -1388,6 +1388,43 @@ Three basic approaches:
 
 ::::
 
+## Evaluating DTGraph - Evaluation configuration
+
+##### Ingestion
+
+- <b>Volume</b>: [1, 10, 100] GB
+- <b>Cluster Machines</b>: [1, 2, 4] slaves
+- <b>Data Sources</b>: [1, 10, 100]
+- <b>Mode</b>: [offline, online]
+
+##### Storage
+
+- Storage consumption for the WHOLE dataset (replication=1)
+
+##### Query workload
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- <b>Parameters</b>
+  - Elapsed time
+
+:::
+
+::: {.column width="50%"}
+
+- <b>Query aspects</b>
+  - Predicate pushdown:
+    - Filter predicates (normal + spatial)
+    - Aggregation predicates
+  - Historical queries on graph
+  
+:::
+
+::::
+
+
 ## Evaluatin DTGraph - Queries
 
 1. EnvironmentCoverage(L, 𝜏), where L is a list of locations, and 𝜏 is a measurement type: lists all agents that can generate measurements of a given type 𝜏 that cancover the environments/locations specified in L.
