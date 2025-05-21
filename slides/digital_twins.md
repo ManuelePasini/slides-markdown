@@ -1388,7 +1388,11 @@ Three basic approaches:
 
 ::::
 
-## Evaluating DTGraph - Evaluation configuration
+## Evaluating DTGraph - Configuration
+
+:::: {.columns}
+
+::: {.column width="60%"}
 
 **Ingestion** 
 
@@ -1400,6 +1404,16 @@ Three basic approaches:
 **Storage** 
 
 - Storage consumption for the WHOLE dataset (replication=1)
+
+:::
+
+::: {.column width="40%"}
+
+![AeonG evaluation setup](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/evaluation/aeong_eval_setup.png?raw=true)
+
+::::
+
+
 
 **Query workload** 
 
