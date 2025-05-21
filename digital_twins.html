@@ -1798,7 +1798,7 @@ on OpenMeasurements(location) type rtree;</code></pre></li>
 <ul>
 <li><a href="https://hououou.github.io/AeonG/aeong-extended-version-vldb24.pdf">AeonG @ VLDB 2024</a></li>
 <li><a href="https://ceur-ws.org/Vol-3946/TGD-3.pdf">HyGraph, Workshop @ EDBT 2025</a></li>
-<li>Neo4J (distribuito (?)) - <b style="color: red;">maybe not</b></li>
+<li>Neo4J - <b style="color: red;">maybe not</b></li>
 <li>PostgreSQL + Apache AGE + TimescaleDB</li>
 </ul></li>
 <li><b>Dataset</b>:
@@ -1838,7 +1838,7 @@ on OpenMeasurements(location) type rtree;</code></pre></li>
 </section>
 <section id="evaluating-dtgraph---configuration" class="slide level2">
 <h2>Evaluating DTGraph - Configuration</h2>
-<p>:::: {.columns}</p>
+<div class="columns">
 <div class="column" style="width:60%;">
 <p><strong>Ingestion</strong></p>
 <ul>
@@ -1851,13 +1851,13 @@ on OpenMeasurements(location) type rtree;</code></pre></li>
 <ul>
 <li>Storage consumption for the WHOLE dataset (replication=1)</li>
 </ul>
-</div>
-<div class="column" style="width:40%;">
+</div><div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/evaluation/aeong_eval_setup.png?raw=true"></p>
 <figcaption>AeonG evaluation setup</figcaption>
 </figure>
+</div>
 </div>
 </div>
 <p><strong>Query workload</strong></p>
