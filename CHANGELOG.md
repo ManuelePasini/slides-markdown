@@ -1,3 +1,10 @@
+## [1.28.0](https://github.com/ManuelePasini/slides-markdown/compare/1.27.0...1.28.0) (2025-05-21)
+
+
+### Features
+
+* update dt slides ([cd1a3be](https://github.com/ManuelePasini/slides-markdown/commit/cd1a3be5db1dc73922c768599b5fc57394e859d8))
+
 ## [1.27.0](https://github.com/ManuelePasini/slides-markdown/compare/1.26.0...1.27.0) (2025-05-21)
 
 
