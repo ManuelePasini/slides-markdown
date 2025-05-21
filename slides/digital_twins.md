@@ -1359,7 +1359,7 @@ Three basic approaches:
 - <b>Competitors</b>: 
   - [AeonG @ VLDB 2024](https://hououou.github.io/AeonG/aeong-extended-version-vldb24.pdf)
   - [HyGraph, Workshop @ EDBT 2025](https://ceur-ws.org/Vol-3946/TGD-3.pdf)
-  - Neo4J (distribuito (?))
+  - Neo4J (distribuito (?)) -  <b style="color: red;">maybe not</b>
   - PostgreSQL + Apache AGE + TimescaleDB
 
 - <b>Dataset</b>:
@@ -1419,7 +1419,7 @@ Three basic approaches:
     - Filter predicates (normal + spatial)
     - Aggregation predicates
   - Historical queries on graph
-  
+
 :::
 
 ::::
