@@ -1390,18 +1390,18 @@ Three basic approaches:
 
 ## Evaluating DTGraph - Evaluation configuration
 
-##### Ingestion
+***Ingestion*** 
 
 - <b>Volume</b>: [1, 10, 100] GB
 - <b>Cluster Machines</b>: [1, 2, 4] slaves
 - <b>Data Sources</b>: [1, 10, 100]
 - <b>Mode</b>: [offline, online]
 
-##### Storage
+**Storage** 
 
 - Storage consumption for the WHOLE dataset (replication=1)
 
-##### Query workload
+**Query workload** 
 
 :::: {.columns}
 
