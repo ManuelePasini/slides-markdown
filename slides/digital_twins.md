@@ -1312,14 +1312,14 @@ Three basic approaches:
 
 ## Temporal graphs
 
-##### [Clock-G](https://ieeexplore.ieee.org/document/9835183) - ICDE 2022
-##### [AeonG](https://www.vldb.org/pvldb/vol17/p1515-lu.pdf) - VLDB, 2024
+##### [Clock-G](https://ieeexplore.ieee.org/document/9835183) @ ICDE 2022
+##### [AeonG](https://www.vldb.org/pvldb/vol17/p1515-lu.pdf) @ VLDB, 2024
 
 - introduces two temporal syntax extensions in the MATCH clause:
   - <b>Time-Point queries</b>: FOR <i>TT</i> AS OF <i>𝑡</i> , which retrieves all graph objects legal at time <i>𝑡</i>
   - <b>Time-Slice queries</b>: FOR <i>TT</i> FROM <i>𝑡1</i> TO <i>𝑡2</i>, which locates all graph objects consistently legal within the time range from <i>𝑡1</i> to <i>𝑡2</i>.
 
-##### [T-GQL](https://ri.itba.edu.ar/server/api/core/bitstreams/06cfb092-353f-40bf-8ff7-789102b54146/content) - VLDB Journal, 2023
+##### [T-GQL](https://ri.itba.edu.ar/server/api/core/bitstreams/06cfb092-353f-40bf-8ff7-789102b54146/content) @ VLDB Journal, 2023
 
 - A collection of operators for computing different kinds of temporal paths in a graph, capturing different temporal path semantics.
 
@@ -1348,3 +1348,43 @@ Three basic approaches:
 ## Temporal graphs
 
 ##### Clock-G
+
+
+## Evaluating DTGraph
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+- <b>Competitors</b>: 
+  - [AeonG @ VLDB 2024](https://hououou.github.io/AeonG/aeong-extended-version-vldb24.pdf)
+  - [HyGraph, Workshop @ EDBT 2025](https://ceur-ws.org/Vol-3946/TGD-3.pdf)
+  - Neo4J (distribuito (?))
+  - PostgreSQL + Apache AGE + TimescaleDB
+
+- <b>Dataset</b>:
+  - [SmartBench @ VLDB 2020](https://dl.acm.org/doi/abs/10.14778/3407790.3407791)
+  - Agritech (?)
+
+:::
+
+::: {.column width="40%"}
+
+- <b>Evaluation aspects</b>:
+  1. Ingestion latency
+      - Rows x second
+      
+  2. Storage consumption
+  3. Query performances
+      - Expressivity:
+          - Graph -> TS
+          - TS -> Graph
+          - Graph -> TS -> Graph
+      - Spatial contains queries
+          - Spatial Join
+          - Edges Join
+      - Performance (ms)
+:::
+
+
+::::
