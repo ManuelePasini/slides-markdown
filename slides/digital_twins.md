@@ -1354,13 +1354,12 @@ Three basic approaches:
 
 :::: {.columns}
 
-::: {.column width="60%"}
+::: {.column width="30%"}
 
 - <b>Competitors</b>: 
   - [AeonG @ VLDB 2024](https://hououou.github.io/AeonG/aeong-extended-version-vldb24.pdf)
   - [HyGraph, Workshop @ EDBT 2025](https://ceur-ws.org/Vol-3946/TGD-3.pdf)
-  - Neo4J -  <b style="color: red;">maybe not</b>
-  - PostgreSQL + Apache AGE + TimescaleDB
+  - PostgreSQL + Apache AGE + TimescaleDB + PostGIS
 
 - <b>Dataset</b>:
   - [SmartBench @ VLDB 2020](https://dl.acm.org/doi/abs/10.14778/3407790.3407791)
@@ -1368,25 +1367,20 @@ Three basic approaches:
 
 :::
 
-::: {.column width="40%"}
+::: {.column width="70%"}
 
-- <b>Evaluation aspects</b>:
-  1. Ingestion latency
-      - Rows x second
-      
-  2. Storage consumption
-  3. Query performances
-      - Expressivity:
-          - Graph -> TS
-          - TS -> Graph
-          - Graph -> TS -> Graph
-      - Spatial contains queries
-          - Spatial Join
-          - Edges Join
-      - Performance (ms)
+| Competitor | Layout| In-Memory | Spatial | Time-Series | Historical-Graph | Scale-out |
+|------------|-----|-------|------|----|---|-----------|
+| AeonG | Graph  | No| No | No | Yes | No |
+| HyGraph | Graph  | Yes | No | Yes | Yes | No |
+| PostgreSQL + Age + Timescale + PostGIS   | Relational  | No | Yes | Yes | No | No |
+| Us | Graph + WideColumn | No | Yes | Yes | Yes | Yes |
+
 :::
 
 ::::
+
+
 
 ## Evaluating DTGraph - Configuration
 
