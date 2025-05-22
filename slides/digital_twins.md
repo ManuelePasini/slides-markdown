@@ -1396,7 +1396,7 @@ Three basic approaches:
 
 **Ingestion** 
 
-- <b>Volume</b>: [1, 10, 100] GB
+- <b>Volume</b>: **big data** [1, 10, 100] GB 
 - <b>Cluster Machines</b>: [1, 2, 4] slaves
 - <b>Data Sources</b>: [1, 10, 100]
 - <b>Mode</b>: [offline, online]
@@ -1414,8 +1414,6 @@ Three basic approaches:
 :::
 
 ::::
-
-
 
 **Query workload** 
 
