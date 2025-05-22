@@ -1789,17 +1789,16 @@ on OpenMeasurements(location) type rtree;</code></pre></li>
 <h2>Temporal graphs</h2>
 <h5 id="clock-g">Clock-G</h5>
 </section>
-<section id="evaluating-dtgraph" class="slide level2 scrollable">
+<section id="evaluating-dtgraph" class="slide level2">
 <h2>Evaluating DTGraph</h2>
 <div class="columns">
-<div class="column" style="width:60%;">
+<div class="column" style="width:30%;">
 <ul>
 <li><b>Competitors</b>:
 <ul>
 <li><a href="https://hououou.github.io/AeonG/aeong-extended-version-vldb24.pdf">AeonG @ VLDB 2024</a></li>
 <li><a href="https://ceur-ws.org/Vol-3946/TGD-3.pdf">HyGraph, Workshop @ EDBT 2025</a></li>
-<li>Neo4J - <b style="color: red;">maybe not</b></li>
-<li>PostgreSQL + Apache AGE + TimescaleDB</li>
+<li>PostgreSQL + Apache AGE + TimescaleDB + PostGIS</li>
 </ul></li>
 <li><b>Dataset</b>:
 <ul>
@@ -1807,32 +1806,67 @@ on OpenMeasurements(location) type rtree;</code></pre></li>
 <li>Agritech (?)</li>
 </ul></li>
 </ul>
-</div><div class="column" style="width:40%;">
-<ul>
-<li><b>Evaluation aspects</b>:
-<ol type="1">
-<li>Ingestion latency
-<ul>
-<li>Rows x second</li>
-</ul></li>
-<li>Storage consumption</li>
-<li>Query performances
-<ul>
-<li>Expressivity:
-<ul>
-<li>Graph -&gt; TS</li>
-<li>TS -&gt; Graph</li>
-<li>Graph -&gt; TS -&gt; Graph</li>
-</ul></li>
-<li>Spatial contains queries
-<ul>
-<li>Spatial Join</li>
-<li>Edges Join</li>
-</ul></li>
-<li>Performance (ms)</li>
-</ul></li>
-</ol></li>
-</ul>
+</div><div class="column" style="width:70%;">
+<table>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 10%">
+<col style="width: 14%">
+<col style="width: 12%">
+<col style="width: 8%">
+<col style="width: 6%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Competitor</th>
+<th>Layout</th>
+<th>In-Memory</th>
+<th>Spatial</th>
+<th>Time-Series</th>
+<th>Historical-Graph</th>
+<th>Scale-out</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AeonG</td>
+<td>Graph</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>HyGraph</td>
+<td>Graph</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>PostgreSQL + Age + Timescale + PostGIS</td>
+<td>Relational</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>Us</td>
+<td>Graph + WideColumn</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </section>
