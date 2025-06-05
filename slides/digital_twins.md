@@ -1454,6 +1454,7 @@ Three basic approaches:
 - 3197 verticles
 - 5467 edges
 - 8442 properties
+- 8 Time-Series
 - 207 370 measurements (only observations, no semantic observation)
 
 - Total ingestion time: 10 326 ms
@@ -1469,11 +1470,12 @@ Three basic approaches:
 - 6237 verticles
 - 12 442 edges
 - 15 698 properties
+- 200 Time-Series
 - 10 368 001 measurements (only observations, no semantic observation)
 
 - Total ingestion time: ~ 462 486 ms
 - Measurements ingestion time: 461 886 ms
-- AsterixDB Storage Size (primary index + spatial R-Tree index): ~ 2.8 GB
+- AsterixDB Storage Size (primary index + spatial R-Tree index): ~ 1.8 GB
 
 :::
 
