@@ -1929,6 +1929,26 @@ on OpenMeasurements(location) type rtree;</code></pre></li>
 <li>CurrenteAgentLocation(𝑡𝑎, 𝑡𝑏 ): list the current location for the agents that performed measurements during [𝑡𝑎, 𝑡𝑏 [.</li>
 <li>ActiveAgents(𝑡𝑎, 𝑡𝑏 ): list all the agents currently in the environments in which were performed some measurements in the period [𝑡𝑎, 𝑡𝑏 [.</li>
 </ol>
+</section>
+<section id="evaluating-dtgraph---smartbenchmark" class="slide level2">
+<h2>Evaluating DTGraph - SmartBenchmark</h2>
+<p><strong>Small</strong></p>
+<ul>
+<li>3197 verticles</li>
+<li>5467 edges</li>
+<li>8442 properties</li>
+<li>207 370 measurements (only observations, no semantic observation)</li>
+</ul>
+<p>Total ingestion time: 10 326 ms Measurements ingestion time: 9861 ms AsterixDB Storage Size (primary index + spatial R-Tree index): ~ 130 MB</p>
+<p><strong>Large</strong></p>
+<ul>
+<li>6237 verticles</li>
+<li>12 442 edges</li>
+<li>15 698 properties</li>
+<li>10 368 001 measurements (only observations, no semantic observation)</li>
+</ul>
+<p>Total ingestion time: ~ 462 486 ms Measurements ingestion time: 461 886 ms AsterixDB Storage Size (primary index + spatial R-Tree index): ~ 2.8 GB</p>
+<p><strong>Big</strong></p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
