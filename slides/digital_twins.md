@@ -1445,6 +1445,10 @@ Three basic approaches:
 
 ## Evaluating DTGraph - SmartBenchmark
 
+:::: {.columns}
+
+::: {.column width="50%"}
+
 **Small** 
 
 - 3197 verticles
@@ -1452,9 +1456,13 @@ Three basic approaches:
 - 8442 properties
 - 207 370 measurements (only observations, no semantic observation)
 
-Total ingestion time: 10 326 ms
-Measurements ingestion time: 9861 ms
-AsterixDB Storage Size (primary index + spatial R-Tree index): ~ 130 MB
+- Total ingestion time: 10 326 ms
+- Measurements ingestion time: 9861 ms
+- AsterixDB Storage Size (primary index + spatial R-Tree index): ~ 130 MB
+
+:::
+
+::: {.column width="50%"}
 
 **Large**
 
@@ -1463,8 +1471,17 @@ AsterixDB Storage Size (primary index + spatial R-Tree index): ~ 130 MB
 - 15 698 properties
 - 10 368 001 measurements (only observations, no semantic observation)
 
-Total ingestion time: ~ 462 486 ms
-Measurements ingestion time: 461 886 ms
-AsterixDB Storage Size (primary index + spatial R-Tree index): ~ 2.8 GB
+- Total ingestion time: ~ 462 486 ms
+- Measurements ingestion time: 461 886 ms
+- AsterixDB Storage Size (primary index + spatial R-Tree index): ~ 2.8 GB
+
+:::
+
+::::
+
+
+
+
+
 
 **Big**
