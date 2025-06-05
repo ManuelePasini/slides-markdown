@@ -1442,3 +1442,29 @@ Three basic approaches:
 4. AgentCoverage(𝐴): where 𝐴 is a set of agents. For each 𝛼 ∈ 𝐴, list all environments 𝜖 for which 𝛼 generated measurements in.
 5. CurrenteAgentLocation(𝑡𝑎, 𝑡𝑏 ): list the current location for the agents that performed measurements during [𝑡𝑎, 𝑡𝑏 [.
 6. ActiveAgents(𝑡𝑎, 𝑡𝑏 ): list all the agents currently in the environments in which were performed some measurements in the period [𝑡𝑎, 𝑡𝑏 [.
+
+## Evaluating DTGraph - SmartBenchmark
+
+**Small** 
+
+- 3197 verticles
+- 5467 edges
+- 8442 properties
+- 207 370 measurements (only observations, no semantic observation)
+
+Total ingestion time: 10 326 ms
+Measurements ingestion time: 9861 ms
+AsterixDB Storage Size (primary index + spatial R-Tree index): ~ 130 MB
+
+**Large**
+
+- 6237 verticles
+- 12 442 edges
+- 15 698 properties
+- 10 368 001 measurements (only observations, no semantic observation)
+
+Total ingestion time: ~ 462 486 ms
+Measurements ingestion time: 461 886 ms
+AsterixDB Storage Size (primary index + spatial R-Tree index): ~ 2.8 GB
+
+**Big**
