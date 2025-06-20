@@ -1437,11 +1437,12 @@ Three basic approaches:
 ## Evaluatin DTGraph - Queries
 
 1. EnvironmentCoverage(L, 𝜏), where L is a list of locations, and 𝜏 is a measurement type: lists all agents that can generate measurements of a given type 𝜏 that cancover the environments/locations specified in L.
-2. EnvironmentAggregate(𝜖, 𝜏, 𝑡𝑎, 𝑡𝑏 ): where 𝜖 is an environment. List, for each agent currently in the environment 𝜖, the average  <b style="color: red;">hourly</b> value of type 𝜏 during the period [𝑡𝑎, 𝑡𝑏 [.
-3. AgentHistory(𝐴): where A is a set of agents. List, for each 𝛼 ∈ 𝐴, the average value for measurements for each environment in the past 24 hours.
-4. AgentCoverage(𝐴): where 𝐴 is a set of agents. For each 𝛼 ∈ 𝐴, list all environments 𝜖 for which 𝛼 generated measurements in.
-5. CurrenteAgentLocation(𝑡𝑎, 𝑡𝑏 ): list the current location for the agents that performed measurements during [𝑡𝑎, 𝑡𝑏 [.
-6. ActiveAgents(𝑡𝑎, 𝑡𝑏 ): list all the agents currently in the environments in which were performed some measurements in the period [𝑡𝑎, 𝑡𝑏 [.
+2. EnvironmentAggregate(𝜖, 𝜏, 𝑡𝑎, 𝑡𝑏 ): where 𝜖 is anenvironment. List, for each agent in the environment 𝜖 during the period [𝑡𝑎, 𝑡𝑏 [, the average hourly value of type 𝜏 during the period [𝑡𝑎, 𝑡𝑏 [.
+3. MaintenanceOwners: MaintenanceOwners(𝜏, alpha): List all owners of devices that measured took measurements of type 𝜏 above a threshold alpha during the period [𝑡𝑎, 𝑡𝑏 [
+4. EnvironmentAlert(𝐴): List the environments that have had a an average temperature > 20 degrees during the period [𝑡𝑎, 𝑡𝑏 [.
+5. AgentOutlier: List the max value measured for each agent in each environment
+6. AgentHistory(𝐴): where 𝐴 is a set of agents. For each 𝛼 ∈ 𝐴, list all environments 𝜖 for which 𝛼 generated measurements in.
+
 
 ## Evaluating DTGraph - SmartBenchmark
 
@@ -1481,9 +1482,19 @@ Three basic approaches:
 
 ::::
 
-
-
-
-
-
 **Big**
+
+
+## Considerations
+
+Come modellare AeonG: 1 nodo per ts con update pppure n nodi per n measurements 
+
+Loro per un update fanno search + update su base di un id, io mi tengo in memoria in fase di caricanento gli is dei grafi e faccio le operazioni a basso livello con gli id dei nodi, non scala con grafi abnormi. Inoltre, la cosa è semplice per un arco perché fai la search dei due nodi, ma per un measurement? Devo per forza fare un search basato sulla semantica: sensore, property (che è il nodo ts), quindi non cerco più nemmeno due nodi, ma devo cercare un path se non faccio come ho fatto ora; è una sorta di caching. Forse ha senso definire delle api (tipo socket, in cui inserisci sulla tua stessa macchina per il grafo e ip:porta sui node controller per le ts, in questo modo parallelizzi ulteriormente) per facilitare l’inserimento?
+
+Io faccio del parsing semantico: il parsing fa parte dell’ingestion? Tipo la data, ha un formato standard? Se si, posso aspettarmi di ricevere i dati già pronti? Oppure la data deve esssre nel formato uscito da quel dataset? Se ho smeanricaC posso associare ad una serie di property il fatto che siano edge? Oppure devo rimanere generico e definirlo a livello di struttura del json come ho fatto {id:x}
+
+Io seguirei lo standard NGSI o addirittura NGSI-LD in modo da fissare la sintassi. Anche perché così non devo storpiare il dataset da aggregate-oriented a graph oriented e devo solo farlo aderire allo standard
+
+La parte di creazione TS di un dataset che è molto lenta perchè richiede query HTTP eventualmente iterate, fa parte dell'ingestion o possiamo assumere di avere già un dataset x ts e direttamente pushare i dati (sempre creando la parte di grafo)
+
+Virtual Sensor
