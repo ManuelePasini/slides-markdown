@@ -1,3 +1,10 @@
+## [1.35.0](https://github.com/ManuelePasini/slides-markdown/compare/1.34.0...1.35.0) (2025-07-02)
+
+
+### Features
+
+* added ioannina presentation slides ([81b7bb6](https://github.com/ManuelePasini/slides-markdown/commit/81b7bb627c4b5eaf3ab00fddf3ebec553cc9b995))
+
 ## [1.34.0](https://github.com/ManuelePasini/slides-markdown/compare/1.33.0...1.34.0) (2025-07-02)
 
 
