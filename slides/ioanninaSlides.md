@@ -8,6 +8,6 @@
 - **Area of Interest:** 
 
     - Data architectures and methodologies for Digital Twins (oh god not DTs again)
-    ![Oh God no, not DTs again](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/ioanninaSlides/dt_meme.jpg)
+    ![Oh God no, not DTs again](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_meme.jpg)
 
     - Precision Agriculture
