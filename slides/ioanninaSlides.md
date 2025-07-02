@@ -7,9 +7,21 @@
 
 - **Area of Interest:** 
 
-    - Big Data, Data Platforms, Data Engineering
-        - Data architectures and methodologies for Digital Twins (oh god not DTs again)
-        
-    ![Oh God no, not DTs again](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_meme.jpg)
+:::: {.columns}
 
-    - Precision Agriculture (static & dynamic entities)
+::: {.column width="50%"}
+
+- Big Data, Data Platforms, Data Engineering
+    - Data architectures and methodologies for Digital Twins (oh god not DTs again)
+- Precision Agriculture (static & dynamic entities)        
+:::
+
+::: {.column width="50%"}
+
+![Oh God no, not DTs again](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_meme.jpg)
+
+:::
+
+
+::::
+
