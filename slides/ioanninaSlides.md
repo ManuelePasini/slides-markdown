@@ -61,7 +61,8 @@
 ##### Future plans
 
 - Hopefully finish and publish the paper;
-- optimize querying performance on the data structure.
+- optimize querying performances;
+- enhance query expressiveness;
 
 :::
 
