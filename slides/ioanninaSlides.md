@@ -11,8 +11,7 @@
 
 - **Area of Interest:** 
 
-- Big Data and Data Platforms:
-    - from collection to exploitation;
+- Big Data and Data Platforms
 
 - Data architectures and methodologies for Digital Twins
 
@@ -57,11 +56,14 @@
 
 ::::
 
+:::{.fragment}
 
 ##### Future plans
 
-- Actually manage to finish and publish the paper;
-- optimizing the data structure;
+- Hopefully finish and publish the paper;
+- optimize querying performance on the data structure.
+
+:::
 
 :::{.fragment}
 
