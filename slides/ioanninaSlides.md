@@ -11,10 +11,14 @@
 
 - **Area of Interest:** 
 
-- Big Data, Data Platforms, Data Engineering
-    - Data architectures and methodologies for Digital Twins (oh god not DTs again)
+- Big Data and Data Platforms:
+    - from collection to exploitation;
 
-- Precision Agriculture
+- Data architectures and methodologies for Digital Twins
+
+- Precision Agriculture:
+    - Irrigation optimization
+    - 
 
 :::
 
@@ -33,15 +37,37 @@
 
 ## Current Work
 
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![Excerpt of our P.A. platform](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/catalog.jpg)
+
+:::
+
+::: {.column width="50%"}
+
+:::{.fragment}
+
 ![Hybrid data model](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg)
+
+:::
+
+:::
+
+
+::::
+
+
+
 
 ##### Future plans
 
 - Actually manage to finish and publish the paper;
-- Work on optimizing the data structure;
-
+- optimizing the data structure;
+- Wor
 :::{.fragment}
 
-- Survive this journey without going insane.
+**Survive this journey without going insane**
 
 :::
