@@ -34,6 +34,16 @@
 
 ::::
 
+<div align='center'>
+:::: {.columns}
+::: {.column width="20%"}
+
+![](https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/big.png?raw=true)
+
+:::
+::::
+</div>
+
 ## Current Work
 
 :::: {.columns}
