@@ -14,7 +14,7 @@
 - Big Data, Data Platforms, Data Engineering
     - Data architectures and methodologies for Digital Twins (oh god not DTs again)
 
-- Precision Agriculture (static & dynamic entities)
+- Precision Agriculture
 
 :::
 
@@ -31,3 +31,17 @@
 
 ::::
 
+## Current Work
+
+![Hybrid data model](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg)
+
+##### Future plans
+
+- Actually manage to finish and publish the paper;
+- Work on optimizing the data structure;
+
+:::{.fragment}
+
+- Survive this journey without going insane.
+
+:::
