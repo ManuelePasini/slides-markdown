@@ -55,17 +55,13 @@
 
 :::
 
-
 ::::
-
-
 
 
 ##### Future plans
 
 - Actually manage to finish and publish the paper;
 - optimizing the data structure;
-- Wor
 
 :::{.fragment}
 
