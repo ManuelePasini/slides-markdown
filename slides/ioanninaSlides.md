@@ -2,7 +2,7 @@
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="70%"}
 
 - **Who am I ?** 
 
@@ -22,7 +22,7 @@
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="30%"}
 
 :::{.fragment}
 
