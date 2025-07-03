@@ -18,7 +18,7 @@
 
 - Precision Agriculture:
     - Irrigation optimization
-    - 
+    - Data Platform for italian agriculture domain @[Agritech](https://agritechcenter.it/it/)
 
 :::
 
@@ -69,6 +69,6 @@
 
 :::{.fragment}
 
-**Survive this journey without going insane**
+- **Survive this journey without going insane**
 
 :::
