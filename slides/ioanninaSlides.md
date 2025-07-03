@@ -13,11 +13,11 @@
 
     - Big Data and Data Platforms
 
-    - Data architectures and methodologies for Digital Twins
+        - Data architectures and methodologies for Digital Twins
 
-    - Precision Agriculture:
-        - Irrigation optimization
-        - Data Platform for italian agriculture domain @[Agritech](https://agritechcenter.it/it/)
+        - Precision Agriculture:
+            - Irrigation optimization
+            - Data Platform for italian agriculture domain @[Agritech](https://agritechcenter.it/it/)
 
 :::
 
