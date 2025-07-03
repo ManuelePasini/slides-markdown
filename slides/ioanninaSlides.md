@@ -39,13 +39,13 @@
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="40%"}
 
 ![Excerpt of our P.A. platform](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/catalog.jpg)
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="60%"}
 
 :::{.fragment}
 
@@ -66,6 +66,7 @@
 - Actually manage to finish and publish the paper;
 - optimizing the data structure;
 - Wor
+
 :::{.fragment}
 
 **Survive this journey without going insane**
