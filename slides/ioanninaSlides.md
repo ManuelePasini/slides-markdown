@@ -11,7 +11,7 @@
 
 - **Area of Interest:** 
 
-    - Big Data and Data Platforms
+    - Traditional DBMS, Big Data and Data Platforms
 
         - Data architectures and methodologies for Digital Twins
 
