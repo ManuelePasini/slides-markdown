@@ -78,6 +78,6 @@
 
 :::{.fragment}
 
-- **Survive this journey without going insane**
+- **Survive this journey without developing PTSD**
 
 :::
