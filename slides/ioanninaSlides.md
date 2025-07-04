@@ -9,6 +9,9 @@
     - Manuele Pasini, Ph.D. Candidate in Computer Science and Engineering
     - University of Bologna, [Business Intelligence Group](https://big.csr.unibo.it/)
 
+:::{.fragment}
+
+
 - **Area of Interest:** 
 
     - Traditional DBMS, Big Data and Data Platforms
@@ -18,6 +21,7 @@
         - Precision Agriculture:
             - Irrigation optimization
             - Data Platform for italian agriculture domain @[Agritech](https://agritechcenter.it/it/)
+:::
 
 :::
 
