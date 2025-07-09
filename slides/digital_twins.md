@@ -1439,7 +1439,7 @@ Three basic approaches:
 1. EnvironmentCoverage(L, 𝜏), where L is a list of locations, and 𝜏 is a measurement type: lists all agents that can generate measurements of a given type 𝜏 that cancover the environments/locations specified in L.
 2. EnvironmentAggregate(𝜖, 𝜏, 𝑡𝑎, 𝑡𝑏 ): where 𝜖 is anenvironment. List, for each agent in the environment 𝜖 during the period [𝑡𝑎, 𝑡𝑏 [, the average hourly value of type 𝜏 during the period [𝑡𝑎, 𝑡𝑏 [.
 3. MaintenanceOwners: MaintenanceOwners(𝜏, alpha): List all owners of devices that measured took measurements of type 𝜏 above a threshold alpha during the period [𝑡𝑎, 𝑡𝑏 [
-4. EnvironmentAlert(𝐴): List the environments that have had a an average temperature > 20 degrees during the period [𝑡𝑎, 𝑡𝑏 [.
+4. EnvironmentAlert(𝐴): List the environments that have had a temperature > 20 degrees during the period [𝑡𝑎, 𝑡𝑏 [.
 5. AgentOutlier: List the max value measured for each agent in each environment
 6. AgentHistory(𝐴): where 𝐴 is a set of agents. For each 𝛼 ∈ 𝐴, list all environments 𝜖 for which 𝛼 generated measurements in.
 
