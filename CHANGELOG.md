@@ -1,3 +1,10 @@
+## [1.52.0](https://github.com/ManuelePasini/slides-markdown/compare/1.51.0...1.52.0) (2025-07-09)
+
+
+### Features
+
+* updated dtqueries ([6e4cb4a](https://github.com/ManuelePasini/slides-markdown/commit/6e4cb4aa72323723585ce0cd17ba10849c492a39))
+
 ## [1.51.0](https://github.com/ManuelePasini/slides-markdown/compare/1.50.0...1.51.0) (2025-07-04)
 
 
