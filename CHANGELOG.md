@@ -1,3 +1,10 @@
+## [1.52.1](https://github.com/ManuelePasini/slides-markdown/compare/1.52.0...1.52.1) (2025-09-22)
+
+
+### Bug Fixes
+
+* aeong docker volume ([cc23138](https://github.com/ManuelePasini/slides-markdown/commit/cc23138e3e5f8a8495f588627c8d97edad7fadca))
+
 ## [1.52.0](https://github.com/ManuelePasini/slides-markdown/compare/1.51.0...1.52.0) (2025-07-09)
 
 
