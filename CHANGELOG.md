@@ -1,3 +1,10 @@
+## [1.53.3](https://github.com/ManuelePasini/slides-markdown/compare/1.53.2...1.53.3) (2025-09-22)
+
+
+### Bug Fixes
+
+* wrong slide location ([c808259](https://github.com/ManuelePasini/slides-markdown/commit/c8082593894ed494969bf8b12d3704e9b388cd5c))
+
 ## [1.53.2](https://github.com/ManuelePasini/slides-markdown/compare/1.53.1...1.53.2) (2025-09-22)
 
 
