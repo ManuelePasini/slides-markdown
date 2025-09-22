@@ -2,31 +2,31 @@
 
 ## Large Language Models on Graphs: A Comprehensive Survey - TDKE, December 2024
 
-Three types of graphs:
+- Three types of graphs:
     - Pure Graphs without Textual Information
     - Text-Attributed Graphs: nodes or edges are associated with semantically rich text information
     - Text-Paired Graphs: have textual descriptions defined for the entire graph structure.
 
 ## Large Language Models on Graphs: A Comprehensive Survey - TDKE, December 2024
 
-** Input graph into LLM **:
+- ** Input graph into LLM **:
 
 
-- <b>Plainly verbailizing graph</b>: Verbalizing the graph structure in natural language (e.g., describe edges and adjacency lists)
-- <b>Paraphrasing graph</b>: paraphrase the graph structure into more natural or concise sentences.
+    - <b>Plainly verbailizing graph</b>: Verbalizing the graph structure in natural language (e.g., describe edges and adjacency lists)
+    - <b>Paraphrasing graph</b>: paraphrase the graph structure into more natural or concise sentences.
 
-    ```
-    [125] find that
-    by prompting LLMs to generate a format explanation of the raw graph inputs for itself (Format-Explanation) or to pretend to play a role in a natural task (Role Prompting), the performance on some problems can be improved but not systematically.
-    [130] explores the effect of grounding the pure graph in a real-world scenario, such as social networks, friendship graphs, or co-authorship graphs. In such graphs, nodes are described as people, and edges are relationships between people.
-    ```
+        ```
+        [125] find that
+        by prompting LLMs to generate a format explanation of the raw graph inputs for itself (Format-Explanation) or to pretend to play a role in a natural task (Role Prompting), the performance on some problems can be improved but not systematically.
+        [130] explores the effect of grounding the pure graph in a real-world scenario, such as social networks, friendship graphs, or co-authorship graphs. In such graphs, nodes are described as people, and edges are relationships between people.
+        ```
 
-- <b> Encoding Graphs Into Implicit Feature Sequences </b>:  Usually train a graph encoder to encode the graph structure into a
+    - <b> Encoding Graphs Into Implicit Feature Sequences </b>:  Usually train a graph encoder to encode the graph structure into a
 sequence of features and fine-tuning the LLMs to adapt to the new input format.
 
 ## Large Language Models on Graphs: A Comprehensive Survey - TDKE, December 2024
 
-** Applications **
+** Applications  - Pure graphs **
 
 - <b>Direct answering</b>: just provide me an answer.
     - On verbalized/paragraphed graphs...
@@ -42,5 +42,4 @@ sequence of features and fine-tuning the LLMs to adapt to the new input format.
         - At each step LLM decides if answer the question or explore one node through an edge (good for scaling in graph size)
 - <b>Algorithmic Reasoning</b>: prompts the LLMs to recall the algorithms that are relevant to the questions and then perform reasoning step by step according to the algorithms. bad results
 
-
-** Overall, no consensus on how to represent graphs **
+- ** Overall, no consensus on how to represent graphs **
