@@ -1,3 +1,11 @@
+## [1.53.4](https://github.com/ManuelePasini/slides-markdown/compare/1.53.3...1.53.4) (2025-09-22)
+
+
+### Bug Fixes
+
+* working on graph_llm slides ([4583137](https://github.com/ManuelePasini/slides-markdown/commit/45831371dcbc56d7f8748be970773c63df287377))
+* wrong slide location ([34cd2f2](https://github.com/ManuelePasini/slides-markdown/commit/34cd2f28cdd0cb5dc21b538bc3b44da081db1269))
+
 ## [1.53.3](https://github.com/ManuelePasini/slides-markdown/compare/1.53.2...1.53.3) (2025-09-22)
 
 
