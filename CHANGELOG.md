@@ -1,3 +1,15 @@
+## [1.53.0](https://github.com/ManuelePasini/slides-markdown/compare/1.52.1...1.53.0) (2025-09-22)
+
+
+### Features
+
+* add graph llm slides ([d649797](https://github.com/ManuelePasini/slides-markdown/commit/d6497975ced7d34ea8521cb9fbb5668510c93dd8))
+
+
+### Bug Fixes
+
+* wrong slide location ([486823f](https://github.com/ManuelePasini/slides-markdown/commit/486823fa5aa8d052fb0cbc12eb7c2928e399b36d))
+
 ## [1.52.1](https://github.com/ManuelePasini/slides-markdown/compare/1.52.0...1.52.1) (2025-09-22)
 
 
