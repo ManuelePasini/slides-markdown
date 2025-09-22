@@ -14,12 +14,10 @@
 
 ## Large Language Models on Graphs: A Comprehensive Survey - TKDE, December 2024
 
-- Three types of graphs:
+- **Three types of graphs**:
     - Pure Graphs without Textual Information
     - Text-Attributed Graphs: nodes or edges are associated with semantically rich text information
     - Text-Paired Graphs: have textual descriptions defined for the entire graph structure.
-
-## Large Language Models on Graphs: A Comprehensive Survey - TKDE, December 2024
 
 - **HOW TO Input graph into LLM**:
 
