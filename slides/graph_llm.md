@@ -1,13 +1,25 @@
 # Graph + LLM state of the art
 
-## Large Language Models on Graphs: A Comprehensive Survey - TDKE, December 2024
+## Surveys
+
+- Unifying Large Language Models and Knowledge Graphs: A Roadmap - <b>TKDE</b>, 2023
+- A survey on augmenting knowledge graphs (KGs) with large language models (LLMs): models, evaluation metrics, benchmarks, and challenges - <b>Discover artificial intelligence</b>, 2024
+- Graph Retrieval-Augmented Generation for Large Language Models: A Survey - <b>Conference on AI, Science, Engineering, and Technology (AIxSET)</b>, 2024
+- A Survey of Large Language Models for Graphs - <b>KDD</b> 2024
+- Research Trends for the Interplay between Large Language Models and Knowledge Graphs - <b>PVLD</b>, 2024
+- Think-on-Graph: Deep and Responsible Reasoning of Large Language Model on Knowledge Graph - <b>ICLR</b> 2024
+- A survey of large language models for data challenges in graphs - <b>Expert systems with Applications</b>, 2025
+- Bring Your Own Knowledge: A Survey of Methods for LLM Knowledge Expansion - <b>??</b>, 2025
+
+
+## Large Language Models on Graphs: A Comprehensive Survey - TKDE, December 2024
 
 - Three types of graphs:
     - Pure Graphs without Textual Information
     - Text-Attributed Graphs: nodes or edges are associated with semantically rich text information
     - Text-Paired Graphs: have textual descriptions defined for the entire graph structure.
 
-## Large Language Models on Graphs: A Comprehensive Survey - TDKE, December 2024
+## Large Language Models on Graphs: A Comprehensive Survey - TKDE, December 2024
 
 - **Input graph into LLM**:
 
