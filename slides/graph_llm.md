@@ -9,7 +9,7 @@
 
 ## Large Language Models on Graphs: A Comprehensive Survey - TDKE, December 2024
 
-- ** Input graph into LLM **:
+- **Input graph into LLM**:
 
 
     - <b>Plainly verbailizing graph</b>: Verbalizing the graph structure in natural language (e.g., describe edges and adjacency lists)
@@ -26,7 +26,7 @@ sequence of features and fine-tuning the LLMs to adapt to the new input format.
 
 ## Large Language Models on Graphs: A Comprehensive Survey - TDKE, December 2024
 
-** Applications  - Pure graphs **
+##### Applications - Pure graphs 
 
 - <b>Direct answering</b>: just provide me an answer.
     - On verbalized/paragraphed graphs...
@@ -36,10 +36,10 @@ sequence of features and fine-tuning the LLMs to adapt to the new input format.
 - <b>Heuristic Reasoning</b>: Perform a series of intermediate reasoning steps that might heuristically lead to the correct answer
     - Reasoning step-by-step: Chain of Thouhg (CoT) like, improves performances on simpler problems (e.g., cycle detection, shortest-path) but fails on complex problems(e.g, hamiltonian PF, topological sorting).
     - Retrieving subgraphs as evidence</b>: when not all graph is relevant to the task, LLM retrieve the subgraphs as evidence first and then perform reasoning on it.
-        - Build-a-Graph: encourages LLMs to reconstruct the relevant graph structures and then perform reasoning on them. This
-        - Context-Summarization: encourages LLMs to summarize the key nodes, edges, or sub-graphs and perform reasoning.
+        - Build-a-Graph: reconstruct the relevant graph structures and then perform reasoning on them. This
+        - Context-Summarization: summarize the key nodes, edges, or sub-graphs and perform reasoning.
     - Searching on Graphs</b>: e.g., DFS, BFS.
         - At each step LLM decides if answer the question or explore one node through an edge (good for scaling in graph size)
 - <b>Algorithmic Reasoning</b>: prompts the LLMs to recall the algorithms that are relevant to the questions and then perform reasoning step by step according to the algorithms. bad results
 
-- ** Overall, no consensus on how to represent graphs **
+- **Overall, no consensus on how to represent graphs**
