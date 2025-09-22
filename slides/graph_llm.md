@@ -2,14 +2,14 @@
 
 ## Surveys
 
-- Unifying Large Language Models and Knowledge Graphs: A Roadmap - <b>TKDE</b>, 2023
-- A survey on augmenting knowledge graphs (KGs) with large language models (LLMs): models, evaluation metrics, benchmarks, and challenges - <b>Discover artificial intelligence</b>, 2024
-- Graph Retrieval-Augmented Generation for Large Language Models: A Survey - <b>Conference on AI, Science, Engineering, and Technology (AIxSET)</b>, 2024
-- A Survey of Large Language Models for Graphs - <b>KDD</b>, 2024
-- Research Trends for the Interplay between Large Language Models and Knowledge Graphs - <b>PVLD</b>, 2024
-- Think-on-Graph: Deep and Responsible Reasoning of Large Language Model on Knowledge Graph - <b>ICLR</b>, 2024
-- A survey of large language models for data challenges in graphs - <b>Expert systems with Applications</b>, 2025
-- Bring Your Own Knowledge: A Survey of Methods for LLM Knowledge Expansion - <b>??</b>, 2025
+- Unifying Large Language Models and Knowledge Graphs: A Roadmap - <b style="color: blue;">TKDE</b>, 2023
+- A survey on augmenting knowledge graphs (KGs) with large language models (LLMs): models, evaluation metrics, benchmarks, and challenges - <b style="color: blue;">Discover artificial intelligence</b>, 2024
+- Graph Retrieval-Augmented Generation for Large Language Models: A Survey - <b style="color: blue;">Conference on AI, Science, Engineering, and Technology (AIxSET)</b>, 2024
+- A Survey of Large Language Models for Graphs - <b style="color: blue;">KDD</b>, 2024
+- Research Trends for the Interplay between Large Language Models and Knowledge Graphs - <b style="color: blue;">PVLD</b>, 2024
+- Think-on-Graph: Deep and Responsible Reasoning of Large Language Model on Knowledge Graph - <b style="color: blue;">ICLR</b>, 2024
+- A survey of large language models for data challenges in graphs - <b style="color: blue;">Expert systems with Applications</b>, 2025
+- Bring Your Own Knowledge: A Survey of Methods for LLM Knowledge Expansion - <b style="color: blue;">??</b>, 2025
 
 
 ## Large Language Models on Graphs: A Comprehensive Survey - TKDE, December 2024
@@ -21,7 +21,7 @@
 
 ## Large Language Models on Graphs: A Comprehensive Survey - TKDE, December 2024
 
-- **Input graph into LLM**:
+- **HOW TO Input graph into LLM**:
 
     - <b>Plainly verbailizing graph</b>: Verbalizing the graph structure in natural language (e.g., describe edges and adjacency lists)
     - <b>Paraphrasing graph</b>: paraphrase the graph structure into more natural or concise sentences.
