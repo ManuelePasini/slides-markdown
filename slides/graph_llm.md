@@ -5,9 +5,9 @@
 - Unifying Large Language Models and Knowledge Graphs: A Roadmap - <b>TKDE</b>, 2023
 - A survey on augmenting knowledge graphs (KGs) with large language models (LLMs): models, evaluation metrics, benchmarks, and challenges - <b>Discover artificial intelligence</b>, 2024
 - Graph Retrieval-Augmented Generation for Large Language Models: A Survey - <b>Conference on AI, Science, Engineering, and Technology (AIxSET)</b>, 2024
-- A Survey of Large Language Models for Graphs - <b>KDD</b> 2024
+- A Survey of Large Language Models for Graphs - <b>KDD</b>, 2024
 - Research Trends for the Interplay between Large Language Models and Knowledge Graphs - <b>PVLD</b>, 2024
-- Think-on-Graph: Deep and Responsible Reasoning of Large Language Model on Knowledge Graph - <b>ICLR</b> 2024
+- Think-on-Graph: Deep and Responsible Reasoning of Large Language Model on Knowledge Graph - <b>ICLR</b>, 2024
 - A survey of large language models for data challenges in graphs - <b>Expert systems with Applications</b>, 2025
 - Bring Your Own Knowledge: A Survey of Methods for LLM Knowledge Expansion - <b>??</b>, 2025
 
@@ -23,7 +23,6 @@
 
 - **Input graph into LLM**:
 
-
     - <b>Plainly verbailizing graph</b>: Verbalizing the graph structure in natural language (e.g., describe edges and adjacency lists)
     - <b>Paraphrasing graph</b>: paraphrase the graph structure into more natural or concise sentences.
 
@@ -33,10 +32,9 @@
         [130] explores the effect of grounding the pure graph in a real-world scenario, such as social networks, friendship graphs, or co-authorship graphs. In such graphs, nodes are described as people, and edges are relationships between people.
         ```
 
-    - <b> Encoding Graphs Into Implicit Feature Sequences </b>:  Usually train a graph encoder to encode the graph structure into a
-sequence of features and fine-tuning the LLMs to adapt to the new input format.
+    - <b> Encoding Graphs Into Implicit Feature Sequences </b>:  Usually train a graph encoder to encode the graph structure into a sequence of features and fine-tuning the LLMs to adapt to the new input format.
 
-## Large Language Models on Graphs: A Comprehensive Survey - TDKE, December 2024
+## Large Language Models on Graphs: A Comprehensive Survey - TKDE, December 2024
 
 ##### Applications - Pure graphs 
 
