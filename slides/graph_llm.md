@@ -12,7 +12,7 @@
 - Bring Your Own Knowledge: A Survey of Methods for LLM Knowledge Expansion - <b style="color: blue;">??</b>, 2025
 
 
-## Large Language Models on Graphs: A Comprehensive Survey - TKDE, December 2024
+## LLMs on Graphs: A Comprehensive Survey - TKDE, 2024
 
 - **Three types of graphs**:
     - Pure Graphs without Textual Information
@@ -32,7 +32,7 @@
 
     - <b> Encoding Graphs Into Implicit Feature Sequences </b>:  Usually train a graph encoder to encode the graph structure into a sequence of features and fine-tuning the LLMs to adapt to the new input format.
 
-## Large Language Models on Graphs: A Comprehensive Survey - TKDE, December 2024
+## LLMs on Graphs: A Comprehensive Survey - TKDE, 2024
 
 ##### Applications - **Pure graphs**
 
@@ -52,18 +52,26 @@
 
 - **Overall, no consensus on how to represent graphs**
 
-## Large Language Models on Graphs: A Comprehensive Survey - TKDE, December 2024
+## LLMs on Graphs: A Comprehensive Survey - TKDE, 2024
 
 ##### Applications - **Text-attributed graphs** 
 
-- <b> LLM as Predictor </b>: language model as the main model architecture to capture both the text information and graph structure information, depending on howstructure information in graphs is injected:
-    - <b> Graph as Sequence </b>: The ego-graphs associated with nodes/edges are serialized into a sequence, depending on how it gets serialized:
-        - <b> Rule-based methods </b>
-        - <b> GNN-based methods</b>: graph encoder models (i.e., GNN) to ego-graph associated with nodes into token representations which are concatenated with the text information
-    - <b> Graph-Empowered LLMs </b>:  modify the architecture of Transformersb to encode text and graph structure simultaneously.
-    - <b> Graph-AwareLLM finetuning methods </b>:adopt vanilla language mode and finetune them with structure signals on the graph. **tons of methods on this**
-- **Takeouts**:
-    - Graph as Code Sequence: Existing graphs as sequence methods are mainly rule-based or GNN-based. Promising way is to obtain a structure-aware sequence for graphs that can support zero-shot inference. e.g., adopt codes (that can capture structures, e.g., graph XML or JSON) to describe the graphs and utilize code LLMs
+## LLMs on Graphs: A Comprehensive Survey - TKDE, 2024
 
+- <b> LLM as Predictor </b>: language model as the main model architecture to capture both the text information and graph structure information, depending on howstructure information in graphs is injected:
 - <b> LLM as Encoder </b>
 - <b> LLM as Aligner </b>
+
+## LLMs on Graphs: A Comprehensive Survey - TKDE, 2024
+
+##### Applications - **Text-attributed graphs**  - LLM as Predictor
+
+- <b> Graph as Sequence </b>: The ego-graphs associated with nodes/edges are serialized into a sequence, depending on how it gets serialized:
+    - <b> Rule-based methods </b>
+    - <b> GNN-based methods</b>: graph encoder models (i.e., GNN) to ego-graph associated with nodes into token representations which are concatenated with the text information
+- <b> Graph-Empowered LLMs </b>:  modify the architecture of Transformersb to encode text and graph structure simultaneously.
+- <b> Graph-AwareLLM finetuning methods </b>:adopt vanilla language mode and finetune them with structure signals on the graph. **tons of methods on this**
+
+- **Takeouts**:
+- <b> Graph as Code Sequence </b>: Existing graphs as sequence methods are mainly rule-based or GNN-based. Promising way is to obtain a structure-aware sequence for graphs that can support zero-shot inference. e.g., adopt codes (that can capture structures, e.g., graph XML or JSON) to describe the graphs and utilize code LLMs
+- <b> More powerful Graph-Empowered LLms</b>
