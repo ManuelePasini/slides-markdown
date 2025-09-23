@@ -34,7 +34,7 @@
 
 ## Large Language Models on Graphs: A Comprehensive Survey - TKDE, December 2024
 
-##### Applications - Pure graphs 
+##### Applications - **Pure graphs**
 
 - <b>Direct answering</b>: just provide me an answer.
     - On verbalized/paragraphed graphs...
@@ -51,3 +51,8 @@
 - <b>Algorithmic Reasoning</b>: prompts the LLMs to recall the algorithms that are relevant to the questions and then perform reasoning step by step according to the algorithms. bad results
 
 - **Overall, no consensus on how to represent graphs**
+
+
+## Large Language Models on Graphs: A Comprehensive Survey - TKDE, December 2024
+
+##### Applications - **Text-attributed graphs** 
