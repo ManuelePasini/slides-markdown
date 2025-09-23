@@ -52,7 +52,18 @@
 
 - **Overall, no consensus on how to represent graphs**
 
-
 ## Large Language Models on Graphs: A Comprehensive Survey - TKDE, December 2024
 
 ##### Applications - **Text-attributed graphs** 
+
+- <b> LLM as Predictor </b>: language model as the main model architecture to capture both the text information and graph structure information, depending on howstructure information in graphs is injected:
+    - <b> Graph as Sequence </b>: The ego-graphs associated with nodes/edges are serialized into a sequence, depending on how it gets serialized:
+        - <b> Rule-based methods </b>
+        - <b> GNN-based methods</b>: graph encoder models (i.e., GNN) to ego-graph associated with nodes into token representations which are concatenated with the text information
+    - <b> Graph-Empowered LLMs </b>:  modify the architecture of Transformersb to encode text and graph structure simultaneously.
+    - <b> Graph-AwareLLM finetuning methods </b>:adopt vanilla language mode and finetune them with structure signals on the graph. **tons of methods on this**
+- **Takeouts**:
+    - Graph as Code Sequence: Existing graphs as sequence methods are mainly rule-based or GNN-based. Promising way is to obtain a structure-aware sequence for graphs that can support zero-shot inference. e.g., adopt codes (that can capture structures, e.g., graph XML or JSON) to describe the graphs and utilize code LLMs
+
+- <b> LLM as Encoder </b>
+- <b> LLM as Aligner </b>
