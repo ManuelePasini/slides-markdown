@@ -56,7 +56,6 @@
 
 ##### Applications - **Text-attributed graphs** 
 
-## LLMs on Graphs: A Comprehensive Survey - TKDE, 2024
 
 - <b> LLM as Predictor </b>: language model as the main model architecture to capture both the text information and graph structure information, depending on howstructure information in graphs is injected:
 - <b> LLM as Encoder </b>
@@ -72,6 +71,6 @@
 - <b> Graph-Empowered LLMs </b>:  modify the architecture of Transformersb to encode text and graph structure simultaneously.
 - <b> Graph-AwareLLM finetuning methods </b>:adopt vanilla language mode and finetune them with structure signals on the graph. **tons of methods on this**
 
-- **Takeouts**:
+##### **Takeouts**:
 - <b> Graph as Code Sequence </b>: Existing graphs as sequence methods are mainly rule-based or GNN-based. Promising way is to obtain a structure-aware sequence for graphs that can support zero-shot inference. e.g., adopt codes (that can capture structures, e.g., graph XML or JSON) to describe the graphs and utilize code LLMs
 - <b> More powerful Graph-Empowered LLms</b>
