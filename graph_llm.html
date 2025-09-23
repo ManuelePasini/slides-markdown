@@ -399,29 +399,28 @@ by prompting LLMs to generate a format explanation of the raw graph inputs for i
 <section id="llms-on-graphs-a-comprehensive-survey---tkde-2024-2" class="slide level2">
 <h2>LLMs on Graphs: A Comprehensive Survey - TKDE, 2024</h2>
 <h5 id="applications---text-attributed-graphs">Applications - <strong>Text-attributed graphs</strong></h5>
-</section>
-<section id="llms-on-graphs-a-comprehensive-survey---tkde-2024-3" class="slide level2">
-<h2>LLMs on Graphs: A Comprehensive Survey - TKDE, 2024</h2>
 <ul>
 <li><b> LLM as Predictor </b>: language model as the main model architecture to capture both the text information and graph structure information, depending on howstructure information in graphs is injected:</li>
 <li><b> LLM as Encoder </b></li>
 <li><b> LLM as Aligner </b></li>
 </ul>
 </section>
-<section id="llms-on-graphs-a-comprehensive-survey---tkde-2024-4" class="slide level2">
+<section id="llms-on-graphs-a-comprehensive-survey---tkde-2024-3" class="slide level2">
 <h2>LLMs on Graphs: A Comprehensive Survey - TKDE, 2024</h2>
 <h5 id="applications---text-attributed-graphs---llm-as-predictor">Applications - <strong>Text-attributed graphs</strong> - LLM as Predictor</h5>
 <ul>
-<li><p><b> Graph as Sequence </b>: The ego-graphs associated with nodes/edges are serialized into a sequence, depending on how it gets serialized:</p>
+<li><b> Graph as Sequence </b>: The ego-graphs associated with nodes/edges are serialized into a sequence, depending on how it gets serialized:
 <ul>
 <li><b> Rule-based methods </b></li>
 <li><b> GNN-based methods</b>: graph encoder models (i.e., GNN) to ego-graph associated with nodes into token representations which are concatenated with the text information</li>
 </ul></li>
-<li><p><b> Graph-Empowered LLMs </b>: modify the architecture of Transformersb to encode text and graph structure simultaneously.</p></li>
-<li><p><b> Graph-AwareLLM finetuning methods </b>:adopt vanilla language mode and finetune them with structure signals on the graph. <strong>tons of methods on this</strong></p></li>
-<li><p><strong>Takeouts</strong>:</p></li>
-<li><p><b> Graph as Code Sequence </b>: Existing graphs as sequence methods are mainly rule-based or GNN-based. Promising way is to obtain a structure-aware sequence for graphs that can support zero-shot inference. e.g., adopt codes (that can capture structures, e.g., graph XML or JSON) to describe the graphs and utilize code LLMs</p></li>
-<li><p><b> More powerful Graph-Empowered LLms</b></p></li>
+<li><b> Graph-Empowered LLMs </b>: modify the architecture of Transformersb to encode text and graph structure simultaneously.</li>
+<li><b> Graph-AwareLLM finetuning methods </b>:adopt vanilla language mode and finetune them with structure signals on the graph. <strong>tons of methods on this</strong></li>
+</ul>
+<h5 id="takeouts"><strong>Takeouts</strong>:</h5>
+<ul>
+<li><b> Graph as Code Sequence </b>: Existing graphs as sequence methods are mainly rule-based or GNN-based. Promising way is to obtain a structure-aware sequence for graphs that can support zero-shot inference. e.g., adopt codes (that can capture structures, e.g., graph XML or JSON) to describe the graphs and utilize code LLMs</li>
+<li><b> More powerful Graph-Empowered LLms</b></li>
 </ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
