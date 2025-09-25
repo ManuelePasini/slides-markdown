@@ -81,7 +81,7 @@
 :::
 ::: {.column width="70%"}
 
-![Schemas for LLM as encoder](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/graphllm/graphpredictor.png.png?raw=true)
+![Schemas for LLM as encoder](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/graphllm/graphpredictor.png?raw=true)
 
 :::
 ::::
@@ -103,11 +103,11 @@
 
 - **Takeouts**:
     - LLM is just used for encoding, but not to generate anything
-    - Low efficient knowledge distillation: it looks very promising, but still costly. Potential solution is to distill the model into a much smaller LM or even an MLP
+    - Low efficient knowledge distillation: it's promising, but costly. Potential solution is to distill the model into a smaller LM or even an MLP
 :::
 ::: {.column width="70%"}
 
-![Schemas for LLM as encoder](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/graphllm/llmencoder.png.png?raw=true)
+![Schemas for LLM as encoder](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/graphllm/llmencoder.png?raw=true)
 
 :::
 ::::
