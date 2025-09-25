@@ -71,12 +71,13 @@
     - <b> GNN-based methods</b>: graph encoder models (i.e., GNN) to ego-graph associated with nodes into token representations which are concatenated with the text information
 - <b> Graph-Empowered LLMs </b>:  modify the architecture of Transformersb to encode text and graph structure simultaneously.
 - <b> Graph-AwareLLM finetuning methods </b>:adopt vanilla language mode and finetune them with structure signals on the graph. **tons of methods on this**
+
 :::: {.columns}
 ::: {.column width="30%"}
 
-##### **Takeouts**:
-- <b> Graph as Code Sequence </b>: Graphs as sequence methods are mainly rule-based or GNN-based. Promising way is to obtain a structure-aware sequence e.g., adopt codes (that can capture structures, e.g., graph XML or JSON) for graphs and utilize code LLMs
-- <b> More powerful Graph-Empowered LLms</b>
+-  **Takeouts**:
+    - <b> Graph as Code Sequence </b>: GraphsASequence methods are rule-or GNN-based. Promising way is to obtain a structure-aware sequence that can capture structures (e.g., graph XML or JSON) and utilize code LLMs
+    - <b> More powerful Graph-Empowered LLms</b>
 
 :::
 ::: {.column width="70%"}
@@ -111,6 +112,14 @@
 
 :::
 ::::
+
+## LLMs on Graphs: A Comprehensive Survey - TKDE, 2024
+
+##### Applications - **Text-attributed graphs**  - LLM as Aligner
+
+- Two components: LLM for text encoding and GNN for structure encoding. They iteratively interact with each other. According to how they interact:
+    - <b> LLM-GNNPrediction Alignment </b>
+    - <b> LLM-GNN Latent Space Alignmen </b>
 
 ## Moro Takeouts
 
