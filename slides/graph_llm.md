@@ -71,17 +71,46 @@
     - <b> GNN-based methods</b>: graph encoder models (i.e., GNN) to ego-graph associated with nodes into token representations which are concatenated with the text information
 - <b> Graph-Empowered LLMs </b>:  modify the architecture of Transformersb to encode text and graph structure simultaneously.
 - <b> Graph-AwareLLM finetuning methods </b>:adopt vanilla language mode and finetune them with structure signals on the graph. **tons of methods on this**
+:::: {.columns}
+::: {.column width="30%"}
 
 ##### **Takeouts**:
-- <b> Graph as Code Sequence </b>: Existing graphs as sequence methods are mainly rule-based or GNN-based. Promising way is to obtain a structure-aware sequence for graphs that can support zero-shot inference. e.g., adopt codes (that can capture structures, e.g., graph XML or JSON) to describe the graphs and utilize code LLMs
+- <b> Graph as Code Sequence </b>: Graphs as sequence methods are mainly rule-based or GNN-based. Promising way is to obtain a structure-aware sequence e.g., adopt codes (that can capture structures, e.g., graph XML or JSON) for graphs and utilize code LLMs
 - <b> More powerful Graph-Empowered LLms</b>
+
+:::
+::: {.column width="70%"}
+
+![Schemas for LLM as encoder](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/graphllm/graphpredictor.png.png?raw=true)
+
+:::
+::::
+
+
 
 ## LLMs on Graphs: A Comprehensive Survey - TKDE, 2024
 
 ##### Applications - **Text-attributed graphs**  - LLM as Encoder
 
 - LLMs extract textual features to serve as initial node feature vectors for GNNs, which then generate node/edge representations and make predictions
+- Goals:
+    - <b> Optimization </b>: of the GNN output
+    - <b> Data Augmentation</b>: LLMs generate additional text data for theLLM-GNNcascaded architecture.
+    - <b> Knowledge Distillation </b>: Train a GNN+LLM, but using it is costly because of GNN. So we train a "teacher" GNN+LLM model and save embeddings/output, and then a student LLM model leverage those in order to avoid inference costs
 
+:::: {.columns}
+::: {.column width="30%"}
+
+- **Takeouts**:
+    - LLM is just used for encoding, but not to generate anything
+    - Low efficient knowledge distillation: it looks very promising, but still costly. Potential solution is to distill the model into a much smaller LM or even an MLP
+:::
+::: {.column width="70%"}
+
+![Schemas for LLM as encoder](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/graphllm/llmencoder.png.png?raw=true)
+
+:::
+::::
 
 ## Moro Takeouts
 
