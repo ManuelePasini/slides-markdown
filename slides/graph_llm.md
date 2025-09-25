@@ -7,6 +7,7 @@
 - Graph Retrieval-Augmented Generation for Large Language Models: A Survey - <b style="color: blue;">Conference on AI, Science, Engineering, and Technology (AIxSET)</b>, 2024
 - A Survey of Large Language Models for Graphs - <b style="color: blue;">KDD</b>, 2024
 - Research Trends for the Interplay between Large Language Models and Knowledge Graphs - <b style="color: blue;">PVLD</b>, 2024
+- Large Language Models on Graphs: A Comprehensive Survey -  <b style="color: blue;">TKDE</b>, 2024
 - Think-on-Graph: Deep and Responsible Reasoning of Large Language Model on Knowledge Graph - <b style="color: blue;">ICLR</b>, 2024
 - A survey of large language models for data challenges in graphs - <b style="color: blue;">Expert systems with Applications</b>, 2025
 - Bring Your Own Knowledge: A Survey of Methods for LLM Knowledge Expansion - <b style="color: blue;">??</b>, 2025
@@ -57,8 +58,8 @@
 ##### Applications - **Text-attributed graphs** 
 
 
-- <b> LLM as Predictor </b>: language model as the main model architecture to capture both the text information and graph structure information, depending on howstructure information in graphs is injected:
-- <b> LLM as Encoder </b>
+- <b> LLM as Predictor </b>: LLM as the main model architecture to capture both the text information and graph structure information, depending on how structure information in graphs is injected:
+- <b> LLM as Encoder </b>: LLMs extract textual features to serve as initial node feature vectors for GNNs, which then generate node/edge representations and make predictions
 - <b> LLM as Aligner </b>
 
 ## LLMs on Graphs: A Comprehensive Survey - TKDE, 2024
@@ -74,3 +75,14 @@
 ##### **Takeouts**:
 - <b> Graph as Code Sequence </b>: Existing graphs as sequence methods are mainly rule-based or GNN-based. Promising way is to obtain a structure-aware sequence for graphs that can support zero-shot inference. e.g., adopt codes (that can capture structures, e.g., graph XML or JSON) to describe the graphs and utilize code LLMs
 - <b> More powerful Graph-Empowered LLms</b>
+
+## LLMs on Graphs: A Comprehensive Survey - TKDE, 2024
+
+##### Applications - **Text-attributed graphs**  - LLM as Encoder
+
+- LLMs extract textual features to serve as initial node feature vectors for GNNs, which then generate node/edge representations and make predictions
+
+
+## Moro Takeouts
+
+- Use RAG only if the question lies beyond the typical training data, if the knowledge we're asking is not embedded in parameters, otherwise performances might get worse
