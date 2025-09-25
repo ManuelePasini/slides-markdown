@@ -416,20 +416,47 @@ by prompting LLMs to generate a format explanation of the raw graph inputs for i
 <li><b> GNN-based methods</b>: graph encoder models (i.e., GNN) to ego-graph associated with nodes into token representations which are concatenated with the text information</li>
 </ul></li>
 <li><b> Graph-Empowered LLMs </b>: modify the architecture of Transformersb to encode text and graph structure simultaneously.</li>
-<li><b> Graph-AwareLLM finetuning methods </b>:adopt vanilla language mode and finetune them with structure signals on the graph. <strong>tons of methods on this</strong></li>
+<li><b> Graph-AwareLLM finetuning methods </b>:adopt vanilla language mode and finetune them with structure signals on the graph. <strong>tons of methods on this</strong> :::: {.columns} ::: {.column width=“30%”}</li>
 </ul>
 <h5 id="takeouts"><strong>Takeouts</strong>:</h5>
 <ul>
-<li><b> Graph as Code Sequence </b>: Existing graphs as sequence methods are mainly rule-based or GNN-based. Promising way is to obtain a structure-aware sequence for graphs that can support zero-shot inference. e.g., adopt codes (that can capture structures, e.g., graph XML or JSON) to describe the graphs and utilize code LLMs</li>
+<li><b> Graph as Code Sequence </b>: Graphs as sequence methods are mainly rule-based or GNN-based. Promising way is to obtain a structure-aware sequence e.g., adopt codes (that can capture structures, e.g., graph XML or JSON) for graphs and utilize code LLMs</li>
 <li><b> More powerful Graph-Empowered LLms</b></li>
 </ul>
+<p>::: ::: {.column width=“70%”}</p>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/graphllm/graphpredictor.png.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Schemas for LLM as encoder</p><p>::: ::::</p>
 </section>
 <section id="llms-on-graphs-a-comprehensive-survey---tkde-2024-4" class="slide level2">
 <h2>LLMs on Graphs: A Comprehensive Survey - TKDE, 2024</h2>
 <h5 id="applications---text-attributed-graphs---llm-as-encoder">Applications - <strong>Text-attributed graphs</strong> - LLM as Encoder</h5>
 <ul>
 <li>LLMs extract textual features to serve as initial node feature vectors for GNNs, which then generate node/edge representations and make predictions</li>
+<li>Goals:
+<ul>
+<li><b> Optimization </b>: of the GNN output</li>
+<li><b> Data Augmentation</b>: LLMs generate additional text data for theLLM-GNNcascaded architecture.</li>
+<li><b> Knowledge Distillation </b>: Train a GNN+LLM, but using it is costly because of GNN. So we train a “teacher” GNN+LLM model and save embeddings/output, and then a student LLM model leverage those in order to avoid inference costs</li>
+</ul></li>
 </ul>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li><strong>Takeouts</strong>:
+<ul>
+<li>LLM is just used for encoding, but not to generate anything</li>
+<li>Low efficient knowledge distillation: it looks very promising, but still costly. Potential solution is to distill the model into a much smaller LM or even an MLP</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/graphllm/llmencoder.png.png?raw=true"></p>
+<figcaption>Schemas for LLM as encoder</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="moro-takeouts" class="slide level2">
 <h2>Moro Takeouts</h2>
