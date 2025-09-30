@@ -76,7 +76,7 @@
 ::: {.column width="30%"}
 
 -  **Takeouts**:
-    - <b> Graph as Code Sequence </b>: GraphsASequence methods are rule-or GNN-based. Promising way is to obtain a structure-aware sequence that can capture structures (e.g., graph XML or JSON) and utilize code LLMs
+    - <b> Graph as Code Sequence </b>: GraphsASequence are rule-or GNN-based. Another way is to obtain a structure-aware sequence that can capture structures (e.g., graph XML or JSON) and utilize code LLMs.
     - <b> More powerful Graph-Empowered LLms</b>
 
 :::
@@ -86,7 +86,6 @@
 
 :::
 ::::
-
 
 
 ## LLMs on Graphs: A Comprehensive Survey - TKDE, 2024
@@ -118,9 +117,28 @@
 ##### Applications - **Text-attributed graphs**  - LLM as Aligner
 
 - Two components: LLM for text encoding and GNN for structure encoding. They iteratively interact with each other. According to how they interact:
-    - <b> LLM-GNNPrediction Alignment </b>
-    - <b> LLM-GNN Latent Space Alignmen </b>
+    - <b> LLM-GNN Prediction Alignment </b>: Iteratively train LLM with graph text data, train GNN with graph structure data. LLM generates labels for nodes from the text perspective and serve them as pseudo-labels for GNN training; GNN generates
+    labels for nodes from the structure perspective and serve them as pseudo-labels for LLM training.
+    - <b> LLM-GNN Latent Space Alignment </b>: connecting text encoding (LLM) and structure encoding (GNN) with cross-modality contrastive learning. The integration between the two models happens in the latent space, similar text encoding and structure encoding will be close in the latent space
+
+:::: {.columns}
+::: {.column width="30%"}
+
+- **Takeouts**:
+    - Heterogeneous semantic relations: the semantic relationships between data units can be multiplex. Different relations have different distributions and a single semantic alignment will fail to capture the comprehensively. Risks of flatting the semantics of data
+    - Low efficient knowledge distillation: it's promising, but costly. Potential solution is to distill the model into a smaller LM or even an MLP
+:::
+::: {.column width="70%"}
+
+![Schemas for LLM as Aligner](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/graphllm/llmaligner.png?raw=true)
+
+:::
+::::
 
 ## Moro Takeouts
 
 - Use RAG only if the question lies beyond the typical training data, if the knowledge we're asking is not embedded in parameters, otherwise performances might get worse
+
+## LLMs on Graphs: A Comprehensive Survey - TKDE, 2024
+
+##### Applications - **Text-Paired graphs**  - LLM as Aligner
