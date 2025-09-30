@@ -1,7 +1,57 @@
 # Architectures and Methods for Digital Twin Platforms
 
-## Introduction to digital twins
+## Introduction to Digital Twins
 
+ - Differences between digital shadow, digital model, Digital Twin (DT)
+ - Still a buzzword, but enclosing on a definition...
+ - 3 components: phyisical model, virtual model, communication services
+
+:::: {.columns}
+::: {.column width="50%"}
+![Differences between twins](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/twin_model_shadow.png?raw=true)
+:::
+::: {.column width="50%"}
+![DT components](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt.png?raw=true)
+:::
+::::
+
+## Introduction to Digital Twins
+
+ - While concept of data as a core component is arising..
+ - ... Still left unconsidered in most research papers.
+ - However, some standard models are emerging...
+ - e.g.: Fei Tao, Univ. of Beijing
+
+:::: {.columns}
+::: {.column width="50%"}
+ ![5-Dimensional DT (Fei, Tao 2020)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/5dim.png?raw=true)
+:::
+::: {.column width="50%"}
+![Virtual Entity architecture (Fei, Tao, 2020)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/digital_model.png?raw=true)
+:::
+::::
+
+## A Digital Twin for Precision Agriculture
+
+- Five year ongoing project (also in PNRR - Spoke 9) in precision irrigation of orchards
+- Demo available at https://big.csr.unibo.it/projects/smarter/
+- Scientific Article submitted to Computer and Electronics in Agriculture (September 2025)
+
+## From application oriented to domain oriented
+
+- Within PNRR Agritech - Spoke 3, building a Data Platform fostering collaboration and integration between research projects...
+- While defining integration policies and standards...
+- Some key data requirements emerged:
+
+    - <b>Heterogeneous data</b>: encompassing structured and unstructured types, including images.
+
+    - <b>Interconnected data</b>: representing both physical entities and the IoT networks describing them.
+
+    - <b>Temporal aspects</b>: datasets often exhibit time-series behavior.
+
+    - <b>Spatial aspects</b>: data are frequently geolocated.
+
+- A DT can be described by the pipelines of data
 
 ## External activities
 
