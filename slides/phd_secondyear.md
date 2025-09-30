@@ -65,7 +65,12 @@
 
 ## Modelling Digital Twin Data
 
-- 
+- Highly interconnected entities (e.g., the fruit tree we want to represent and the IoT network describing it) point to graph database management systems (DBMSs) for an efficient storing and querying...
+    - ... but what about the volume of such data?
+- Time-Series DBMSs efficiently handle large volumes of temporal data...
+    - ... but they struggle in modeling the complex relationships dynamics between the entities.
+
+- What about an hybrid data structure?
 
 ## An Hybryd data structure enabling Digital Twin Data
 
