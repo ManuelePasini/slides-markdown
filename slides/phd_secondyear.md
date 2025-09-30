@@ -35,9 +35,9 @@
 
 - Five year ongoing project (also in PNRR - Spoke 9) in precision irrigation of orchards
 - Demo available at https://big.csr.unibo.it/projects/smarter/
-- Scientific Article submitted to Computer and Electronics in Agriculture (September 2025)
+- Scientific Article submitted to Computer and Electronics in Agriculture (September 2025).
 
-## From application oriented to domain oriented
+## A Data Platform fostering collaboration between DTs
 
 - Within PNRR Agritech - Spoke 3, building a Data Platform fostering collaboration and integration between research projects...
 - While defining integration policies and standards...
@@ -51,7 +51,26 @@
 
     - <b>Spatial aspects</b>: data are frequently geolocated.
 
-- A DT can be described by the pipelines of data
+- **Currently working on its implementation**
+
+## From application-oriented to domain-oriented
+
+- A DT can be characterized by the data pipelines that collect, process, and generate insights from data.
+- Is it possible, given a data pipeline, to determine the set of a data platform services enibling such pipeline?
+
+- Matteo Francia, Matteo Golfarelli, Manuele Pasini - Towards a process-driven design of data platforms. In <b>DOLAP</b>, pages 28–35, 2024.
+- Matteo Francia, Matteo Golfarelli, Manuele Pasini - Process-Driven Design of Cloud Data Platforms, <b>Information Systems journal</b>, Manuscript Number: INFOSYS-D-24-00444
+
+- **But something was missing..**
+
+## Modelling Digital Twin Data
+
+- 
+
+## An Hybryd data structure enabling Digital Twin Data
+
+-
+- Workload definition (queries)
 
 ## External activities
 
