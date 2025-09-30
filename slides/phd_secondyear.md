@@ -59,6 +59,7 @@
 - Is it possible, given a data pipeline, to determine the set of a data platform services enibling such pipeline?
 
 - Matteo Francia, Matteo Golfarelli, Manuele Pasini - Towards a process-driven design of data platforms. In <b>DOLAP</b>, pages 28–35, 2024.
+
 - Matteo Francia, Matteo Golfarelli, Manuele Pasini - Process-Driven Design of Cloud Data Platforms, <b>Information Systems journal</b>, Manuscript Number: INFOSYS-D-24-00444
 
 - **But something was missing..**
@@ -79,6 +80,9 @@
 
 ## External activities
 
+:::: {.columns}
+::: {.column width="50%"}
+
 ##### Tutoring
 
 - 95631 - MACHINE LEARNING AND DATA MINING - 6 cfu (a.a. 23/24)
@@ -94,6 +98,10 @@
 - Project meeting Spoke 3 PNRR Agritech
 - EDBT/ICDT 2024 Joint Conference
 
+
+:::
+::: {.column width="50%"}
+
 ##### External activities
 
 - Teaching Relational Database, 30 hrs, ITS Olivetti (2023/2024)
@@ -106,3 +114,6 @@
 - Denis Nikaj (Progettazione e prototipazione di un'applicazione web per l'irrigazione di precisione), March 2024.
 - Davide Speziali  (Progettazione e realizzazione di un simulatore per l'irrigazione di precisione), December 2024.
 - Federico Capponi (Progettazione e prototipazione di un sistema di irrigazione di precisione), July 2025.
+
+:::
+::::
