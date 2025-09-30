@@ -17,10 +17,10 @@
 
 ## Introduction to Digital Twins
 
- - While concept of data as a core component is arising..
- - ... Still left unconsidered in most research papers.
- - However, some standard models are emerging...
- - e.g.: Fei Tao, Univ. of Beijing
+- While concept of data as a core component is arising..
+- ... Still left unconsidered in most research papers.
+- ... However, some standard models are emerging
+- e.g.: Fei Tao, Univ. of Beijing
 
 :::: {.columns}
 ::: {.column width="50%"}
