@@ -72,7 +72,7 @@
 
 ## From application-oriented to domain-oriented
 
-- ***Research question 1.**Can we abstract from application-level solutions to domain-level solutions? 
+- **Research question 1.** Can we abstract from application-level solutions to domain-level solutions? 
 
 <b style="color: blue;">Takeaway from previous phase </b>: a Digital Twin (DT) can be represented through data pipelines that collect, process, and transform data into insights.
 
