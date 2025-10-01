@@ -54,28 +54,33 @@
 
 ## A Data Platform fostering collaboration between DTs
 
-- Within PNRR Agritech - Spoke 3, building a Data Platform fostering collaboration and integration between research projects...
-- While defining integration policies and standards...
-- Some key data requirements emerged:
+- Within PNRR Agritech – Spoke 3, the focus is on developing a Data Platform to foster collaboration and integration across research projects.
 
-    - <b>Heterogeneous data</b>: encompassing structured and unstructured types, including images.
+- In defining integration policies and standards, several data requirements were identified:
 
-    - <b>Interconnected data</b>: representing both physical entities and the IoT networks describing them.
+<b>Heterogeneous data</b>: covering both structured and unstructured formats, including images.
 
-    - <b>Temporal aspects</b>: datasets often exhibit time-series behavior.
+<b>Interconnected data</b>: capturing physical entities together with the IoT networks describing them.
 
-    - <b>Spatial aspects</b>: data are frequently geolocated.
+<b>Temporal aspects</b>: many datasets display time-series characteristics.
 
-- **Currently working on its implementation**
+<b>Spatial aspects</b>: data are often geo-referenced.
+
+![Excerpt of the Agricolture Data Platform](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/agriplatform.png?raw=true)
+
+- **Currently working on its evolution**
 
 ## From application-oriented to domain-oriented
 
-- A DT can be characterized by the data pipelines that collect, process, and generate insights from data.
-- Is it possible, given a data pipeline, to determine the set of a data platform services enibling such pipeline?
+**Takeaway from previous phase**: a Digital Twin (DT) can be represented through data pipelines that collect, process, and transform data into insights.
 
-- Matteo Francia, Matteo Golfarelli, Manuele Pasini - Towards a process-driven design of data platforms. In <b>DOLAP</b>, pages 28–35, 2024.
+**Open question**: given a data pipeline, can we identify the set of data platform services required to support it?
 
-- Matteo Francia, Matteo Golfarelli, Manuele Pasini - Process-Driven Design of Cloud Data Platforms, <b>Information Systems journal</b>, Manuscript Number: INFOSYS-D-24-00444
+References:
+
+Matteo Francia, Matteo Golfarelli, Manuele Pasini — Towards a Process-Driven Design of Data Platforms. In <b>DOLAP</b>, pp. 28–35, 2024.
+
+Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of Cloud Data Platforms. <b>Information Systems Journal</b>, Manuscript No. INFOSYS-D-24-00444.
 
 - **But something was missing..**
 
