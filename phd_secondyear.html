@@ -336,7 +336,7 @@
 <ul>
 <li>Differences between digital shadow, digital model, Digital Twin (DT)</li>
 <li>Still a buzzword, but enclosing on a definition…</li>
-<li>3 components: phyisical model, virtual model, communication services</li>
+<li>4 components: phyisical model, virtual model, communication services and the data</li>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -426,8 +426,11 @@
 </section>
 <section id="from-application-oriented-to-domain-oriented" class="slide level2">
 <h2>From application-oriented to domain-oriented</h2>
+<ul>
+<li>Can we abstract from application-level solutions to domain-level solutions? (e.g.&nbsp;from having a platform to support a DT application, to having a platform to support Agricolture Digital Twins)</li>
+</ul>
 <p><b style="color: blue;">Takeaway from previous phase </b>: a Digital Twin (DT) can be represented through data pipelines that collect, process, and transform data into insights.</p>
-<p><strong>Open question</strong>: given a data pipeline, can we identify the set of data platform services required to support it?</p>
+<p><strong>Research question</strong>: given a data pipeline, can we identify the set of data platform services required to support it?</p>
 <p><b>References</b>:</p>
 <p>Matteo Francia, Matteo Golfarelli, Manuele Pasini — Towards a Process-Driven Design of Data Platforms. In <b>DOLAP</b>, pp.&nbsp;28–35, 2024.</p>
 <p>Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of Cloud Data Platforms. <b>Information Systems Journal</b>, Manuscript No.&nbsp;INFOSYS-D-24-00444.</p>
@@ -447,18 +450,19 @@
 <li>… but fall short in capturing the complex dynamics of relationships among entities.</li>
 </ul></li>
 <li><p>Even the previous Data Platform Design often suggested multiple storage technologies, tailored to the needs of different DTs…</p></li>
+<li><p>Yet, no multi-store solution has achieved broad adoption in the literature.</p></li>
 <li><p><strong>What about an hybrid data structure?</strong></p></li>
 </ul>
 </section>
 <section id="an-hybryd-data-structure-enabling-digital-twin-data" class="slide level2">
 <h2>An Hybryd data structure enabling Digital Twin Data</h2>
 <ul>
-<li>Combining the strength of Graph and Time-Series DBMS</li>
+<li>Combining the strength of Graph and Time-Series DBMS with a novel, hybrid data structure.</li>
 </ul>
 
 <img data-src="https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg" class="r-stretch quarto-figure-center"><p class="caption">Graph+TimeSeries Hybrid data model</p><ul>
 <li>A query workload representative of typical DT applications has been defined.</li>
-<li>The data structure has been implemented and evaluated against state-of-the-art techinques.</li>
+<li>The data structure has been implemented in Kotlin and evaluated against state-of-the-art techinques with promising results.</li>
 <li>The paper is curently in writing and to be submitted to <a href="https://vldb.org/2026/">VLDB 2026</a></li>
 </ul>
 </section>
