@@ -39,10 +39,10 @@
 
 :::: {.columns}
 ::: {.column width="50%"}
-![Soil moisture distribution within a monitored plant](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyer/dt_agro.png?raw=true)
+![Soil moisture distribution within a monitored plant](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/dt_agro.png?raw=true)
 :::
 ::: {.column width="50%"}
-![Example of controlling action to the physical entity - applying irrigation](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyer/action_agro_dt.png?raw=true)
+![Example of controlling action to the physical entity - applying irrigation](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/action_agro_dt.png?raw=true)
 :::
 ::::
 
