@@ -68,10 +68,14 @@
 
 :::: {.columns}
 ::: {.column width="60%"}
+
 ![Excerpt of the Agricolture Data Platform](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/agriplatform.png?raw=true)
+
 :::
 ::: {.column width="40%"}
+
 - **Currently working on its evolution**: supporting and sharing data processes (e.g., donwload ESA images)
+
 :::
 ::::
 
@@ -117,8 +121,6 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 - The data structure has been implemented in Kotlin and benchmarked against state-of-the-art techniques, showing promising performance gains.
 - The paper is curently under writing and to be submitted to [VLDB 2026](https://vldb.org/2026/)
 
-## Other publications
-
 ## Other activities
 
 :::: {.columns}
@@ -133,6 +135,8 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 ##### Summer schools
 
 - 6th ACM Europe Summer School on Data Science, Ioannina (Greece)
+    - Graph foundatons and Graph Data Science
+    - IoT Edge Computing
 
 ##### Conferences
 
