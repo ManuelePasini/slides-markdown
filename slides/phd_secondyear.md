@@ -4,7 +4,7 @@
 
  - Differences between digital shadow, digital model, Digital Twin (DT)
  - Still a buzzword, but enclosing on a definition...
- - 3 components: phyisical model, virtual model, communication services
+ - 4 components: phyisical model, virtual model, communication services and the data
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -72,9 +72,11 @@
 
 ## From application-oriented to domain-oriented
 
+- Can we abstract from application-level solutions to domain-level solutions? (e.g. from having a platform to support a DT application, to having a platform to support Agricolture Digital Twins)
+
 <b style="color: blue;">Takeaway from previous phase </b>: a Digital Twin (DT) can be represented through data pipelines that collect, process, and transform data into insights.
 
-**Open question**: given a data pipeline, can we identify the set of data platform services required to support it?
+**Research question**: given a data pipeline, can we identify the set of data platform services required to support it?
 
 <b>References</b>:
 
@@ -91,17 +93,18 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 - Time-Series DBMSs efficiently handle large volumes of temporal data...
     - ... but fall short in capturing the complex dynamics of relationships among entities.
 - Even the previous Data Platform Design often suggested multiple storage technologies, tailored to the needs of different DTs…
+- Yet, no multi-store solution has achieved broad adoption in the literature.
 
 - **What about an hybrid data structure?**
 
 ## An Hybryd data structure enabling Digital Twin Data
 
-- Combining the strength of Graph and Time-Series DBMS
+- Combining the strength of Graph and Time-Series DBMS with a novel, hybrid data structure.
 
 ![Graph+TimeSeries Hybrid data model](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg)
 
 - A query workload representative of typical DT applications has been defined.
-- The data structure has been implemented and evaluated against state-of-the-art techinques.
+- The data structure has been implemented in Kotlin and evaluated against state-of-the-art techinques with promising results.
 - The paper is curently in writing and to be submitted to [VLDB 2026](https://vldb.org/2026/)
 
 ## Other publications
