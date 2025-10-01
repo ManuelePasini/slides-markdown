@@ -23,11 +23,15 @@
 - e.g.: Fei Tao, Univ. of Beijing
 
 :::: {.columns}
-::: {.column width="50%"}
+::: {.column width="60%"}
+
  ![5-Dimensional DT (Fei, Tao 2020)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/5dim.png?raw=true)
+
 :::
-::: {.column width="50%"}
+::: {.column width="40%"}
+
 ![Virtual Entity architecture (Fei, Tao, 2020)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/digital_model.png?raw=true)
+
 :::
 ::::
 
