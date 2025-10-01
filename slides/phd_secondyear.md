@@ -54,7 +54,7 @@
 
 ## A Data Platform fostering collaboration between DTs
 
-- Within PNRR Agritech – Spoke 3, a Data Platform fostering collaboration and integration across research projects has been implemented.
+- Within PNRR [Agritech](https://agritechcenter.it/it/), a data platform fostering collaboration and integration across research projects has been implemented.
 
 - In defining integration policies and standards, several data requirements were identified:
 
