@@ -72,11 +72,11 @@
 
 ## From application-oriented to domain-oriented
 
-- Can we abstract from application-level solutions to domain-level solutions? (e.g. from having a platform to support a DT application, to having a platform to support Agricolture Digital Twins)
+- ***Research question 1.**Can we abstract from application-level solutions to domain-level solutions? 
 
 <b style="color: blue;">Takeaway from previous phase </b>: a Digital Twin (DT) can be represented through data pipelines that collect, process, and transform data into insights.
 
-**Research question**: given a data pipeline, can we identify the set of data platform services required to support it?
+**Research question 2.**: given a data pipeline, can we identify the set of data platform services required to support it?
 
 <b>References</b>:
 
@@ -84,7 +84,7 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Towards a Process-Driven D
 
 Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of Cloud Data Platforms. <b>Information Systems Journal</b>, Manuscript No. INFOSYS-D-24-00444.
 
-- <b style="color: blue;">But something was missing..</b>
+- But something was missing..
 
 ## Modelling Digital Twin Data
 
