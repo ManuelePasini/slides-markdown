@@ -86,18 +86,24 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 
 ## Modelling Digital Twin Data
 
-- Highly interconnected entities (e.g., the fruit tree we want to represent and the IoT network describing it) point to graph database management systems (DBMSs) for an efficient storing and querying...
-    - ... but what about the volume of such data?
+- Highly interconnected entities (e.g., a fruit tree and the IoT network describing it) naturally suggest the use of graph DBMSs for efficient storage and querying…
+    - ... yet, they cannot cope with the volume of such data
 - Time-Series DBMSs efficiently handle large volumes of temporal data...
-    - ... but they struggle in modeling the complex relationships dynamics between the entities.
-- Even the previous Data Platform Design tended to different storage solutions for different DTs...
+    - ... but fall short in capturing the complex dynamics of relationships among entities.
+- Even the previous Data Platform Design often suggested multiple storage technologies, tailored to the needs of different DTs…
 
 - **What about an hybrid data structure?**
 
 ## An Hybryd data structure enabling Digital Twin Data
 
--
-- Workload definition (queries)
+- Combining the strength of Graph and Time-Series DBMS
+
+![Graph+TimeSeries Hybrid data model](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg)
+
+- A query workload representative of typical DT applications has been defined.
+- The data structure has been implemented and evaluated against state-of-the-art techinques.
+- The paper is curently in writing and to be submitted to [VLDB 2026](https://vldb.org/2026/)
+
 
 ## External activities
 
