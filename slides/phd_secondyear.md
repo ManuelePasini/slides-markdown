@@ -37,6 +37,17 @@
 - Demo available at https://big.csr.unibo.it/projects/smarter/
 - Scientific Article submitted to Computer and Electronics in Agriculture (September 2025).
 
+:::: {.columns}
+::: {.column width="50%"}
+![Soil moisture distribution within a monitored plant](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyer/dt_agro.png?raw=true)
+:::
+::: {.column width="50%"}
+![Example of controlling action to the physical entity - applying irrigation](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyer/action_agro_dt.png?raw=true)
+:::
+::::
+
+
+
 ## A Data Platform fostering collaboration between DTs
 
 - Within PNRR Agritech - Spoke 3, building a Data Platform fostering collaboration and integration between research projects...
