@@ -66,9 +66,19 @@
 
     - <b>Spatial aspects</b>: data are often geo-referenced.
 
+:::: {.columns}
+::: {.column width="60%"}
 ![Excerpt of the Agricolture Data Platform](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/agriplatform.png?raw=true)
+:::
+::: {.column width="40%"}
+- **Currently working on its evolution**: supporting and sharing data processes (e.g., donwload ESA images)
+:::
+::::
 
-- **Currently working on its evolution**
+
+
+
+
 
 ## From application-oriented to domain-oriented
 
@@ -76,7 +86,7 @@
 
 <b style="color: blue;">Takeaway from previous phase </b>: a Digital Twin (DT) can be represented through data pipelines that collect, process, and transform data into insights.
 
-**Research question 2.**: given a data pipeline, can we identify the set of data platform services required to support it?
+- **Research question 2.**: given a data pipeline, can we identify the set of data platform services required to support it?
 
 <b>References</b>:
 
@@ -84,7 +94,7 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Towards a Process-Driven D
 
 Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of Cloud Data Platforms. <b>Information Systems Journal</b>, Manuscript No. INFOSYS-D-24-00444.
 
-- But something was missing..
+- <u>But something was missing..</u>
 
 ## Modelling Digital Twin Data
 
