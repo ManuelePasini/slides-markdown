@@ -387,17 +387,17 @@
 <ul>
 <li>Five year ongoing project (also in PNRR - Spoke 9) in precision irrigation of orchards</li>
 <li>Demo available at https://big.csr.unibo.it/projects/smarter/</li>
-<li>Scientific Article submitted to Computer and Electronics in Agriculture (September 2025).</li>
+<li>Paper submitted to <a href="https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture">Computer and Electronics in Agriculture</a> (September 2025).</li>
 </ul>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:60%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/dt_agro.png?raw=true"></p>
 <figcaption>Soil moisture distribution within a monitored plant</figcaption>
 </figure>
 </div>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/action_agro_dt.png?raw=true"></p>
@@ -411,12 +411,14 @@
 <h2>A Data Platform fostering collaboration between DTs</h2>
 <ul>
 <li><p>Within PNRR Agritech – Spoke 3, the focus is on developing a Data Platform to foster collaboration and integration across research projects.</p></li>
-<li><p>In defining integration policies and standards, several data requirements were identified:</p></li>
+<li><p>In defining integration policies and standards, several data requirements were identified:</p>
+<ul>
+<li><p><b>Heterogeneous data</b>: covering both structured and unstructured formats, including images.</p></li>
+<li><p><b>Interconnected data</b>: capturing physical entities together with the IoT networks describing them.</p></li>
+<li><p><b>Temporal aspects</b>: many datasets display time-series characteristics.</p></li>
+<li><p><b>Spatial aspects</b>: data are often geo-referenced.</p></li>
+</ul></li>
 </ul>
-<p><b>Heterogeneous data</b>: covering both structured and unstructured formats, including images.</p>
-<p><b>Interconnected data</b>: capturing physical entities together with the IoT networks describing them.</p>
-<p><b>Temporal aspects</b>: many datasets display time-series characteristics.</p>
-<p><b>Spatial aspects</b>: data are often geo-referenced.</p>
 
 <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/agriplatform.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Excerpt of the Agricolture Data Platform</p><ul>
 <li><strong>Currently working on its evolution</strong></li>
@@ -424,27 +426,28 @@
 </section>
 <section id="from-application-oriented-to-domain-oriented" class="slide level2">
 <h2>From application-oriented to domain-oriented</h2>
-<p><strong>Takeaway from previous phase</strong>: a Digital Twin (DT) can be represented through data pipelines that collect, process, and transform data into insights.</p>
+<p><b style="color: blue;">Takeaway from previous phase </b>: a Digital Twin (DT) can be represented through data pipelines that collect, process, and transform data into insights.</p>
 <p><strong>Open question</strong>: given a data pipeline, can we identify the set of data platform services required to support it?</p>
-<p>References:</p>
+<p><b>References</b>:</p>
 <p>Matteo Francia, Matteo Golfarelli, Manuele Pasini — Towards a Process-Driven Design of Data Platforms. In <b>DOLAP</b>, pp.&nbsp;28–35, 2024.</p>
 <p>Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of Cloud Data Platforms. <b>Information Systems Journal</b>, Manuscript No.&nbsp;INFOSYS-D-24-00444.</p>
 <ul>
-<li><strong>But something was missing..</strong></li>
+<li><b style="color: blue;">But something was missing..</b></li>
 </ul>
 </section>
 <section id="modelling-digital-twin-data" class="slide level2">
 <h2>Modelling Digital Twin Data</h2>
 <ul>
-<li>Highly interconnected entities (e.g., the fruit tree we want to represent and the IoT network describing it) point to graph database management systems (DBMSs) for an efficient storing and querying…
+<li><p>Highly interconnected entities (e.g., the fruit tree we want to represent and the IoT network describing it) point to graph database management systems (DBMSs) for an efficient storing and querying…</p>
 <ul>
 <li>… but what about the volume of such data?</li>
 </ul></li>
-<li>Time-Series DBMSs efficiently handle large volumes of temporal data…
+<li><p>Time-Series DBMSs efficiently handle large volumes of temporal data…</p>
 <ul>
 <li>… but they struggle in modeling the complex relationships dynamics between the entities.</li>
 </ul></li>
-<li>What about an hybrid data structure?</li>
+<li><p>Even the previous Data Platform Design tended to different storage solutions for different DTs…</p></li>
+<li><p><strong>What about an hybrid data structure?</strong></p></li>
 </ul>
 </section>
 <section id="an-hybryd-data-structure-enabling-digital-twin-data" class="slide level2">
