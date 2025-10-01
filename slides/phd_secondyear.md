@@ -39,13 +39,13 @@
 
 - Five year ongoing project (also in PNRR - Spoke 9) in precision irrigation of orchards
 - Demo available at https://big.csr.unibo.it/projects/smarter/
-- Scientific Article submitted to Computer and Electronics in Agriculture (September 2025).
+- Paper submitted to [Computer and Electronics in Agriculture](https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture) (September 2025).
 
 :::: {.columns}
-::: {.column width="50%"}
+::: {.column width="60%"}
 ![Soil moisture distribution within a monitored plant](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/dt_agro.png?raw=true)
 :::
-::: {.column width="50%"}
+::: {.column width="40%"}
 ![Example of controlling action to the physical entity - applying irrigation](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/action_agro_dt.png?raw=true)
 :::
 ::::
@@ -58,13 +58,13 @@
 
 - In defining integration policies and standards, several data requirements were identified:
 
-<b>Heterogeneous data</b>: covering both structured and unstructured formats, including images.
+    - <b>Heterogeneous data</b>: covering both structured and unstructured formats, including images.
 
-<b>Interconnected data</b>: capturing physical entities together with the IoT networks describing them.
+    - <b>Interconnected data</b>: capturing physical entities together with the IoT networks describing them.
 
-<b>Temporal aspects</b>: many datasets display time-series characteristics.
+    - <b>Temporal aspects</b>: many datasets display time-series characteristics.
 
-<b>Spatial aspects</b>: data are often geo-referenced.
+    - <b>Spatial aspects</b>: data are often geo-referenced.
 
 ![Excerpt of the Agricolture Data Platform](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/agriplatform.png?raw=true)
 
@@ -72,17 +72,17 @@
 
 ## From application-oriented to domain-oriented
 
-**Takeaway from previous phase**: a Digital Twin (DT) can be represented through data pipelines that collect, process, and transform data into insights.
+<b style="color: blue;">Takeaway from previous phase </b>: a Digital Twin (DT) can be represented through data pipelines that collect, process, and transform data into insights.
 
 **Open question**: given a data pipeline, can we identify the set of data platform services required to support it?
 
-References:
+<b>References</b>:
 
 Matteo Francia, Matteo Golfarelli, Manuele Pasini — Towards a Process-Driven Design of Data Platforms. In <b>DOLAP</b>, pp. 28–35, 2024.
 
 Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of Cloud Data Platforms. <b>Information Systems Journal</b>, Manuscript No. INFOSYS-D-24-00444.
 
-- **But something was missing..**
+- <b style="color: blue;">But something was missing..</b>
 
 ## Modelling Digital Twin Data
 
@@ -90,8 +90,9 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
     - ... but what about the volume of such data?
 - Time-Series DBMSs efficiently handle large volumes of temporal data...
     - ... but they struggle in modeling the complex relationships dynamics between the entities.
+- Even the previous Data Platform Design tended to different storage solutions for different DTs...
 
-- What about an hybrid data structure?
+- **What about an hybrid data structure?**
 
 ## An Hybryd data structure enabling Digital Twin Data
 
