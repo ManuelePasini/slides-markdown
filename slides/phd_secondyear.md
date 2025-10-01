@@ -103,9 +103,9 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 
 ![Graph+TimeSeries Hybrid data model](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg)
 
-- A query workload representative of typical DT applications has been defined.
-- The data structure has been implemented in Kotlin and evaluated against state-of-the-art techinques with promising results.
-- The paper is curently in writing and to be submitted to [VLDB 2026](https://vldb.org/2026/)
+- A representative query workload has been designed, capturing the core of Digital Twin applications by integrating IoT, Time-Series, and Graph queries.
+- The data structure has been implemented in Kotlin and benchmarked against state-of-the-art techniques, showing promising performance gains.
+- The paper is curently under writing and to be submitted to [VLDB 2026](https://vldb.org/2026/)
 
 ## Other publications
 
