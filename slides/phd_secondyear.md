@@ -54,7 +54,7 @@
 
 ## A Data Platform fostering collaboration between DTs
 
-- Within PNRR Agritech – Spoke 3, the focus is on developing a Data Platform to foster collaboration and integration across research projects.
+- Within PNRR Agritech – Spoke 3, a Data Platform fostering collaboration and integration across research projects has been implemented.
 
 - In defining integration policies and standards, several data requirements were identified:
 
@@ -104,8 +104,9 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 - The data structure has been implemented and evaluated against state-of-the-art techinques.
 - The paper is curently in writing and to be submitted to [VLDB 2026](https://vldb.org/2026/)
 
+## Other publications
 
-## External activities
+## Other activities
 
 :::: {.columns}
 ::: {.column width="50%"}
