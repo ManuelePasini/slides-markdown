@@ -109,7 +109,7 @@
 - Teaching NoSQL Database, 30 hrs, ITS Olivetti (2025/2026)
 - Consultancy on Digitalization in Precision Agriculture, iFarming s.r.l.
 
-##### Bachelor Thesis advisr
+##### Bachelor Thesis advisor
 
 - Denis Nikaj (Progettazione e prototipazione di un'applicazione web per l'irrigazione di precisione), March 2024.
 - Davide Speziali  (Progettazione e realizzazione di un simulatore per l'irrigazione di precisione), December 2024.
