@@ -90,7 +90,7 @@
 
 ## From application-oriented to domain-oriented
 
-- **Research question 1.** Can we abstract from application-level solutions to general purpose (e.g., domain-level) solutions? 
+- **Research question 1.** Can we abstract from application-level platform solutions to general purpose (e.g., domain-level) platform solutions? 
 
 <b style="color: blue;">Takeaway from previous phase </b>: a Digital Twin (DT) can be represented through data pipelines that collect, process, and exploit such data.
 
@@ -110,7 +110,7 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
     - ... yet, they cannot cope with the volume of such data
 - Time-Series storage systems efficiently handle large volumes of temporal data...
     - ... but fall short in capturing the complex dynamics of relationships among entities.
-- Even the previous Data Platform Design often suggested multiple storage technologies, tailored to the needs of different DTs…
+- <u>Even the mentioned Data Platform Design methodology often suggested multiple storage technologies, tailored to the needs of different DTs</u>…
 - Yet, no multi-store solution has yet achieved broad adoption in the literature.
 
 - **What about an hybrid data structure?**
