@@ -36,6 +36,7 @@
     - Capabilities of DTs are thus limited;
 
     - **A standardization effort is required to foster integration.**
+    - **Standardization should begin at the data layer**
 ::: 
 ::::
 
