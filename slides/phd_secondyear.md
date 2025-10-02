@@ -106,10 +106,17 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 
 :::: {.columns}
 ::: {.column width="50%"}
+
 - DT data involve highly interconnected entitieS (e.g., a fruit tree and the IoT network describing it), suggesting the use of graph data layout for efficient storage and querying…
     - ... yet, they struggle with such volume of data
 - Time-Series storage systems efficiently manage large volumes of temporal data...
     - ... but fall short in capturing the complex inter-entity dynamics.
+
+- <u>Even the Data Platform Design methodology suggested different architectures tailored to each DT</u>…
+- Yet, no multi-store solution has yet achieved broad adoption in the literature.
+
+- **What about an hybrid data structure?**
+
 :::
 ::: {.column width="50%"}
 
@@ -122,10 +129,7 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 
 
 
-- <u>Even our Data Platform Design methodology repeatedly suggested multi-store architectures tailored to each DT</u>…
-- Yet, no multi-store solution has yet achieved broad adoption in the literature.
 
-- **What about an hybrid data structure?**
 
 ## An Hybryd data structure enabling Digital Twin Data
 
