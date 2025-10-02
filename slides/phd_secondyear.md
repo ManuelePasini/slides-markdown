@@ -105,12 +105,12 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 ## Modelling Digital Twin Data
 
 :::: {.columns}
-::: {.column width="60%"}
-- DT data involve highly interconnected entitie (e.g., a fruit tree and the IoT network describing it) naturally suggest the use of graph data layout for efficient storage and querying…
+::: {.column width="50%"}
+- DT data involve highly interconnected entitieS (e.g., a fruit tree and the IoT network describing it), suggesting the use of graph data layout for efficient storage and querying…
     - ... yet, they struggle with such volume of data
 
 :::
-::: {.column width="40%"}
+::: {.column width="50%"}
 
 ![Graph representation of Precision Irrigation DT](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/agrigraph.png?raw=true)
 :::
@@ -118,11 +118,11 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 
 
 :::: {.columns}
-::: {.column width="60%"}
+::: {.column width="50%"}
 - Time-Series storage systems efficiently manage large volumes of temporal data...
     - ... but fall short in capturing the complex inter-entity dynamics.
 :::
-::: {.column width="40%"}
+::: {.column width="50%"}
 
 ![Time-Series representation of Precision Irrigation DT](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/agrits.svg)
 
