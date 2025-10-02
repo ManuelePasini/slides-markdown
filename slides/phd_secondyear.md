@@ -54,7 +54,7 @@
 
 ## A Data Platform fostering collaboration between DTs
 
-- Within Agritech - Spoke 3, a data platform fostering collaboration and integration across research projects has been implemented.
+- Within Agritech - Spoke 3, a data platform fostering integration across research projects has been implemented.
 
 - In defining integration policies and standards, several data requirements were identified:
 
@@ -74,7 +74,9 @@
 :::
 ::: {.column width="40%"}
 
-- **Currently working on its evolution**: supporting and sharing data processes (e.g., donwload ESA images)
+- General purpose: supporting heterogeneous data through heterogeneous storage systems;
+- Interoperable: allows data integration and sharing between stakeholders through common data models (e.g., [FIWARE](https://www.fiware.org/));
+- **Currently working on its evolution**: supporting and sharing data processes (e.g., donwload ESA images) and fruition applications.
 
 :::
 ::::
