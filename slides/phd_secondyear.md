@@ -100,14 +100,36 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Towards a Process-Driven D
 
 Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of Cloud Data Platforms. <b>Information Systems Journal</b>, Manuscript No. INFOSYS-D-24-00444.
 
-- <u>But an issue emerged</u>…: pipelines of different DTs entail different data models & storage systems, yet they share some of the same recurrent requirements....
+- <u>But an issue emerged</u>: pipelines of different DTs entail different data models & storage systems, yet they share some of the same recurrent requirements....
 
 ## Modelling Digital Twin Data
 
+:::: {.columns}
+::: {.column width="60%"}
 - DT data involve highly interconnected entitie (e.g., a fruit tree and the IoT network describing it) naturally suggest the use of graph data layout for efficient storage and querying…
     - ... yet, they struggle with such volume of data
+
+:::
+::: {.column width="40%"}
+
+![Graph representation of Precision Irrigation DT](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/agrigraph.png?raw=true)
+:::
+::::
+
+
+:::: {.columns}
+::: {.column width="40%"}
 - Time-Series storage systems efficiently manage large volumes of temporal data...
     - ... but fall short in capturing the complex inter-entity dynamics.
+:::
+::: {.column width="60%"}
+
+![Time-Series representation of Precision Irrigation DT](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/agrits.svg)
+:::
+::::
+
+
+
 - <u>Even our Data Platform Design methodology repeatedly suggested multi-store architectures tailored to each DT</u>…
 - Yet, no multi-store solution has yet achieved broad adoption in the literature.
 
