@@ -37,8 +37,8 @@
 
 ## A Digital Twin for Precision Agriculture
 
-- Five year ongoing project (also in PNRR - Spoke 9) in precision irrigation of orchards
-- Demo available at https://big.csr.unibo.it/projects/smarter/
+- Five year ongoing project (within PNRR - [Agritech](https://agritechcenter.it/it/) Spoke 9) in precision irrigation of fruit orchards
+- Demo available at [this link](https://big.csr.unibo.it/projects/smarter/)
 - Paper submitted to [Computer and Electronics in Agriculture](https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture) (September 2025).
 
 :::: {.columns}
@@ -54,7 +54,7 @@
 
 ## A Data Platform fostering collaboration between DTs
 
-- Within PNRR [Agritech](https://agritechcenter.it/it/), a data platform fostering collaboration and integration across research projects has been implemented.
+- Within Agritech - Spoke 3, a data platform fostering collaboration and integration across research projects has been implemented.
 
 - In defining integration policies and standards, several data requirements were identified:
 
@@ -140,7 +140,6 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 
 ##### Conferences
 
-- Project meeting Spoke 3 PNRR Agritech
 - EDBT/ICDT 2024 Joint Conference
 
 
