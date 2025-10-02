@@ -31,9 +31,9 @@
 ::: {.column width="40%"}
 - <b>However...</b>
     - Each solution is independent, in both data models and storage systems:
-        → No interoperability between different DTs and their data;
-        → limiting the capabilities of DTs
-        → **need to standardize DTs to facilitate integration**
+        - No interoperability between different DTs and their data;
+        - limiting the capabilities of DTs
+        - **need to standardize DTs to facilitate integration**
 ::: 
 ::::
 
