@@ -148,9 +148,9 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 
 ##### Tutoring
 
-- 95631 - MACHINE LEARNING AND DATA MINING - 6 cfu (a.a. 23/24)
-- 95631 - MACHINE LEARNING AND DATA MINING - 6 cfu (a.a. 24/25)
-- 95631 - MACHINE LEARNING AND DATA MINING - 6 cfu (a.a. 25/26)
+- 95631 - MACHINE LEARNING AND DATA MINING - 6 cfu (2023/2024)
+- 95631 - MACHINE LEARNING AND DATA MINING - 6 cfu (2024/2025)
+- 95631 - MACHINE LEARNING AND DATA MINING - 6 cfu (2025/2026)
 
 ##### Summer schools
 
@@ -161,7 +161,7 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 ##### Conferences
 
 - EDBT/ICDT 2024 Joint Conference
-
+- SEBD 2024, 2025
 
 :::
 ::: {.column width="50%"}
