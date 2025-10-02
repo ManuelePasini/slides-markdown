@@ -1,4 +1,4 @@
-# Architectures and Methods for Digital Twin Platforms
+# 2nd Year Ph.D. Seminar
 
 ## Introduction to Digital Twins
 
