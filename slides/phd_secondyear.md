@@ -115,7 +115,7 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 
 ![Graph representation of Precision Irrigation DT](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/agrigraph.png?raw=true)
 
-![Time-Series representation of Precision Irrigation DT](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/agrits.svg)
+![Time-Series representation of Precision Irrigation DT](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/phd2ndyear/agrits.svg)
 
 :::
 ::::
