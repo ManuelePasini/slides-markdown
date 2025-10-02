@@ -359,10 +359,9 @@
 <section id="introduction-to-digital-twins-1" class="slide level2">
 <h2>Introduction to Digital Twins</h2>
 <ul>
-<li>While concept of data as a core component is arising..</li>
-<li>… Still left unconsidered in most research papers</li>
-<li>… but some standard models are emerging</li>
-<li>e.g.: Fei Tao, Univ. of Beijing</li>
+<li>The role of <b>data as a core component</b> of Digital Twins is increasingly recognized…</li>
+<li>… yet it is often overlooked in research contributions.</li>
+<li>Some reference models are emerging (e.g., Fei Tao, Univ. of Beijing).</li>
 </ul>
 <div class="columns">
 <div class="column" style="width:60%;">
@@ -376,12 +375,10 @@
 <ul>
 <li><b>However…</b>
 <ul>
-<li>Each solution is independent, in both data models and storage systems:
-<ul>
-<li>No interoperability between different DTs and their data;</li>
-<li>limiting the capabilities of DTs</li>
-<li><strong>need to standardize DTs to facilitate integration</strong></li>
-</ul></li>
+<li><p>Each solution develops its own data model and storage system;</p></li>
+<li><p>No interoperability between DTs, even when relying on the same data;</p></li>
+<li><p>Capabilities of DTs are thus limited;</p></li>
+<li><p><strong>A standardization effort is required to foster integration.</strong></p></li>
 </ul></li>
 </ul>
 </div>
@@ -390,7 +387,7 @@
 <section id="a-digital-twin-for-precision-agriculture" class="slide level2">
 <h2>A Digital Twin for Precision Agriculture</h2>
 <ul>
-<li>Five year ongoing project (within PNRR - <a href="https://agritechcenter.it/it/">Agritech</a> Spoke 9) in precision irrigation of fruit orchards</li>
+<li>Five year ongoing project (within PNRR - <a href="https://agritechcenter.it/it/">Agritech</a> Spoke 9) on precision irrigation of fruit orchards</li>
 <li>Demo available at <a href="https://big.csr.unibo.it/projects/smarter/">this link</a></li>
 <li>Paper submitted to <a href="https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture">Computer and Electronics in Agriculture</a> (September 2025).</li>
 </ul>
@@ -415,12 +412,12 @@
 <section id="a-data-platform-fostering-collaboration-between-dts" class="slide level2">
 <h2>A Data Platform fostering collaboration between DTs</h2>
 <ul>
-<li><p>Within Agritech - Spoke 3, a data platform fostering integration across research projects has been implemented.</p></li>
-<li><p>In defining integration policies and standards, several data requirements were identified:</p>
+<li><p>Within Agritech - Spoke 3, a data platform fostering integration across research projects has been developed.</p></li>
+<li><p>When defining integration policies and standards, several recurrent data requirements were identified:</p>
 <ul>
-<li><p><b>Heterogeneous data</b>: covering both structured and unstructured formats, including images.</p></li>
+<li><p><b>Heterogeneous data</b>: from structured to unstructured (including images).</p></li>
 <li><p><b>Interconnected data</b>: capturing physical entities together with the IoT networks describing them.</p></li>
-<li><p><b>Temporal aspects</b>: many datasets display time-series characteristics.</p></li>
+<li><p><b>Temporal aspects</b>: datasets often evolve as time series.</p></li>
 <li><p><b>Spatial aspects</b>: data are often geo-referenced.</p></li>
 </ul></li>
 </ul>
@@ -435,18 +432,16 @@
 </div><div class="column" style="width:40%;">
 <ul>
 <li>General purpose: supporting heterogeneous data through heterogeneous storage systems;</li>
-<li>Interoperable: allows data integration and sharing between stakeholders through common data models (e.g., <a href="https://www.fiware.org/">FIWARE</a>);</li>
-<li><strong>Currently working on its evolution</strong>: supporting and sharing data processes (e.g., donwload ESA images) and fruition applications.</li>
+<li>Interoperable: Interoperable: integration and sharing via common data models (e.g., <a href="https://www.fiware.org/">FIWARE</a>);</li>
+<li><strong>Ongoing work</strong>: supporting and sharing data processes (e.g., donwload ESA images) and applications.</li>
 </ul>
 </div>
 </div>
 </section>
 <section id="from-application-oriented-to-domain-oriented" class="slide level2">
 <h2>From application-oriented to domain-oriented</h2>
-<ul>
-<li><strong>Research question 1.</strong> Can we abstract from application-level platform solutions to general purpose (e.g., domain-level) platform solutions?</li>
-</ul>
-<p><b style="color: blue;">Takeaway from previous phase </b>: a Digital Twin (DT) can be represented through data pipelines that collect, process, and exploit such data.</p>
+<p>an we move from application-level DT platforms to domain-level platforms?</p>
+<p><span style="color:blue;">Takeaway</span>: a DT can be represented as a data pipeline that collects, processes, and exploits data.</p>
 <ul>
 <li><strong>Research question 2.</strong>: given a data pipeline, can we identify the set of data platform services required to support it?</li>
 </ul>
@@ -454,21 +449,21 @@
 <p>Matteo Francia, Matteo Golfarelli, Manuele Pasini — Towards a Process-Driven Design of Data Platforms. In <b>DOLAP</b>, pp.&nbsp;28–35, 2024.</p>
 <p>Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of Cloud Data Platforms. <b>Information Systems Journal</b>, Manuscript No.&nbsp;INFOSYS-D-24-00444.</p>
 <ul>
-<li><u>But something was missing..</u></li>
+<li><u>But an issue emerged</u>…: pipelines of different DTs entail different data models &amp; storage systems, yet they share some of the same recurrent requirements….</li>
 </ul>
 </section>
 <section id="modelling-digital-twin-data" class="slide level2">
 <h2>Modelling Digital Twin Data</h2>
 <ul>
-<li><p>Highly interconnected entities (e.g., a fruit tree and the IoT network describing it) naturally suggest the use of graph data layout for efficient storage and querying…</p>
+<li><p>DT data involve highly interconnected entitie (e.g., a fruit tree and the IoT network describing it) naturally suggest the use of graph data layout for efficient storage and querying…</p>
 <ul>
-<li>… yet, they cannot cope with the volume of such data</li>
+<li>… yet, they struggle with such volume of data</li>
 </ul></li>
-<li><p>Time-Series storage systems efficiently handle large volumes of temporal data…</p>
+<li><p>Time-Series storage systems efficiently manage large volumes of temporal data…</p>
 <ul>
-<li>… but fall short in capturing the complex dynamics of relationships among entities.</li>
+<li>… but fall short in capturing the complex inter-entity dynamics.</li>
 </ul></li>
-<li><p><u>Even the mentioned Data Platform Design methodology often suggested multiple storage technologies, tailored to the needs of different DTs</u>…</p></li>
+<li><p><u>Even our Data Platform Design methodology repeatedly suggested multi-store architectures tailored to each DT</u>…</p></li>
 <li><p>Yet, no multi-store solution has yet achieved broad adoption in the literature.</p></li>
 <li><p><strong>What about an hybrid data structure?</strong></p></li>
 </ul>
