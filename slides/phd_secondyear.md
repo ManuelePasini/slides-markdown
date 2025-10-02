@@ -112,19 +112,20 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 :::
 ::: {.column width="40%"}
 
-![Graph representation of Precision Irrigation DT](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/agrigraph.png?raw=true)
+![Graph representation of Precision Irrigation DT](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/agrigraph.png?raw=true)
 :::
 ::::
 
 
 :::: {.columns}
-::: {.column width="40%"}
+::: {.column width="60%"}
 - Time-Series storage systems efficiently manage large volumes of temporal data...
     - ... but fall short in capturing the complex inter-entity dynamics.
 :::
-::: {.column width="60%"}
+::: {.column width="40%"}
 
-![Time-Series representation of Precision Irrigation DT](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/agrits.svg)
+![Time-Series representation of Precision Irrigation DT](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/agrits.svg)
+
 :::
 ::::
 
