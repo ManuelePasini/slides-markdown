@@ -88,9 +88,9 @@
 
 ## From application-oriented to domain-oriented
 
-- **Research question 1.** Can we abstract from application-level solutions to domain-level solutions? 
+- **Research question 1.** Can we abstract from application-level solutions to general purpose (e.g., domain-level) solutions? 
 
-<b style="color: blue;">Takeaway from previous phase </b>: a Digital Twin (DT) can be represented through data pipelines that collect, process, and transform data into insights.
+<b style="color: blue;">Takeaway from previous phase </b>: a Digital Twin (DT) can be represented through data pipelines that collect, process, and exploit such data.
 
 - **Research question 2.**: given a data pipeline, can we identify the set of data platform services required to support it?
 
@@ -104,18 +104,18 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 
 ## Modelling Digital Twin Data
 
-- Highly interconnected entities (e.g., a fruit tree and the IoT network describing it) naturally suggest the use of graph DBMSs for efficient storage and querying…
+- Highly interconnected entities (e.g., a fruit tree and the IoT network describing it) naturally suggest the use of graph data layout for efficient storage and querying…
     - ... yet, they cannot cope with the volume of such data
-- Time-Series DBMSs efficiently handle large volumes of temporal data...
+- Time-Series storage systems efficiently handle large volumes of temporal data...
     - ... but fall short in capturing the complex dynamics of relationships among entities.
 - Even the previous Data Platform Design often suggested multiple storage technologies, tailored to the needs of different DTs…
-- Yet, no multi-store solution has achieved broad adoption in the literature.
+- Yet, no multi-store solution has yet achieved broad adoption in the literature.
 
 - **What about an hybrid data structure?**
 
 ## An Hybryd data structure enabling Digital Twin Data
 
-- Combining the strength of Graph and Time-Series DBMS with a novel, hybrid data structure.
+- Combining the strength of Graph and Time-Series data layouts with a novel, hybrid data structure.
 
 ![Graph+TimeSeries Hybrid data model](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg)
 
