@@ -18,8 +18,8 @@
 ## Introduction to Digital Twins
 
 - While concept of data as a core component is arising..
-- ... Still left unconsidered in most research papers.
-- ... However, some standard models are emerging
+- ... Still left unconsidered in most research papers
+- ... but some standard models are emerging
 - e.g.: Fei Tao, Univ. of Beijing
 
 :::: {.columns}
@@ -29,10 +29,11 @@
 
 :::
 ::: {.column width="40%"}
-
-![Virtual Entity architecture (Fei, Tao, 2020)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/digital_model.png?raw=true)
-
-:::
+- <b>However...</b>
+    - Each solution is independent, in both data models and storage systems:
+        → No interoperability between different DTs and their data;
+        → limiting the capabilities of DTs
+::: 
 ::::
 
 ## A Digital Twin for Precision Agriculture
