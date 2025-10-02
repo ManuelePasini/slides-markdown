@@ -17,10 +17,9 @@
 
 ## Introduction to Digital Twins
 
-- While concept of data as a core component is arising..
-- ... Still left unconsidered in most research papers
-- ... but some standard models are emerging
-- e.g.: Fei Tao, Univ. of Beijing
+- The role of <b>data as a core component</b> of Digital Twins is increasingly recognized…
+- … yet it is often overlooked in research contributions.
+- Some reference models are emerging (e.g., Fei Tao, Univ. of Beijing).
 
 :::: {.columns}
 ::: {.column width="60%"}
@@ -30,16 +29,19 @@
 :::
 ::: {.column width="40%"}
 - <b>However...</b>
-    - Each solution is independent, in both data models and storage systems:
-        - No interoperability between different DTs and their data;
-        - limiting the capabilities of DTs
-        - **need to standardize DTs to facilitate integration**
+    - Each solution develops its own data model and storage system;
+
+    - No interoperability between DTs, even when relying on the same data;
+
+    - Capabilities of DTs are thus limited;
+
+    - **A standardization effort is required to foster integration.**
 ::: 
 ::::
 
 ## A Digital Twin for Precision Agriculture
 
-- Five year ongoing project (within PNRR - [Agritech](https://agritechcenter.it/it/) Spoke 9) in precision irrigation of fruit orchards
+- Five year ongoing project (within PNRR - [Agritech](https://agritechcenter.it/it/) Spoke 9) on precision irrigation of fruit orchards
 - Demo available at [this link](https://big.csr.unibo.it/projects/smarter/)
 - Paper submitted to [Computer and Electronics in Agriculture](https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture) (September 2025).
 
@@ -56,15 +58,15 @@
 
 ## A Data Platform fostering collaboration between DTs
 
-- Within Agritech - Spoke 3, a data platform fostering integration across research projects has been implemented.
+- Within Agritech - Spoke 3, a data platform fostering integration across research projects has been developed.
 
-- In defining integration policies and standards, several data requirements were identified:
+- When defining integration policies and standards, several recurrent data requirements were identified:
 
-    - <b>Heterogeneous data</b>: covering both structured and unstructured formats, including images.
+    - <b>Heterogeneous data</b>: from structured to unstructured (including images).
 
     - <b>Interconnected data</b>: capturing physical entities together with the IoT networks describing them.
 
-    - <b>Temporal aspects</b>: many datasets display time-series characteristics.
+    - <b>Temporal aspects</b>: datasets often evolve as time series.
 
     - <b>Spatial aspects</b>: data are often geo-referenced.
 
@@ -77,22 +79,18 @@
 ::: {.column width="40%"}
 
 - General purpose: supporting heterogeneous data through heterogeneous storage systems;
-- Interoperable: allows data integration and sharing between stakeholders through common data models (e.g., [FIWARE](https://www.fiware.org/));
-- **Currently working on its evolution**: supporting and sharing data processes (e.g., donwload ESA images) and fruition applications.
+- Interoperable: Interoperable: integration and sharing via common data models (e.g., [FIWARE](https://www.fiware.org/));
+- **Ongoing work**: supporting and sharing data processes (e.g., donwload ESA images) and applications.
 
 :::
 ::::
 
 
-
-
-
-
 ## From application-oriented to domain-oriented
 
-- **Research question 1.** Can we abstract from application-level platform solutions to general purpose (e.g., domain-level) platform solutions? 
+an we move from application-level DT platforms to domain-level platforms?
 
-<b style="color: blue;">Takeaway from previous phase </b>: a Digital Twin (DT) can be represented through data pipelines that collect, process, and exploit such data.
+<span style="color:blue;">Takeaway</span>: a DT can be represented as a data pipeline that collects, processes, and exploits data.
 
 - **Research question 2.**: given a data pipeline, can we identify the set of data platform services required to support it?
 
@@ -102,15 +100,15 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Towards a Process-Driven D
 
 Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of Cloud Data Platforms. <b>Information Systems Journal</b>, Manuscript No. INFOSYS-D-24-00444.
 
-- <u>But something was missing..</u>
+- <u>But an issue emerged</u>…: pipelines of different DTs entail different data models & storage systems, yet they share some of the same recurrent requirements....
 
 ## Modelling Digital Twin Data
 
-- Highly interconnected entities (e.g., a fruit tree and the IoT network describing it) naturally suggest the use of graph data layout for efficient storage and querying…
-    - ... yet, they cannot cope with the volume of such data
-- Time-Series storage systems efficiently handle large volumes of temporal data...
-    - ... but fall short in capturing the complex dynamics of relationships among entities.
-- <u>Even the mentioned Data Platform Design methodology often suggested multiple storage technologies, tailored to the needs of different DTs</u>…
+- DT data involve highly interconnected entitie (e.g., a fruit tree and the IoT network describing it) naturally suggest the use of graph data layout for efficient storage and querying…
+    - ... yet, they struggle with such volume of data
+- Time-Series storage systems efficiently manage large volumes of temporal data...
+    - ... but fall short in capturing the complex inter-entity dynamics.
+- <u>Even our Data Platform Design methodology repeatedly suggested multi-store architectures tailored to each DT</u>…
 - Yet, no multi-store solution has yet achieved broad adoption in the literature.
 
 - **What about an hybrid data structure?**
