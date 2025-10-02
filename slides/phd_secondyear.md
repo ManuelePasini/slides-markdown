@@ -88,7 +88,7 @@
 
 ## From application-oriented to domain-oriented
 
-an we move from application-level DT platforms to domain-level platforms?
+- **Research Question 1.**: Can we move from application-level DT platforms to domain-level platforms?
 
 <span style="color:blue;">Takeaway</span>: a DT can be represented as a data pipeline that collects, processes, and exploits data.
 
