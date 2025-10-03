@@ -1,4 +1,8 @@
-# 2nd Year Ph.D. Seminar
+# Architectures and Methods for Digital Twin Platforms
+
+- Manuele Pasini - Ph.D. Student
+    - Business Intelligence Group (B.I.G.)
+    - Supervisor: Prof. Matteo Golfarelli
 
 ## Introduction to Digital Twins
 
@@ -145,10 +149,11 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 - A representative query workload has been designed, capturing the core of Digital Twin applications by integrating IoT, Time-Series, and Graph queries.
 - The data structure has been implemented in Kotlin and benchmarked against state-of-the-art techniques, showing promising performance gains.
 - The paper is curently under writing and to be submitted to [VLDB 2026](https://vldb.org/2026/)
+
 :::
 ::::
  
-**Ongoing and future Works**
+**Future Works**
 
 - Efficient querying: The semantic capabilities of Large Language Models (LLMs) make them a compelling solution for managing the inherent complexity of transparent querying in hybrid storage environments.
 
@@ -195,3 +200,16 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 
 :::
 ::::
+
+
+
+- Manca titolo e info miei
+- Cambia slide 1, fai focus su altra roba
+- Three year ongoing project
+- Ongoing or future works
+- Aggiungi metamodello
+
+
+- SU DT il modello dati è tailored, application based
+- per muoverci più in alto, dobbiamo muoverci verso domain, e.g. piattaforma precision agriculture.
+- Poi metamodello, un caso possibile è quello.
