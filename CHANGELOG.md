@@ -1,3 +1,10 @@
+## [1.100.0](https://github.com/ManuelePasini/slides-markdown/compare/1.99.0...1.100.0) (2025-10-03)
+
+
+### Features
+
+* add 2nd phd year slides ([0d9f2eb](https://github.com/ManuelePasini/slides-markdown/commit/0d9f2ebf9c0e0e792b0848a642635c92484cd81b))
+
 ## [1.99.0](https://github.com/ManuelePasini/slides-markdown/compare/1.98.0...1.99.0) (2025-10-03)
 
 
