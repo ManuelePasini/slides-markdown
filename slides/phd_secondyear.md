@@ -1,7 +1,7 @@
 # Architectures and Methods for Digital Twin Platforms
 
-- Manuele Pasini - Ph.D. Student
-    - Business Intelligence Group (B.I.G.)
+    - **Manuele Pasini**
+    - [Business Intelligence Group](https://big.csr.unibo.it/) (B.I.G.)
     - Supervisor: Prof. Matteo Golfarelli
 
 ## Introduction to Digital Twins
@@ -64,15 +64,15 @@
 
 ## From application-oriented to domain-oriented
 
-- The Precision Agriculture Digital Twin <u>is still a standalone application</u>
+- The precision agriculture Digital Twin <u>is still a standalone application</u>
 
-- **Research Question 1.**: Can we move from application-level DT platforms to domain-level platforms?
+- **Research Question 1.**: can we move from application-level DT to domain-level DT platforms?
 
-- A first attempt was made within the Agriculture domain:
+- A first attempt was made within the agriculture domain:
 
 :::: {.columns}
 ::: {.column width="50%"}
-![Precision Agriculture data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/dm.png?raw=true)
+![Precision agriculture "relational" data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/dm.png?raw=true)
 :::
 ::: {.column width="50%"}
 ![Component schema of the Agriculture Data Platform](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/phd2ndyear/platform.svg)
@@ -158,7 +158,9 @@
 - Efficient querying: The semantic capabilities of Large Language Models (LLMs) make them a compelling solution for managing the inherent complexity of transparent querying in hybrid storage environments.
 
 
-## Methodologies in building digital twins
+## Methodology aspects
+
+- Even within Cloud Service Providers and for expert designers, it is non trivial to determine the set of services enabling a data pipeline.
 
 - **Research question**: given a data pipeline, can we identify the set of data platform services required to support it?
 
@@ -167,9 +169,6 @@
 Matteo Francia, Matteo Golfarelli, Manuele Pasini — Towards a Process-Driven Design of Data Platforms. In <b>DOLAP</b>, pp. 28–35, 2024.
 
 Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of Cloud Data Platforms. <b>Information Systems Journal</b>, Manuscript No. INFOSYS-D-24-00444.
-
-- <u>But an issue emerged</u>: pipelines of different DTs entail different data models & storage systems, yet they share some of the same recurrent requirements....
-
 
 
 ## Other activities
