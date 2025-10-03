@@ -153,7 +153,7 @@
 :::
 ::::
  
-**Future Works**
+**Future Work**
 
 - Efficient querying: The semantic capabilities of Large Language Models (LLMs) make them a compelling solution for managing the inherent complexity of transparent querying in hybrid storage environments.
 
