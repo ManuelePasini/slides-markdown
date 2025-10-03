@@ -67,7 +67,7 @@
 - The precision agriculture digital twin is still a standalone application with a <u>tailored data model</u>.
 - Integration with different agriculture application is still limited...
 
-- **Research Question 1.**: can we move from application-level DT to domain-level DT platforms?
+- **Research Question 1.**: can we move from application-level DT to domain-level Digital Twin Platforms (DTP)?
 
 - A first attempt was made within the agriculture domain:
 
@@ -161,7 +161,9 @@
 
 ## Methodology aspects
 
-- Even within Cloud Service Providers and for expert designers, it is non trivial to determine the set of services enabling a data pipeline.
+- Given a DTP, how do we efficiently deploy digital twin applications on top of it?
+- An digital twin application can be as the set of sequential data processes that enable a digital twin.
+- Even within Cloud Service Providers and for expert designers, it is non trivial to determine the set of services enabling an a data pipeline.
 
 - **Research question**: given a data pipeline, can we identify the set of data platform services required to support it?
 
