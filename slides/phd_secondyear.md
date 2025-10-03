@@ -1,7 +1,7 @@
 # Architectures and Methods for Digital Twin Platforms
 
 - **Manuele Pasini**
-    - [Business Intelligence Group](https://big.csr.unibo.it/) (B.I.G.)
+    - [Business Intelligence Group](https://big.csr.unibo.it/)
     - Supervisor: Prof. Matteo Golfarelli
 
 ## Introduction to Digital Twins
@@ -161,9 +161,9 @@
 
 ## Methodology aspects
 
-- Given a DTP, how do we efficiently deploy digital twin applications on top of it?
-- An digital twin application can be as the set of sequential data processes that enable a digital twin.
-- Even within Cloud Service Providers and for expert designers, it is non trivial to determine the set of services enabling an a data pipeline.
+- How can we <b>efficiently deploy digital twin applications on a DTP?</b>
+- A digital twin application is essentially a sequence of data processes powering its functionality.
+- Even for experts and within cloud environments, identifying the right services for a data pipeline is far from trivial.
 
 - **Research question**: given a data pipeline, can we identify the set of data platform services required to support it?
 
