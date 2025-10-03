@@ -8,7 +8,7 @@
 
  - Still a buzzword, but enclosing on a definition...
  - Four key components: physical model, virtual model, data, and communication services.
- - Currently mostly standalone systems with limited interoperability, especially in collected and exploited data.
+ - Mostly standalone systems with limited or none data interoperability.
 
 :::: {.columns}
 ::: {.column width="50%"}
