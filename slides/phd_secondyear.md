@@ -1,6 +1,6 @@
 # Architectures and Methods for Digital Twin Platforms
 
-    - **Manuele Pasini**
+- **Manuele Pasini**
     - [Business Intelligence Group](https://big.csr.unibo.it/) (B.I.G.)
     - Supervisor: Prof. Matteo Golfarelli
 
