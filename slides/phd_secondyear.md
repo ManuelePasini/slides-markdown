@@ -7,8 +7,8 @@
 ## Introduction to Digital Twins
 
  - Still a buzzword, but enclosing on a definition...
- - 4 components: phyisical model, virtual model, communication services and the data
- - As of today, they result as standalone applications
+ - Four key components: physical model, virtual model, data, and communication services.
+ - Currently mostly standalone systems with limited interoperability, especially in collected and exploited data.
 
 :::: {.columns}
 ::: {.column width="50%"}
