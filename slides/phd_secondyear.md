@@ -6,9 +6,9 @@
 
 ## Introduction to Digital Twins
 
- - Differences between digital shadow, digital model, Digital Twin (DT)
  - Still a buzzword, but enclosing on a definition...
  - 4 components: phyisical model, virtual model, communication services and the data
+ - As of today, they result as standalone applications
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -46,7 +46,7 @@
 
 ## A Digital Twin for Precision Agriculture
 
-- Five year ongoing project (within PNRR - [Agritech](https://agritechcenter.it/it/) Spoke 9) on precision irrigation of fruit orchards
+- Three year ongoing project (within PNRR - [Agritech](https://agritechcenter.it/it/) Spoke 9) on precision irrigation of fruit orchards
 - Demo available at [this link](https://big.csr.unibo.it/projects/smarter/)
 - Paper submitted to [Computer and Electronics in Agriculture](https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture) (September 2025).
 
@@ -60,6 +60,25 @@
 ::::
 
 **Ongoing work**: [ZESPRI](https://www.zespri.com/it-IT), the world’s largest kiwifruit producer, has decided to undertake large-scale experimental implementation of the system for the 2026 irrigation season.
+
+
+## From application-oriented to domain-oriented
+
+- The Precision Agriculture Digital Twin <u>is still a standalone application</u>
+
+- **Research Question 1.**: Can we move from application-level DT platforms to domain-level platforms?
+
+- A first attempt was made within the Agriculture domain:
+
+:::: {.columns}
+::: {.column width="50%"}
+![Precision Agriculture data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/dm.png?raw=true)
+:::
+::: {.column width="50%"}
+![Component schema of the Agriculture Data Platform](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/phd2ndyear/platform.svg)
+:::
+::::
+
 
 ## A Data Platform fostering collaboration between DTs
 
@@ -90,23 +109,6 @@
 :::
 ::::
 
-
-## From application-oriented to domain-oriented
-
-- **Research Question 1.**: Can we move from application-level DT platforms to domain-level platforms?
-
-<span style="color:blue;">Takeaway</span>: a DT can be represented as a data pipeline that collects, processes, and exploits data.
-
-- **Research question 2.**: given a data pipeline, can we identify the set of data platform services required to support it?
-
-<b>References</b>:
-
-Matteo Francia, Matteo Golfarelli, Manuele Pasini — Towards a Process-Driven Design of Data Platforms. In <b>DOLAP</b>, pp. 28–35, 2024.
-
-Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of Cloud Data Platforms. <b>Information Systems Journal</b>, Manuscript No. INFOSYS-D-24-00444.
-
-- <u>But an issue emerged</u>: pipelines of different DTs entail different data models & storage systems, yet they share some of the same recurrent requirements....
-
 ## Modelling Digital Twin Data
 
 :::: {.columns}
@@ -134,8 +136,6 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 
 
 
-
-
 ## An Hybryd data structure enabling Digital Twin Data
 
 - Combining the strength of Graph and Time-Series data layouts with a novel, hybrid data structure.
@@ -157,6 +157,18 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 
 - Efficient querying: The semantic capabilities of Large Language Models (LLMs) make them a compelling solution for managing the inherent complexity of transparent querying in hybrid storage environments.
 
+
+## Methodologies in building digital twins
+
+- **Research question**: given a data pipeline, can we identify the set of data platform services required to support it?
+
+<b>References</b>:
+
+Matteo Francia, Matteo Golfarelli, Manuele Pasini — Towards a Process-Driven Design of Data Platforms. In <b>DOLAP</b>, pp. 28–35, 2024.
+
+Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of Cloud Data Platforms. <b>Information Systems Journal</b>, Manuscript No. INFOSYS-D-24-00444.
+
+- <u>But an issue emerged</u>: pipelines of different DTs entail different data models & storage systems, yet they share some of the same recurrent requirements....
 
 
 
@@ -203,13 +215,3 @@ Matteo Francia, Matteo Golfarelli, Manuele Pasini — Process-Driven Design of C
 
 
 
-- Manca titolo e info miei
-- Cambia slide 1, fai focus su altra roba
-- Three year ongoing project
-- Ongoing or future works
-- Aggiungi metamodello
-
-
-- SU DT il modello dati è tailored, application based
-- per muoverci più in alto, dobbiamo muoverci verso domain, e.g. piattaforma precision agriculture.
-- Poi metamodello, un caso possibile è quello.
