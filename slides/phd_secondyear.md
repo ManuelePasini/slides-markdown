@@ -64,7 +64,8 @@
 
 ## From application-oriented to domain-oriented
 
-- The precision agriculture Digital Twin <u>is still a standalone application</u>
+- The precision agriculture digital twin is still a standalone application with a <u>tailored data model</u>.
+- Integration with different agriculture application is still limited...
 
 - **Research Question 1.**: can we move from application-level DT to domain-level DT platforms?
 
