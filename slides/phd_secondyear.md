@@ -1,6 +1,6 @@
 # Architectures and Methods for Digital Twin Platforms
 
-- **Manuele Pasini**
+- **Manuele Pasini**, Student ID: 0001129119
     - [Business Intelligence Group](https://big.csr.unibo.it/)
     - Supervisor: Prof. Matteo Golfarelli
 
