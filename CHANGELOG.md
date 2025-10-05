@@ -1,3 +1,10 @@
+## [1.104.0](https://github.com/ManuelePasini/slides-markdown/compare/1.103.0...1.104.0) (2025-10-05)
+
+
+### Features
+
+* update phd slides ([a4386a9](https://github.com/ManuelePasini/slides-markdown/commit/a4386a929cc0c81b25aefc9b03adf967bc42dcaf))
+
 ## [1.103.0](https://github.com/ManuelePasini/slides-markdown/compare/1.102.0...1.103.0) (2025-10-05)
 
 
