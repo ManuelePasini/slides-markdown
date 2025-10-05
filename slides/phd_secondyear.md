@@ -40,7 +40,7 @@
     - Capabilities of DTs are thus limited.
 
     - **A standardization effort is required to foster integration.**
-    - **Standardization should begin at the data layer**
+    - **Standardization should begin at the data layer!**
 ::: 
 ::::
 
@@ -73,7 +73,7 @@
 
 :::: {.columns}
 ::: {.column width="50%"}
-![Precision agriculture UML data model, blue = domain level, green = application level](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/phd2ndyear/agritech_dw.svg)
+![Precision agriculture UML data model, blue = domain level entities, green = application level entities](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/phd2ndyear/agritech_dw.svg)
 :::
 ::: {.column width="50%"}
 ![Component schema of the Agriculture Data Platform](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/phd2ndyear/platform.svg)
@@ -117,7 +117,7 @@
 :::: {.columns}
 ::: {.column width="50%"}
 
-- DT data involve highly interconnected entities (e.g., a fruit tree and the IoT network describing it), suggesting the use of graph data layout for efficient storage and querying…
+- DT data involve highly interconnected entities (e.g., a fruit tree and the IoT network describing it), suggesting the use of graph data layout for efficient modelling and querying…
     - ... yet, they struggle with such volume of data
 - Time-Series storage systems efficiently manage large volumes of temporal data...
     - ... but fall short in capturing the complex inter-entity dynamics.
