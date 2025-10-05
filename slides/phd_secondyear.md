@@ -8,7 +8,7 @@
 
  - Still a buzzword, but enclosing on a definition...
  - Four key components: physical model, virtual model, data, and communication services.
- - Mostly standalone systems with limited or none data interoperability.
+ - Mostly standalone, application-oriented systems with limited or none data interoperability.
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -21,7 +21,7 @@
 
 ## Introduction to Digital Twins
 
-- The role of <b>data as a core component</b> of Digital Twins is increasingly recognized…
+- The role of <b>data as a core component</b> in Digital Twins is increasingly recognized…
 - … yet it is often overlooked in research contributions.
 - Some reference models are emerging (e.g., Fei Tao, Univ. of Beijing).
 
@@ -33,18 +33,18 @@
 :::
 ::: {.column width="40%"}
 - <b>However...</b>
-    - Each solution develops its own data model and storage system;
+    - Each solution is independent in both data modelling and semantics
 
     - No interoperability between DTs, even when relying on the same data;
 
-    - Capabilities of DTs are thus limited;
+    - Capabilities of DTs are thus limited.
 
     - **A standardization effort is required to foster integration.**
     - **Standardization should begin at the data layer**
 ::: 
 ::::
 
-## A Digital Twin for Precision Agriculture
+## A Digital Twin in Precision Agriculture
 
 - Three year ongoing project (within PNRR - [Agritech](https://agritechcenter.it/it/) Spoke 9) on precision irrigation of fruit orchards
 - Demo available at [this link](https://big.csr.unibo.it/projects/smarter/)
@@ -64,16 +64,16 @@
 
 ## From application-oriented to domain-oriented
 
-- The precision agriculture digital twin is still a standalone application with a <u>tailored data model</u>.
+- The precision irrigation digital twin is still a standalone system with a <u>tailored data model and semantics</u>.
 - Integration with different agriculture application is still limited...
 
-- **Research Question 1.**: can we move from application-level DT to domain-level Digital Twin Platforms (DTP)?
+- **Research Question 1.**: can we move from application-level DT to domain-level Digital Twin Platforms (DTP) that can facilitate standardization and integration of data?
 
 - A first attempt was made within the agriculture domain:
 
 :::: {.columns}
 ::: {.column width="50%"}
-![Precision agriculture "relational" data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/dm.png?raw=true)
+![Precision agriculture UML data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/dm.png?raw=true)
 :::
 ::: {.column width="50%"}
 ![Component schema of the Agriculture Data Platform](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/phd2ndyear/platform.svg)
@@ -102,6 +102,8 @@
 
 :::
 ::: {.column width="40%"}
+
+**Key aspects**
 
 - General purpose: supporting heterogeneous data through heterogeneous storage systems;
 - Interoperable: Interoperable: integration and sharing via common data models (e.g., [FIWARE](https://www.fiware.org/));
