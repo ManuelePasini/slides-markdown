@@ -342,7 +342,7 @@
 <ul>
 <li>Still a buzzword, but enclosing on a definition…</li>
 <li>Four key components: physical model, virtual model, data, and communication services.</li>
-<li>Mostly standalone, application-oriented systems with limited or none data interoperability.</li>
+<li>Mostly standalone, application-oriented systems with limited or none interoperability, in both data and processes.</li>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -381,7 +381,7 @@
 <ul>
 <li><b>However…</b>
 <ul>
-<li><p>Each solution is independent in both data modelling and semantics</p></li>
+<li><p>Each solution is independent in both data modelling and semantics;</p></li>
 <li><p>No interoperability between DTs, even when relying on the same data;</p></li>
 <li><p>Capabilities of DTs are thus limited.</p></li>
 <li><p><strong>A standardization effort is required to foster integration.</strong></p></li>
@@ -421,16 +421,16 @@
 <h2>From application-oriented to domain-oriented</h2>
 <ul>
 <li><p>The precision irrigation digital twin is still a standalone system with a <u>tailored data model and semantics</u>.</p></li>
-<li><p>Integration with different agriculture application is still limited…</p></li>
-<li><p><strong>Research Question 1.</strong>: can we move from application-level DT to domain-level Digital Twin Platforms (DTP) that can facilitate standardization and integration of data?</p></li>
+<li><p>Integration with different application in the agriculture domain is still limited…</p></li>
+<li><p><strong>Research Question 1.</strong>: can we move from application-level DT to domain-level Digital Twin Platforms (DTP) that can facilitate the standardization and integration of DT applications?</p></li>
 <li><p>A first attempt was made within the agriculture domain:</p></li>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/dm.png?raw=true"></p>
-<figcaption>Precision agriculture UML data model</figcaption>
+<p><img data-src="https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/phd2ndyear/agritech_dw.svg"></p>
+<figcaption>Precision agriculture UML data model, blue = domain level, green = application level</figcaption>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
@@ -466,8 +466,8 @@
 </div><div class="column" style="width:40%;">
 <p><strong>Key aspects</strong></p>
 <ul>
-<li>General purpose: supporting heterogeneous data through heterogeneous storage systems;</li>
-<li>Interoperable: Interoperable: integration and sharing via common data models (e.g., <a href="https://www.fiware.org/">FIWARE</a>);</li>
+<li><b>General purpose</b>: supporting heterogeneous data through heterogeneous storage systems;</li>
+<li><b>Interoperable: Interoperable</b>: integration and sharing via common data models (e.g., <a href="https://www.fiware.org/">FIWARE</a>);</li>
 <li><strong>Ongoing work</strong>: supporting and sharing data processes (e.g., donwload ESA images) and applications.</li>
 </ul>
 </div>
@@ -478,7 +478,7 @@
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li><p>DT data involve highly interconnected entitieS (e.g., a fruit tree and the IoT network describing it), suggesting the use of graph data layout for efficient storage and querying…</p>
+<li><p>DT data involve highly interconnected entities (e.g., a fruit tree and the IoT network describing it), suggesting the use of graph data layout for efficient storage and querying…</p>
 <ul>
 <li>… yet, they struggle with such volume of data</li>
 </ul></li>
@@ -486,7 +486,6 @@
 <ul>
 <li>… but fall short in capturing the complex inter-entity dynamics.</li>
 </ul></li>
-<li><p><u>Even the Data Platform Design methodology suggested different architectures tailored to each DT</u>…</p></li>
 <li><p>Yet, no multi-store solution has yet achieved broad adoption in the literature.</p></li>
 <li><p><strong>What about an hybrid data structure?</strong></p></li>
 </ul>
@@ -536,9 +535,9 @@
 <h2>Methodology aspects</h2>
 <ul>
 <li><p>How can we <b>efficiently deploy digital twin applications on a DTP?</b></p></li>
-<li><p>A digital twin application is essentially a sequence of data processes powering its functionality.</p></li>
-<li><p>Even for experts and within cloud environments, identifying the right services for a data pipeline is far from trivial.</p></li>
-<li><p><strong>Research question</strong>: given a data pipeline, can we identify the set of data platform services required to support it?</p></li>
+<li><p>A digital twin application is essentially a sequence of data processes powering its functionalities.</p></li>
+<li><p>Even for experts and within cloud environments, identifying the right services enabling a data pipeline is far from trivial.</p></li>
+<li><p><strong>Research question</strong>: given a data pipeline, can we define a methodology to identify the set of data platform services required to support it?</p></li>
 </ul>
 <p><b>References</b>:</p>
 <p>Matteo Francia, Matteo Golfarelli, Manuele Pasini — Towards a Process-Driven Design of Data Platforms. In <b>DOLAP</b>, pp.&nbsp;28–35, 2024.</p>
