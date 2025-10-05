@@ -342,7 +342,7 @@
 <ul>
 <li>Still a buzzword, but enclosing on a definition…</li>
 <li>Four key components: physical model, virtual model, data, and communication services.</li>
-<li>Mostly standalone systems with limited or none data interoperability.</li>
+<li>Mostly standalone, application-oriented systems with limited or none data interoperability.</li>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -365,7 +365,7 @@
 <section id="introduction-to-digital-twins-1" class="slide level2">
 <h2>Introduction to Digital Twins</h2>
 <ul>
-<li>The role of <b>data as a core component</b> of Digital Twins is increasingly recognized…</li>
+<li>The role of <b>data as a core component</b> in Digital Twins is increasingly recognized…</li>
 <li>… yet it is often overlooked in research contributions.</li>
 <li>Some reference models are emerging (e.g., Fei Tao, Univ. of Beijing).</li>
 </ul>
@@ -381,9 +381,9 @@
 <ul>
 <li><b>However…</b>
 <ul>
-<li><p>Each solution develops its own data model and storage system;</p></li>
+<li><p>Each solution is independent in both data modelling and semantics</p></li>
 <li><p>No interoperability between DTs, even when relying on the same data;</p></li>
-<li><p>Capabilities of DTs are thus limited;</p></li>
+<li><p>Capabilities of DTs are thus limited.</p></li>
 <li><p><strong>A standardization effort is required to foster integration.</strong></p></li>
 <li><p><strong>Standardization should begin at the data layer</strong></p></li>
 </ul></li>
@@ -391,8 +391,8 @@
 </div>
 </div>
 </section>
-<section id="a-digital-twin-for-precision-agriculture" class="slide level2">
-<h2>A Digital Twin for Precision Agriculture</h2>
+<section id="a-digital-twin-in-precision-agriculture" class="slide level2">
+<h2>A Digital Twin in Precision Agriculture</h2>
 <ul>
 <li>Three year ongoing project (within PNRR - <a href="https://agritechcenter.it/it/">Agritech</a> Spoke 9) on precision irrigation of fruit orchards</li>
 <li>Demo available at <a href="https://big.csr.unibo.it/projects/smarter/">this link</a></li>
@@ -420,9 +420,9 @@
 <section id="from-application-oriented-to-domain-oriented" class="slide level2">
 <h2>From application-oriented to domain-oriented</h2>
 <ul>
-<li><p>The precision agriculture digital twin is still a standalone application with a <u>tailored data model</u>.</p></li>
+<li><p>The precision irrigation digital twin is still a standalone system with a <u>tailored data model and semantics</u>.</p></li>
 <li><p>Integration with different agriculture application is still limited…</p></li>
-<li><p><strong>Research Question 1.</strong>: can we move from application-level DT to domain-level Digital Twin Platforms (DTP)?</p></li>
+<li><p><strong>Research Question 1.</strong>: can we move from application-level DT to domain-level Digital Twin Platforms (DTP) that can facilitate standardization and integration of data?</p></li>
 <li><p>A first attempt was made within the agriculture domain:</p></li>
 </ul>
 <div class="columns">
@@ -430,7 +430,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/dm.png?raw=true"></p>
-<figcaption>Precision agriculture “relational” data model</figcaption>
+<figcaption>Precision agriculture UML data model</figcaption>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
@@ -464,6 +464,7 @@
 </figure>
 </div>
 </div><div class="column" style="width:40%;">
+<p><strong>Key aspects</strong></p>
 <ul>
 <li>General purpose: supporting heterogeneous data through heterogeneous storage systems;</li>
 <li>Interoperable: Interoperable: integration and sharing via common data models (e.g., <a href="https://www.fiware.org/">FIWARE</a>);</li>
