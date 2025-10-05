@@ -8,7 +8,7 @@
 
  - Still a buzzword, but enclosing on a definition...
  - Four key components: physical model, virtual model, data, and communication services.
- - Mostly standalone, application-oriented systems with limited or none data interoperability.
+ - Mostly standalone, application-oriented systems with limited or none interoperability, in both data and processes.
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -33,7 +33,7 @@
 :::
 ::: {.column width="40%"}
 - <b>However...</b>
-    - Each solution is independent in both data modelling and semantics
+    - Each solution is independent in both data modelling and semantics;
 
     - No interoperability between DTs, even when relying on the same data;
 
@@ -65,15 +65,15 @@
 ## From application-oriented to domain-oriented
 
 - The precision irrigation digital twin is still a standalone system with a <u>tailored data model and semantics</u>.
-- Integration with different agriculture application is still limited...
+- Integration with different application in the agriculture domain is still limited...
 
-- **Research Question 1.**: can we move from application-level DT to domain-level Digital Twin Platforms (DTP) that can facilitate standardization and integration of data?
+- **Research Question 1.**: can we move from application-level DT to domain-level Digital Twin Platforms (DTP) that can facilitate the standardization and integration of DT applications?
 
 - A first attempt was made within the agriculture domain:
 
 :::: {.columns}
 ::: {.column width="50%"}
-![Precision agriculture UML data model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd2ndyear/dm.png?raw=true)
+![Precision agriculture UML data model, blue = domain level, green = application level](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/phd2ndyear/agritech_dw.svg)
 :::
 ::: {.column width="50%"}
 ![Component schema of the Agriculture Data Platform](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/phd2ndyear/platform.svg)
@@ -105,8 +105,8 @@
 
 **Key aspects**
 
-- General purpose: supporting heterogeneous data through heterogeneous storage systems;
-- Interoperable: Interoperable: integration and sharing via common data models (e.g., [FIWARE](https://www.fiware.org/));
+- <b>General purpose</b>: supporting heterogeneous data through heterogeneous storage systems;
+- <b>Interoperable: Interoperable</b>: integration and sharing via common data models (e.g., [FIWARE](https://www.fiware.org/));
 - **Ongoing work**: supporting and sharing data processes (e.g., donwload ESA images) and applications.
 
 :::
@@ -117,12 +117,11 @@
 :::: {.columns}
 ::: {.column width="50%"}
 
-- DT data involve highly interconnected entitieS (e.g., a fruit tree and the IoT network describing it), suggesting the use of graph data layout for efficient storage and querying…
+- DT data involve highly interconnected entities (e.g., a fruit tree and the IoT network describing it), suggesting the use of graph data layout for efficient storage and querying…
     - ... yet, they struggle with such volume of data
 - Time-Series storage systems efficiently manage large volumes of temporal data...
     - ... but fall short in capturing the complex inter-entity dynamics.
 
-- <u>Even the Data Platform Design methodology suggested different architectures tailored to each DT</u>…
 - Yet, no multi-store solution has yet achieved broad adoption in the literature.
 
 - **What about an hybrid data structure?**
@@ -164,10 +163,10 @@
 ## Methodology aspects
 
 - How can we <b>efficiently deploy digital twin applications on a DTP?</b>
-- A digital twin application is essentially a sequence of data processes powering its functionality.
-- Even for experts and within cloud environments, identifying the right services for a data pipeline is far from trivial.
+- A digital twin application is essentially a sequence of data processes powering its functionalities.
+- Even for experts and within cloud environments, identifying the right services enabling a data pipeline is far from trivial.
 
-- **Research question**: given a data pipeline, can we identify the set of data platform services required to support it?
+- **Research question**: given a data pipeline, can we define a methodology to identify the set of data platform services required to support it?
 
 <b>References</b>:
 
