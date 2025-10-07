@@ -142,3 +142,5 @@
 ## LLMs on Graphs: A Comprehensive Survey - TKDE, 2024
 
 ##### Applications - **Text-Paired graphs**  - LLM as Aligner
+
+![Taxonomy of graph + llm contributions in literature](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/graphllm/taxonomy.png?raw=true)
