@@ -27,18 +27,18 @@
 
 ## STGraph - Implementation
 
-- Implemented in Kotlin;
+- Implemented in <b>Kotlin</b>.
 
-- <b>Graph data layout</b>
+- **Graph data layout**
     - based on <b>index-free adjacency</b>;
-    - time dimension as first citizen;
     - properties and edges are represented as a <b>linked chain of pointers</b>;
-    - properties values bigger than 8 bytes (e.g. strings, geometries) are stored in a dynamic storage (RocksDB).
-    - supports spatial operations (e.g., ST_INTERSECTS)
+    - properties values bigger than 8 bytes (e.g. strings, geometries) are stored in a dynamic storage (RocksDB);
+    - time dimension as first citizen;
+    - supports spatial operations (e.g., ST_INTERSECTS).
 
-- <b>Time-Series data layout</b>
-    - Implemented in AsterixDB BDMS
-    - LSM-Tree based data layout
-    - Native spatial capabilities.
-    - Primary index on time dimension
-    - Secondary index on spatial dimension
+- **Time-Series data layout**
+    - Implemented in <b>AsterixDB BDMS</b> ;
+    - LSM-Tree based data layout ;
+    - Native spatial capabilities ;
+    - Primary index on time dimension ;
+    - Secondary index on spatial dimension .
