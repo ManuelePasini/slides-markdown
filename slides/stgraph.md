@@ -33,8 +33,8 @@
 ::: {.column width="30%"}
 
 - <b>Nodes</b>
-    - Graph node <div style="width:15px; height:15px; border-radius:50%; background:#8eb3c5;"></div> ;
-    - Time-Series node  <div style="width:15px; height:15px; border-radius:50%; background:#f39c42;"></div> ;
+    - Graph node <span style="display:inline-block; width:12px; height:12px; border-radius:50%; background:#8eb3c5; border:1px solid #333;"></span> ;
+    - Time-Series node <span style="display:inline-block; width:12px; height:12px; border-radius:50%; background:#f39c42; border:1px solid #333;"></span> ;
     
 - <b>Edges</b>
     - Graph edge (to a graph node);
