@@ -386,31 +386,30 @@
 <section id="stgraph---operations" class="slide level2">
 <h2>STGraph - Operations</h2>
 <ul>
-<li><p><b>Search Algorithm&lt;:</b></p><b>
+<li><b>Search algorithm</b>:
 <ul>
-<li>Temporal DFS, temporal feasibility check based on constraint tightening:
-<ul>
+<li>Temporal DFS, temporal feasibility check based on constraint tightening:</li>
 <li><div>
-[t_A^s, t_A^e) ∩ [t_B^s, t_B^e) ≠ ∅ ⇔ max(t_A^s, t_B^s) &lt; min(t_A^e, t_B^e)
+[t<sub>A</sub><sup>s</sup>, t<sub>A</sub><sup>e</sup>) ∩ [t<sub>B</sub><sup>s</sup>, t<sub>B</sub><sup>e</sup>) ≠ ∅ ⇔ max(t<sub>A</sub><sup>s</sup>, t<sub>B</sub><sup>s</sup>) &lt; min(t<sub>A</sub><sup>e</sup>, t<sub>B</sub><sup>e</sup>)
+</div></li>
+<li><div>
+<p>[t<sub>A</sub><sup>s</sup>, t<sub>A</sub><sup>e</sup>) ∩ [t<sub>B</sub><sup>s</sup>, t<sub>B</sub><sup>e</sup>) ≠ ∅ ⇔ max(t<sub>A</sub><sup>s</sup>, t<sub>B</sub><sup>s</sup>) &lt; min(t<sub>A</sub><sup>e</sup>, t<sub>B</sub><sup>e</sup>)</p>
 </div></li>
 </ul></li>
-</ul></b></li><b>
-<li><p><strong>GraphNode2GraphNode</strong></p></li>
-<li><p><strong>GraphNode-TSNode</strong></p></li>
-<li><p>Furthermore</p>
+<li><b>Join strategy</b>: Nested-Loop;</li>
+<li><strong>GraphNode-TSNode</strong>
 <ul>
-<li>Join: Nested-Join Loop;</li>
-<li>Temporal traversal: monotonic validity window</li>
+<li>Each time a traversal goes through a virtual edge</li>
 </ul></li>
-</b></ul><b>
+</ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</b></section></section><b>
-    </b></div><b>
-  </b></div><b>
+</section></section>
+    </div>
+  </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="stgraph_files/libs/revealjs/dist/reveal.js"></script>
@@ -775,4 +774,4 @@
     </script>
     
 
-</b></body></html>
+</body></html>
