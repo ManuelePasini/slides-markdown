@@ -24,17 +24,17 @@
 - If so, can we embed two different data-layout into the same conceptual storage system and provide hybrid capabilities?
 
 :::: {.columns}
-::: {.column width="75%"}
+::: {.column width="70%"}
 
 
 ![Graph+TimeSeries Hybrid data model](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg)
 
 :::
-::: {.column width="25%"}
+::: {.column width="30%"}
 
 - <b>Nodes</b>
-    - Graph node;
-    - Time-Series node;
+    - Graph node <div style="width:15px; height:15px; border-radius:50%; background:#8eb3c5;"></div> ;
+    - Time-Series node  <div style="width:15px; height:15px; border-radius:50%; background:#f39c42;"></div> ;
     
 - <b>Edges</b>
     - Graph edge (to a graph node);
