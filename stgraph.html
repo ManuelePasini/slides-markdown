@@ -358,14 +358,14 @@
 <li>If so, can we embed two different data-layout into the same conceptual storage system and provide hybrid capabilities?</li>
 </ul>
 <div class="columns">
-<div class="column" style="width:70%;">
+<div class="column" style="width:80%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg"></p>
 <figcaption>Graph+TimeSeries Hybrid data model</figcaption>
 </figure>
 </div>
-</div><div class="column" style="width:30%;">
+</div><div class="column" style="width:20%;">
 <ul>
 <li><b>Nodes</b>
 <ul>
@@ -408,18 +408,12 @@
 <section id="stgraph---operations" class="slide level2">
 <h2>STGraph - Operations</h2>
 <ul>
-<li><b>Search algorithm</b>:
-<ul>
-<li>Temporal DFS, temporal feasibility check based on constraint tightening:</li>
-<li><div>
-<p>⋂<sub>i=1..k</sub> I<sub>e<sub>i</sub></sub> ≠ ∅</p>
+<li><b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening: -
+<div>
+Path(n<sub>i</sub>, …, n<sub>k</sub>) è valido ⇔ ⋂<sub>j=i..k</sub> I<sub>e<sub>j</sub></sub> ≠ ∅
 </div></li>
-<li><div>
-<p>path(P) è valido ⇔ ⋂<sub>i=1..k</sub> I<sub>e<sub>i</sub></sub> ≠ ∅</p>
-</div></li>
-</ul></li>
 <li><b>Join strategy</b>: Nested-Loop;</li>
-<li><strong>GraphNode-TSNode</strong>
+<li><b>&gt;GraphNode-TSNode</b>
 <ul>
 <li>Each time a traversal goes through a virtual edge</li>
 </ul></li>
