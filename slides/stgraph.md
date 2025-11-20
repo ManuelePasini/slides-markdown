@@ -11,11 +11,16 @@
     - Optimized for <i>high-throughput temporal ingestion</i> and efficient management of <i>time-ordered data</i>;
     - Efficient on <i>large-volume datasets</i>.
 
-- Different data layouts entail different workload and ingestion capabilities...
+- Different data layouts imply different ingestion and workload capabilities...
 
-- But nowadays data-intensive applications often entail both characteristics...
-    - ... Internet-of-Things networks
-    - ... Digital Twins applications
-    - ... Pervasive computing
+- Yet many modern data-intensive applications combine both, e.g., IoT systems, Digital Twins, and pervasive computing.
 
 - **What about an hybrid data structure ?**
+
+
+## STGraph - Conceptualization
+
+- Can we distinguish highly-temporal data from moderately-temporal data ?
+- If so, can we embed two different data-layout into the same conceptual storage system?
+
+![Graph+TimeSeries Hybrid data model](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg)
