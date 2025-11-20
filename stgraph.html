@@ -387,19 +387,19 @@
 <li><p>Implemented in <b>Kotlin</b>.</p></li>
 <li><p><strong>Graph data layout</strong></p>
 <ul>
-<li>Based on <b>index-free adjacency</b> through <b>fixed-size records</b> stored in <i>nodes, edges,</i> and <i>property</i> files.</li>
-<li>Properties and edges are represented as a <b>linked chain of pointers</b>;
+<li><b>Index-free adjacency</b> through <b>fixed-size records</b> stored in <i>nodes, edges,</i> and <i>property</i> files.</li>
+<li>Properties/edges represented as <b>linked chain of pointers</b>;
 <ul>
-<li>values &gt; 8 bytes (e.g.&nbsp;strings, geometries) are stored in a dynamic storage (RocksDB);</li>
+<li>values &gt; 8 bytes (e.g.&nbsp;strings, geometries) stored in dynamic storage (RocksDB);</li>
 </ul></li>
-<li>Time dimension as first citizen;</li>
+<li>Time attribute as first citizen;</li>
 </ul></li>
 <li><p><strong>Time-Series data layout</strong></p>
 <ul>
 <li>Implemented through <b>AsterixDB</b> (LSM-Tree based);</li>
 <li>Native spatial capabilities;</li>
 <li>Primary index on time and secondary index on space;</li>
-<li>Properties and outgoing edges are stored as “fat” graph properties.</li>
+<li>Properties/outgoing edges stored as “fat” graph properties.</li>
 </ul></li>
 </ul>
 </section>
