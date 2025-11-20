@@ -362,22 +362,22 @@
 <section id="stgraph---implementation" class="slide level2">
 <h2>STGraph - Implementation</h2>
 <ul>
-<li><p>Implemented in Kotlin;</p></li>
-<li><p><b>Graph data layout</b></p>
+<li><p>Implemented in <b>Kotlin</b>.</p></li>
+<li><p><strong>Graph data layout</strong></p>
 <ul>
 <li>based on <b>index-free adjacency</b>;</li>
-<li>time dimension as first citizen;</li>
 <li>properties and edges are represented as a <b>linked chain of pointers</b>;</li>
-<li>properties values bigger than 8 bytes (e.g.&nbsp;strings, geometries) are stored in a dynamic storage (RocksDB).</li>
-<li>supports spatial operations (e.g., ST_INTERSECTS)</li>
+<li>properties values bigger than 8 bytes (e.g.&nbsp;strings, geometries) are stored in a dynamic storage (RocksDB);</li>
+<li>time dimension as first citizen;</li>
+<li>supports spatial operations (e.g., ST_INTERSECTS).</li>
 </ul></li>
-<li><p><b>Time-Series data layout</b></p>
+<li><p><strong>Time-Series data layout</strong></p>
 <ul>
-<li>Implemented in AsterixDB BDMS</li>
-<li>LSM-Tree based data layout</li>
-<li>Native spatial capabilities.</li>
-<li>Primary index on time dimension</li>
-<li>Secondary index on spatial dimension</li>
+<li>Implemented in <b>AsterixDB BDMS</b> ;</li>
+<li>LSM-Tree based data layout ;</li>
+<li>Native spatial capabilities ;</li>
+<li>Primary index on time dimension ;</li>
+<li>Secondary index on spatial dimension .</li>
 </ul></li>
 </ul>
 <div class="quarto-auto-generated-content">
