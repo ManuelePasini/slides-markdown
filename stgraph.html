@@ -414,25 +414,30 @@ isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ⋂<sub>j=i..k-1</sub> I<su
 </ul></li>
 <li><p><b>Querying STGraph</b>:</p>
 <ul>
-<li>Executed in <b>two steps</b>:
+<li>Executed in <b>three steps</b>:
 <ul>
-<li><b>Graph exploration</b> through a DFS search;</li>
-<li><b>Graph materialization</b>: if exploration leads to a virtual edge, materialize its virtual nodes;</li>
+<li><b>Graph exploration</b> through DFS;</li>
+<li><b>Graph materialization</b>: if exploring a virtual edge, materialize its virtual nodes;</li>
 <li><b>Query solving</b>.</li>
 </ul></li>
 <li><b>Materializing a virtual node</b>:
 <ul>
 <li>Each virtual edge traversal entails a temporal query to AsterixDB;</li>
-<li>Output tuples are materialized as virtual nodes and connected in the graph.</li>
+<li>Output tuples are materialized as virtual nodes and connected within the graph.</li>
 </ul></li>
 <li><b>Optimizations</b>
 <ul>
 <li>Naive <b>nested-Loop</b> join strategy;</li>
-<li>Supports filter pushdown to AsterixDB;</li>
-<li>Supports spatial join/filtering operations (e.g., ST_INTERSECTS).</li>
+<li>Support for filter pushdown to AsterixDB;</li>
+<li>Support for spatial join/filtering operations (e.g., ST_INTERSECTS).</li>
 </ul></li>
 </ul></li>
-<li><p><strong>As of today</strong></p>
+</ul>
+</section>
+<section id="limitations-and-future-works" class="slide level2">
+<h2>Limitations and Future works</h2>
+<ul>
+<li><strong>As of today</strong>
 <ul>
 <li><b>No support for cross time-series operations</b> .</li>
 <li><b>Query to AsterixDB block path traversal algorithm (could by asynchronous)</b></li>
