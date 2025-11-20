@@ -37,8 +37,8 @@
     - Time-Series node <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#f39c42; border:2px solid #333;"></span> ;
     
 - <b>Edges</b>
-    - Graph edge <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> -> <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span>
-    - Virtual edge <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> -> <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#f39c42; border:2px solid #333;"></span>
+    - Graph edge   <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> <--> <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span>
+    - Virtual edge   <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> <--> <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#f39c42; border:2px solid #333;"></span>
 :::
 ::::
 
@@ -65,17 +65,21 @@
     - <div>isValid(Path(n<sub>i</sub>, ..., n<sub>k</sub>)) &iff; ⋂<sub>j=i..k-1</sub> I<sub>e<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub></sub> &ne; &empty;, I = validityInterval(n)</div>
 
 - <b>Querying STGraph</b>:
-    - Naive <b>nested-Loop</b> join strategy ;
-    - <b>Spatial join operations</b> (e.g., ST_INTERSECTS);
 
-    - <b>Traversing a virtual edge</b>:
-        - Entails a query to AsterixDB ;
-        - Supports filter pushdown ;
-        - <b>Query results are materialized as virtual nodes in the graph at query time.</b>
-
-    -<b> Two steps</b>:
-        - <b>Graph materialization</b>: retrieve virtual nodes and edges.
+    - Executed in <b>two steps</b>:
+        - <b>Graph exploration</b> through a DFS search;
+        - <b>Graph materialization</b>: if exploration leads to a virtual edge, materialize its virtual nodes;
         - <b>Query solving</b>.
+
+    - <b>Materializing a virtual node</b>:
+        - Each virtual edge traversal entails a temporal query to AsterixDB;
+        - Output tuples are materialized as virtual nodes and connected in the graph.
+
+    - <b>Optimizations</b>
+        - Naive <b>nested-Loop</b> join strategy;
+        - Supports filter pushdown to AsterixDB;
+        - Supports spatial join/filtering operations (e.g., ST_INTERSECTS).
 
 - **As of today**
     - <b>No support for cross time-series operations</b> .
+    - <b>Query to AsterixDB block path traversal algorithm (could by asynchronous)</b>
