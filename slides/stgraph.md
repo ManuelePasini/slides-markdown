@@ -65,10 +65,10 @@
 ## STGraph - Operations
 
 - <b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:
-    - <div>Path(n<sub>i</sub>, ..., n<sub>k</sub>) è valido &iff; ⋂<sub>j=i..k-1</sub> I<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub> &ne; &empty;</div>
+    - <div>Path(n<sub>i</sub>, ..., n<sub>k</sub>) è valido &iff; ⋂<sub>j=i..k-1</sub> I<sub>e<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub></sub> &ne; &empty;</div>
 
 - <b>Join strategy</b>: Nested-Loop;
-- <b>>GraphNode-TSNode</b>
-    - Each traversal of a virtual edge entails a query to AsterixDB.
-    - Filter pushdown
-    - <b>No support for cross time-series operations</b>
+- <b>Traversing a virtual edge</b>:
+    - Entails a query to AsterixDB ;
+    - Filter pushdown ;
+    - <b>No support for cross time-series operations</b> .
