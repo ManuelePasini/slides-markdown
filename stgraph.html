@@ -355,10 +355,32 @@
 <h2>STGraph - Conceptualization</h2>
 <ul>
 <li>Can we separate data by temporal granularity to support hybrid modeling across time-series and temporal graph systems?</li>
-<li>If so, can we embed two different data-layout into the same conceptual storage system?</li>
+<li>If so, can we embed two different data-layout into the same conceptual storage system and provide hybrid capabilities?</li>
 </ul>
 
-<img data-src="https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg" class="r-stretch quarto-figure-center"><p class="caption">Graph+TimeSeries Hybrid data model</p><div class="quarto-auto-generated-content">
+<img data-src="https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg" class="r-stretch quarto-figure-center"><p class="caption">Graph+TimeSeries Hybrid data model</p></section>
+<section id="stgraph---implementation" class="slide level2">
+<h2>STGraph - Implementation</h2>
+<ul>
+<li><p>Implemented in Kotlin;</p></li>
+<li><p><b>Graph data layout</b></p>
+<ul>
+<li>based on <b>index-free adjacency</b>;</li>
+<li>time dimension as first citizen;</li>
+<li>properties and edges are represented as a <b>linked chain of pointers</b>;</li>
+<li>properties values bigger than 8 bytes (e.g.&nbsp;strings, geometries) are stored in a dynamic storage (RocksDB).</li>
+<li>supports spatial operations (e.g., ST_INTERSECTS)</li>
+</ul></li>
+<li><p><b>Time-Series data layout</b></p>
+<ul>
+<li>Implemented in AsterixDB BDMS</li>
+<li>LSM-Tree based data layout</li>
+<li>Native spatial capabilities.</li>
+<li>Primary index on time dimension</li>
+<li>Secondary index on spatial dimension</li>
+</ul></li>
+</ul>
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
