@@ -56,16 +56,17 @@
     - supports spatial join operations (e.g., ST_INTERSECTS).
 
 - **Time-Series data layout**
-    - Implemented in <b>AsterixDB BDMS</b> ;
-    - LSM-Tree based data layout ;
-    - Native spatial capabilities ;
-    - Primary index on time dimension ;
-    - Secondary index on spatial dimension .
+    - Implemented in <b>AsterixDB</b> ;
+    - LSM-Tree based;
+    - Native spatial capabilities;
+    - Primary index on time dimension;
+    - Secondary index on spatial dimension.
 
 ## STGraph - Operations
 
 - <b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:
-        - <div>Path(n<sub>i</sub>, ..., n<sub>k</sub>) è valido &iff; ⋂<sub>j=i..k</sub> I<sub>e<sub>j</sub></sub> &ne; &empty; </div>
+    - <div>Path(n<sub>i</sub>, ..., n<sub>k</sub>) è valido &iff; ⋂<sub>j=i..k-1</sub> I<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub> &ne; &empty;</div>
+
 - <b>Join strategy</b>: Nested-Loop;
 - <b>>GraphNode-TSNode</b>
     - Each time a traversal goes through a virtual edge
