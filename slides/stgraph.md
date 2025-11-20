@@ -37,7 +37,7 @@
     - Time-Series node <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#f39c42; border:2px solid #333;"></span> ;
     
 - <b>Edges</b>
-    - Graph edge <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> -> <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span>;
+    - Graph edge <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> -> <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span>
     - Virtual edge <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> -> <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#f39c42; border:2px solid #333;"></span>
 :::
 ::::
@@ -48,28 +48,34 @@
 - Implemented in <b>Kotlin</b>.
 
 - **Graph data layout**
-    - based on <b>index-free adjacency</b> through <b>fixed-size records</b> stored in <i>nodes, edges,</i> and <i>property</i> files.
-    - properties and edges are represented as a <b>linked chain of pointers</b>;
+    - Based on <b>index-free adjacency</b> through <b>fixed-size records</b> stored in <i>nodes, edges,</i> and <i>property</i> files.
+    - Properties and edges are represented as a <b>linked chain of pointers</b>;
         - values > 8 bytes (e.g. strings, geometries) are stored in a dynamic storage (RocksDB);
-    - time dimension as first citizen;
-    - supports spatial join operations (e.g., ST_INTERSECTS).
+    - Time dimension as first citizen;
 
 - **Time-Series data layout**
-    - Implemented in <b>AsterixDB</b> ;
-    - LSM-Tree based;
+    - Implemented through <b>AsterixDB</b> (LSM-Tree based);
     - Native spatial capabilities;
-    - Primary index on time dimension;
-    - Secondary index on spatial dimension.
-    - Outgoing edges and properties are stored in a "fat" representation".
+    - Primary index on time and secondary index on space;
+    - Properties and outgoing edges are stored as "fat" graph properties.
 
 ## STGraph - Operations
 
 - <b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:
     - <div>isValid(Path(n<sub>i</sub>, ..., n<sub>k</sub>)) &iff; ⋂<sub>j=i..k-1</sub> I<sub>e<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub></sub> &ne; &empty;, I = validityInterval(n)</div>
 
-- <b>Join strategy</b>: Nested-Loop;
-- <b>Traversing a virtual edge</b>:
-    - Entails a query to AsterixDB ;
-    - Filter pushdown ;
-    - <b>No support for cross time-series operations</b> .
+- <b>Querying STGraph</b>:
+    - Naive <b>nested-Loop</b> join strategy ;
+    - <b>Spatial join operations</b> (e.g., ST_INTERSECTS);
 
+    - <b>Traversing a virtual edge</b>:
+        - Entails a query to AsterixDB ;
+        - Supports filter pushdown ;
+        - <b>Query results are materialized as virtual nodes in the graph at query time.</b>
+
+    -<b> Two steps</b>:
+        - <b>Graph materialization</b>: retrieve virtual nodes and edges.
+        - <b>Query solving</b>.
+
+- **As of today**
+    - <b>No support for cross time-series operations</b> .
