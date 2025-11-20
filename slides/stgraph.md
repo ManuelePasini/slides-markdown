@@ -24,13 +24,13 @@
 - If so, can we embed two different data-layout into the same conceptual storage system and provide hybrid capabilities?
 
 :::: {.columns}
-::: {.column width="80%"}
+::: {.column width="75%"}
 
 
 ![Graph+TimeSeries Hybrid data model](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg)
 
 :::
-::: {.column width="20%"}
+::: {.column width="25%"}
 
 - <b>Nodes</b>
     - Graph node;
@@ -69,4 +69,6 @@
 
 - <b>Join strategy</b>: Nested-Loop;
 - <b>>GraphNode-TSNode</b>
-    - Each time a traversal goes through a virtual edge
+    - Each traversal of a virtual edge entails a query to AsterixDB.
+    - Filter pushdown
+    - <b>No support for cross time-series operations</b>
