@@ -390,7 +390,9 @@
 <ul>
 <li>Temporal DFS, temporal feasibility check based on constraint tightening:
 <ul>
-<li>[t_A^s, t_A^e) [t_B^s, t_B^e) (t_A^s, t_B^s) &lt; (t_A^e, t_B^e)</li>
+<li><div>
+[t_A^s, t_A^e) ∩ [t_B^s, t_B^e) ≠ ∅ ⇔ max(t_A^s, t_B^s) &lt; min(t_A^e, t_B^e)
+</div></li>
 </ul></li>
 </ul></b></li><b>
 <li><p><strong>GraphNode2GraphNode</strong></p></li>
