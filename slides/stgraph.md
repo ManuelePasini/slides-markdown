@@ -47,7 +47,8 @@
 
 - <b>Search Algorithm<\b>: 
     - Temporal DFS, temporal feasibility check based on constraint tightening:
-        - [t_A^s, t_A^e) \cap [t_B^s, t_B^e) \neq \emptyset \iff \max(t_A^s, t_B^s) < \min(t_A^e, t_B^e)
+        - <div>  [t_A^s, t_A^e) &cap; [t_B^s, t_B^e) &ne; &empty; &iff; max(t_A^s, t_B^s) &lt; min(t_A^e, t_B^e)</div>
+
 
 - **GraphNode2GraphNode**
 
