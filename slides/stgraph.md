@@ -66,19 +66,21 @@
 
 - <b>Querying STGraph</b>:
 
-    - Executed in <b>two steps</b>:
-        - <b>Graph exploration</b> through a DFS search;
-        - <b>Graph materialization</b>: if exploration leads to a virtual edge, materialize its virtual nodes;
+    - Executed in <b>three steps</b>:
+        - <b>Graph exploration</b> through DFS;
+        - <b>Graph materialization</b>: if exploring a virtual edge, materialize its virtual nodes;
         - <b>Query solving</b>.
 
     - <b>Materializing a virtual node</b>:
         - Each virtual edge traversal entails a temporal query to AsterixDB;
-        - Output tuples are materialized as virtual nodes and connected in the graph.
+        - Output tuples are materialized as virtual nodes and connected within the graph.
 
     - <b>Optimizations</b>
         - Naive <b>nested-Loop</b> join strategy;
-        - Supports filter pushdown to AsterixDB;
-        - Supports spatial join/filtering operations (e.g., ST_INTERSECTS).
+        - Support for filter pushdown to AsterixDB;
+        - Support for spatial join/filtering operations (e.g., ST_INTERSECTS).
+
+## Limitations and Future works
 
 - **As of today**
     - <b>No support for cross time-series operations</b> .
