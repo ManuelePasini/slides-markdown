@@ -374,8 +374,8 @@
 </ul></li>
 <li><b>Edges</b>
 <ul>
-<li>Graph edge <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> -&gt; <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span>;</li>
-<li>Virtual edge <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> -&gt; <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#f39c42; border:2px solid #333;"></span></li>
+<li>Graph edge <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> &lt;–&gt; <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span></li>
+<li>Virtual edge <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> &lt;–&gt; <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#f39c42; border:2px solid #333;"></span></li>
 </ul></li>
 </ul>
 </div>
@@ -387,40 +387,55 @@
 <li><p>Implemented in <b>Kotlin</b>.</p></li>
 <li><p><strong>Graph data layout</strong></p>
 <ul>
-<li>based on <b>index-free adjacency</b> through <b>fixed-size records</b> stored in <i>nodes, edges,</i> and <i>property</i> files.</li>
-<li>properties and edges are represented as a <b>linked chain of pointers</b>;
+<li>Based on <b>index-free adjacency</b> through <b>fixed-size records</b> stored in <i>nodes, edges,</i> and <i>property</i> files.</li>
+<li>Properties and edges are represented as a <b>linked chain of pointers</b>;
 <ul>
 <li>values &gt; 8 bytes (e.g.&nbsp;strings, geometries) are stored in a dynamic storage (RocksDB);</li>
 </ul></li>
-<li>time dimension as first citizen;</li>
-<li>supports spatial join operations (e.g., ST_INTERSECTS).</li>
+<li>Time dimension as first citizen;</li>
 </ul></li>
 <li><p><strong>Time-Series data layout</strong></p>
 <ul>
-<li>Implemented in <b>AsterixDB</b> ;</li>
-<li>LSM-Tree based;</li>
+<li>Implemented through <b>AsterixDB</b> (LSM-Tree based);</li>
 <li>Native spatial capabilities;</li>
-<li>Primary index on time dimension;</li>
-<li>Secondary index on spatial dimension.</li>
-<li>Outgoing edges and properties are stored in a “fat” representation”.</li>
+<li>Primary index on time and secondary index on space;</li>
+<li>Properties and outgoing edges are stored as “fat” graph properties.</li>
 </ul></li>
 </ul>
 </section>
 <section id="stgraph---operations" class="slide level2">
 <h2>STGraph - Operations</h2>
 <ul>
-<li><b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:
+<li><p><b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:</p>
 <ul>
 <li><div>
 isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ⋂<sub>j=i..k-1</sub> I<sub>e<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub></sub> ≠ ∅, I = validityInterval(n)
 </div></li>
 </ul></li>
-<li><b>Join strategy</b>: Nested-Loop;</li>
-<li><b>Traversing a virtual edge</b>:
+<li><p><b>Querying STGraph</b>:</p>
 <ul>
-<li>Entails a query to AsterixDB ;</li>
-<li>Filter pushdown ;</li>
+<li>Executed in <b>two steps</b>:
+<ul>
+<li><b>Graph exploration</b> through a DFS search;</li>
+<li><b>Graph materialization</b>: if exploration leads to a virtual edge, materialize its virtual nodes;</li>
+<li><b>Query solving</b>.</li>
+</ul></li>
+<li><b>Materializing a virtual node</b>:
+<ul>
+<li>Each virtual edge traversal entails a temporal query to AsterixDB;</li>
+<li>Output tuples are materialized as virtual nodes and connected in the graph.</li>
+</ul></li>
+<li><b>Optimizations</b>
+<ul>
+<li>Naive <b>nested-Loop</b> join strategy;</li>
+<li>Supports filter pushdown to AsterixDB;</li>
+<li>Supports spatial join/filtering operations (e.g., ST_INTERSECTS).</li>
+</ul></li>
+</ul></li>
+<li><p><strong>As of today</strong></p>
+<ul>
 <li><b>No support for cross time-series operations</b> .</li>
+<li><b>Query to AsterixDB block path traversal algorithm (could by asynchronous)</b></li>
 </ul></li>
 </ul>
 <div class="quarto-auto-generated-content">
