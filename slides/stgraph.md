@@ -66,14 +66,14 @@
 
 - <b>Search algorithm</b>: 
     - Temporal DFS, temporal feasibility check based on constraint tightening:
-    -  <div>[t<sub>A</sub><sup>s</sup>, t<sub>A</sub><sup>e</sup>) &cap; [t<sub>B</sub><sup>s</sup>, t<sub>B</sub><sup>e</sup>) &ne; &empty; &iff; 
-        max(t<sub>A</sub><sup>s</sup>, t<sub>B</sub><sup>s</sup>) &lt; min(t<sub>A</sub><sup>e</sup>, t<sub>B</sub><sup>e</sup>)</div>
-    - <div>
-  [t<sub>A</sub><sup>s</sup>, t<sub>A</sub><sup>e</sup>) &cap; [t<sub>B</sub><sup>s</sup>, t<sub>B</sub><sup>e</sup>) &ne; &empty; &iff; max(t<sub>A</sub><sup>s</sup>, t<sub>B</sub><sup>s</sup>) &lt; min(t<sub>A</sub><sup>e</sup>, t<sub>B</sub><sup>e</sup>)
+    -  <div>
+  ⋂<sub>i=1..k</sub> I<sub>e<sub>i</sub></sub> &ne; &empty;
 </div>
     - <div>
-  I<sub>a</sub> &cap; I<sub>b</sub> &ne; &empty;
+  path(P) è valido &iff; ⋂<sub>i=1..k</sub> I<sub>e<sub>i</sub></sub> &ne; &empty;
 </div>
+
+
 
 
 - <b>Join strategy</b>: Nested-Loop;
