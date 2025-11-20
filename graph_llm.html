@@ -497,6 +497,26 @@ by prompting LLMs to generate a format explanation of the raw graph inputs for i
 </div>
 </div>
 </section>
+<section id="applications" class="slide level2">
+<h2>Applications</h2>
+<ul>
+<li>GraphText: Graph reasoning in text space - NIPS 2025:
+<ul>
+<li>GraphText translates graphs to natural language. GRAPHTEXT derives a graph-syntax tree for each graph that encapsulates both the node attributes and inter-node relationships. Traversal of the tree yields a graph text sequence, which is then processed by an LLM to treat graph tasks as text generation tasks. Notably, GRAPHTEXT offers multiple advantages. It introduces training-free graph reasoning: even without training on graph data, GRAPHTEXT with ChatGPT can achieve on par with, or even surpassing, the performance of supervised-trained graph neural networks through in-context learning (ICL). Furthermore, GRAPHTEXT paves the way for interactive graph reasoning, allowing both humans and LLMs to communicate with the model seamlessly using natural language.</li>
+</ul></li>
+<li>Temporal Knowledge Graph Forecasting: predicting future facts occur at time tn based on given historical facts occur at time t with t &lt; tn</li>
+<li>Knowledge base question answering:
+<ul>
+<li><img data-src="https://doi.org/10.1609/aaai.v38i17.29823" alt="FlexKQBA">: given a KG, create new data to train QA algorithms: given a query, parse them in natural language</li>
+<li><img data-src="https://doi.org/10.1145/3627673.3679805" alt="Knowledge Graph Question Generation (KGQG)">: generate questions based on graph.</li>
+</ul></li>
+<li><img data-src="https://10.0.4.85/ICASSP49660.2025.10889242" alt="Knowledge graph completion">:</li>
+<li>Class-Imbalanced Graph Learning: imbalance not only in labels (e.g.&nbsp;more fraud users than legit in a social network graph), but also in graph connectivity (more :marriedTo than :friendOf).
+<ul>
+<li>LLM used to generate synthetic data to represent the unbalanced class;</li>
+</ul></li>
+</ul>
+</section>
 <section id="moro-takeouts" class="slide level2">
 <h2>Moro Takeouts</h2>
 <ul>
@@ -507,7 +527,11 @@ by prompting LLMs to generate a format explanation of the raw graph inputs for i
 <h2>LLMs on Graphs: A Comprehensive Survey - TKDE, 2024</h2>
 <h5 id="applications---text-paired-graphs---llm-as-aligner">Applications - <strong>Text-Paired graphs</strong> - LLM as Aligner</h5>
 
-<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/graphllm/taxonomy.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Taxonomy of graph + llm contributions in literature</p><div class="quarto-auto-generated-content">
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/graphllm/taxonomy.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Taxonomy of graph + llm contributions in literature</p><ul>
+<li>Una volta che embedd oe faccio rag e trovo qualcosa per similarità, lo passo comunque al LLM sotto forma testuale (?)</li>
+<li>se uso node2vec e embeddo un nodo, come glielo passo (e.g.&nbsp;text? json?)</li>
+</ul>
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
