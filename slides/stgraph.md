@@ -37,9 +37,8 @@
     - Time-Series node <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#f39c42; border:2px solid #333;"></span> ;
     
 - <b>Edges</b>
-    - Graph edge (to a graph node);
-    - Virtual edge (to a Time-Series node)
-
+    - Graph edge <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> -> <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span>;
+    - Virtual edge <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> -> <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#f39c42; border:2px solid #333;"></span>
 :::
 ::::
 
@@ -61,6 +60,7 @@
     - Native spatial capabilities;
     - Primary index on time dimension;
     - Secondary index on spatial dimension.
+    - Outgoing edges and properties are stored in a "fat" representation".
 
 ## STGraph - Operations
 
