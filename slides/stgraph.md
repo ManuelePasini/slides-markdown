@@ -24,13 +24,13 @@
 - If so, can we embed two different data-layout into the same conceptual storage system and provide hybrid capabilities?
 
 :::: {.columns}
-::: {.column width="70%"}
+::: {.column width="80%"}
 
 
 ![Graph+TimeSeries Hybrid data model](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg)
 
 :::
-::: {.column width="30%"}
+::: {.column width="20%"}
 
 - <b>Nodes</b>
     - Graph node;
@@ -64,18 +64,8 @@
 
 ## STGraph - Operations
 
-- <b>Search algorithm</b>: 
-    - Temporal DFS, temporal feasibility check based on constraint tightening:
-    -  <div>
-  ⋂<sub>i=1..k</sub> I<sub>e<sub>i</sub></sub> &ne; &empty;
-</div>
-    - <div>
-  path(P) è valido &iff; ⋂<sub>i=1..k</sub> I<sub>e<sub>i</sub></sub> &ne; &empty;
-</div>
-
-
-
-
+- <b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:
+        - <div>Path(n<sub>i</sub>, ..., n<sub>k</sub>) è valido &iff; ⋂<sub>j=i..k</sub> I<sub>e<sub>j</sub></sub> &ne; &empty; </div>
 - <b>Join strategy</b>: Nested-Loop;
--  **GraphNode-TSNode**
+- <b>>GraphNode-TSNode</b>
     - Each time a traversal goes through a virtual edge
