@@ -411,15 +411,15 @@
 <li><b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:
 <ul>
 <li><div>
-Path(n<sub>i</sub>, …, n<sub>k</sub>) è valido ⇔ ⋂<sub>j=i..k-1</sub> I<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub> ≠ ∅
+Path(n<sub>i</sub>, …, n<sub>k</sub>) è valido ⇔ ⋂<sub>j=i..k-1</sub> I<sub>e<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub></sub> ≠ ∅
 </div></li>
 </ul></li>
 <li><b>Join strategy</b>: Nested-Loop;</li>
-<li><b>&gt;GraphNode-TSNode</b>
+<li><b>Traversing a virtual edge</b>:
 <ul>
-<li>Each traversal of a virtual edge entails a query to AsterixDB.</li>
-<li>Filter pushdown</li>
-<li><b>No support for cross time-series operations</b></li>
+<li>Entails a query to AsterixDB ;</li>
+<li>Filter pushdown ;</li>
+<li><b>No support for cross time-series operations</b> .</li>
 </ul></li>
 </ul>
 <div class="quarto-auto-generated-content">
