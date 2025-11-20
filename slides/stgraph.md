@@ -27,7 +27,7 @@
 ::: {.column width="70%"}
 
 
-![Graph+TimeSeries Hybrid data model](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg)
+![Graph+TimeSeries Hybrid data model](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/stgraph/STGraph.svg)
 
 :::
 ::: {.column width="30%"}
@@ -65,7 +65,7 @@
 ## STGraph - Operations
 
 - <b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:
-    - <div>Path(n<sub>i</sub>, ..., n<sub>k</sub>) è valido &iff; ⋂<sub>j=i..k-1</sub> I<sub>e<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub></sub> &ne; &empty;</div>
+    - <div>isValid(Path(n<sub>i</sub>, ..., n<sub>k</sub>)) &iff; ⋂<sub>j=i..k-1</sub> I<sub>e<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub></sub> &ne; &empty;, I = validityInterval(n)</div>
 
 - <b>Join strategy</b>: Nested-Loop;
 - <b>Traversing a virtual edge</b>:
