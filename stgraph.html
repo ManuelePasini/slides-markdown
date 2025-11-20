@@ -361,7 +361,7 @@
 <div class="column" style="width:70%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg"></p>
+<p><img data-src="https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/stgraph/STGraph.svg"></p>
 <figcaption>Graph+TimeSeries Hybrid data model</figcaption>
 </figure>
 </div>
@@ -412,7 +412,7 @@
 <li><b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:
 <ul>
 <li><div>
-Path(n<sub>i</sub>, …, n<sub>k</sub>) è valido ⇔ ⋂<sub>j=i..k-1</sub> I<sub>e<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub></sub> ≠ ∅
+isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ⋂<sub>j=i..k-1</sub> I<sub>e<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub></sub> ≠ ∅, I = validityInterval(n)
 </div></li>
 </ul></li>
 <li><b>Join strategy</b>: Nested-Loop;</li>
