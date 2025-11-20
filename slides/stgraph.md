@@ -45,15 +45,14 @@
 
 ## STGraph - Operations
 
-- <b>Search Algorithm<\b>: 
+- <b>Search algorithm</b>: 
     - Temporal DFS, temporal feasibility check based on constraint tightening:
-        - <div>  [t_A^s, t_A^e) &cap; [t_B^s, t_B^e) &ne; &empty; &iff; max(t_A^s, t_B^s) &lt; min(t_A^e, t_B^e)</div>
+    -  <div>[t<sub>A</sub><sup>s</sup>, t<sub>A</sub><sup>e</sup>) &cap; [t<sub>B</sub><sup>s</sup>, t<sub>B</sub><sup>e</sup>) &ne; &empty; &iff; 
+        max(t<sub>A</sub><sup>s</sup>, t<sub>B</sub><sup>s</sup>) &lt; min(t<sub>A</sub><sup>e</sup>, t<sub>B</sub><sup>e</sup>)</div>
+    - <div>
+  [t<sub>A</sub><sup>s</sup>, t<sub>A</sub><sup>e</sup>) &cap; [t<sub>B</sub><sup>s</sup>, t<sub>B</sub><sup>e</sup>) &ne; &empty; &iff; max(t<sub>A</sub><sup>s</sup>, t<sub>B</sub><sup>s</sup>) &lt; min(t<sub>A</sub><sup>e</sup>, t<sub>B</sub><sup>e</sup>)
+</div>
 
-
-- **GraphNode2GraphNode**
-
-- **GraphNode-TSNode**
-
-- Furthermore
-    - Join: Nested-Join Loop;
-    - Temporal traversal: monotonic validity window
+- <b>Join strategy</b>: Nested-Loop;
+-  **GraphNode-TSNode**
+    - Each time a traversal goes through a virtual edge
