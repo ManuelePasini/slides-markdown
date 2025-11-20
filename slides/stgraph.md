@@ -22,8 +22,25 @@
 
 - Can we separate data by temporal granularity to support hybrid modeling across time-series and temporal graph systems?
 - If so, can we embed two different data-layout into the same conceptual storage system and provide hybrid capabilities?
+:::: {.columns}
+::: {.column width="50%"}
+
 
 ![Graph+TimeSeries Hybrid data model](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg)
+
+:::
+::: {.column width="50%"}
+
+- <b>Nodes</b>
+    - Graph node;
+    - Time-Series node;
+- <b>Edges</b>
+    - Graph edge (to a graph node);
+    - Virtual edge (to a Time-Series node)
+
+:::
+::::
+
 
 ## STGraph - Implementation
 
