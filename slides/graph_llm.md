@@ -135,6 +135,19 @@
 :::
 ::::
 
+## Applications
+
+- GraphText: Graph reasoning in text space - NIPS 2025:
+    - GraphText translates graphs to natural language. GRAPHTEXT derives a graph-syntax tree for each graph that encapsulates both the node attributes and inter-node relationships. Traversal of the tree yields a graph text sequence, which is then processed by an LLM to treat graph tasks as text generation tasks. Notably, GRAPHTEXT offers multiple advantages. It introduces training-free graph reasoning: even without training on graph data, GRAPHTEXT with ChatGPT can achieve on par with, or even surpassing, the performance of supervised-trained graph neural networks through in-context learning (ICL). Furthermore, GRAPHTEXT paves the way for interactive graph reasoning, allowing both humans and LLMs to communicate with the model seamlessly using natural language. 
+
+- Temporal Knowledge Graph Forecasting: predicting future facts occur at time tn based on given historical facts occur at time t with t < tn
+- Knowledge base question answering:
+    - ![FlexKQBA](https://doi.org/10.1609/aaai.v38i17.29823): given a KG, create new data to train QA algorithms: given a query, parse them in natural language
+    - ![Knowledge Graph Question Generation (KGQG)](https://doi.org/10.1145/3627673.3679805): generate questions based on graph.
+- ![Knowledge graph completion](https://10.0.4.85/ICASSP49660.2025.10889242):
+- Class-Imbalanced Graph Learning: imbalance not only in labels (e.g. more fraud users than legit in a social network graph), but also in graph connectivity (more :marriedTo than :friendOf).
+    - LLM used to generate synthetic data to represent the unbalanced class;
+
 ## Moro Takeouts
 
 - Use RAG only if the question lies beyond the typical training data, if the knowledge we're asking is not embedded in parameters, otherwise performances might get worse
@@ -144,3 +157,7 @@
 ##### Applications - **Text-Paired graphs**  - LLM as Aligner
 
 ![Taxonomy of graph + llm contributions in literature](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/graphllm/taxonomy.png?raw=true)
+
+
+- Una volta che embedd oe faccio rag e trovo qualcosa per similarità, lo passo comunque al LLM sotto forma testuale (?)
+- se uso node2vec e embeddo un nodo, come glielo passo (e.g. text? json?)
