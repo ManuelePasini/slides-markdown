@@ -358,14 +358,14 @@
 <li>If so, can we embed two different data-layout into the same conceptual storage system and provide hybrid capabilities?</li>
 </ul>
 <div class="columns">
-<div class="column" style="width:80%;">
+<div class="column" style="width:75%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg"></p>
 <figcaption>Graph+TimeSeries Hybrid data model</figcaption>
 </figure>
 </div>
-</div><div class="column" style="width:20%;">
+</div><div class="column" style="width:25%;">
 <ul>
 <li><b>Nodes</b>
 <ul>
@@ -417,7 +417,9 @@ Path(n<sub>i</sub>, …, n<sub>k</sub>) è valido ⇔ ⋂<sub>j=i..k-1</sub> I<s
 <li><b>Join strategy</b>: Nested-Loop;</li>
 <li><b>&gt;GraphNode-TSNode</b>
 <ul>
-<li>Each time a traversal goes through a virtual edge</li>
+<li>Each traversal of a virtual edge entails a query to AsterixDB.</li>
+<li>Filter pushdown</li>
+<li><b>No support for cross time-series operations</b></li>
 </ul></li>
 </ul>
 <div class="quarto-auto-generated-content">
