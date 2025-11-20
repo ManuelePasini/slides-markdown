@@ -33,8 +33,8 @@
 ::: {.column width="30%"}
 
 - <b>Nodes</b>
-    - Graph node <span style="display:inline-block; width:12px; height:12px; border-radius:50%; background:#8eb3c5; border:1px solid #333;"></span> ;
-    - Time-Series node <span style="display:inline-block; width:12px; height:12px; border-radius:50%; background:#f39c42; border:1px solid #333;"></span> ;
+    - Graph node <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> ;
+    - Time-Series node <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#f39c42; border:2px solid #333;"></span> ;
     
 - <b>Edges</b>
     - Graph edge (to a graph node);
@@ -49,7 +49,7 @@
 - Implemented in <b>Kotlin</b>.
 
 - **Graph data layout**
-    - based on <b>index-free adjacency</b> through <i>nodes, edges,</i> and <i>property</i> files.
+    - based on <b>index-free adjacency</b> through <b>fixed-size records</b> stored in <i>nodes, edges,</i> and <i>property</i> files.
     - properties and edges are represented as a <b>linked chain of pointers</b>;
         - values > 8 bytes (e.g. strings, geometries) are stored in a dynamic storage (RocksDB);
     - time dimension as first citizen;
@@ -72,3 +72,4 @@
     - Entails a query to AsterixDB ;
     - Filter pushdown ;
     - <b>No support for cross time-series operations</b> .
+
