@@ -20,7 +20,7 @@
 
 ## STGraph - Conceptualization
 
-- Can we distinguish highly-temporal data from moderately-temporal data ?
+- Can we separate data by temporal granularity to support hybrid modeling across time-series and temporal graph systems?
 - If so, can we embed two different data-layout into the same conceptual storage system?
 
 ![Graph+TimeSeries Hybrid data model](https://raw.githubusercontent.com/ManuelePasini/slides-markdown/refs/heads/master/slides/images/ioanninaSlides/dt_graph.svg)
