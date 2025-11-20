@@ -48,16 +48,16 @@
 - Implemented in <b>Kotlin</b>.
 
 - **Graph data layout**
-    - Based on <b>index-free adjacency</b> through <b>fixed-size records</b> stored in <i>nodes, edges,</i> and <i>property</i> files.
-    - Properties and edges are represented as a <b>linked chain of pointers</b>;
-        - values > 8 bytes (e.g. strings, geometries) are stored in a dynamic storage (RocksDB);
-    - Time dimension as first citizen;
+    - <b>Index-free adjacency</b> through <b>fixed-size records</b> stored in <i>nodes, edges,</i> and <i>property</i> files.
+    - Properties/edges represented as <b>linked chain of pointers</b>;
+        - values > 8 bytes (e.g. strings, geometries) stored in dynamic storage (RocksDB);
+    - Time attribute as first citizen;
 
 - **Time-Series data layout**
     - Implemented through <b>AsterixDB</b> (LSM-Tree based);
     - Native spatial capabilities;
     - Primary index on time and secondary index on space;
-    - Properties and outgoing edges are stored as "fat" graph properties.
+    - Properties/outgoing edges stored as "fat" graph properties.
 
 ## STGraph - Operations
 
