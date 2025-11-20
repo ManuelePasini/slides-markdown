@@ -369,8 +369,8 @@
 <ul>
 <li><b>Nodes</b>
 <ul>
-<li>Graph node <span style="display:inline-block; width:12px; height:12px; border-radius:50%; background:#8eb3c5; border:1px solid #333;"></span> ;</li>
-<li>Time-Series node <span style="display:inline-block; width:12px; height:12px; border-radius:50%; background:#f39c42; border:1px solid #333;"></span> ;</li>
+<li>Graph node <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> ;</li>
+<li>Time-Series node <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#f39c42; border:2px solid #333;"></span> ;</li>
 </ul></li>
 <li><b>Edges</b>
 <ul>
@@ -387,7 +387,7 @@
 <li><p>Implemented in <b>Kotlin</b>.</p></li>
 <li><p><strong>Graph data layout</strong></p>
 <ul>
-<li>based on <b>index-free adjacency</b> through <i>nodes, edges,</i> and <i>property</i> files.</li>
+<li>based on <b>index-free adjacency</b> through <b>fixed-size records</b> stored in <i>nodes, edges,</i> and <i>property</i> files.</li>
 <li>properties and edges are represented as a <b>linked chain of pointers</b>;
 <ul>
 <li>values &gt; 8 bytes (e.g.&nbsp;strings, geometries) are stored in a dynamic storage (RocksDB);</li>
