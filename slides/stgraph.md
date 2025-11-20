@@ -35,6 +35,7 @@
 - <b>Nodes</b>
     - Graph node;
     - Time-Series node;
+    
 - <b>Edges</b>
     - Graph edge (to a graph node);
     - Virtual edge (to a Time-Series node)
