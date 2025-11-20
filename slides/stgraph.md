@@ -20,8 +20,8 @@
 
 ## STGraph - Conceptualization
 
-- Can we separate data by temporal granularity to support hybrid modeling across time-series and temporal graph systems?
-- If so, can we embed two different data-layout into the same conceptual storage system and provide hybrid capabilities?
+- **RQ1** - Can we separate data by temporal granularity to support hybrid modeling across time-series and temporal graph systems?
+- **RQ2** - If so, can we embed two different data-layout into the same conceptual storage system and provide hybrid capabilities?
 
 :::: {.columns}
 ::: {.column width="70%"}
