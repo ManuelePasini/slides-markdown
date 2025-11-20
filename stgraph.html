@@ -397,21 +397,23 @@
 </ul></li>
 <li><p><strong>Time-Series data layout</strong></p>
 <ul>
-<li>Implemented in <b>AsterixDB BDMS</b> ;</li>
-<li>LSM-Tree based data layout ;</li>
-<li>Native spatial capabilities ;</li>
-<li>Primary index on time dimension ;</li>
-<li>Secondary index on spatial dimension .</li>
+<li>Implemented in <b>AsterixDB</b> ;</li>
+<li>LSM-Tree based;</li>
+<li>Native spatial capabilities;</li>
+<li>Primary index on time dimension;</li>
+<li>Secondary index on spatial dimension.</li>
 </ul></li>
 </ul>
 </section>
 <section id="stgraph---operations" class="slide level2">
 <h2>STGraph - Operations</h2>
 <ul>
-<li><b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening: -
-<div>
-Path(n<sub>i</sub>, …, n<sub>k</sub>) è valido ⇔ ⋂<sub>j=i..k</sub> I<sub>e<sub>j</sub></sub> ≠ ∅
+<li><b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:
+<ul>
+<li><div>
+Path(n<sub>i</sub>, …, n<sub>k</sub>) è valido ⇔ ⋂<sub>j=i..k-1</sub> I<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub> ≠ ∅
 </div></li>
+</ul></li>
 <li><b>Join strategy</b>: Nested-Loop;</li>
 <li><b>&gt;GraphNode-TSNode</b>
 <ul>
