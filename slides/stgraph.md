@@ -30,11 +30,11 @@
 - Implemented in <b>Kotlin</b>.
 
 - **Graph data layout**
-    - based on <b>index-free adjacency</b>;
+    - based on <b>index-free adjacency</b> through <i>nodes, edges,</i> and <i>property</i> files.
     - properties and edges are represented as a <b>linked chain of pointers</b>;
-    - properties values bigger than 8 bytes (e.g. strings, geometries) are stored in a dynamic storage (RocksDB);
+        - values > 8 bytes (e.g. strings, geometries) are stored in a dynamic storage (RocksDB);
     - time dimension as first citizen;
-    - supports spatial operations (e.g., ST_INTERSECTS).
+    - supports spatial join operations (e.g., ST_INTERSECTS).
 
 - **Time-Series data layout**
     - Implemented in <b>AsterixDB BDMS</b> ;
@@ -42,3 +42,17 @@
     - Native spatial capabilities ;
     - Primary index on time dimension ;
     - Secondary index on spatial dimension .
+
+## STGraph - Operations
+
+- <b>Search Algorithm<\b>: 
+    - Temporal DFS, temporal feasibility check based on constraint tightening:
+        - [t_A^s, t_A^e) \cap [t_B^s, t_B^e) \neq \emptyset \iff \max(t_A^s, t_B^s) < \min(t_A^e, t_B^e)
+
+- **GraphNode2GraphNode**
+
+- **GraphNode-TSNode**
+
+- Furthermore
+    - Join: Nested-Join Loop;
+    - Temporal traversal: monotonic validity window
