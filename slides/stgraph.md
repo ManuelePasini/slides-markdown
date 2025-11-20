@@ -69,6 +69,10 @@
     - <div>
   [t<sub>A</sub><sup>s</sup>, t<sub>A</sub><sup>e</sup>) &cap; [t<sub>B</sub><sup>s</sup>, t<sub>B</sub><sup>e</sup>) &ne; &empty; &iff; max(t<sub>A</sub><sup>s</sup>, t<sub>B</sub><sup>s</sup>) &lt; min(t<sub>A</sub><sup>e</sup>, t<sub>B</sub><sup>e</sup>)
 </div>
+    - <div>
+  I<sub>a</sub> &cap; I<sub>b</sub> &ne; &empty;
+</div>
+
 
 - <b>Join strategy</b>: Nested-Loop;
 -  **GraphNode-TSNode**
