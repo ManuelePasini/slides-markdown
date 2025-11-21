@@ -414,10 +414,10 @@ isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ⋂<sub>j=i..k-1</sub> I<su
 </ul></li>
 <li><p><b>Querying STGraph</b>:</p>
 <ul>
-<li>Executed in <b>three steps</b>:
+<li>Executed in <b>three iterative steps</b>:
 <ul>
-<li><b>Graph exploration</b> through DFS;</li>
-<li><b>Graph materialization</b>: if exploring a virtual edge, materialize its virtual nodes;</li>
+<li><b>Path exploration</b> through DFS;</li>
+<li><b>Path materialization</b>: if exploring a virtual edge, materialize its virtual nodes;</li>
 <li><b>Query solving</b>.</li>
 </ul></li>
 <li><b>Materializing a virtual node</b>:
