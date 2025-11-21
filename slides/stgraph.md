@@ -67,9 +67,9 @@
 - <b>Querying STGraph</b>:
 
     - Executed in <b>three iterative steps</b>:
-        - <b>Path exploration</b> through DFS;
+        - <b>Path exploration</b> through temporal DFS;
         - <b>Path materialization</b>: if exploring a virtual edge, materialize its virtual nodes;
-        - <b>Query solving</b>.
+        - <b>Path filtering</b>.
 
     - <b>Materializing a virtual node</b>:
         - Each virtual edge traversal entails a temporal query to AsterixDB;
