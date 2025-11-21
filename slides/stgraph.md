@@ -66,9 +66,9 @@
 
 - <b>Querying STGraph</b>:
 
-    - Executed in <b>three steps</b>:
-        - <b>Graph exploration</b> through DFS;
-        - <b>Graph materialization</b>: if exploring a virtual edge, materialize its virtual nodes;
+    - Executed in <b>three iterative steps</b>:
+        - <b>Path exploration</b> through DFS;
+        - <b>Path materialization</b>: if exploring a virtual edge, materialize its virtual nodes;
         - <b>Query solving</b>.
 
     - <b>Materializing a virtual node</b>:
