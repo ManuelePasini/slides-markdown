@@ -83,5 +83,5 @@
 ## Limitations and Future works
 
 - **As of today**
-    - <b>No support for cross time-series operations</b> .
-    - <b>Query to AsterixDB block path traversal algorithm (could by asynchronous)</b>
+    - No support for cross time-series operations ;
+    - Query to AsterixDB should be asynchronous ;
