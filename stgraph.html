@@ -408,7 +408,7 @@
 <li><p><b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:</p>
 <ul>
 <li><div>
-isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ⋂<sub>j=i..k-1</sub> I<sub>e<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub></sub> ≠ ∅, I = validityInterval(n)
+isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ⋂<sub>j=i..k-1</sub> I<sub>e<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub></sub> ≠ ∅, I<sub>e</sub> = [t<sub>a</sub>; t<sub>b</sub>[
 </div></li>
 </ul></li>
 <li><p><b>Querying STGraph</b>:</p>
@@ -422,7 +422,7 @@ isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ⋂<sub>j=i..k-1</sub> I<su
 <li><b>Materializing a virtual node</b>:
 <ul>
 <li>Each virtual edge traversal entails a temporal query to AsterixDB;</li>
-<li>Output tuples are materialized as virtual nodes and connected within the graph.</li>
+<li>Output tuples are materialized as nodes (dummy ID) and connected within the graph.</li>
 </ul></li>
 <li><b>Optimizations</b>
 <ul>
