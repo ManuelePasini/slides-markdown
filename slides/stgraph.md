@@ -12,7 +12,7 @@
     - Efficient on <i>large-volume datasets</i>.
 
 - Different layouts ➔ different ingestion and workload capabilities...
-    -➔ Yet many modern data-intensive applications combine both, e.g., IoT systems, Digital Twins, and pervasive computing.
+    - Yet many modern data-intensive applications combine both, e.g., IoT systems, Digital Twins, and pervasive computing.
 
 - **What about an hybrid data structure ?**
 
@@ -79,7 +79,7 @@
         - Output tuples are materialized as nodes (dummy ID) and connected within the graph.
 
     - <b>Optimizations</b>
-        - Naive <b>nested-Loop</b> join strategy;
+        - Support for join operations through naive <b>nested-Loop</b> join;
         - Support for filter pushdown to AsterixDB;
         - Support for spatial join/filtering operations (e.g., ST_INTERSECTS).
 
