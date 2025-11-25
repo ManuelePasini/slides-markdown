@@ -408,7 +408,7 @@
 <li><p><b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:</p>
 <ul>
 <li><div>
-isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) &nbsp;⇔&nbsp; (<em>{j=i}^{k-1} I</em>{e(n_j, n_{j+1})} ), where (I_e = [t_a,, t_b[)
+isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ∩<sub>j=i..k-1</sub> I<sub>e(n<sub>j</sub>,n<sub>j+1</sub>)</sub> ≠ ∅, where I<sub>e</sub> = [t<sub>a</sub>, t<sub>b</sub>[
 </div></li>
 </ul></li>
 <li><p><b>Querying STGraph</b>:</p>
