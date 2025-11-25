@@ -1,3 +1,10 @@
+## [1.142.0](https://github.com/ManuelePasini/slides-markdown/compare/1.141.0...1.142.0) (2025-11-25)
+
+
+### Features
+
+* add STGraph slides ([3401ff7](https://github.com/ManuelePasini/slides-markdown/commit/3401ff7f8319b81c05e51a87d768ccd0b2ad8603))
+
 ## [1.141.0](https://github.com/ManuelePasini/slides-markdown/compare/1.140.0...1.141.0) (2025-11-25)
 
 
