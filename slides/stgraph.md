@@ -61,7 +61,7 @@
 ## STGraph - Operations
 
 - <b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:
-    - <div>isValid(Path(n<sub>i</sub>, ..., n<sub>k</sub>)) &iff; ⋂<sub>j=i..k-1</sub> I<sub>e<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub></sub> &ne; &empty;, I<sub>e</sub> = [t<sub>a</sub>; t<sub>b</sub>[</div>
+    - <div> isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) &nbsp;&iff;&nbsp; \(\displaystyle \bigcap_{j=i}^{k-1} I_{e(n_j, n_{j+1})} \neq \varnothing\), where \(I_e = [t_a,\, t_b[\) </div>
 
 - <b>Querying STGraph</b>:
 
@@ -82,5 +82,6 @@
 ## Limitations and Future works
 
 - **As of today**
-    - No support for cross time-series operations ;
-    - Query to AsterixDB should be asynchronous ;
+    - No support for cross time-series operations;
+    - Query to AsterixDB should be asynchronous;
+    - AsterixDB implementation could be far optimized and its full capabilities integrated;
