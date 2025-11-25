@@ -334,20 +334,23 @@
 <section id="stgraph---overview" class="slide level2">
 <h2>STGraph - Overview</h2>
 <ul>
-<li><p><b>Graph DBMSs</b></p>
+<li><b>Graph DBMSs</b>
 <ul>
 <li>Natively built on <strong>index-free adjacency principles</strong>;</li>
 <li>Optimized for high-performance <i>entity traversal</i>;</li>
 <li>Efficient on <i>small-volume datasets</i> .</li>
 </ul></li>
-<li><p><b>Time-Series DBMSs</b></p>
+<li><b>Time-Series DBMSs</b>
 <ul>
 <li>Natively built on <strong>Log-Structured Merge Tree</strong> based data structures;</li>
 <li>Optimized for <i>high-throughput temporal ingestion</i> and efficient management of <i>time-ordered data</i>;</li>
 <li>Efficient on <i>large-volume datasets</i>.</li>
 </ul></li>
-<li><p>Different layouts ➔ different ingestion and workload capabilities… -➔ Yet many modern data-intensive applications combine both, e.g., IoT systems, Digital Twins, and pervasive computing.</p></li>
-<li><p><strong>What about an hybrid data structure ?</strong></p></li>
+<li>Different layouts ➔ different ingestion and workload capabilities…
+<ul>
+<li>Yet many modern data-intensive applications combine both, e.g., IoT systems, Digital Twins, and pervasive computing.</li>
+</ul></li>
+<li><strong>What about an hybrid data structure ?</strong></li>
 </ul>
 </section>
 <section id="stgraph---conceptualization" class="slide level2">
@@ -426,7 +429,7 @@ isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ∩<sub>j=i..k-1</sub> I<su
 </ul></li>
 <li><b>Optimizations</b>
 <ul>
-<li>Naive <b>nested-Loop</b> join strategy;</li>
+<li>Support for join operations through naive <b>nested-Loop</b> join;</li>
 <li>Support for filter pushdown to AsterixDB;</li>
 <li>Support for spatial join/filtering operations (e.g., ST_INTERSECTS).</li>
 </ul></li>
