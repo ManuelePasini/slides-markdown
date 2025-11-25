@@ -61,7 +61,7 @@
 ## STGraph - Operations
 
 - <b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:
-    - <div>isValid(Path(n<sub>i</sub>, ..., n<sub>k</sub>)) &iff; ⋂<sub>j=i..k-1</sub> I<sub>e<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub></sub> &ne; &empty;, I = validityInterval(n)</div>
+    - <div>isValid(Path(n<sub>i</sub>, ..., n<sub>k</sub>)) &iff; ⋂<sub>j=i..k-1</sub> I<sub>e<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub></sub> &ne; &empty;, I<sub>e</sub> = [t<sub>a</sub>; t<sub>b</sub>[</div>
 
 - <b>Querying STGraph</b>:
 
@@ -72,7 +72,7 @@
 
     - <b>Materializing a virtual node</b>:
         - Each virtual edge traversal entails a temporal query to AsterixDB;
-        - Output tuples are materialized as virtual nodes and connected within the graph.
+        - Output tuples are materialized as nodes (dummy ID) and connected within the graph.
 
     - <b>Optimizations</b>
         - Naive <b>nested-Loop</b> join strategy;
