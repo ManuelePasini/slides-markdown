@@ -19,8 +19,8 @@
 
 ## STGraph - Conceptualization
 
-- **RQ1** - Can we separate data by temporal granularity to support hybrid modeling across time-series and temporal graph systems?
-- **RQ2** - If so, can we embed two different data-layout into the same conceptual storage system and provide hybrid capabilities?
+- **RQ1** - How can we separate, within a specific domain, temporal graph data from time-series data?
+- **RQ2** - If so, can we embed both data layouts into the same conceptual storage system and provide hybrid capabilities?
 
 :::: {.columns}
 ::: {.column width="70%"}
@@ -36,8 +36,8 @@
     - Time-Series node <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#f39c42; border:2px solid #333;"></span> ;
     
 - <b>Edges</b>
-    - Graph edge   <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> <--> <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span>
-    - Virtual edge   <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> <--> <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#f39c42; border:2px solid #333;"></span>
+    - Graph edge   <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> ⟺ <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span>
+    - Virtual edge   <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#8eb3c5; border:2px solid #333;"></span> ⟺ <span style="display:inline-block; width:16px; height:16px; border-radius:50%; background:#f39c42; border:2px solid #333;"></span>
 :::
 ::::
 
