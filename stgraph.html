@@ -346,8 +346,7 @@
 <li>Optimized for <i>high-throughput temporal ingestion</i> and efficient management of <i>time-ordered data</i>;</li>
 <li>Efficient on <i>large-volume datasets</i>.</li>
 </ul></li>
-<li><p>Different data layouts imply different ingestion and workload capabilities…</p></li>
-<li><p>Yet many modern data-intensive applications combine both, e.g., IoT systems, Digital Twins, and pervasive computing.</p></li>
+<li><p>Different layouts ➔ different ingestion and workload capabilities… ➔ Yet many modern data-intensive applications combine both, e.g., IoT systems, Digital Twins, and pervasive computing.</p></li>
 <li><p><strong>What about an hybrid data structure ?</strong></p></li>
 </ul>
 </section>
@@ -387,7 +386,7 @@
 <li><p>Implemented in <b>Kotlin</b>.</p></li>
 <li><p><strong>Graph data layout</strong></p>
 <ul>
-<li><b>Index-free adjacency</b> through <b>fixed-size records</b> stored in <i>nodes, edges,</i> and <i>property</i> files.</li>
+<li><b>Index-free adjacency</b> through <b>fixed-size records</b> stored in <i>node, edge,</i> and <i>property</i> files.</li>
 <li>Properties/edges represented as <b>linked chain of pointers</b>;
 <ul>
 <li>values &gt; 8 bytes (e.g.&nbsp;strings, geometries) stored in dynamic storage (RocksDB);</li>
