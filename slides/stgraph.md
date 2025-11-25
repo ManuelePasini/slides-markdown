@@ -12,7 +12,7 @@
     - Efficient on <i>large-volume datasets</i>.
 
 - Different layouts ➔ different ingestion and workload capabilities...
-    ➔ Yet many modern data-intensive applications combine both, e.g., IoT systems, Digital Twins, and pervasive computing.
+    -➔ Yet many modern data-intensive applications combine both, e.g., IoT systems, Digital Twins, and pervasive computing.
 
 - **What about an hybrid data structure ?**
 
