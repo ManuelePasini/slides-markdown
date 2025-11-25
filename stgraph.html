@@ -408,7 +408,7 @@
 <li><p><b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:</p>
 <ul>
 <li><div>
-isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ⋂<sub>j=i..k-1</sub> I<sub>e<sub>(n<sub>j</sub>,n<sub>j+1</sub>)</sub></sub> ≠ ∅, I<sub>e</sub> = [t<sub>a</sub>; t<sub>b</sub>[
+isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) &nbsp;⇔&nbsp; (<em>{j=i}^{k-1} I</em>{e(n_j, n_{j+1})} ), where (I_e = [t_a,, t_b[)
 </div></li>
 </ul></li>
 <li><p><b>Querying STGraph</b>:</p>
@@ -438,8 +438,9 @@ isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ⋂<sub>j=i..k-1</sub> I<su
 <ul>
 <li><strong>As of today</strong>
 <ul>
-<li>No support for cross time-series operations ;</li>
-<li>Query to AsterixDB should be asynchronous ;</li>
+<li>No support for cross time-series operations;</li>
+<li>Query to AsterixDB should be asynchronous;</li>
+<li>AsterixDB implementation could be far optimized and its full capabilities integrated;</li>
 </ul></li>
 </ul>
 <div class="quarto-auto-generated-content">
