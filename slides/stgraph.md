@@ -61,7 +61,11 @@
 ## STGraph - Operations
 
 - <b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:
-    - <div> isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) &nbsp;&iff;&nbsp; \(\displaystyle \bigcap_{j=i}^{k-1} I_{e(n_j, n_{j+1})} \neq \varnothing\), where \(I_e = [t_a,\, t_b[\) </div>
+    - <div>
+        isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) &iff;
+        &#8745;<sub>j=i..k-1</sub> I<sub>e(n<sub>j</sub>,n<sub>j+1</sub>)</sub> &#8800; &#8709;, 
+        where I<sub>e</sub> = [t<sub>a</sub>, t<sub>b</sub>[
+        </div>
 
 - <b>Querying STGraph</b>:
 
