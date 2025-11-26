@@ -70,9 +70,12 @@
 - <b>Querying STGraph</b>:
 
     - Executed in <b>three iterative steps</b>:
-        - <b>Path exploration</b> through temporal DFS;
-        - <b>Path materialization</b>: if exploring a virtual edge, materialize its virtual nodes;
-        - <b>Path filtering</b>.
+        - <b>Pattern matching</b>:
+            - <b>Exploration</b> through temporal DFS;
+            - <b>Materialization</b>: if exploring a virtual edge, materialize its virtual nodes;
+            - <b>Filtering</b>: apply constraints.
+        - <b>Temporal properties replacement</b>
+        - <b>Aggregation/Join</b>
 
     - <b>Materializing a virtual node</b>:
         - Each virtual edge traversal entails a temporal query to AsterixDB;
@@ -87,5 +90,6 @@
 
 - **As of today**
     - No support for cross time-series operations;
-    - Query to AsterixDB should be asynchronous;
-    - AsterixDB implementation could be far optimized and its full capabilities integrated;
+    - Supporting only "long" values as TS measurements;
+    - Query to AsterixDB is synchronous (shouldn't be);
+    - Limited support for AsterixDB capabilities;
