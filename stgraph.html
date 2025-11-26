@@ -416,16 +416,16 @@ isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ∩<sub>j=i..k-1</sub> I<su
 </ul></li>
 <li><p><b>Querying STGraph</b>:</p>
 <ul>
-<li>Executed in <b>three iterative steps</b>:
+<li>Executed in <b>three steps</b>:
 <ul>
-<li><b>Pattern matching</b>:
+<li><b>Search</b>:
 <ul>
-<li><b>Exploration</b> through temporal DFS;</li>
-<li><b>Materialization</b>: if exploring a virtual edge, materialize its virtual nodes;</li>
-<li><b>Filtering</b>: apply constraints.</li>
+<li><b>Path Exploration</b> through temporal DFS;</li>
+<li><b>Path Materialization</b>: if exploring a virtual edge, materialize its virtual nodes;</li>
+<li><b>Path Filtering</b>: add path to solution if satisfies constraints.</li>
 </ul></li>
-<li><b>Temporal properties replacement</b></li>
-<li><b>Aggregation/Join</b></li>
+<li><b>Temporal properties replacement</b>;</li>
+<li><b>Aggregate/Join</b>.</li>
 </ul></li>
 <li><b>Materializing a virtual node</b>:
 <ul>
