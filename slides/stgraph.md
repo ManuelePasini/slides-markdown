@@ -85,7 +85,7 @@
 
 - <b>Instantiating a virtual node</b>:
     - Each virtual edge traversal entails a temporal query to AsterixDB;
-    - Output tuples are materialized as nodes (dummy ID) and connected within the graph.
+    - Output tuples are instantiated as in-memory nodes (dummy ID) and connected within the graph.
 
 - <b>Optimizations</b>
     - Support for join operations through naive <b>nested-Loop</b> join;
