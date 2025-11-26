@@ -83,14 +83,14 @@
 :::
 ::: {.column width="40%"}
 
-> - <b>Materializing a virtual node</b>:
->    - Each virtual edge traversal entails a temporal query to AsterixDB;
->    - Output tuples are materialized as nodes (dummy ID) and connected within the graph.
->
-> - <b>Optimizations</b>
->    - Support for join operations through naive <b>nested-Loop</b> join;
->    - Support for filter pushdown to AsterixDB;
->    - Support for spatial join/filtering operations (e.g., ST_INTERSECTS).
+- <b>Materializing a virtual node</b>:
+    - Each virtual edge traversal entails a temporal query to AsterixDB;
+    - Output tuples are materialized as nodes (dummy ID) and connected within the graph.
+
+- <b>Optimizations</b>
+    - Support for join operations through naive <b>nested-Loop</b> join;
+    - Support for filter pushdown to AsterixDB;
+    - Support for spatial join/filtering operations (e.g., ST_INTERSECTS).
     
 :::
 ::::
