@@ -69,13 +69,13 @@
 
 - <b>Querying STGraph</b>:
 
-    - Executed in <b>three iterative steps</b>:
-        - <b>Pattern matching</b>:
-            - <b>Exploration</b> through temporal DFS;
-            - <b>Materialization</b>: if exploring a virtual edge, materialize its virtual nodes;
-            - <b>Filtering</b>: apply constraints.
-        - <b>Temporal properties replacement</b>
-        - <b>Aggregation/Join</b>
+    - Executed in <b>three steps</b>:
+        - <b>Search</b>:
+            - <b>Path Exploration</b> through temporal DFS;
+            - <b>Path Materialization</b>: if exploring a virtual edge, materialize its virtual nodes;
+            - <b>Path Filtering</b>: add path to solution if satisfies constraints.
+        - <b>Temporal properties replacement</b>;
+        - <b>Aggregate/Join</b>.
 
     - <b>Materializing a virtual node</b>:
         - Each virtual edge traversal entails a temporal query to AsterixDB;
