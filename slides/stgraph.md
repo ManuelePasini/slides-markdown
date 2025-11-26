@@ -60,6 +60,10 @@
 
 ## STGraph - Operations
 
+
+:::: {.columns}
+::: {.column width="60%"}
+
 - <b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:
     - <div>
         isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) &iff;
@@ -76,15 +80,22 @@
             - <b>Path Filtering</b>: add path to solution if satisfies constraints.
         - <b>Temporal properties replacement</b>;
         - <b>Aggregate/Join</b>.
+:::
+::: {.column width="40%"}
 
-    - <b>Materializing a virtual node</b>:
-        - Each virtual edge traversal entails a temporal query to AsterixDB;
-        - Output tuples are materialized as nodes (dummy ID) and connected within the graph.
+- <b>Materializing a virtual node</b>:
+    - Each virtual edge traversal entails a temporal query to AsterixDB;
+    - Output tuples are materialized as nodes (dummy ID) and connected within the graph.
 
-    - <b>Optimizations</b>
-        - Support for join operations through naive <b>nested-Loop</b> join;
-        - Support for filter pushdown to AsterixDB;
-        - Support for spatial join/filtering operations (e.g., ST_INTERSECTS).
+- <b>Optimizations</b>
+    - Support for join operations through naive <b>nested-Loop</b> join;
+    - Support for filter pushdown to AsterixDB;
+    - Support for spatial join/filtering operations (e.g., ST_INTERSECTS).
+    
+:::
+::::
+
+
 
 ## Limitations and Future works
 
