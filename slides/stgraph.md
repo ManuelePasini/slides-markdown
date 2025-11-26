@@ -83,7 +83,7 @@
 :::
 ::: {.column width="40%"}
 
-- <b>Materializing a virtual node</b>:
+- <b>Instantiating a virtual node</b>:
     - Each virtual edge traversal entails a temporal query to AsterixDB;
     - Output tuples are materialized as nodes (dummy ID) and connected within the graph.
 
