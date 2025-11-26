@@ -407,6 +407,8 @@
 </section>
 <section id="stgraph---operations" class="slide level2">
 <h2>STGraph - Operations</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
 <ul>
 <li><p><b>Search algorithm</b>: temporal DFS, temporal validity through constraint tightening:</p>
 <ul>
@@ -427,6 +429,10 @@ isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ∩<sub>j=i..k-1</sub> I<su
 <li><b>Temporal properties replacement</b>;</li>
 <li><b>Aggregate/Join</b>.</li>
 </ul></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<ul>
 <li><b>Materializing a virtual node</b>:
 <ul>
 <li>Each virtual edge traversal entails a temporal query to AsterixDB;</li>
@@ -438,8 +444,9 @@ isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ∩<sub>j=i..k-1</sub> I<su
 <li>Support for filter pushdown to AsterixDB;</li>
 <li>Support for spatial join/filtering operations (e.g., ST_INTERSECTS).</li>
 </ul></li>
-</ul></li>
 </ul>
+</div>
+</div>
 </section>
 <section id="limitations-and-future-works" class="slide level2">
 <h2>Limitations and Future works</h2>
