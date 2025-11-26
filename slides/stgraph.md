@@ -75,7 +75,7 @@
 
     - Executed in <b>three steps</b>:
         - <b>Search</b>:
-            - <b>Path Exploration</b> through temporal DFS;
+            - <b>Pattern matching</b> through temporal DFS;
             - <b>Path instantiation</b>: if exploring a virtual edge, instantiation its virtual nodes;
             - <b>Path Filtering</b>: add path to solution if satisfies constraints.
         - <b>Temporal properties replacement</b>;
