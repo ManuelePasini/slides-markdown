@@ -433,16 +433,16 @@ isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ∩<sub>j=i..k-1</sub> I<su
 </ul>
 </div><div class="column" style="width:40%;">
 <ul>
-<li><b>Materializing a virtual node</b>:
+<li class="fragment"><b>Materializing a virtual node</b>:
 <ul>
-<li>Each virtual edge traversal entails a temporal query to AsterixDB;</li>
-<li>Output tuples are materialized as nodes (dummy ID) and connected within the graph.</li>
+<li class="fragment">Each virtual edge traversal entails a temporal query to AsterixDB;</li>
+<li class="fragment">Output tuples are materialized as nodes (dummy ID) and connected within the graph.</li>
 </ul></li>
-<li><b>Optimizations</b>
+<li class="fragment"><b>Optimizations</b>
 <ul>
-<li>Support for join operations through naive <b>nested-Loop</b> join;</li>
-<li>Support for filter pushdown to AsterixDB;</li>
-<li>Support for spatial join/filtering operations (e.g., ST_INTERSECTS).</li>
+<li class="fragment">Support for join operations through naive <b>nested-Loop</b> join;</li>
+<li class="fragment">Support for filter pushdown to AsterixDB;</li>
+<li class="fragment">Support for spatial join/filtering operations (e.g., ST_INTERSECTS).</li>
 </ul></li>
 </ul>
 </div>
