@@ -418,9 +418,14 @@ isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ∩<sub>j=i..k-1</sub> I<su
 <ul>
 <li>Executed in <b>three iterative steps</b>:
 <ul>
-<li><b>Path exploration</b> through temporal DFS;</li>
-<li><b>Path materialization</b>: if exploring a virtual edge, materialize its virtual nodes;</li>
-<li><b>Path filtering</b>.</li>
+<li><b>Pattern matching</b>:
+<ul>
+<li><b>Exploration</b> through temporal DFS;</li>
+<li><b>Materialization</b>: if exploring a virtual edge, materialize its virtual nodes;</li>
+<li><b>Filtering</b>: apply constraints.</li>
+</ul></li>
+<li><b>Temporal properties replacement</b></li>
+<li><b>Aggregation/Join</b></li>
 </ul></li>
 <li><b>Materializing a virtual node</b>:
 <ul>
@@ -442,8 +447,9 @@ isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ∩<sub>j=i..k-1</sub> I<su
 <li><strong>As of today</strong>
 <ul>
 <li>No support for cross time-series operations;</li>
-<li>Query to AsterixDB should be asynchronous;</li>
-<li>AsterixDB implementation could be far optimized and its full capabilities integrated;</li>
+<li>Supporting only “long” values as TS measurements;</li>
+<li>Query to AsterixDB is synchronous (shouldn’t be);</li>
+<li>Limited support for AsterixDB capabilities;</li>
 </ul></li>
 </ul>
 <div class="quarto-auto-generated-content">
