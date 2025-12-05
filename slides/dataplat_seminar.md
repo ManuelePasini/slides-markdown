@@ -37,14 +37,18 @@ Cloud DP are built out of *service ecosystems* offered by *Cloud Service Provide
 
 :::: {.columns}
 ::: {.column width="70%"}
+
 ![](https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/dataplat_seminar/Slide5.jpg?raw=true)
+
 :::
 ::: {.column width="30%"}
+
 - 12 Nodes (to be increased...)
     - CPU 20 core w5-2445 @4.6 GHZ
     - 256 GB RAM
     - 12 TB HDD
 - 2 GPUs NVIDIA RTX 6000 Ada Generation
 - 1 Network File System (3 TB)
+
 :::
 ::::
