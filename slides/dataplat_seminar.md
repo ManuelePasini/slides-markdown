@@ -100,7 +100,7 @@
 
 ## A Docker overview
 
-- <b>Docker</b> is a platform for developing, shipping and running application using container based virtualization technology.
+- <b>Docker</b> is a platform for developing, shipping and running isolated application using container based virtualization technology.
 
 :::: {.columns}
 ::: {.column width="45%"}
@@ -123,6 +123,28 @@
 
 ## Docker Swarm
 
+- Swarm mode is an advanced feature for managing a cluster of Docker daemons.
+
+:::: {.columns}
+::: {.column width="25%"}
+
+- <b>Characteristics</b>:
+    - Integrated Orchestration;
+    - Decentralized Management;
+    - multi-host networking;
+    - load balancing;
+    - scaling features;
+    - service discovery;
+    - rolling updates
+
+:::
+::: {.column width="75%"}
+
+![Docker swarm architecture](https://docs.docker.com/engine/swarm/images/swarm-diagram.webp)
+
+
+:::
+::::
 
 ## test1
 ![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/func_view.jpg?raw=true)
