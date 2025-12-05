@@ -32,21 +32,22 @@
 - **Goal**: Build a data platform to Foster collaboration and integration between different agriculture research projects.
 
 :::: {.columns}
-::: {.column width="30%"}
+::: {.column width="20%"}
 
-- 6 Research partners;
-- Heterogeneous data;
-- <b>Governance issues</b>;
+- Context:
+    - 6 Research partners;
+    - Heterogeneous data;
+    - <b>Governance issues</b>;
+    - <b>Integration issues</b>.
 
 
 :::
-::: {.column width="70%"}
+::: {.column width="80%"}
 
-![Agritech scenario](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/datamesh.jpg?raw=true)
+![Agritech project](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/datamesh.jpg?raw=true)
 
 :::
 ::::
-
 
 
 ## On a hardware level
