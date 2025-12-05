@@ -36,7 +36,7 @@ Cloud DP are built out of *service ecosystems* offered by *Cloud Service Provide
 ## On a hardware level
 
 :::: {.columns}
-::: {.column width="70%"}
+::: {.column width="30%"}
 
 - 12 Nodes (to be increased...)
     - CPU 20 core w5-2445 @4.6 GHZ
@@ -46,7 +46,7 @@ Cloud DP are built out of *service ecosystems* offered by *Cloud Service Provide
 - 1 Network File System (3 TB)
 
 :::
-::: {.column width="30%"}
+::: {.column width="70%"}
 
 ![Hardware architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/Slide5.jpg?raw=true)
 
@@ -81,20 +81,20 @@ Cloud DP are built out of *service ecosystems* offered by *Cloud Service Provide
 - Differences between containers and virtual machines...
 
 :::: {.columns}
-::: {.column width="50%"}
+::: {.column width="60%"}
 
 | **Containers**                                | **Virtual Machines**                             |
 |-----------------------------------------------|---------------------------------------------------|
-| Share the host operating system kernel        | Each VM includes a full guest operating system    |
-| Very fast startup                              | Slower startup                                    |
+| Share host operating system kernel        | Each VM includes a full guest operating system    |
+| Fast startup                              | Slower startup                                    |
 | Lightweight images                             | Heavyweight images                                |
 | Logical isolation                              | Strong isolation via hypervisor                   |
-| Easy and rapid scalability                     | More complex to scale                             |
+| Easy scalability                     | More complex to scale                             |
 | High workload density                          | Lower density due to higher resource consumption  |
 
 
 :::
-::: {.column width="50%"}
+::: {.column width="40%"}
 
 ![Container vs. Virtual Machines](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/virtualization.jpg?raw=true)
 
