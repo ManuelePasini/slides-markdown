@@ -81,7 +81,7 @@ Cloud DP are built out of *service ecosystems* offered by *Cloud Service Provide
 - Differences between containers and virtual machines...
 
 :::: {.columns}
-::: {.column width="40%"}
+::: {.column width="45%"}
 
 | **Containers**                                | **Virtual Machines**                             |
 |-----------------------------------------------|---------------------------------------------------|
@@ -93,7 +93,7 @@ Cloud DP are built out of *service ecosystems* offered by *Cloud Service Provide
 
 
 :::
-::: {.column width="60%"}
+::: {.column width="55%"}
 
 ![Container vs. Virtual Machines](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/virtualization.jpg?raw=true)
 
