@@ -1,3 +1,10 @@
+## [1.168.0](https://github.com/ManuelePasini/slides-markdown/compare/1.167.0...1.168.0) (2025-12-05)
+
+
+### Features
+
+* working on dataplat seminar  slides ([dd532db](https://github.com/ManuelePasini/slides-markdown/commit/dd532db95ab23c525e6ac1eac95fd03561382570))
+
 ## [1.167.0](https://github.com/ManuelePasini/slides-markdown/compare/1.166.0...1.167.0) (2025-12-05)
 
 
