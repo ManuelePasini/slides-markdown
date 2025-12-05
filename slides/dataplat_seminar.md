@@ -152,9 +152,20 @@
 
 ![Docker swarm architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/top_view.jpg?raw=true)
 
+- This is the **what**, but... 
+- ... Too many things in one-flat schema, we need to add another dimension.
 
-## test1
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/func_view.jpg?raw=true)
+
+# A perspective change
+
+![Vertical view on BIG Data platform](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/vert_view.jpg?raw=true)
+
+- Now we know the **where**...
+- What about the **how** ?
+
+## A functional view
+
+![Functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/func_view.jpg?raw=true)
 
 ## test2
 ![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.png?raw=true)
