@@ -146,6 +146,13 @@
 :::
 ::::
 
+## Building a Data Platform
+
+- Platform services as <b>Docker services</b>.
+
+![Docker swarm architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/top_view.jpg?raw=true)
+
+
 ## test1
 ![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/func_view.jpg?raw=true)
 
