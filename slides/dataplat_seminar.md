@@ -1,4 +1,4 @@
-# A seminar on Data Platforms
+# Data Platform - Under the hood
 
 <hr style="border: none; border-top: 1px solid #000;">
 
@@ -20,12 +20,31 @@
 
 
 
-# A Cloud Data Platform
+## A Cloud Data Platform
 
-<!--is an infrastructure that facilitates the ingestion, storage, management, and exploitation of large volumes of data.
--->
 - Is a *centralized* infrastructre composed of *independent* and *well-integrated* services meeting the *end-to-end* needs of data pipelines:
     - *Centralized*: a data platform is conceptually a single and unified component;
     - *Independent*: changes in a a service do not affect others;
     - *Well-integrated*: services have interfaces enabling a frictionless composition;
     - *End-to-end*: services cover the entire data life cycle.
+
+Cloud DP are built out of *service ecosystems* offered by *Cloud Service Providers* (CSPs).
+
+![Some of the AWS Services](https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/aws_services.png?raw=true)
+
+
+## On a hardware level
+
+:::: {.columns}
+::: {.column width="70%"}
+![](https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/dataplat_seminar/Slide5.jpg?raw=true)
+:::
+::: {.column width="30%"}
+- 12 Nodes (to be increased...)
+    - CPU 20 core w5-2445 @4.6 GHZ
+    - 256 GB RAM
+    - 12 TB HDD
+- 2 GPUs NVIDIA RTX 6000 Ada Generation
+- 1 Network File System (3 TB)
+:::
+::::
