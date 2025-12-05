@@ -327,8 +327,8 @@
 
 
 <section>
-<section id="data-platform---under-the-hood" class="title-slide slide level1 center">
-<h1>Data Platform - Under the hood</h1>
+<section id="data-platforms---under-the-hood" class="title-slide slide level1 center">
+<h1>Data Platforms - Under the hood</h1>
 <hr style="border: none; border-top: 1px solid #000;">
 <div style="text-align:center">
 <p><span style="font-size: larger;"><b>Manuele Pasini</b></span></p>
@@ -370,7 +370,12 @@
 <li>1 Network File System (3 TB)</li>
 </ul>
 </div><div class="column" style="width:30%;">
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/dataplat_seminar/Slide5.jpg?raw=true"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/Slide5.jpg?raw=true"></p>
+<figcaption>Hardware architecture</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -386,12 +391,73 @@
 </ul></li>
 <li>… We want to <strong>virtualize</strong>
 <ul>
-<li>remember the <strong>independence</strong> constraint.</li>
+<li>remember the <b>independence</b> constraint.</li>
 </ul></li>
+<li><strong>Docker Swarm</strong> !</li>
 </ul>
 </div><div class="column" style="width:70%;">
 <div class="fragment">
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/dataplat_seminar/Slide6.jpg?raw=true"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/Slide6.jpg?raw=true"></p>
+<figcaption>Hardware + Docker architecture</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="a-docker-overview" class="slide level2">
+<h2>A Docker overview</h2>
+<ul>
+<li>Differences between containers and virtual machines…</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table>
+<colgroup>
+<col style="width: 47%">
+<col style="width: 52%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Containers</strong></th>
+<th><strong>Virtual Machines</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Share the host operating system kernel</td>
+<td>Each VM includes a full guest operating system</td>
+</tr>
+<tr class="even">
+<td>Very fast startup</td>
+<td>Slower startup</td>
+</tr>
+<tr class="odd">
+<td>Lightweight images</td>
+<td>Heavyweight images</td>
+</tr>
+<tr class="even">
+<td>Logical isolation</td>
+<td>Strong isolation via hypervisor</td>
+</tr>
+<tr class="odd">
+<td>Easy and rapid scalability</td>
+<td>More complex to scale</td>
+</tr>
+<tr class="even">
+<td>High workload density</td>
+<td>Lower density due to higher resource consumption</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/virtualization.jpg?raw=true"></p>
+<figcaption>Container vs.&nbsp;Virtual Machines</figcaption>
+</figure>
 </div>
 </div>
 </div>
