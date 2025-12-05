@@ -126,7 +126,7 @@
 - Swarm mode is an advanced feature for managing a cluster of Docker daemons.
 
 :::: {.columns}
-::: {.column width="25%"}
+::: {.column width="30%"}
 
 - <b>Characteristics</b>:
     - Integrated Orchestration;
@@ -138,7 +138,7 @@
     - rolling updates
 
 :::
-::: {.column width="75%"}
+::: {.column width="70%"}
 
 ![Docker swarm architecture](https://docs.docker.com/engine/swarm/images/swarm-diagram.webp)
 
