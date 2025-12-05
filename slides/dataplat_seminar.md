@@ -53,6 +53,8 @@
 ::::
 
 
+# Let's talk deploy!
+
 ## On a hardware level
 
 :::: {.columns}
@@ -98,18 +100,16 @@
 
 ## A Docker overview
 
-- Differences between containers and virtual machines...
+- <b>Docker</b> is a platform for developing, shipping and running application using container based virtualization technology.
 
 :::: {.columns}
 ::: {.column width="45%"}
-
-| **Containers**                                | **Virtual Machines**                             |
-|-----------------------------------------------|---------------------------------------------------|
-| Share host operating system kernel        | Each VM includes a full guest operating system    |
-| Fast startup                              | Slower startup                                    |
-| Logical isolation                              | Strong isolation via hypervisor                   |
-| Easy scalability                     | More complex to scale                             |
-| High workload density                          | Lower density due to higher resource consumption  |
+- w.r.t. virtual machines (e.g., VMWare):
+    - more lightweight;
+    - no guest OS;
+    - reduced resource consumption;
+    - more containers per host;
+    - greater portability
 
 
 :::
