@@ -34,9 +34,12 @@
 :::: {.columns}
 ::: {.column width="20%"}
 
-- Context:
-    - 6 Research partners;
-    - Heterogeneous data;
+- In short:
+    - 6 research partners;
+    - highly heterogeneous data;
+    - different goals;
+
+- Main challenges:
     - <b>Governance issues</b>;
     - <b>Integration issues</b>.
 
