@@ -81,20 +81,19 @@ Cloud DP are built out of *service ecosystems* offered by *Cloud Service Provide
 - Differences between containers and virtual machines...
 
 :::: {.columns}
-::: {.column width="60%"}
+::: {.column width="40%"}
 
 | **Containers**                                | **Virtual Machines**                             |
 |-----------------------------------------------|---------------------------------------------------|
 | Share host operating system kernel        | Each VM includes a full guest operating system    |
 | Fast startup                              | Slower startup                                    |
-| Lightweight images                             | Heavyweight images                                |
 | Logical isolation                              | Strong isolation via hypervisor                   |
 | Easy scalability                     | More complex to scale                             |
 | High workload density                          | Lower density due to higher resource consumption  |
 
 
 :::
-::: {.column width="40%"}
+::: {.column width="60%"}
 
 ![Container vs. Virtual Machines](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/virtualization.jpg?raw=true)
 
