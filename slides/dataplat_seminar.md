@@ -32,7 +32,7 @@
 - **Goal**: Build a data platform to Foster collaboration and integration between different agriculture research projects.
 
 :::: {.columns}
-::: {.column width="20%"}
+::: {.column width="25%"}
 
 - In short:
     - 6 research partners;
@@ -41,11 +41,11 @@
 
 - Main challenges:
     - <b>Governance issues</b>;
-    - <b>Integration issues</b>.
+    - <b>Sharing issues</b>.
 
 
 :::
-::: {.column width="80%"}
+::: {.column width="75%"}
 
 ![Agritech project](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/datamesh.jpg?raw=true)
 
