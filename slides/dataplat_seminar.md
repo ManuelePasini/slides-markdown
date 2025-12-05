@@ -1,4 +1,4 @@
-# Data Platform - Under the hood
+# Data Platforms - Under the hood
 
 <hr style="border: none; border-top: 1px solid #000;">
 
@@ -63,7 +63,8 @@ Cloud DP are built out of *service ecosystems* offered by *Cloud Service Provide
     - Need for <b>fault tolerance</b> mechanisms;
     - Might face dependencies issues;
 - ... We want to **virtualize**
-    - remember the **independence** constraint.
+    - remember the <b>independence</b> constraint.
+- **Docker Swarm** !
 
 :::
 ::: {.column width="70%"}
@@ -71,6 +72,32 @@ Cloud DP are built out of *service ecosystems* offered by *Cloud Service Provide
 :::{.fragment}
 ![Hardware + Docker architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/Slide6.jpg?raw=true)
 :::
+
+:::
+::::
+
+## A Docker overview
+
+- Differences between containers and virtual machines...
+
+:::: {.columns}
+::: {.column width="50%"}
+
+| **Containers**                                | **Virtual Machines**                             |
+|-----------------------------------------------|---------------------------------------------------|
+| Share the host operating system kernel        | Each VM includes a full guest operating system    |
+| Very fast startup                              | Slower startup                                    |
+| Lightweight images                             | Heavyweight images                                |
+| Logical isolation                              | Strong isolation via hypervisor                   |
+| Easy and rapid scalability                     | More complex to scale                             |
+| High workload density                          | Lower density due to higher resource consumption  |
+
+
+:::
+::: {.column width="50%"}
+
+![Container vs. Virtual Machines](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/virtualization.jpg?raw=true)
+
 
 :::
 ::::
