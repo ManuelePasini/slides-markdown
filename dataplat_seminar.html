@@ -326,8 +326,9 @@
     <div class="slides">
 
 
-<section id="a-seminar-on-data-platforms" class="title-slide slide level1 center">
-<h1>A seminar on Data Platforms</h1>
+<section>
+<section id="data-platform---under-the-hood" class="title-slide slide level1 center">
+<h1>Data Platform - Under the hood</h1>
 <hr style="border: none; border-top: 1px solid #000;">
 <div style="text-align:center">
 <p><span style="font-size: larger;"><b>Manuele Pasini</b></span></p>
@@ -340,11 +341,8 @@
 </div>
 </div>
 </section>
-
-<section id="a-cloud-data-platform" class="title-slide slide level1 center">
-<h1>A Cloud Data Platform</h1>
-<!--is an infrastructure that facilitates the ingestion, storage, management, and exploitation of large volumes of data.
--->
+<section id="a-cloud-data-platform" class="slide level2">
+<h2>A Cloud Data Platform</h2>
 <ul>
 <li>Is a <em>centralized</em> infrastructre composed of <em>independent</em> and <em>well-integrated</em> services meeting the <em>end-to-end</em> needs of data pipelines:
 <ul>
@@ -354,12 +352,55 @@
 <li><em>End-to-end</em>: services cover the entire data life cycle.</li>
 </ul></li>
 </ul>
+<p>Cloud DP are built out of <em>service ecosystems</em> offered by <em>Cloud Service Providers</em> (CSPs).</p>
+
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/aws_services.png?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Some of the AWS Services</p></section>
+<section id="on-a-hardware-level" class="slide level2">
+<h2>On a hardware level</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ul>
+<li>12 Nodes (to be increased…)
+<ul>
+<li>CPU 20 core w5-2445 <span class="citation" data-cites="4.6">@4.6</span> GHZ</li>
+<li>256 GB RAM</li>
+<li>12 TB HDD</li>
+</ul></li>
+<li>2 GPUs NVIDIA RTX 6000 Ada Generation</li>
+<li>1 Network File System (3 TB)</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/dataplat_seminar/Slide5.jpg?raw=true"></p>
+</div>
+</div>
+</section>
+<section id="on-a-hardware-level-1" class="slide level2">
+<h2>On a hardware level</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li>We don’t really want to work on bare metal…
+<ul>
+<li>Need for <b>fault tolerance</b> mechanisms;</li>
+<li>Might face dependencies issues;</li>
+</ul></li>
+<li>… We want to <strong>virtualize</strong>
+<ul>
+<li>remember the <strong>independence</strong> constraint.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="fragment">
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/dataplat_seminar/Slide6.jpg?raw=true"></p>
+</div>
+</div>
+</div>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
