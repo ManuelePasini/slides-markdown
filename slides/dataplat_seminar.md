@@ -27,11 +27,6 @@
     - *Well-integrated*: services have interfaces enabling a frictionless composition;
     - *End-to-end*: services cover the entire data life cycle.
 
-Cloud DP are built out of *service ecosystems* offered by *Cloud Service Providers* (CSPs).
-
-![Some of the AWS Services](https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/aws_services.png?raw=true)
-
-
 ## A case study - The Agritech PNRR Project
 
 - **Goal**: Build a data platform to Foster collaboration and integration between different agriculture research projects.
