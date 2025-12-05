@@ -120,3 +120,24 @@
 
 :::
 ::::
+
+## test1
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/func_view.jpg?raw=true)
+
+## test2
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.jpg?raw=true)
+
+## test3
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/watering_pipeline.jpg?raw=true)
+
+## test4
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/agritech.jpg?raw=true)
+
+## test5
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/agritech_ods.jpg?raw=true)
+
+## test6
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/top_view.jpg?raw=true)
+
+## test7
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/vert_view.jpg?raw=true)
