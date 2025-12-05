@@ -48,7 +48,7 @@ Cloud DP are built out of *service ecosystems* offered by *Cloud Service Provide
 :::
 ::: {.column width="30%"}
 
-![](https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/dataplat_seminar/Slide5.jpg?raw=true)
+![Hardware architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/Slide5.jpg?raw=true)
 
 :::
 ::::
@@ -69,7 +69,7 @@ Cloud DP are built out of *service ecosystems* offered by *Cloud Service Provide
 ::: {.column width="70%"}
 
 :::{.fragment}
-![](https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/dataplat_seminar/Slide6.jpg?raw=true)
+![Hardware + Docker architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/Slide6.jpg?raw=true)
 :::
 
 :::
