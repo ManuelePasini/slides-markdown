@@ -19,7 +19,6 @@
 </div>
 
 
-
 ## A Cloud Data Platform
 
 - Is a *centralized* infrastructre composed of *independent* and *well-integrated* services meeting the *end-to-end* needs of data pipelines:
@@ -33,12 +32,34 @@ Cloud DP are built out of *service ecosystems* offered by *Cloud Service Provide
 ![Some of the AWS Services](https://github.com/ManuelePasini/slides-markdown/blob/4893698e949da4ee45c95087b170c011a4b9f687/slides/images/aws_services.png?raw=true)
 
 
+## A case study - The Agritech PNRR Project
+
+- **Goal**: Build a data platform to Foster collaboration and integration between different agriculture research projects.
+
+:::: {.columns}
+::: {.column width="30%"}
+
+- 6 Research partners;
+- Heterogeneous data;
+- <b>Governance issues</b>;
+
+
+:::
+::: {.column width="70%"}
+
+![Agritech scenario](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/datamesh.jpg?raw=true)
+
+:::
+::::
+
+
+
 ## On a hardware level
 
 :::: {.columns}
 ::: {.column width="30%"}
 
-- 12 Nodes (to be increased...)
+- 12 Nodes (and counting...)
     - CPU 20 core w5-2445 @4.6 GHZ
     - 256 GB RAM
     - 12 TB HDD
