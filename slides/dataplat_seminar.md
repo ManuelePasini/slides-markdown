@@ -121,11 +121,14 @@
 :::
 ::::
 
+## Docker Swarm
+
+
 ## test1
 ![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/func_view.jpg?raw=true)
 
 ## test2
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.jpg?raw=true)
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.png?raw=true)
 
 ## test3
 ![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/watering_pipeline.jpg?raw=true)
