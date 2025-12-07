@@ -120,8 +120,16 @@ Centralized integration would be of great cost:
 
 :::
 ::::
+:::: {.columns}
+::: {.column width="60%"}
 
 ![A view on Agritech Conceptual Architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/Slide19.jpg?raw=true)
+
+:::
+::: {.column width="40%"}
+
+:::
+::::
 
 # Agritech conceptual architecture
 
@@ -202,7 +210,7 @@ Centralized integration would be of great cost:
 - Swarm mode is an advanced feature for managing a cluster of Docker daemons.
 
 :::: {.columns}
-::: {.column width="35  %"}
+::: {.column width="30%"}
 
 - <b>Characteristics</b>:
     - Integrated Orchestration;
@@ -214,7 +222,7 @@ Centralized integration would be of great cost:
     - rolling updates
 
 :::
-::: {.column width="65%"}
+::: {.column width="70%"}
 
 ![Docker swarm architecture](https://docs.docker.com/engine/swarm/images/swarm-diagram.webp)
 
