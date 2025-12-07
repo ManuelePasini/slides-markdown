@@ -101,7 +101,7 @@ We needed to identify key data aspects!
 ## Towards a mesh architecture
 
 :::: {.columns}
-::: {.column width="25%"}
+::: {.column width="70%"}
 
 Centralized integration would be of great cost:
     - 1 ETL procedure x stakeholder;
@@ -114,7 +114,7 @@ Centralized integration would be of great cost:
     - **data as a product**
 
 :::
-::: {.column width="75%"}
+::: {.column width="30%"}
 
 ![FIWARE Agrifood Smart Data Model example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/FIWARE.png?raw=true)
 
