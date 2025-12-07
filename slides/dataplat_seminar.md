@@ -18,6 +18,26 @@
 
 </div>
 
+## Intro
+
+- **Who am I ?** 
+
+    - Manuele Pasini, Ph.D. Candidate in Computer Science and Engineering
+    - University of Bologna, [Business Intelligence Group](https://big.csr.unibo.it/)
+
+:::{.fragment}
+
+
+- **Area of Interest:** 
+
+    - (Almost) the whole data* world.
+
+        - Data engineering;
+        - Data integration;
+        - Precision Agriculture:
+            - Irrigation management
+            - Data Platform for italian agriculture domain @[Agritech](https://agritechcenter.it/it/)
+
 
 ## A Cloud Data Platform
 
