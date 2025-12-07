@@ -353,12 +353,12 @@
 <ul>
 <li><p>(Almost) the whole data* world.</p>
 <ul>
-<li>Data engineering;</li>
+<li>Data engineering (physical level);</li>
 <li>Data integration;</li>
 <li>Precision Agriculture:
 <ul>
-<li>Irrigation management</li>
-<li>Data Platform for italian agriculture domain @<a href="https://agritechcenter.it/it/">Agritech</a></li>
+<li>Irrigation management;</li>
+<li>Data Platform for italian agriculture domain @<a href="https://agritechcenter.it/it/">Agritech</a>.</li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -379,7 +379,7 @@
 <section id="a-case-study---the-agritech-pnrr-project" class="slide level2">
 <h2>A case study - The Agritech PNRR Project</h2>
 <ul>
-<li><strong>Goal</strong>: Build a data platform to Foster collaboration and integration between different agriculture research projects.</li>
+<li><strong>Goal</strong>: Build a data platform to foster collaboration and integration between different agriculture research projects.</li>
 </ul>
 <div class="columns">
 <div class="column" style="width:25%;">
@@ -418,37 +418,54 @@
 <li>10 minutes presentation on their project;</li>
 <li>Clear questions on the type of data managed.</li>
 </ul></li>
-<li><strong>Goal</strong> Document key data aspects (e.g., 5Vs) and processing requirements for every project stakeholder.</li>
 </ul>
+<p><strong>Goal</strong>: Document key data aspects (e.g., 5Vs) and processing requirements for every project stakeholder.</p>
 </section>
 <section id="about-governance-1" class="slide level2">
 <h2>About Governance…</h2>
 <ul>
 <li>Identified key aspects:
 <ul>
-<li>Variety: Vector, image, multispectral, and sensor data.</li>
-<li>Volume: From small sensor sets to large drone missions.</li>
-<li>Veracity: Managing data quality from non-IT personnel.</li>
+<li><b>V</b>ariety: Vector, image, multispectral, and sensor data.</li>
+<li><b>V</b>olume: From small sensor sets to large drone missions.</li>
+<li><b>V</b>eracity: Managing data quality from non-IT personnel.</li>
 </ul></li>
 <li>Heterogeneous context:
 <ul>
-<li>Multidisiplinary projects;</li>
-<li>Non-communicating partners;</li>
-<li>Different standards;</li>
-<li>Few-to-none common ground for interoperability</li>
+<li>multidisiplinary projects;</li>
+<li>non-communicating partners;</li>
+<li>data collected in standalone excel files;</li>
+<li>few-to-none common ground for interoperability.</li>
 </ul></li>
-<li>Project volatility:
+<li><b>Project volatility</b>:
 <ul>
-<li>Analysis goals could evolve through time</li>
-<li>Data types could vary through time!</li>
+<li>Analysis goals could evolve through time;</li>
+<li>data types could vary through time!</li>
 </ul></li>
 </ul>
 </section>
 <section id="towards-a-mesh-architecture" class="slide level2">
 <h2>Towards a mesh architecture</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p>Centralized integration would be of great cost: - 1 ETL procedure x stakeholder; - hard to enforce data quality; - limited scalability (w.r.t. stakeholders)</p>
 <ul>
-<li></li>
+<li>Hybrid solution:
+<ul>
+<li>Centralized storage;</li>
+<li>adherence to <a href="https://www.fiware.org/">FIWARE</a> Smart Data Models;</li>
+<li><strong>data as a product</strong></li>
+</ul></li>
 </ul>
+</div><div class="column" style="width:75%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/FIWARE.png?raw=true"></p>
+<figcaption>FIWARE Agrifood Smart Data Model example</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="lets-talk-deploy" class="title-slide slide level1 center">
@@ -460,7 +477,7 @@
 <div class="columns">
 <div class="column" style="width:30%;">
 <ul>
-<li>12 Nodes (and counting…)
+<li>12 nodes (and counting…)
 <ul>
 <li>CPU 20 core w5-2445 <span class="citation" data-cites="4.6">@4.6</span> GHZ</li>
 <li>256 GB RAM</li>
@@ -541,7 +558,7 @@
 <li>Swarm mode is an advanced feature for managing a cluster of Docker daemons.</li>
 </ul>
 <div class="columns">
-<div class="column" style="width:27%;">
+<div class="column" style="width:35  %;">
 <ul>
 <li><b>Characteristics</b>:
 <ul>
@@ -554,7 +571,7 @@
 <li>rolling updates</li>
 </ul></li>
 </ul>
-</div><div class="column" style="width:73%;">
+</div><div class="column" style="width:65%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="https://docs.docker.com/engine/swarm/images/swarm-diagram.webp"></p>
