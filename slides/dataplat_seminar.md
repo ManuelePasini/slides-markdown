@@ -79,7 +79,7 @@ We needed to identify key data aspects!
     - 10 minutes presentation on their project;
     - Clear questions on the type of data managed.
 
-**Goal**: Document key data aspects (e.g., 5Vs) and processing requirements for every project stakeholder.
+**Goal**: document key data aspects (e.g., 5Vs) and processing requirements for every project stakeholder.
 
 ## About Governance...
 
@@ -108,7 +108,7 @@ Centralized integration would be of great cost:
     - hard to enforce data quality;
     - limited scalability (w.r.t. stakeholders)
 
-- Hybrid solution:
+- <b>Hybrid solution</b>:
     - Centralized storage;
     - adherence to [FIWARE](https://www.fiware.org/) Smart Data Models;
     - **data as a product**
@@ -121,6 +121,9 @@ Centralized integration would be of great cost:
 :::
 ::::
 
+# Agritech conceptual architecture
+
+![A view on Agritech Conceptual Architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/Slide19.jpg?raw=true)
 
 
 # Let's talk deploy!
