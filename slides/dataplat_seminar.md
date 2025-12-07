@@ -71,6 +71,35 @@
 
 ## About Governance...
 
+We needed to identify key data aspects!
+
+- Process:
+    - Two meetings with each partner;
+    - Questionaires;
+    - 10 minutes presentation on their project;
+    - Clear questions on the type of data managed.
+
+- **Goal** Document key data aspects (e.g., 5Vs) and processing requirements for every project stakeholder.
+
+## About Governance...
+
+- Identified key aspects:
+    - Variety: Vector, image, multispectral, and sensor data.
+    - Volume: From small sensor sets to large drone missions.
+    - Veracity: Managing data quality from non-IT personnel.
+
+- Heterogeneous context:
+    - Multidisiplinary projects;
+    - Non-communicating partners;
+    - Different standards;
+    - Few-to-none common ground for interoperability    
+
+- Project volatility:
+    - Analysis goals could evolve through time
+    - Data types could vary through time!
+
+## Towards a mesh architecture
+
 - 
 
 # Let's talk deploy!
