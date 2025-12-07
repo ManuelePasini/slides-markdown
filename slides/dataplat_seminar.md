@@ -29,11 +29,11 @@
 
     - (Almost) the whole data* world.
 
-        - Data engineering;
+        - Data engineering (physical level);
         - Data integration;
         - Precision Agriculture:
-            - Irrigation management
-            - Data Platform for italian agriculture domain @[Agritech](https://agritechcenter.it/it/)
+            - Irrigation management;
+            - Data Platform for italian agriculture domain @[Agritech](https://agritechcenter.it/it/).
 
 
 ## A Cloud Data Platform
@@ -46,7 +46,7 @@
 
 ## A case study - The Agritech PNRR Project
 
-- **Goal**: Build a data platform to Foster collaboration and integration between different agriculture research projects.
+- **Goal**: Build a data platform to foster collaboration and integration between different agriculture research projects.
 
 :::: {.columns}
 ::: {.column width="25%"}
@@ -79,28 +79,49 @@ We needed to identify key data aspects!
     - 10 minutes presentation on their project;
     - Clear questions on the type of data managed.
 
-- **Goal** Document key data aspects (e.g., 5Vs) and processing requirements for every project stakeholder.
+**Goal**: Document key data aspects (e.g., 5Vs) and processing requirements for every project stakeholder.
 
 ## About Governance...
 
 - Identified key aspects:
-    - Variety: Vector, image, multispectral, and sensor data.
-    - Volume: From small sensor sets to large drone missions.
-    - Veracity: Managing data quality from non-IT personnel.
+    - <b>V</b>ariety: Vector, image, multispectral, and sensor data.
+    - <b>V</b>olume: From small sensor sets to large drone missions.
+    - <b>V</b>eracity: Managing data quality from non-IT personnel.
 
 - Heterogeneous context:
-    - Multidisiplinary projects;
-    - Non-communicating partners;
-    - Different standards;
-    - Few-to-none common ground for interoperability    
+    - multidisiplinary projects;
+    - non-communicating partners;
+    - data collected in standalone excel files;
+    - few-to-none common ground for interoperability.
 
-- Project volatility:
-    - Analysis goals could evolve through time
-    - Data types could vary through time!
+- <b>Project volatility</b>:
+    - Analysis goals could evolve through time;
+    - data types could vary through time!
 
 ## Towards a mesh architecture
 
-- 
+:::: {.columns}
+::: {.column width="25%"}
+
+Centralized integration would be of great cost:
+    - 1 ETL procedure x stakeholder;
+    - hard to enforce data quality;
+    - limited scalability (w.r.t. stakeholders)
+
+- Hybrid solution:
+    - Centralized storage;
+    - adherence to [FIWARE](https://www.fiware.org/) Smart Data Models;
+    - **data as a product**
+
+:::
+::: {.column width="75%"}
+
+![FIWARE Agrifood Smart Data Model example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/FIWARE.png?raw=true)
+
+:::
+::::
+
+
 
 # Let's talk deploy!
 
@@ -109,7 +130,7 @@ We needed to identify key data aspects!
 :::: {.columns}
 ::: {.column width="30%"}
 
-- 12 Nodes (and counting...)
+- 12 nodes (and counting...)
     - CPU 20 core w5-2445 @4.6 GHZ
     - 256 GB RAM
     - 12 TB HDD
@@ -176,7 +197,7 @@ We needed to identify key data aspects!
 - Swarm mode is an advanced feature for managing a cluster of Docker daemons.
 
 :::: {.columns}
-::: {.column width="27%"}
+::: {.column width="35  %"}
 
 - <b>Characteristics</b>:
     - Integrated Orchestration;
@@ -188,7 +209,7 @@ We needed to identify key data aspects!
     - rolling updates
 
 :::
-::: {.column width="73%"}
+::: {.column width="65%"}
 
 ![Docker swarm architecture](https://docs.docker.com/engine/swarm/images/swarm-diagram.webp)
 
