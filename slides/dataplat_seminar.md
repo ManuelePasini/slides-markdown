@@ -56,10 +56,10 @@
     - highly heterogeneous data;
     - different goals;
 
-- Main challenges:
-    - <b>Governance issues</b>;
-    - <b>Sharing issues</b>.
-
+- <b>Main challenges</b>:
+    - Data governance;
+    - Resource governance;
+    - Unforseen events.
 
 :::
 ::: {.column width="75%"}
@@ -69,6 +69,9 @@
 :::
 ::::
 
+## About Governance...
+
+- 
 
 # Let's talk deploy!
 
@@ -100,7 +103,8 @@
 
 - We don't really want to work on bare metal...
     - Need for <b>fault tolerance</b> mechanisms;
-    - Might face dependencies issues;
+    - Possible dependencies issues;
+    - <b> no isolation </b>.
 - ... We want to **virtualize**
     - remember the <b>independence</b> constraint.
 - **Docker Swarm** !
@@ -143,7 +147,7 @@
 - Swarm mode is an advanced feature for managing a cluster of Docker daemons.
 
 :::: {.columns}
-::: {.column width="30%"}
+::: {.column width="27%"}
 
 - <b>Characteristics</b>:
     - Integrated Orchestration;
@@ -155,7 +159,7 @@
     - rolling updates
 
 :::
-::: {.column width="70%"}
+::: {.column width="73%"}
 
 ![Docker swarm architecture](https://docs.docker.com/engine/swarm/images/swarm-diagram.webp)
 
@@ -166,8 +170,11 @@
 ## Building a Data Platform
 
 - Platform services as <b>Docker services</b>.
+- Logically organized in <b>stacks</b>
 
+:::{.fragment}
 ![Docker swarm architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/top_view.jpg?raw=true)
+:::
 
 - This is the **what**, but... 
 - ... Too many things in one-flat schema, we need to add another dimension.
