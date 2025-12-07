@@ -121,6 +121,8 @@ Centralized integration would be of great cost:
 :::
 ::::
 
+![A view on Agritech Conceptual Architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/Slide19.jpg?raw=true)
+
 # Agritech conceptual architecture
 
 ![A view on Agritech Conceptual Architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/Slide19.jpg?raw=true)
