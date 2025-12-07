@@ -22,11 +22,8 @@
 
 - **Who am I ?** 
 
-    - Manuele Pasini, Ph.D. Candidate in Computer Science and Engineering
+    - <b>Manuele Pasini</b>, Ph.D. Candidate in Computer Science and Engineering
     - University of Bologna, [Business Intelligence Group](https://big.csr.unibo.it/)
-
-:::{.fragment}
-
 
 - **Area of Interest:** 
 
