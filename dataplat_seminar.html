@@ -390,10 +390,11 @@
 <li>highly heterogeneous data;</li>
 <li>different goals;</li>
 </ul></li>
-<li>Main challenges:
+<li><b>Main challenges</b>:
 <ul>
-<li><b>Governance issues</b>;</li>
-<li><b>Sharing issues</b>.</li>
+<li>Data governance;</li>
+<li>Resource governance;</li>
+<li>Unforseen events.</li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:75%;">
@@ -405,6 +406,12 @@
 </div>
 </div>
 </div>
+</section>
+<section id="about-governance" class="slide level2">
+<h2>About Governance…</h2>
+<ul>
+<li></li>
+</ul>
 </section></section>
 <section>
 <section id="lets-talk-deploy" class="title-slide slide level1 center">
@@ -443,7 +450,8 @@
 <li>We don’t really want to work on bare metal…
 <ul>
 <li>Need for <b>fault tolerance</b> mechanisms;</li>
-<li>Might face dependencies issues;</li>
+<li>Possible dependencies issues;</li>
+<li><b> no isolation </b>.</li>
 </ul></li>
 <li>… We want to <strong>virtualize</strong>
 <ul>
@@ -496,7 +504,7 @@
 <li>Swarm mode is an advanced feature for managing a cluster of Docker daemons.</li>
 </ul>
 <div class="columns">
-<div class="column" style="width:30%;">
+<div class="column" style="width:27%;">
 <ul>
 <li><b>Characteristics</b>:
 <ul>
@@ -509,7 +517,7 @@
 <li>rolling updates</li>
 </ul></li>
 </ul>
-</div><div class="column" style="width:70%;">
+</div><div class="column" style="width:73%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="https://docs.docker.com/engine/swarm/images/swarm-diagram.webp"></p>
@@ -523,9 +531,17 @@
 <h2>Building a Data Platform</h2>
 <ul>
 <li>Platform services as <b>Docker services</b>.</li>
+<li>Logically organized in <b>stacks</b></li>
 </ul>
-
-<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/top_view.jpg?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Docker swarm architecture</p><ul>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/top_view.jpg?raw=true"></p>
+<figcaption>Docker swarm architecture</figcaption>
+</figure>
+</div>
+</div>
+<ul>
 <li>This is the <strong>what</strong>, but…</li>
 <li>… Too many things in one-flat schema, we need to add another dimension.</li>
 </ul>
