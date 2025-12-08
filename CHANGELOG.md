@@ -1,3 +1,10 @@
+## [1.207.0](https://github.com/ManuelePasini/slides-markdown/compare/1.206.0...1.207.0) (2025-12-08)
+
+
+### Features
+
+* working on stgraph slides ([f27a7dc](https://github.com/ManuelePasini/slides-markdown/commit/f27a7dc2a567ce5c386370851770e4e49ae79b60))
+
 ## [1.206.0](https://github.com/ManuelePasini/slides-markdown/compare/1.205.0...1.206.0) (2025-12-08)
 
 
