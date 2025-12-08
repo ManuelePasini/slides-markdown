@@ -158,6 +158,8 @@ We needed to identify key data aspects!
 ::::
 
 
+# Before talking deploy, we have a problem!
+
 # Let's talk deploy!
 
 ## On a hardware level
@@ -210,6 +212,7 @@ We needed to identify key data aspects!
 
 :::: {.columns}
 ::: {.column width="45%"}
+
 - w.r.t. virtual machines (e.g., VMWare):
     - more lightweight;
     - no guest OS;
@@ -222,7 +225,6 @@ We needed to identify key data aspects!
 ::: {.column width="55%"}
 
 ![Container vs. Virtual Machines](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/virtualization.jpg?raw=true)
-
 
 :::
 ::::
@@ -276,7 +278,7 @@ We needed to identify key data aspects!
 :::: {.columns}
 ::: {.column width="50%"}
 
-- <b>Processing Module<b>:
+- <b>Processing Module</b>:
     - <b>Data processes</b>: internal to the platform, used for providing users tools&data (e.g. download SENTINEL-2 images)
     - <b>User processes</b>: specific to a user (e.g. UniPR), black-box to the platform. Interact through APIs.
 - <b>Metadata Module</b>: Support governance policies (e.g., FIWARE)
@@ -296,6 +298,8 @@ We needed to identify key data aspects!
 ## Let's put things toghether
 
 ![Data Platform as a whole](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true){.r-stretch}
+
+- [A bigger version](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true)
 
 ## Application 1 - Irrigation optimization of fruit orchards 
 
