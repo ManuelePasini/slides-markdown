@@ -30,7 +30,7 @@ Slides at: tinyurl.com/dataplatseminar
 
     - (Almost) the whole data* world.
 
-        - Data engineering (physical level);
+        - Data engineering;
         - Data integration;
         - Precision Agriculture:
             - Irrigation management;
@@ -259,7 +259,7 @@ We needed to identify key data aspects!
 ## Building a Data Platform
 
 - Platform services as <b>Docker services</b>.
-- Logically organized in <b>stacks</b>
+- Logically organized in <b>stacks</b>, manageable throguh <b>Portainer</b>.
 
 :::{.fragment}
 ![Docker swarm architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/top_view.jpg?raw=true)
@@ -282,7 +282,7 @@ We needed to identify key data aspects!
 ::: {.column width="50%"}
 
 - <b>Processing Module</b>:
-    - <b>Data processes</b>: internal to the platform, used for providing users tools&data (e.g. download SENTINEL-2 images)
+    - <b>Platform processes</b>: internal to the platform, used for providing users tools&data (e.g. download SENTINEL-2 images)
     - <b>User processes</b>: specific to a user (e.g. UniPR), black-box to the platform. Interact through APIs.
 - <b>Metadata Module</b>: Support governance policies (e.g., FIWARE)
 - <b>Storage Module</b>: Heterogeneous and hierarachical set of storage systems (e.g., Hadoop, MongoDB, PostgreSQL)
