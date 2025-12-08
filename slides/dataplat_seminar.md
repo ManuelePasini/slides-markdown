@@ -86,7 +86,7 @@ We needed to identify key data aspects!
 ## About Governance...
 
 :::: {.columns}
-::: {.column width="45%"}
+::: {.column width="40%"}
 
 ###### Output
 
@@ -107,7 +107,7 @@ We needed to identify key data aspects!
 
 
 :::
-::: {.column width="55%"}
+::: {.column width="60%"}
 
 
 ![Agritech project](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/agritech_second.svg?raw=true)
@@ -277,11 +277,11 @@ We needed to identify key data aspects!
 
 ## Let's put things toghether
 
-<div> 
-        <img src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true" alt="Ortographic projection">
-</div>
+![Data Platform as a whole](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true){.r-stretch}
 
-<!--![Data Platform as a whole](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true)-->
+## Let's put things toghether
+
+![Data Platform as a whole](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true){width="95%"}
 
 ## Application 1 - Irrigation optimization of fruit orchards 
 
