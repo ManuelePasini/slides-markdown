@@ -114,7 +114,7 @@ We needed to identify key data aspects!
         - JSON descriptor attached to data;
         - Common glossary of terms;
         - geo-properties standardization.
-    - **data as a product**
+    - **data as a product!**
 
 :::
 ::: {.column width="30%"}
@@ -126,7 +126,18 @@ We needed to identify key data aspects!
 
 # Agritech conceptual architecture
 
-![A view on Agritech Conceptual Architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/Slide19.jpg?raw=true)
+:::: {.columns}
+::: {.column width="70%"}
+
+![Agritech Conceptual Architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/Slide19.jpg?raw=true)
+
+:::
+::: {.column width="30%"}
+
+![Agritech functional architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/agritech_first.png?raw=true)
+
+:::
+::::
 
 
 # Let's talk deploy!
