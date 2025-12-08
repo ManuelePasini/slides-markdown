@@ -128,7 +128,7 @@ We needed to identify key data aspects!
 
 - <b>Hybrid solution</b>:
     - Centralized storage;
-    - adherence to [FIWARE](https://www.fiware.org/) Smart Data Models;
+    - <b>Governance</b> through adherence to [FIWARE](https://www.fiware.org/) Smart Data Models;
         - JSON descriptor attached to data;
         - Common glossary of terms;
         - geo-properties standardization.
@@ -232,7 +232,7 @@ We needed to identify key data aspects!
 - Swarm mode is an advanced feature for managing a cluster of Docker daemons.
 
 :::: {.columns}
-::: {.column width="25%"}
+::: {.column width="20%"}
 
 - <b>Characteristics</b>:
     - Integrated Orchestration;
@@ -243,7 +243,7 @@ We needed to identify key data aspects!
     - rolling updates.
 
 :::
-::: {.column width="75%"}
+::: {.column width="80%"}
 
 ![Docker swarm architecture](https://docs.docker.com/engine/swarm/images/swarm-diagram.webp)
 
@@ -266,7 +266,7 @@ We needed to identify key data aspects!
 
 ## A perspective change - Vertical View
 
-![Vertical view on BIG Data platform](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/vert_view.jpg?raw=true)
+![Vertical view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/vert_view.jpg?raw=true)
 
 - Now we know the **where**...
 - What about the **how** ?
