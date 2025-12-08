@@ -602,7 +602,7 @@
 <li>Swarm mode is an advanced feature for managing a cluster of Docker daemons.</li>
 </ul>
 <div class="columns">
-<div class="column" style="width:20%;">
+<div class="column" style="width:50%;">
 <ul>
 <li><b>Characteristics</b>:
 <ul>
@@ -614,7 +614,7 @@
 <li>rolling updates.</li>
 </ul></li>
 </ul>
-</div><div class="column" style="width:80%;">
+</div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="https://docs.docker.com/engine/swarm/images/swarm-diagram.webp"></p>
@@ -653,8 +653,29 @@
 </section>
 <section id="connecting-the-wires---functional-view" class="slide level2">
 <h2>Connecting the wires - Functional View</h2>
-
-<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/func_view.jpg?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Functional view</p></section>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p><b>Processing Module<b>:</b></b></p><b><b>
+<ul>
+<li><b>Data processes</b>: internal to the platform, used for providing users tools&amp;data (e.g.&nbsp;download SENTINEL-2 images)</li>
+<li><b>User processes</b>: specific to a user (e.g.&nbsp;UniPR), black-box to the platform. Interact through APIs.</li>
+</ul></b></b></li><b><b>
+<li><p><b>Metadata Module</b>: Support governance policies (e.g., FIWARE)</p></li>
+<li><p><b>Storage Layer</b>: Heterogeneous and hierarachical set of storage systems (e.g., Hadoop, MongoDB, PostgreSQL)</p></li>
+<li><p><b>APIs Module</b>: defines how users interacts with the platform services.</p></li>
+<li><p><strong>Apache Airflow</strong> as platform quarterback!</p></li>
+</b></b></ul><b><b>
+</b></b></div><div class="column" style="width:50%;"><b><b>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/func_view.jpg?raw=true"></p>
+<figcaption>Functional view</figcaption>
+</figure>
+</div>
+</b></b></div><b><b>
+</b></b></div><b><b>
+</b></b></section><b><b>
 <section id="lets-put-things-toghether" class="slide level2">
 <h2>Let’s put things toghether</h2>
 
@@ -674,7 +695,7 @@
 <section id="agritech---towards-further-structure" class="slide level2">
 <h2>Agritech - Towards further structure</h2>
 
-<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/agritech_ods.svg?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Agritech future functional view</p></section></section>
+<img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/agritech_ods.svg?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Agritech future functional view</p></section></b></b></section><b><b>
 <section id="thanks" class="title-slide slide level1 center">
 <h1><em>Thanks!</em></h1>
 <p>Questions?</p>
@@ -684,8 +705,8 @@
 </div>
 </div>
 </section>
-    </div>
-  </div>
+    </b></b></div><b><b>
+  </b></b></div><b><b>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="dataplat_seminar_files/libs/revealjs/dist/reveal.js"></script>
@@ -1050,4 +1071,4 @@
     </script>
     
 
-</body></html>
+</b></b></body></html>
