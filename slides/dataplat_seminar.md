@@ -299,7 +299,7 @@ We needed to identify key data aspects!
 
 ![Data Platform as a whole](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true){.r-stretch}
 
-- [A bigger version](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true)
+- [A bigger version](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.png?raw=true)
 
 ## Application 1 - Irrigation optimization of fruit orchards 
 
