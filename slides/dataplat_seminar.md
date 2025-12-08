@@ -197,7 +197,7 @@ We needed to identify key data aspects!
     - <b> no isolation </b>.
 - ... We want to **virtualize**
     - remember the <b>independence</b> constraint.
-- **Docker Swarm** !
+- **Docker** (or Kubernetes in production environments)!
 
 :::
 ::: {.column width="70%"}
@@ -221,7 +221,7 @@ We needed to identify key data aspects!
     - no guest OS;
     - reduced resource consumption;
     - more containers per host;
-    - greater portability
+    - greater portability.
 
 
 :::
