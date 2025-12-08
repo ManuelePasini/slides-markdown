@@ -71,7 +71,7 @@
 
 ## About Governance...
 
-#### Requirement gathering
+###### Requirement gathering
 
 We needed to identify key data aspects!
 
@@ -81,11 +81,11 @@ We needed to identify key data aspects!
     - 10 minutes presentation on their project;
     - Clear questions on the type of data managed.
 
-**Goal**: document key data (e.g., 5Vs) and processing requirements (e.g., GPUS) for each stakeholder.
+**Desired output**: document key data (e.g., 5Vs) and processing requirements (e.g., GPUS) for each stakeholder.
 
 ## About Governance...
 
-#### Output
+###### Output
 
 - Identified key aspects:
     - **V**ariety: Vector, image, multispectral, and sensor data.
