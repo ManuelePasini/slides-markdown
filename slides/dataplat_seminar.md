@@ -71,6 +71,8 @@
 
 ## About Governance...
 
+#### Requirement gathering
+
 We needed to identify key data aspects!
 
 - Process:
@@ -79,14 +81,16 @@ We needed to identify key data aspects!
     - 10 minutes presentation on their project;
     - Clear questions on the type of data managed.
 
-**Goal**: document key data aspects (e.g., 5Vs) and processing requirements for every project stakeholder.
+**Goal**: document key data (e.g., 5Vs) and processing requirements (e.g., GPUS) for each stakeholder.
 
 ## About Governance...
 
+#### Output
+
 - Identified key aspects:
-    - <b>V</b>ariety: Vector, image, multispectral, and sensor data.
-    - <b>V</b>olume: From small sensor sets to large drone missions.
-    - <b>V</b>eracity: Managing data quality from non-IT personnel.
+    - **V**ariety: Vector, image, multispectral, and sensor data.
+    - **V**olume: From small sensor data to large drone missions.
+    - **V**eracity: Managing data quality from non-IT personnel.
 
 - Heterogeneous domain:
     - multidisiplinary projects;
@@ -103,10 +107,10 @@ We needed to identify key data aspects!
 :::: {.columns}
 ::: {.column width="70%"}
 
-- Centralized integration would not be cheap!
+- <b>Centralized integration would be a nightmare</b>!
     - 1 ETL procedure x stakeholder;
     - hard to enforce data quality;
-    - limited scalability (w.r.t. stakeholders)
+    - limited scalability (w.r.t. stakeholders).
 
 - <b>Hybrid solution</b>:
     - Centralized storage;
@@ -114,7 +118,7 @@ We needed to identify key data aspects!
         - JSON descriptor attached to data;
         - Common glossary of terms;
         - geo-properties standardization.
-    - **data as a product!**
+    - **Data as a product!**
 
 :::
 ::: {.column width="30%"}
@@ -127,12 +131,12 @@ We needed to identify key data aspects!
 # Agritech conceptual architecture
 
 :::: {.columns}
-::: {.column width="70%"}
+::: {.column width="60%"}
 
 ![Agritech Conceptual Architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/Slide19.jpg?raw=true)
 
 :::
-::: {.column width="30%"}
+::: {.column width="40%"}
 
 ![Agritech functional architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/agritech_first.png?raw=true)
 
