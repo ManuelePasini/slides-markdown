@@ -260,9 +260,22 @@ We needed to identify key data aspects!
 - Platform services as <b>Docker services</b>.
 - Logically organized in <b>stacks</b>, manageable throguh <b>Portainer</b>.
 
-:::{.fragment}
+:::: {.columns}
+::: {.column width="50%"}
+
+
 ![Docker swarm architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/top_view.jpg?raw=true)
+
 :::
+::: {.column width="50%"}
+
+![Docker stack example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/stack.png?raw=true)
+
+:::
+::::
+
+
+
 
 - This is the **what**, but... 
 - ... Too many things in one-flat schema, we need to add another dimension.
