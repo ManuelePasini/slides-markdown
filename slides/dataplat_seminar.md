@@ -36,15 +36,6 @@ Slides at: tinyurl.com/dataplatseminar
             - Irrigation management;
             - Data Platform for italian agriculture domain @[Agritech](https://agritechcenter.it/it/).
 
-
-## A Cloud Data Platform
-
-- Is a *centralized* infrastructre composed of *independent* and *well-integrated* services meeting the *end-to-end* needs of data pipelines:
-    - *Centralized*: a data platform is conceptually a single and unified component;
-    - *Independent*: changes in a a service do not affect others;
-    - *Well-integrated*: services have interfaces enabling a frictionless composition;
-    - *End-to-end*: services cover the entire data life cycle.
-
 ## A case study - The Agritech PNRR Project
 
 - **Goal**: Build a data platform to foster collaboration and integration between different agriculture research projects.
@@ -54,8 +45,12 @@ Slides at: tinyurl.com/dataplatseminar
 
 - In short:
     - 6 research partners;
-    - highly heterogeneous data;
+    - multidisiplinary projects;
     - different goals;
+
+- Considerations:
+    - Requirements might not always be clear
+    - analysis goals could evolve through time!
 
 - <b>Main challenges</b>:
     - Data governance;
@@ -97,14 +92,11 @@ We needed to identify key data aspects!
     - **V**eracity: manual collection and sharing.
 
 - Domain analysis:
-    - multidisiplinary projects;
+    - Project volatility;
     - non-communicating partners;
-    - data in multiple excel files;
-    - No common ground for interoperability.
+    - data shattered through different formats;
+    - no common ground for interoperability.
 
-- <b>Project volatility</b>:
-    - Analysis goals could evolve through time;
-    - data types could vary through time!
 
 
 :::
