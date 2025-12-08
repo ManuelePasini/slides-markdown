@@ -218,19 +218,18 @@ We needed to identify key data aspects!
 - Swarm mode is an advanced feature for managing a cluster of Docker daemons.
 
 :::: {.columns}
-::: {.column width="30%"}
+::: {.column width="25%"}
 
 - <b>Characteristics</b>:
     - Integrated Orchestration;
-    - Decentralized Management;
     - multi-host networking;
     - load balancing;
     - scaling features;
     - service discovery;
-    - rolling updates
+    - rolling updates.
 
 :::
-::: {.column width="70%"}
+::: {.column width="75%"}
 
 ![Docker swarm architecture](https://docs.docker.com/engine/swarm/images/swarm-diagram.webp)
 
@@ -251,31 +250,33 @@ We needed to identify key data aspects!
 - ... Too many things in one-flat schema, we need to add another dimension.
 
 
-# A perspective change
+# A perspective change - Vertical View
 
 ![Vertical view on BIG Data platform](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/vert_view.jpg?raw=true)
 
 - Now we know the **where**...
 - What about the **how** ?
 
-## A functional view
+## Connecting the wires . Functional View
 
 ![Functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/func_view.jpg?raw=true)
 
-## test2
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.png?raw=true)
+## Let's put things toghether
 
-## test3
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/watering_pipeline.jpg?raw=true)
+![Data Platform as a whole](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true)
 
-## test4
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/agritech.jpg?raw=true)
+## Application 1 - Irrigation optimization of fruit orchards 
 
-## test5
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/agritech_ods.jpg?raw=true)
+![Smart Irrigation Data Pipeline](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/watering.svg?raw=true)
 
-## test6
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/top_view.jpg?raw=true)
+## Agritech - A Data Platform for Italian Precision Agriculturew 
 
-## test7
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/vert_view.jpg?raw=true)
+![Agritech actual functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/watering.svg?raw=true)
+
+## Agritech - Towards further structure
+
+![Agritech future functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/watering.svg?raw=true)
+
+# *Thanks!*
+
+Questions?
