@@ -9,6 +9,7 @@
 
 09/12/2025
 
+Slides at: tinyurl.com/dataplatseminar
 
 :::: {.columns}
 ::: {.column width="20%"}
@@ -142,7 +143,7 @@ We needed to identify key data aspects!
 :::
 ::::
 
-# Agritech conceptual architecture
+# Agritech architecture
 
 :::: {.columns}
 ::: {.column width="60%"}
@@ -284,7 +285,7 @@ We needed to identify key data aspects!
     - <b>Data processes</b>: internal to the platform, used for providing users tools&data (e.g. download SENTINEL-2 images)
     - <b>User processes</b>: specific to a user (e.g. UniPR), black-box to the platform. Interact through APIs.
 - <b>Metadata Module</b>: Support governance policies (e.g., FIWARE)
-- <b>Storage Layer</b>: Heterogeneous and hierarachical set of storage systems (e.g., Hadoop, MongoDB, PostgreSQL)
+- <b>Storage Module</b>: Heterogeneous and hierarachical set of storage systems (e.g., Hadoop, MongoDB, PostgreSQL)
 - <b>APIs Module</b>: defines how users interacts with the platform services.
 
 - **Apache Airflow** as platform quarterback!
