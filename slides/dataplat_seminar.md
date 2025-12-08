@@ -1,4 +1,4 @@
-# Data Platforms - Under the hood
+# Data Platforms - A 3D View
 
 <hr style="border: none; border-top: 1px solid #000;">
 
@@ -252,7 +252,6 @@ We needed to identify key data aspects!
 
 ![Docker swarm architecture](https://docs.docker.com/engine/swarm/images/swarm-diagram.webp)
 
-
 :::
 ::::
 
@@ -293,7 +292,7 @@ We needed to identify key data aspects!
 :::
 ::: {.column width="50%"}
 
-![Functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/func_view.jpg?raw=true)
+![Functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/func_view.svg?raw=true)
 
 :::
 ::::
