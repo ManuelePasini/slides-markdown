@@ -49,7 +49,7 @@ Slides at: tinyurl.com/dataplatseminar
     - different goals;
 
 - Considerations:
-    - Requirements might not always be clear
+    - Requirements might not always be clear;
     - analysis goals could evolve through time!
 
 - <b>Main challenges</b>:
@@ -90,7 +90,8 @@ We needed to identify key data aspects!
     - **V**ariety: vector, image, multispectral, and sensor data.
     - **V**olume: from small sensor data to large drone missions.
     - **V**eracity: manual collection and sharing.
-
+    - Strong temporal and spatial connotations.
+    
 - Domain analysis:
     - Project volatility;
     - non-communicating partners;
