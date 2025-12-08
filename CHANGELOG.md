@@ -1,3 +1,11 @@
+## [1.183.0](https://github.com/ManuelePasini/slides-markdown/compare/1.182.0...1.183.0) (2025-12-08)
+
+
+### Features
+
+* add agritech conceptual schema ([d3035db](https://github.com/ManuelePasini/slides-markdown/commit/d3035dbd82e0aef567898866083b2fbf06a00c5b))
+* working on stgraph slides ([ebca54f](https://github.com/ManuelePasini/slides-markdown/commit/ebca54f3d19010bc68356d99655748d51635bbc9))
+
 ## [1.182.0](https://github.com/ManuelePasini/slides-markdown/compare/1.181.0...1.182.0) (2025-12-08)
 
 
