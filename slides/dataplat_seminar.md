@@ -91,7 +91,7 @@ We needed to identify key data aspects!
     - **V**olume: from small sensor data to large drone missions.
     - **V**eracity: manual collection and sharing.
     - Strong temporal and spatial connotations.
-    
+
 - Domain analysis:
     - Project volatility;
     - non-communicating partners;
@@ -299,7 +299,7 @@ We needed to identify key data aspects!
 :::
 ::: {.column width="50%"}
 
-![Functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/func_view.svg?raw=true)
+![Functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/func_view.jpg?raw=true)
 
 :::
 ::::
