@@ -277,8 +277,8 @@ We needed to identify key data aspects!
 
 ## Let's put things toghether
 
-<div style="margin: 0;"> 
-        <img src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true" alt="Ortographic projection" style="width: 100%; display: block;">
+<div> 
+        <img src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true" alt="Ortographic projection">
 </div>
 
 <!--![Data Platform as a whole](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true)-->
