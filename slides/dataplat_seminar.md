@@ -77,11 +77,11 @@ We needed to identify key data aspects!
 
 - Process:
     - Two meetings with each partner;
-    - Questionaires;
+    - Questionaire filling;
     - 10 minutes presentation on their project;
     - Clear questions on the type of data managed.
 
-**Desired output**: document key data (e.g., 5Vs) and processing requirements (e.g., GPUS) for each stakeholder.
+**Desired output**: document key data aspects (5Vs) and processing requirements (e.g., GPUS) for each stakeholder.
 
 ## About Governance...
 
@@ -160,7 +160,9 @@ We needed to identify key data aspects!
 
 # Before talking deploy, we have a problem!
 
-# Let's talk deploy!
+*Someting came up, we need to think about a migration first...*
+
+# Now let's talk deploy!
 
 ## On a hardware level
 
