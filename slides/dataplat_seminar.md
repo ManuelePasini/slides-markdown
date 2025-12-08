@@ -64,7 +64,7 @@
 :::
 ::: {.column width="75%"}
 
-![Agritech project](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/datamesh.jpg?raw=true)
+![Agritech project](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/agritech_first.svg?raw=true)
 
 :::
 ::::
@@ -85,6 +85,9 @@ We needed to identify key data aspects!
 
 ## About Governance...
 
+:::: {.columns}
+::: {.column width="60%"}
+
 ###### Output
 
 - Identified key aspects:
@@ -101,6 +104,17 @@ We needed to identify key data aspects!
 - <b>Project volatility</b>:
     - Analysis goals could evolve through time;
     - data types could vary through time!
+
+
+:::
+::: {.column width="40%"}
+
+
+![Agritech project](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/agritech_second.svg?raw=true)
+
+
+:::
+::::
 
 ## Towards a mesh architecture
 
@@ -250,20 +264,24 @@ We needed to identify key data aspects!
 - ... Too many things in one-flat schema, we need to add another dimension.
 
 
-# A perspective change - Vertical View
+## A perspective change - Vertical View
 
 ![Vertical view on BIG Data platform](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/vert_view.jpg?raw=true)
 
 - Now we know the **where**...
 - What about the **how** ?
 
-## Connecting the wires . Functional View
+## Connecting the wires - Functional View
 
 ![Functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/func_view.jpg?raw=true)
 
 ## Let's put things toghether
 
-![Data Platform as a whole](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true)
+<div style="margin: 0;"> 
+        <img src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true" alt="Ortographic projection" style="width: 100%; display: block;">
+</div>
+
+<!--![Data Platform as a whole](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true)-->
 
 ## Application 1 - Irrigation optimization of fruit orchards 
 
