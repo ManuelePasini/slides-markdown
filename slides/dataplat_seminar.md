@@ -162,6 +162,7 @@ We needed to identify key data aspects!
 # Before talking deploy, we have a problem!
 
 *Someting came up, we need to think about a migration first...*
+*Slides at: tinyurl.com/dataplatmigration*
 
 # Now let's talk deploy!
 
@@ -312,7 +313,7 @@ We needed to identify key data aspects!
 
 ## Let's put things toghether
 
-![Data Platform as a whole](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true){.r-stretch}
+![Data Platform as a whole](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true)
 
 - [A bigger version](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.png?raw=true)
 
