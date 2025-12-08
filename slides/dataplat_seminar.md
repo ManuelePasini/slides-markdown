@@ -271,11 +271,11 @@ We needed to identify key data aspects!
 
 ## Agritech - A Data Platform for Italian Precision Agriculturew 
 
-![Agritech actual functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/watering.svg?raw=true)
+![Agritech actual functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/agritech.svg?raw=true)
 
 ## Agritech - Towards further structure
 
-![Agritech future functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/watering.svg?raw=true)
+![Agritech future functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/agritech_ods.svg?raw=true)
 
 # *Thanks!*
 
