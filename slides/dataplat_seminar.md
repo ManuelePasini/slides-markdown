@@ -86,20 +86,20 @@ We needed to identify key data aspects!
 ## About Governance...
 
 :::: {.columns}
-::: {.column width="60%"}
+::: {.column width="45%"}
 
 ###### Output
 
-- Identified key aspects:
-    - **V**ariety: Vector, image, multispectral, and sensor data.
-    - **V**olume: From small sensor data to large drone missions.
-    - **V**eracity: Managing data quality from non-IT personnel.
+- Identified data aspects:
+    - **V**ariety: vector, image, multispectral, and sensor data.
+    - **V**olume: from small sensor data to large drone missions.
+    - **V**eracity: manual collection and sharing.
 
-- Heterogeneous domain:
+- Domain analysis:
     - multidisiplinary projects;
     - non-communicating partners;
-    - data collected in standalone excel files;
-    - few-to-none common ground for interoperability.
+    - data in multiple excel files;
+    - No common ground for interoperability.
 
 - <b>Project volatility</b>:
     - Analysis goals could evolve through time;
@@ -107,7 +107,7 @@ We needed to identify key data aspects!
 
 
 :::
-::: {.column width="40%"}
+::: {.column width="55%"}
 
 
 ![Agritech project](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/agritech_second.svg?raw=true)
