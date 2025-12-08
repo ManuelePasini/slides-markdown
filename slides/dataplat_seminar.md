@@ -232,7 +232,7 @@ We needed to identify key data aspects!
 - Swarm mode is an advanced feature for managing a cluster of Docker daemons.
 
 :::: {.columns}
-::: {.column width="20%"}
+::: {.column width="50%"}
 
 - <b>Characteristics</b>:
     - Integrated Orchestration;
@@ -243,7 +243,7 @@ We needed to identify key data aspects!
     - rolling updates.
 
 :::
-::: {.column width="80%"}
+::: {.column width="50%"}
 
 ![Docker swarm architecture](https://docs.docker.com/engine/swarm/images/swarm-diagram.webp)
 
@@ -273,7 +273,24 @@ We needed to identify key data aspects!
 
 ## Connecting the wires - Functional View
 
+:::: {.columns}
+::: {.column width="50%"}
+- <b>Processing Module<b>:
+    - <b>Data processes</b>: internal to the platform, used for providing users tools&data (e.g. download SENTINEL-2 images)
+    - <b>User processes</b>: specific to a user (e.g. UniPR), black-box to the platform. Interact through APIs.
+- <b>Metadata Module</b>: Support governance policies (e.g., FIWARE)
+- <b>Storage Layer</b>: Heterogeneous and hierarachical set of storage systems (e.g., Hadoop, MongoDB, PostgreSQL)
+- <b>APIs Module</b>: defines how users interacts with the platform services.
+
+- **Apache Airflow** as platform quarterback!
+
+:::
+::: {.column width="50%"}
+
 ![Functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/func_view.jpg?raw=true)
+
+:::
+::::
 
 ## Let's put things toghether
 
