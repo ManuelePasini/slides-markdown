@@ -88,7 +88,7 @@ We needed to identify key data aspects!
     - <b>V</b>olume: From small sensor sets to large drone missions.
     - <b>V</b>eracity: Managing data quality from non-IT personnel.
 
-- Heterogeneous context:
+- Heterogeneous domain:
     - multidisiplinary projects;
     - non-communicating partners;
     - data collected in standalone excel files;
@@ -103,7 +103,7 @@ We needed to identify key data aspects!
 :::: {.columns}
 ::: {.column width="70%"}
 
-Centralized integration would be of great cost:
+- Centralized integration would not be cheap!
     - 1 ETL procedure x stakeholder;
     - hard to enforce data quality;
     - limited scalability (w.r.t. stakeholders)
@@ -111,22 +111,15 @@ Centralized integration would be of great cost:
 - <b>Hybrid solution</b>:
     - Centralized storage;
     - adherence to [FIWARE](https://www.fiware.org/) Smart Data Models;
+        - JSON descriptor attached to data;
+        - Common glossary of terms;
+        - geo-properties standardization.
     - **data as a product**
 
 :::
 ::: {.column width="30%"}
 
 ![FIWARE Agrifood Smart Data Model example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/FIWARE.png?raw=true)
-
-:::
-::::
-:::: {.columns}
-::: {.column width="50%"}
-
-![A view on Agritech Conceptual Architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/Slide19.jpg?raw=true)
-
-:::
-::: {.column width="50%"}
 
 :::
 ::::
