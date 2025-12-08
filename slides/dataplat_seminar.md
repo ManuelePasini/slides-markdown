@@ -133,7 +133,7 @@ We needed to identify key data aspects!
 :::: {.columns}
 ::: {.column width="60%"}
 
-![Agritech Conceptual Architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/Slide19.jpg?raw=true)
+![Agritech Conceptual Architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/agritech_conceptual.svg?raw=true)
 
 :::
 ::: {.column width="40%"}
