@@ -275,6 +275,7 @@ We needed to identify key data aspects!
 
 :::: {.columns}
 ::: {.column width="50%"}
+
 - <b>Processing Module<b>:
     - <b>Data processes</b>: internal to the platform, used for providing users tools&data (e.g. download SENTINEL-2 images)
     - <b>User processes</b>: specific to a user (e.g. UniPR), black-box to the platform. Interact through APIs.
@@ -295,10 +296,6 @@ We needed to identify key data aspects!
 ## Let's put things toghether
 
 ![Data Platform as a whole](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true){.r-stretch}
-
-## Let's put things toghether
-
-![Data Platform as a whole](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true){width="95%"}
 
 ## Application 1 - Irrigation optimization of fruit orchards 
 
