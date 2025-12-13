@@ -86,18 +86,17 @@ We needed to identify key data aspects!
 
 ###### Output
 
-- Identified data aspects:
-    - **V**ariety: vector, image, multispectral, and sensor data.
-    - **V**olume: from small sensor data to large drone missions.
-    - **V**eracity: manual collection and sharing.
-    - Strong temporal and spatial connotations.
-
 - Domain analysis:
     - Project volatility;
     - non-communicating partners;
     - data shattered through different formats;
     - no common ground for interoperability.
 
+- Identified data aspects:
+    - **V**ariety: vector, image, multispectral, and sensor data.
+    - **V**olume: from small sensor data to large drone missions.
+    - **V**eracity: manual collection and sharing.
+    - Strong temporal and spatial connotations.
 
 
 :::
@@ -126,6 +125,7 @@ We needed to identify key data aspects!
         - JSON descriptor attached to data;
         - Common glossary of terms;
         - geo-properties standardization.
+    - Stakeholder responsible of quality adherence;
     - **Data as a product!**
 
 :::
