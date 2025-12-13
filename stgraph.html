@@ -459,6 +459,26 @@ isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ∩<sub>j=i..k-1</sub> I<su
 <li>Limited support for AsterixDB capabilities;</li>
 </ul></li>
 </ul>
+</section>
+<section id="collaborations" class="slide level2">
+<h2>Collaborations</h2>
+<ul>
+<li>Physical level:
+<ul>
+<li>TS data require different data layout than graph data;
+<ul>
+<li>LSM-Tree-like (RocksDB)</li>
+<li>InfluxDB 3.0 on Parquet.</li>
+</ul></li>
+<li>Metadata modelling;</li>
+<li>algorithms optimizations;</li>
+</ul></li>
+<li>Analytics:
+<ul>
+<li>TS operations in graph QL (Graph analytics);</li>
+<li>Cross time-series operations;</li>
+</ul></li>
+</ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
