@@ -280,6 +280,8 @@ We needed to identify key data aspects!
 
 ![Vertical view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/vert_view.jpg?raw=true)
 
+- Portainer grants you access from the top...
+    - SSH on phisical machines grants access from the bottom.
 - Now we know the **where**...
 - What about the **how** ?
 

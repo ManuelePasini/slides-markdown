@@ -104,3 +104,17 @@
     - Supporting only "long" values as TS measurements;
     - Query to AsterixDB is synchronous (shouldn't be);
     - Limited support for AsterixDB capabilities;
+
+
+## Collaborations
+
+- Physical level:
+    - TS data require different data layout than graph data;
+        - LSM-Tree-like (RocksDB)
+        - InfluxDB 3.0 on Parquet.
+    - Metadata modelling;
+    - algorithms optimizations; 
+
+- Analytics:
+    - TS operations in graph QL (Graph analytics);
+    - Cross time-series operations;
