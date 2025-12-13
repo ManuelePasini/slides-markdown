@@ -123,7 +123,7 @@ We needed to identify key data aspects!
     - Centralized storage;
     - <b>Governance</b> through adherence to [FIWARE](https://www.fiware.org/) Smart Data Models;
         - JSON descriptor attached to data;
-        - Common glossary of terms;
+        - Common glossary of terms (e.g., [AGROVOC](https://www.fao.org/agrovoc/));
         - geo-properties standardization.
     - Stakeholder responsible of quality adherence;
     - **Data as a product!**
@@ -186,8 +186,9 @@ We needed to identify key data aspects!
 ::: {.column width="30%"}
 
 - We don't really want to work on bare metal...
-    - Need for <b>fault tolerance</b> mechanisms;
-    - Possible dependencies issues;
+    - Need to build <b>fault tolerance</b> mechanisms;
+    - Need to build monitoring tools;
+    - Probable dependency issues;
     - <b> no isolation </b>.
 - ... We want to **virtualize**
     - remember the <b>independence</b> constraint.
