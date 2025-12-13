@@ -422,19 +422,19 @@
 <div class="column" style="width:40%;">
 <h6 id="output">Output</h6>
 <ul>
-<li>Identified data aspects:
-<ul>
-<li><strong>V</strong>ariety: vector, image, multispectral, and sensor data.</li>
-<li><strong>V</strong>olume: from small sensor data to large drone missions.</li>
-<li><strong>V</strong>eracity: manual collection and sharing.</li>
-<li>Strong temporal and spatial connotations.</li>
-</ul></li>
 <li>Domain analysis:
 <ul>
 <li>Project volatility;</li>
 <li>non-communicating partners;</li>
 <li>data shattered through different formats;</li>
 <li>no common ground for interoperability.</li>
+</ul></li>
+<li>Identified data aspects:
+<ul>
+<li><strong>V</strong>ariety: vector, image, multispectral, and sensor data.</li>
+<li><strong>V</strong>olume: from small sensor data to large drone missions.</li>
+<li><strong>V</strong>eracity: manual collection and sharing.</li>
+<li>Strong temporal and spatial connotations.</li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:60%;">
@@ -464,9 +464,10 @@
 <li><b>Governance</b> through adherence to <a href="https://www.fiware.org/">FIWARE</a> Smart Data Models;
 <ul>
 <li>JSON descriptor attached to data;</li>
-<li>Common glossary of terms;</li>
+<li>Common glossary of terms (e.g., <a href="https://www.fao.org/agrovoc/">AGROVOC</a>);</li>
 <li>geo-properties standardization.</li>
 </ul></li>
+<li>Stakeholder responsible of quality adherence;</li>
 <li><strong>Data as a product!</strong></li>
 </ul></li>
 </ul>
@@ -542,8 +543,9 @@
 <ul>
 <li>We don’t really want to work on bare metal…
 <ul>
-<li>Need for <b>fault tolerance</b> mechanisms;</li>
-<li>Possible dependencies issues;</li>
+<li>Need to build <b>fault tolerance</b> mechanisms;</li>
+<li>Need to build monitoring tools;</li>
+<li>Probable dependency issues;</li>
 <li><b> no isolation </b>.</li>
 </ul></li>
 <li>… We want to <strong>virtualize</strong>
