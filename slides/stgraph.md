@@ -117,17 +117,14 @@
 
 - Analytics:
     - TS operators in Cypher/GQL (Graph analytics);
-        - shape-matching;
+        - shape/patthern matching;
     - Cross time-series operators:
-        - Dimmi piante/griglie che hanno avuto pattern asciugatura simili ultime 24h.
-        - Correlami con join spaziale asciugatura terreno piante e temperatura da centralina ARPAE.
+        - Identify plants/grids with similar drying patterns over the last 24h
+        - Correlate soil drying with temperature (spatial join with ARPAE weather stations)
     - Graph-TS cross-operators:
-        - Come si è evoluta topologia grafo all'evolversi della ts?
-        - Correlare grado (o property) di un nodo e andamento di una TS (picco di connessione, picco di valore)
-            - e.g., rete di sensori monitora punti pressione frana, archi tra sensori modellato con hygraph
-              con una property che aumenta il peso dell'arco tra due sensori  vicini all'aumentare della pressione di uno dei due.
-              cerca correlazione tra punti di pressione diversi nella frana.
+        - Correlate graph metrics (node degree, node/edge properties) with time-series trends
+           - e.g., landslide monitoring sensor network: correlation between pressure measurements and dynamic edge weights between nearby sensors
 
 - LLMs:
-    - Text to query (in hybrid data models)
-    -
+    - Text to query (in hybrid models)
+    - Repair
