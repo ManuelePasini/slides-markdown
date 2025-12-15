@@ -108,14 +108,14 @@
 
 ## Collaborations
 
-- Physical level:
+- <b>Physical level</b>:
     - TS data require different data layout than graph data;
         - LSM-Tree-like (e.g., RocksDB)
         - InfluxDB 3.0 on Parquet.
     - Metadata modelling (ausiliary structures);
     - query formalization and optimization; 
 
-- Analytics:
+- <b>Analytics</b>:
     - TS operators in Cypher/GQL (Graph analytics);
         - shape/patthern matching;
     - Cross time-series operators:
