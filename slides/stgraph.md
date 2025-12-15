@@ -95,8 +95,6 @@
 :::
 ::::
 
-
-
 ## Limitations and Future works
 
 - **As of today**
@@ -118,12 +116,11 @@
 - <b>Analytics</b>:
     - TS operators in Cypher/GQL (Graph analytics);
         - shape/patthern matching;
-    - Cross time-series operators:
-        - Identify plants/grids with similar drying patterns over the last 24h
     - Graph-TS cross-operators:
+        - Identify plants/grids with similar drying patterns over the last 24h
         - Correlate graph metrics with time-series trends
            - e.g., landslide monitoring sensor network: correlation between pressure measurements and node degree between nearby sensors
         - Correlate soil drying with temperature (spatial join with ARPAE weather stations)
-        
+
 - <b>Multistore</b>:
-    - Provide a unified language that transparently distributes the execution plan on different engines
+    - Provide a unified language that transparently distributes the execution plan on different engines.
