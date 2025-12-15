@@ -112,7 +112,7 @@
     - TS data require different data layout than graph data;
         - LSM-Tree-like (e.g., RocksDB)
         - InfluxDB 3.0 on Parquet.
-    - Metadata modelling (custom metadata as a query);
+    - Metadata modelling (ausiliary structures);
     - query formalization and optimization; 
 
 - Analytics:
@@ -120,11 +120,10 @@
         - shape/patthern matching;
     - Cross time-series operators:
         - Identify plants/grids with similar drying patterns over the last 24h
-        - Correlate soil drying with temperature (spatial join with ARPAE weather stations)
     - Graph-TS cross-operators:
         - Correlate graph metrics (node degree, node/edge properties) with time-series trends
            - e.g., landslide monitoring sensor network: correlation between pressure measurements and dynamic edge weights between nearby sensors
-
+        - Correlate soil drying with temperature (spatial join with ARPAE weather stations)
 - LLMs:
     - Text to query (in hybrid models)
     - Repair
