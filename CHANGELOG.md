@@ -1,3 +1,10 @@
+## [1.215.0](https://github.com/ManuelePasini/slides-markdown/compare/1.214.0...1.215.0) (2025-12-15)
+
+
+### Features
+
+* working on seminar slides ([5c9bba3](https://github.com/ManuelePasini/slides-markdown/commit/5c9bba3bb5c5c100bb3e6a6d52480610925cf9eb))
+
 ## [1.214.0](https://github.com/ManuelePasini/slides-markdown/compare/1.213.0...1.214.0) (2025-12-15)
 
 
