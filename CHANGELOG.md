@@ -1,3 +1,81 @@
+## [1.210.0](https://github.com/ManuelePasini/slides-markdown/compare/1.209.0...1.210.0) (2025-12-13)
+
+
+### Features
+
+* working on stgraph slides ([f5ac7a0](https://github.com/ManuelePasini/slides-markdown/commit/f5ac7a071a97079a086461f1011338d1d4d0b158))
+
+## [1.209.0](https://github.com/ManuelePasini/slides-markdown/compare/1.208.0...1.209.0) (2025-12-13)
+
+
+### Features
+
+* working on stgraph slides ([9c07e66](https://github.com/ManuelePasini/slides-markdown/commit/9c07e66ab560eb1ccd975fb8b98afae00d2ddb5d))
+* working on stgraph slides ([c87fd33](https://github.com/ManuelePasini/slides-markdown/commit/c87fd33d43ae735a4283503d2ed2fef9d4d4476d))
+
+## [1.208.0](https://github.com/ManuelePasini/slides-markdown/compare/1.207.0...1.208.0) (2025-12-08)
+
+
+### Features
+
+* working on stgraph slides ([cecc77f](https://github.com/ManuelePasini/slides-markdown/commit/cecc77f238f0ebadb7757010f85eb79bed591b1b))
+
+## [1.207.0](https://github.com/ManuelePasini/slides-markdown/compare/1.206.0...1.207.0) (2025-12-08)
+
+
+### Features
+
+* working on stgraph slides ([f27a7dc](https://github.com/ManuelePasini/slides-markdown/commit/f27a7dc2a567ce5c386370851770e4e49ae79b60))
+
+## [1.206.0](https://github.com/ManuelePasini/slides-markdown/compare/1.205.0...1.206.0) (2025-12-08)
+
+
+### Features
+
+* working on stgraph slides ([320fd32](https://github.com/ManuelePasini/slides-markdown/commit/320fd324be6a4d9833dd200f56edb0a1c1f0b7e7))
+
+## [1.205.0](https://github.com/ManuelePasini/slides-markdown/compare/1.204.0...1.205.0) (2025-12-08)
+
+
+### Features
+
+* working on stgraph slides ([d90fabd](https://github.com/ManuelePasini/slides-markdown/commit/d90fabdbac18b494a1af9fc679342fd5f5b67b65))
+
+## [1.204.0](https://github.com/ManuelePasini/slides-markdown/compare/1.203.0...1.204.0) (2025-12-08)
+
+
+### Features
+
+* working on stgraph slides ([182ca5c](https://github.com/ManuelePasini/slides-markdown/commit/182ca5c6311953dba4885cf02c083d474b3f2b2f))
+
+## [1.203.0](https://github.com/ManuelePasini/slides-markdown/compare/1.202.0...1.203.0) (2025-12-08)
+
+
+### Features
+
+* working on stgraph slides ([8a46e2d](https://github.com/ManuelePasini/slides-markdown/commit/8a46e2daa3542ccf63c849f2dd6e11a8de8b259f))
+
+## [1.202.0](https://github.com/ManuelePasini/slides-markdown/compare/1.201.0...1.202.0) (2025-12-08)
+
+
+### Features
+
+* working on stgraph slides ([348c789](https://github.com/ManuelePasini/slides-markdown/commit/348c7898fafc8be03bcfda97c86214275f8c8715))
+
+## [1.201.0](https://github.com/ManuelePasini/slides-markdown/compare/1.200.0...1.201.0) (2025-12-08)
+
+
+### Features
+
+* working on stgraph slides ([5940290](https://github.com/ManuelePasini/slides-markdown/commit/59402908ebbcb59eb32589ce7039e5090babb7f5))
+
+## [1.200.0](https://github.com/ManuelePasini/slides-markdown/compare/1.199.0...1.200.0) (2025-12-08)
+
+
+### Features
+
+* working on stgraph slides ([2d1b532](https://github.com/ManuelePasini/slides-markdown/commit/2d1b53270e6fa3b07ff5b121732a0070833aee2d))
+
 ## [1.199.0](https://github.com/ManuelePasini/slides-markdown/compare/1.198.0...1.199.0) (2025-12-08)
 
 

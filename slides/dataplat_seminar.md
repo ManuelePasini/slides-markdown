@@ -1,4 +1,4 @@
-# Data Platforms - Under the hood
+# Data Platforms - A 3D View
 
 <hr style="border: none; border-top: 1px solid #000;">
 
@@ -36,15 +36,6 @@ Slides at: tinyurl.com/dataplatseminar
             - Irrigation management;
             - Data Platform for italian agriculture domain @[Agritech](https://agritechcenter.it/it/).
 
-
-## A Cloud Data Platform
-
-- Is a *centralized* infrastructre composed of *independent* and *well-integrated* services meeting the *end-to-end* needs of data pipelines:
-    - *Centralized*: a data platform is conceptually a single and unified component;
-    - *Independent*: changes in a a service do not affect others;
-    - *Well-integrated*: services have interfaces enabling a frictionless composition;
-    - *End-to-end*: services cover the entire data life cycle.
-
 ## A case study - The Agritech PNRR Project
 
 - **Goal**: Build a data platform to foster collaboration and integration between different agriculture research projects.
@@ -54,8 +45,12 @@ Slides at: tinyurl.com/dataplatseminar
 
 - In short:
     - 6 research partners;
-    - highly heterogeneous data;
+    - multidisiplinary projects;
     - different goals;
+
+- Considerations:
+    - Requirements might not always be clear;
+    - analysis goals could evolve through time!
 
 - <b>Main challenges</b>:
     - Data governance;
@@ -91,20 +86,17 @@ We needed to identify key data aspects!
 
 ###### Output
 
+- Domain analysis:
+    - Project volatility;
+    - non-communicating partners;
+    - data shattered through different formats;
+    - no common ground for interoperability.
+
 - Identified data aspects:
     - **V**ariety: vector, image, multispectral, and sensor data.
     - **V**olume: from small sensor data to large drone missions.
     - **V**eracity: manual collection and sharing.
-
-- Domain analysis:
-    - multidisiplinary projects;
-    - non-communicating partners;
-    - data in multiple excel files;
-    - No common ground for interoperability.
-
-- <b>Project volatility</b>:
-    - Analysis goals could evolve through time;
-    - data types could vary through time!
+    - Strong temporal and spatial connotations.
 
 
 :::
@@ -131,8 +123,9 @@ We needed to identify key data aspects!
     - Centralized storage;
     - <b>Governance</b> through adherence to [FIWARE](https://www.fiware.org/) Smart Data Models;
         - JSON descriptor attached to data;
-        - Common glossary of terms;
+        - Common glossary of terms (e.g., [AGROVOC](https://www.fao.org/agrovoc/));
         - geo-properties standardization.
+    - Stakeholder responsible of quality adherence;
     - **Data as a product!**
 
 :::
@@ -162,6 +155,7 @@ We needed to identify key data aspects!
 # Before talking deploy, we have a problem!
 
 *Someting came up, we need to think about a migration first...*
+*Slides at: tinyurl.com/dataplatmigration*
 
 # Now let's talk deploy!
 
@@ -192,12 +186,13 @@ We needed to identify key data aspects!
 ::: {.column width="30%"}
 
 - We don't really want to work on bare metal...
-    - Need for <b>fault tolerance</b> mechanisms;
-    - Possible dependencies issues;
+    - Need to build <b>fault tolerance</b> mechanisms;
+    - Need to build monitoring tools;
+    - Probable dependency issues;
     - <b> no isolation </b>.
 - ... We want to **virtualize**
     - remember the <b>independence</b> constraint.
-- **Docker Swarm** !
+- **Docker** (or Kubernetes in production environments)!
 
 :::
 ::: {.column width="70%"}
@@ -221,7 +216,7 @@ We needed to identify key data aspects!
     - no guest OS;
     - reduced resource consumption;
     - more containers per host;
-    - greater portability
+    - greater portability.
 
 
 :::
@@ -252,7 +247,6 @@ We needed to identify key data aspects!
 
 ![Docker swarm architecture](https://docs.docker.com/engine/swarm/images/swarm-diagram.webp)
 
-
 :::
 ::::
 
@@ -261,9 +255,22 @@ We needed to identify key data aspects!
 - Platform services as <b>Docker services</b>.
 - Logically organized in <b>stacks</b>, manageable throguh <b>Portainer</b>.
 
-:::{.fragment}
+:::: {.columns}
+::: {.column width="50%"}
+
+
 ![Docker swarm architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/top_view.jpg?raw=true)
+
 :::
+::: {.column width="50%"}
+
+![Docker stack example](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/stack.png?raw=true)
+
+:::
+::::
+
+
+
 
 - This is the **what**, but... 
 - ... Too many things in one-flat schema, we need to add another dimension.
@@ -273,6 +280,8 @@ We needed to identify key data aspects!
 
 ![Vertical view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/vert_view.jpg?raw=true)
 
+- Portainer grants you access from the top...
+    - SSH on phisical machines grants access from the bottom.
 - Now we know the **where**...
 - What about the **how** ?
 
@@ -300,15 +309,15 @@ We needed to identify key data aspects!
 
 ## Let's put things toghether
 
-![Data Platform as a whole](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true){.r-stretch}
+![Data Platform as a whole](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.svg?raw=true)
 
 - [A bigger version](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/ortho.png?raw=true)
 
-## Application 1 - Irrigation optimization of fruit orchards 
+## SMARTER - Irrigation optimization of fruit orchards 
 
 ![Smart Irrigation Data Pipeline](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/watering.svg?raw=true)
 
-## Agritech - A Data Platform for Italian Precision Agriculturew 
+## Agritech - A Data Platform for Italian Precision Agriculturew
 
 ![Agritech actual functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dataplat_seminar/agritech.svg?raw=true)
 
