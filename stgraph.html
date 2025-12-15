@@ -470,33 +470,32 @@ isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ∩<sub>j=i..k-1</sub> I<su
 <li>LSM-Tree-like (e.g., RocksDB)</li>
 <li>InfluxDB 3.0 on Parquet.</li>
 </ul></li>
-<li>Metadata modelling (custom metadata as a query);</li>
+<li>Metadata modelling (ausiliary structures);</li>
 <li>query formalization and optimization;</li>
 </ul></li>
 <li>Analytics:
 <ul>
 <li>TS operators in Cypher/GQL (Graph analytics);
 <ul>
-<li>shape-matching;</li>
+<li>shape/patthern matching;</li>
 </ul></li>
 <li>Cross time-series operators:
 <ul>
-<li>Dimmi piante/griglie che hanno avuto pattern asciugatura simili ultime 24h.</li>
-<li>Correlami con join spaziale asciugatura terreno piante e temperatura da centralina ARPAE.</li>
+<li>Identify plants/grids with similar drying patterns over the last 24h</li>
 </ul></li>
 <li>Graph-TS cross-operators:
 <ul>
-<li>Come si è evoluta topologia grafo all’evolversi della ts?</li>
-<li>Correlare grado (o property) di un nodo e andamento di una TS (picco di connessione, picco di valore)
+<li>Correlate graph metrics (node degree, node/edge properties) with time-series trends
 <ul>
-<li>e.g., rete di sensori monitora punti pressione frana, archi tra sensori modellato con hygraph con una property che aumenta il peso dell’arco tra due sensori vicini all’aumentare della pressione di uno dei due. cerca correlazione tra punti di pressione diversi nella frana.</li>
+<li>e.g., landslide monitoring sensor network: correlation between pressure measurements and dynamic edge weights between nearby sensors</li>
 </ul></li>
+<li>Correlate soil drying with temperature (spatial join with ARPAE weather stations)</li>
 </ul></li>
 </ul></li>
 <li>LLMs:
 <ul>
-<li>Text to query (in hybrid data models)</li>
-<li></li>
+<li>Text to query (in hybrid models)</li>
+<li>Repair</li>
 </ul></li>
 </ul>
 <div class="quarto-auto-generated-content">
