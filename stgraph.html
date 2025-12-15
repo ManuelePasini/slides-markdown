@@ -467,16 +467,36 @@ isValid(Path(n<sub>i</sub>, …, n<sub>k</sub>)) ⇔ ∩<sub>j=i..k-1</sub> I<su
 <ul>
 <li>TS data require different data layout than graph data;
 <ul>
-<li>LSM-Tree-like (RocksDB)</li>
+<li>LSM-Tree-like (e.g., RocksDB)</li>
 <li>InfluxDB 3.0 on Parquet.</li>
 </ul></li>
-<li>Metadata modelling;</li>
-<li>algorithms optimizations;</li>
+<li>Metadata modelling (custom metadata as a query);</li>
+<li>query formalization and optimization;</li>
 </ul></li>
 <li>Analytics:
 <ul>
-<li>TS operations in graph QL (Graph analytics);</li>
-<li>Cross time-series operations;</li>
+<li>TS operators in Cypher/GQL (Graph analytics);
+<ul>
+<li>shape-matching;</li>
+</ul></li>
+<li>Cross time-series operators:
+<ul>
+<li>Dimmi piante/griglie che hanno avuto pattern asciugatura simili ultime 24h.</li>
+<li>Correlami con join spaziale asciugatura terreno piante e temperatura da centralina ARPAE.</li>
+</ul></li>
+<li>Graph-TS cross-operators:
+<ul>
+<li>Come si è evoluta topologia grafo all’evolversi della ts?</li>
+<li>Correlare grado (o property) di un nodo e andamento di una TS (picco di connessione, picco di valore)
+<ul>
+<li>e.g., rete di sensori monitora punti pressione frana, archi tra sensori modellato con hygraph con una property che aumenta il peso dell’arco tra due sensori vicini all’aumentare della pressione di uno dei due. cerca correlazione tra punti di pressione diversi nella frana.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>LLMs:
+<ul>
+<li>Text to query (in hybrid data models)</li>
+<li></li>
 </ul></li>
 </ul>
 <div class="quarto-auto-generated-content">
