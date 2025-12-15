@@ -20,7 +20,7 @@
 ## STGraph - Conceptualization
 
 - **RQ1** - How can we separate, within a specific domain, temporal graph data from time-series data?
-- **RQ2** - Can we then embed both data layouts into the same conceptual storage system and provide hybrid capabilities?
+- **RQ2** - Can we then merge both data layouts into the same conceptual storage system and provide hybrid capabilities?
 
 :::: {.columns}
 ::: {.column width="70%"}
