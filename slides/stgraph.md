@@ -109,7 +109,7 @@
     - TS data require different data layout than graph data;
         - LSM-Tree-like (e.g., RocksDB)
         - InfluxDB 3.0 on Parquet.
-    - Metadata modelling (ausiliary structures);
+    - Metadata modelling (ausiliary structures, what is physical/in memory?);
     - query formalization and optimization;
 
 - <b>Analytics</b>:
