@@ -110,11 +110,24 @@
 
 - Physical level:
     - TS data require different data layout than graph data;
-        - LSM-Tree-like (RocksDB)
+        - LSM-Tree-like (e.g., RocksDB)
         - InfluxDB 3.0 on Parquet.
-    - Metadata modelling;
-    - algorithms optimizations; 
+    - Metadata modelling (custom metadata as a query);
+    - query formalization and optimization; 
 
 - Analytics:
-    - TS operations in graph QL (Graph analytics);
-    - Cross time-series operations;
+    - TS operators in Cypher/GQL (Graph analytics);
+        - shape-matching;
+    - Cross time-series operators:
+        - Dimmi piante/griglie che hanno avuto pattern asciugatura simili ultime 24h.
+        - Correlami con join spaziale asciugatura terreno piante e temperatura da centralina ARPAE.
+    - Graph-TS cross-operators:
+        - Come si è evoluta topologia grafo all'evolversi della ts?
+        - Correlare grado (o property) di un nodo e andamento di una TS (picco di connessione, picco di valore)
+            - e.g., rete di sensori monitora punti pressione frana, archi tra sensori modellato con hygraph
+              con una property che aumenta il peso dell'arco tra due sensori  vicini all'aumentare della pressione di uno dei due.
+              cerca correlazione tra punti di pressione diversi nella frana.
+
+- LLMs:
+    - Text to query (in hybrid data models)
+    -
