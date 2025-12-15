@@ -103,7 +103,6 @@
     - Query to AsterixDB is synchronous (shouldn't be);
     - Limited support for AsterixDB capabilities;
 
-
 ## Collaborations
 
 - <b>Physical level</b>:
@@ -111,10 +110,10 @@
         - LSM-Tree-like (e.g., RocksDB)
         - InfluxDB 3.0 on Parquet.
     - Metadata modelling (ausiliary structures);
-    - query formalization and optimization; 
+    - query formalization and optimization;
 
 - <b>Analytics</b>:
-    - TS operators in Cypher/GQL (Graph analytics);
+    - Extend Cypher/GQL with TS operators;
         - shape/patthern matching;
     - Graph-TS cross-operators:
         - Identify plants/grids with similar drying patterns over the last 24h
