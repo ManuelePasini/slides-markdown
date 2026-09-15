@@ -22,9 +22,9 @@
 ## Digital Twins: Concept & State of the Art
 
 - <b>Digital Twin</b> (DT): physical entity + virtual representation, connected via **bidirectional** data flow
-- No universally accepted definition (Wuni et al.: 358 definitions surveyed)
+- No universally accepted definition ([Wuni et al](https://www.tandfonline.com/doi/full/10.1080/27525783.2025.2600763).: 358 definitions surveyed)
 - <b>Reference architectures</b>:
-  - <b>5D model</b> (Tao et al.): physical entity, virtual model, connection, data, service
+  - <b>5D model</b> ([Tao et al.](https://www.scopus.com/pages/publications/85064443425)): physical entity, virtual model, connection, data, service
 - Scale: Single -  Digital Twins Ecosystems
 - **Data is not a by-product** — it's the element connecting every dimension
 
