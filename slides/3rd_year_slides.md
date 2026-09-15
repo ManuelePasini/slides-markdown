@@ -1,10 +1,10 @@
 
 ## Introduction
 
-- **Who am I ?** 
+- **Hi!** 
 
     - <b>Manuele Pasini</b>, 3rd year Ph.D. Candidate
-    - <b>Supervisor</b>: Matteo Golfarelli, Marco Patella, Davide Maltoni
+    - <b>Supervisors</b>: <u>Matteo Golfarelli</u>, Marco Patella, Davide Maltoni
     - <b>Research interests</b>: 
         - Database / Data Engineering
         - Digital Twins & Precisision Agriculture 
@@ -21,19 +21,29 @@
 
 ## Digital Twins: Concept & State of the Art
 
-- <b>Digital Twin</b> (DT): physical entity + virtual representation, connected via **bidirectional** data flow
-- No universally accepted definition ([Wuni et al](https://www.tandfonline.com/doi/full/10.1080/27525783.2025.2600763).: 358 definitions surveyed)
-- <b>Reference architectures</b>:
-  - <b>5D model</b> ([Tao et al.](https://www.scopus.com/pages/publications/85064443425)): physical entity, virtual model, connection, data, service
-- Scale: Single -  Digital Twins Ecosystems
-- **Data is not a by-product** — it's the element connecting every dimension
 
 :::: {.columns}
 ::: {.column width="50%"}
- ![5-Dimensional DT (Fei, Tao 2020)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/5dim.png?raw=true)
+- <b>Digital Twin</b> (DT): physical entity (PE) + virtual representation (VE), connected via **bidirectional** data flow
+- No universally accepted definition ([Wuni et al.](https://www.tandfonline.com/doi/full/10.1080/27525783.2025.2600763).: 358 definitions surveyed)
+- <b>Reference architectures</b>:
+  - <b>5D model</b> ([Tao et al.](https://www.scopus.com/pages/publications/85064443425)): PE, VE, connection, data, service
+- Scale: Single DT -  Digital Twins Ecosystems (DTE)
+- **Data is not a by-product** — it's the component connecting every dimension
+
 :::
 ::: {.column width="50%"}
-![Digital Twin Data ([Fei, Tao 2023](https://digitaltwin1.org/articles/1-2/v2))](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt_data.png?raw=true)
+![Characterizing Digital Twin data ([Fei, Tao 2023](https://digitaltwin1.org/articles/1-2/v2))](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt_data.png?raw=true)
+:::
+::::
+
+
+:::: {.columns}
+::: {.column width="50%"}
+ ![5-Dimensional DT ([Tao et al.](https://www.scopus.com/pages/publications/85064443425))](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/5dim.png?raw=true)
+:::
+::: {.column width="50%"}
+![Characterizing Digital Twin data ([Fei, Tao 2023](https://digitaltwin1.org/articles/1-2/v2))](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt_data.png?raw=true)
 :::
 ::::
 
