@@ -114,8 +114,21 @@
 
 - Complex sensor networks are increasingly common
 - Anomaly detection in time-series data is a well-known research field
-- **What about anomalies that are cross-time series?*
+- **What about anomalies that are cross-time series?**
 
-![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_example.svg?raw=true)
+:::: {.columns}
+::: {.column width="50%"}
+
+![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_agro.svg?raw=true)
+
+:::
+::: {.column width="50%"}
+
+![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_er.svg?raw=true)
+
+:::
+::::
+
+
 
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
