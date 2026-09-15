@@ -95,6 +95,7 @@
 ##### Under review @ VLDB 2027
 
 - <b>Key points</b>:
+
 :::: {.columns}
 ::: {.column width="50%"}
     - Optimized streaming ingestion of data;
@@ -112,4 +113,5 @@
 ![Characterizing Digital Twin data ([Fei, Tao 2023](https://digitaltwin1.org/articles/1-2/v2))](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/datamodel.svg?raw=true)
 
 ## Anomaly Detection in Complex Sensor Networks
+
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
