@@ -32,7 +32,7 @@
 
 :::
 ::: {.column width="30%"}
-![Grieves 3D Model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt.png?raw=true)
+![[M. Grieves](https://link.springer.com/chapter/10.1007/978-3-031-21343-4_4) 3D Model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt.png?raw=true)
 :::
 ::::
 
@@ -48,7 +48,7 @@
 
 ## The Challenge: Fragmentation
 
-- Digital Twins adopted across **many independent domains**:
+- Digital Twins adopted across <b>many independent domains</b>:
   - manufacturing, energy, aerospace, healthcare, agriculture, smart cities, transportation...
 - No universally accepted definition ([Wuni et al.](https://www.tandfonline.com/doi/full/10.1080/27525783.2025.2600763): 358 definitions surveyed)
 - Most application builds its own:
@@ -57,7 +57,7 @@
 - Result: <b>isolated, application-specific Digital Twins </b>
   - data isolation
   - architectural heterogeneity
-  - limited scalability
+  - scalability issues
 
 **Fragmentation → limited standardization & interoperability**
 
@@ -68,8 +68,14 @@
 - **Divide et impera**: separate the <u>software</u> and <u>data</u> dimensions
   - Software dimension → substantial work, increasingly mature
   - Data dimension → far less mature ⇐ **focus of my research**
-⇒ **Data standardization should lead** the standardization effort
-    - Data standardization entails interoperability!
+- **Standardization should start from data**, not from software
 - <b>Digital Twin Platform (DTP)</b>:
   - hosts DTs across their lifecycle, but organized around data
   - agnostic to how a DT is implemented — as long as it respects the platform's data models
+
+## Prescriptive watering: Data-driven optimization of water consumption in kiwifruit orchards
+
+## STGraph: A Multistore for Spatio-Temporal Property Graphs and Time-Series Data
+![Characterizing Digital Twin data ([Fei, Tao 2023](https://digitaltwin1.org/articles/1-2/v2))](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/STGraph.svg)
+## Anomaly Detection in Complex Sensor Networks
+## LLM-Assisted Metadata Query Answering on Data Warehouses
