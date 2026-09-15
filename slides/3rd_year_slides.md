@@ -96,14 +96,13 @@
 
 :::: {.columns}
 ::: {.column width="50%"}
-- <b> Graph data model </b>
-    - TS events as graph nodes:
-        - can also hold edges and properties
-        - materialized on graph at query time (saving storage).
+- <b>Property Graph data model</b>:
+        - TS events (nodes) can hold edges and properties
+        - edges built at query time
 :::
 ::: {.column width="50%"}
 - <b>Hybrid storage</b>:
-    - Dedicated Time-Series streaming ingestion of data;
+    - Dedicated Time-Series streaming ingestion of data
     - Query optimization through filter-pushdown
     - Efficient graph traversal & temporal reasoning
 :::
@@ -115,5 +114,8 @@
 
 - Complex sensor networks are increasingly common
 - Anomaly detection in time-series data is a well-known research field
+- **What about anomalies that are cross-time series?*
+
+![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_example.svg?raw=true)
 
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
