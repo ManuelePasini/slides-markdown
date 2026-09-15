@@ -90,28 +90,30 @@
 :::
 ::::
 
-
 ![STGraph Data Model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/datamodel.svg?raw=true)
 
-## STGraph: A Multistore for Temporal Property Graphs and Time-Series Data
+## STGraph: A Multistore for Spatio-Temporal Property Graphs and Time-Series Data
 
 :::: {.columns}
 ::: {.column width="50%"}
-- <b>Key points</b>:
-    - Optimized streaming ingestion of data;
-    - Query optimization through filter-pushdown
-:::
-::: {.column width="50%"}
+- <b> Graph data model </b>
     - TS events as graph nodes:
         - can also hold edges and properties
         - materialized on graph at query time (saving storage).
-    - Support for different temporal semantics 
-        - (e.g., continuous path (default), consecutive path) .
+:::
+::: {.column width="50%"}
+- <b>Hybrid storage</b>:
+    - Dedicated Time-Series streaming ingestion of data;
+    - Query optimization through filter-pushdown
+    - Efficient graph traversal & temporal reasoning
 :::
 ::::
 
 ![Querying STGraph](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/example.svg?raw=true)
 
 ## Anomaly Detection in Complex Sensor Networks
+
+- Complex sensor networks are increasingly common
+- Anomaly detection in time-series data is a well-known research field
 
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
