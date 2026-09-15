@@ -59,17 +59,16 @@
   - architectural heterogeneity
   - limited scalability
 
-**Fragmentation & Heterogeneity → limited standardization & interoperability**
+**Fragmentation → limited standardization & interoperability**
 
 
 ## Digital Twin Platform: A Data-Oriented Perspective
 
 - A Digital Twin is a <b>data-intensive application</b>
-  - heterogeneous data: structured/unstructured, sensor/simulation/imagery, domain-specific
-- **Divide et impera**: separate the software and data dimensions
-  - software dimension → substantial work, increasingly mature
-  - data dimension → far less mature ⇐ **focus of my research**
-- ⇒ **Data standardization should lead** the standardization effort
+- **Divide et impera**: separate the <u>software</u> and <u>data</u> dimensions
+  - Software dimension → substantial work, increasingly mature
+  - Data dimension → far less mature ⇐ **focus of my research**
+⇒ **Data standardization should lead** the standardization effort
     - Data standardization entails interoperability!
 - <b>Digital Twin Platform (DTP)</b>:
   - hosts DTs across their lifecycle, but organized around data
