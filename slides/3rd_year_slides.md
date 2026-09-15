@@ -76,8 +76,40 @@
 ## Prescriptive watering: Data-driven optimization of water consumption in kiwifruit orchards
 
 ## STGraph: A Multistore for Spatio-Temporal Property Graphs and Time-Series Data
+##### Under review @ VLDB 2027
 
-![Characterizing Digital Twin data ([Fei, Tao 2023](https://digitaltwin1.org/articles/1-2/v2))](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/STGraph.svg?raw=true)
+:::: {.columns}
+::: {.column width="60%"}
+- A multistore data structure for large spatio-temporal property graphs
+    - Unified graph conceptual model on top of heterogeneous storage
+        - Low-evolving data on Graph storage
+        - Highly-dynamic data on Time-Series storage
+    - Transparent graph query interface.
+:::
+::: {.column width="40%"}
+![Characterizing Digital Twin data ([Fei, Tao 2023](https://digitaltwin1.org/articles/1-2/v2))](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/arch.svg?raw=true)
+:::
+::::
+
+## STGraph: A Multistore for Spatio-Temporal Property Graphs and Time-Series Data
+##### Under review @ VLDB 2027
+
+- <b>Key points</b>:
+:::: {.columns}
+::: {.column width="50%"}
+    - Optimized streaming ingestion of data;
+    - Query optimization through filter-pushdown
+:::
+::: {.column width="50%"}
+    - TS events as graph nodes:
+        - can also hold edges and properties
+        - materialized on graph at query time (saving storage).
+    - Support for different temporal semantics 
+        - (e.g., continuous path (default), consecutive path) .
+:::
+::::
+
+![Characterizing Digital Twin data ([Fei, Tao 2023](https://digitaltwin1.org/articles/1-2/v2))](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/datamodel.svg?raw=true)
 
 ## Anomaly Detection in Complex Sensor Networks
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
