@@ -87,9 +87,12 @@
     - Transparent graph query interface.
 :::
 ::: {.column width="40%"}
-![Characterizing Digital Twin data ([Fei, Tao 2023](https://digitaltwin1.org/articles/1-2/v2))](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/arch.svg?raw=true)
+![STGraph System Architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/arch.svg?raw=true)
 :::
 ::::
+
+
+![STGraph Data Model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/datamodel.svg?raw=true)
 
 ## STGraph: A Multistore for Spatio-Temporal Property Graphs and Time-Series Data
 ##### Under review @ VLDB 2027
@@ -110,7 +113,7 @@
 :::
 ::::
 
-![Characterizing Digital Twin data ([Fei, Tao 2023](https://digitaltwin1.org/articles/1-2/v2))](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/datamodel.svg?raw=true)
+![Querying STGraph](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/example.svg?raw=true)
 
 ## Anomaly Detection in Complex Sensor Networks
 
