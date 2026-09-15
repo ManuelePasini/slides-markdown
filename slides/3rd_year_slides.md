@@ -6,30 +6,36 @@
     - <b>Manuele Pasini</b>, 3rd year Ph.D. Candidate
     - <b>Supervisor</b>: Matteo Golfarelli, Marco Patella, Davide Maltoni
     - <b>Research interests</b>: 
-        - Database / Data engineering
+        - Database / Data Engineering
         - Digital Twins & Precisision Agriculture 
     - <b>Thesis</b>: Architectures and Methods for Digital Twin Platform
 
 :::: {.columns}
 ::: {.column width="50%"}
-![An example of a data pipeline](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/dataplat.png?raw=true)
+![Digital Twin functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt.png?raw=true)
 :::
 ::: {.column width="50%"}
-![Digital Twin functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt.png?raw=true)
+![An example of a generic data platform with its components and layers](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/dataplat.png?raw=true)
 :::
 ::::
 
 ## Digital Twins: Concept & State of the Art
 
-- **Definition**: physical entity + virtual representation, connected via **bidirectional** data flow
-  - Digital Model → Digital Shadow → Digital Twin (Kritzinger et al.)
+- <b>Digital Twin</b> (DT): physical entity + virtual representation, connected via **bidirectional** data flow
 - No universally accepted definition (Wuni et al.: 358 definitions surveyed)
-- Reference architectures:
-  - 3-component model (Grieves) → **5D model**: physical entity, virtual model, connection, data, service (Tao et al.)
-- Scale: unit-level → system-level → **System of Systems**
-- Data is not a by-product — it's the element connecting *every* dimension
+- <b>Reference architectures</b>:
+  - <b>5D model</b> (Tao et al.): physical entity, virtual model, connection, data, service
+- Scale: Single -  Digital Twins Ecosystems
+- **Data is not a by-product** — it's the element connecting every dimension
 
----
+:::: {.columns}
+::: {.column width="50%"}
+ ![5-Dimensional DT (Fei, Tao 2020)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/5dim.png?raw=true)
+:::
+::: {.column width="50%"}
+![Virtual Entity architecture (Fei, Tao, 2020)](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/digital_model.png?raw=true)
+:::
+::::
 
 ## Digital Twin Data & Open Challenges
 
