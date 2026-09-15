@@ -472,29 +472,39 @@
 </figure>
 </div>
 </section>
-<section id="stgraph-a-multistore-for-temporal-property-graphs-and-time-series-data" class="slide level2">
-<h2>STGraph: A Multistore for Temporal Property Graphs and Time-Series Data</h2>
+<section id="stgraph-a-multistore-for-spatio-temporal-property-graphs-and-time-series-data" class="slide level2">
+<h2>STGraph: A Multistore for Spatio-Temporal Property Graphs and Time-Series Data</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li><b>Key points</b>:
+<li><b> Graph data model </b>
 <ul>
-<li>Optimized streaming ingestion of data;</li>
-<li>Query optimization through filter-pushdown</li>
+<li>TS events as graph nodes:
+<ul>
+<li>can also hold edges and properties</li>
+<li>materialized on graph at query time (saving storage).</li>
+</ul></li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<pre><code>- TS events as graph nodes:
-    - can also hold edges and properties
-    - materialized on graph at query time (saving storage).
-- Support for different temporal semantics 
-    - (e.g., continuous path (default), consecutive path) .</code></pre>
+<ul>
+<li><b>Hybrid storage</b>:
+<ul>
+<li>Dedicated Time-Series streaming ingestion of data;</li>
+<li>Query optimization through filter-pushdown</li>
+<li>Efficient graph traversal &amp; temporal reasoning</li>
+</ul></li>
+</ul>
 </div>
 </div>
 
 <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/example.svg?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Querying STGraph</p></section>
 <section id="anomaly-detection-in-complex-sensor-networks" class="slide level2">
 <h2>Anomaly Detection in Complex Sensor Networks</h2>
+<ul>
+<li>Complex sensor networks are increasingly common</li>
+<li>Anomaly detection in time-series data is a well-known research field</li>
+</ul>
 </section>
 <section id="llm-assisted-metadata-query-answering-on-data-warehouses" class="slide level2">
 <h2>LLM-Assisted Metadata Query Answering on Data Warehouses</h2>
