@@ -471,21 +471,20 @@
 <h2>STGraph: A Multistore for Spatio-Temporal Property Graphs and Time-Series Data</h2>
 <h5 id="under-review-vldb-2027-1">Under review @ VLDB 2027</h5>
 <ul>
-<li><b>Key points</b>: :::: {.columns} ::: {.column width=“50%”}
-<ul>
-<li>Optimized streaming ingestion of data;</li>
-<li>Query optimization through filter-pushdown ::: ::: {.column width=“50%”}</li>
-<li>TS events as graph nodes:
-<ul>
-<li>can also hold edges and properties</li>
-<li>materialized on graph at query time (saving storage).</li>
-</ul></li>
-<li>Support for different temporal semantics
-<ul>
-<li>(e.g., continuous path (default), consecutive path) . ::: ::::</li>
-</ul></li>
-</ul></li>
+<li><b>Key points</b>:</li>
 </ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<pre><code>- Optimized streaming ingestion of data;
+- Query optimization through filter-pushdown</code></pre>
+</div><div class="column" style="width:50%;">
+<pre><code>- TS events as graph nodes:
+    - can also hold edges and properties
+    - materialized on graph at query time (saving storage).
+- Support for different temporal semantics 
+    - (e.g., continuous path (default), consecutive path) .</code></pre>
+</div>
+</div>
 
 <img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/datamodel.svg?raw=true" class="r-stretch quarto-figure-center"><p class="caption">Characterizing Digital Twin data (<a href="https://digitaltwin1.org/articles/1-2/v2">Fei, Tao 2023</a>)</p></section>
 <section id="anomaly-detection-in-complex-sensor-networks" class="slide level2">
