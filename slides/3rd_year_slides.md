@@ -97,8 +97,8 @@
 :::: {.columns}
 ::: {.column width="50%"}
 - <b>Property Graph data model</b>:
-        - TS events (nodes) can hold edges and properties
-        - edges built at query time
+    - TS events (nodes) can hold edges and properties
+    - edges built at query time
 :::
 ::: {.column width="50%"}
 - <b>Hybrid storage</b>:
