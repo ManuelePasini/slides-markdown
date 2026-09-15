@@ -23,7 +23,7 @@
 
 
 :::: {.columns}
-::: {.column width="50%"}
+::: {.column width="70%"}
 - <b>Digital Twin</b> (DT): physical entity (PE) + virtual representation (VE), connected via **bidirectional** data flow
 - No universally accepted definition ([Wuni et al.](https://www.tandfonline.com/doi/full/10.1080/27525783.2025.2600763).: 358 definitions surveyed)
 - <b>Reference architectures</b>:
@@ -32,8 +32,8 @@
 - **Data is not a by-product** — it's the component connecting every dimension
 
 :::
-::: {.column width="50%"}
-![Characterizing Digital Twin data ([Fei, Tao 2023](https://digitaltwin1.org/articles/1-2/v2))](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt_data.png?raw=true)
+::: {.column width="30%"}
+![Digital Twin functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt.png?raw=true)
 :::
 ::::
 
