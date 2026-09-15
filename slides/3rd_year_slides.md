@@ -90,7 +90,14 @@
 :::
 ::::
 
+:::: {.columns}
+::: {.column width="50%"}
 ![STGraph Data Model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/datamodel.svg?raw=true)
+:::
+::: {.column width="50%"}
+:::
+::::
+
 
 ## STGraph: A Multistore for Spatio-Temporal Property Graphs and Time-Series Data
 
@@ -98,7 +105,7 @@
 ::: {.column width="50%"}
 - <b>Property Graph data model</b>:
     - TS events (nodes) can hold edges and properties
-    - edges built at query time
+    - Edges built at query time
 :::
 ::: {.column width="50%"}
 - <b>Hybrid storage</b>:
@@ -128,7 +135,6 @@
 
 :::
 ::::
-
 
 
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
