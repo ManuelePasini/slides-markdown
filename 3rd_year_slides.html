@@ -332,7 +332,7 @@
 <li><p><strong>Hi!</strong></p>
 <ul>
 <li><b>Manuele Pasini</b>, 3rd year Ph.D.&nbsp;Candidate</li>
-<li><b>Supervisors</b>: <u>Matteo Golfarelli</u>, Marco Patella, Davide Maltoni</li>
+<li><b>Supervisor</b>: Matteo Golfarelli</li>
 <li><b>Research interests</b>:
 <ul>
 <li>Database / Data Engineering</li>
@@ -365,19 +365,18 @@
 <div class="column" style="width:70%;">
 <ul>
 <li><b>Digital Twin</b> (DT): physical entity (PE) + virtual representation (VE), connected via <strong>bidirectional</strong> data flow</li>
-<li>No universally accepted definition (<a href="https://www.tandfonline.com/doi/full/10.1080/27525783.2025.2600763">Wuni et al.</a>.: 358 definitions surveyed)</li>
 <li><b>Reference architectures</b>:
 <ul>
-<li><b>5D model</b> (<a href="https://www.scopus.com/pages/publications/85064443425">Tao et al.</a>): PE, VE, connection, data, service</li>
+<li>3D model (<a href="https://link.springer.com/chapter/10.1007/978-3-031-21343-4_4">M. Grieves</a>)</li>
+<li>5D model (<a href="https://www.scopus.com/pages/publications/85064443425">Tao et al.</a>): PE, VE, connection, data, service</li>
 </ul></li>
-<li>Scale: Single DT - Digital Twins Ecosystems (DTE)</li>
 <li><strong>Data is not a by-product</strong> — it’s the component connecting every dimension</li>
 </ul>
 </div><div class="column" style="width:30%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/dt/dt.png?raw=true"></p>
-<figcaption>Digital Twin functional view</figcaption>
+<figcaption>Grieves 3D Model</figcaption>
 </figure>
 </div>
 </div>
@@ -400,39 +399,48 @@
 </div>
 </div>
 </section>
-<section id="digital-twin-data-open-challenges" class="slide level2">
-<h2>Digital Twin Data &amp; Open Challenges</h2>
+<section id="the-challenge-fragmentation" class="slide level2">
+<h2>The Challenge: Fragmentation</h2>
 <ul>
-<li>DT data is highly <strong>heterogeneous</strong>: structured / unstructured, sensor / simulation / imagery</li>
-<li>Shaped by domain: manufacturing, automotive, agriculture → different needs</li>
-<li>Big-data traits: <strong>volume, variety, velocity</strong> + data <strong>quality/veracity</strong></li>
-<li>Two complementary challenges:
+<li>Digital Twins adopted across <strong>many independent domains</strong>:
 <ul>
-<li><strong>Standardization</strong> → shared building blocks (DT) / infrastructure &amp; data models (DTE)</li>
-<li><strong>Interoperability</strong> → technical, syntactic, semantic, … levels (Acharya et al.)</li>
+<li>manufacturing, energy, aerospace, healthcare, agriculture, smart cities, transportation…</li>
 </ul></li>
-<li>⇒ Fragmentation is the current bottleneck for Digital Twin <strong>Ecosystems</strong></li>
+<li>No universally accepted definition (<a href="https://www.tandfonline.com/doi/full/10.1080/27525783.2025.2600763">Wuni et al.</a>: 358 definitions surveyed)</li>
+<li>Most application builds its own:
+<ul>
+<li>architecture and technological stack</li>
+<li>data representation</li>
+</ul></li>
+<li>Result: <b>isolated, application-specific Digital Twins </b>
+<ul>
+<li>data isolation</li>
+<li>architectural heterogeneity</li>
+<li>limited scalability</li>
+</ul></li>
 </ul>
+<p><strong>Fragmentation &amp; Heterogeneity → limited standardization &amp; interoperability</strong></p>
 </section>
-<section id="a-data-oriented-perspective" class="slide level2">
-<h2>A Data-Oriented Perspective</h2>
+<section id="digital-twin-platform-a-data-oriented-perspective" class="slide level2">
+<h2>Digital Twin Platform: A Data-Oriented Perspective</h2>
 <ul>
-<li><strong>Divide et impera</strong>: software and data dimensions are modular, not independent</li>
-<li>Standardization &amp; interoperability, decomposed:
+<li>A Digital Twin is a <b>data-intensive application</b>
 <ul>
-<li>software side → increasingly mature</li>
-<li><strong>data side → the harder, less mature half</strong> ⇐ focus of this thesis</li>
+<li>heterogeneous data: structured/unstructured, sensor/simulation/imagery, domain-specific</li>
 </ul></li>
-<li><strong>Digital Twin Platform (DTP)</strong>:
+<li><strong>Divide et impera</strong>: separate the software and data dimensions
 <ul>
-<li><em>is</em> a software environment, hosting DTs across their lifecycle</li>
-<li>but organized <strong>around data</strong>, not around DT-specific software</li>
-<li>agnostic to how a DT is built — if it respects the platform’s data models</li>
+<li>software dimension → substantial work, increasingly mature</li>
+<li>data dimension → far less mature ⇐ <strong>focus of my research</strong></li>
 </ul></li>
-<li>Two pillars:
+<li>⇒ <strong>Data standardization should lead</strong> the standardization effort
 <ul>
-<li><strong>Data Platforms</strong> → infrastructural standardization</li>
-<li><strong>Data Models &amp; Governance</strong> → semantic interoperability</li>
+<li>Data standardization entails interoperability!</li>
+</ul></li>
+<li><b>Digital Twin Platform (DTP)</b>:
+<ul>
+<li>hosts DTs across their lifecycle, but organized around data</li>
+<li>agnostic to how a DT is implemented — as long as it respects the platform’s data models</li>
 </ul></li>
 </ul>
 <div class="quarto-auto-generated-content">
