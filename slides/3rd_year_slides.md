@@ -75,13 +75,12 @@
 
 ## Prescriptive watering: Data-driven optimization of water consumption in kiwifruit orchards
 
-## STGraph: A Multistore for Spatio-Temporal Property Graphs and Time-Series Data
-##### Under review @ VLDB 2027
+## STGraph: A Multistore for Spatio-Temporal Property Graphs and Time-Series Data . Under review @ VLDB 2027
 
 :::: {.columns}
 ::: {.column width="60%"}
 - A multistore data structure for large spatio-temporal property graphs
-    - Unified graph conceptual model on top of heterogeneous storage
+    - Graph data model on top of heterogeneous storage
         - Low-evolving data on Graph storage
         - Highly-dynamic data on Time-Series storage
     - Transparent graph query interface.
@@ -95,9 +94,6 @@
 ![STGraph Data Model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/datamodel.svg?raw=true)
 
 ## STGraph: A Multistore for Temporal Property Graphs and Time-Series Data
-##### Under review @ VLDB 2027
-
-
 
 :::: {.columns}
 ::: {.column width="50%"}
