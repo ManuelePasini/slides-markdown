@@ -67,8 +67,8 @@
 - A Digital Twin is a <b>data-intensive application</b>
 - **Divide et impera**: separate the <u>software</u> and <u>data</u> dimensions
   - Software dimension → substantial work, increasingly mature
-  - Data dimension → far less mature ⇐ **focus of my research**
-- **Standardization should start from data**, not from software
+  - Data dimension → far less mature ⇐ <b>focus of my research</b>
+- **Standardization should start from data**
 - <b>Digital Twin Platform (DTP)</b>:
   - hosts DTs across their lifecycle, but organized around data
   - agnostic to how a DT is implemented — as long as it respects the platform's data models
@@ -76,6 +76,8 @@
 ## Prescriptive watering: Data-driven optimization of water consumption in kiwifruit orchards
 
 ## STGraph: A Multistore for Spatio-Temporal Property Graphs and Time-Series Data
-![Characterizing Digital Twin data ([Fei, Tao 2023](https://digitaltwin1.org/articles/1-2/v2))](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/STGraph.svg)
+
+![Characterizing Digital Twin data ([Fei, Tao 2023](https://digitaltwin1.org/articles/1-2/v2))](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/STGraph.svg?raw=true)
+
 ## Anomaly Detection in Complex Sensor Networks
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
