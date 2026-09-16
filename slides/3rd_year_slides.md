@@ -78,11 +78,11 @@
 ![An overview of SMARTER](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter.svg?raw=true)
 
 
-## STGraph: A Multistore for Temporal Property Graphs and Time-Series
+## STGraph: A Multistore for Temporal Graphs and Time-Series
 
 :::: {.columns}
 ::: {.column width="60%"}
-- A multistore data structure for large spatio-temporal property graphs
+- A multistore solution for large spatio-temporal property graphs
     - Graph data model on top of heterogeneous storage
         - Low-evolving data on Graph storage
         - Highly-dynamic data on Time-Series storage
@@ -102,7 +102,7 @@
 ::::
 
 
-## STGraph: A Multistore for Temporal Property Graphs and Time-Series
+## STGraph: A Multistore for Temporal Graphs and Time-Series
 
 :::: {.columns}
 ::: {.column width="50%"}
