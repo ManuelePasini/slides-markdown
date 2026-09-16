@@ -95,7 +95,7 @@
 
 ## SMARTER: Data-driven optimization of water consumption in kiwifruit orchards
 
-- <b> Results 
+- <b> Results</b>
 
 :::: {.columns}
 ::: {.column width="60%"}
@@ -183,6 +183,7 @@
 
 ## Anomaly Detection in Complex Sensor Networks
 
+test
 
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
 
