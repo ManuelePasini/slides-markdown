@@ -177,19 +177,34 @@
 ## Anomaly Detection in Complex Sensor Networks
 <small>Currently under development, in collaboration with Angela Bonifati @ Lyon1</small>
 
-- Complex sensor networks are increasingly common
-- Anomaly detection in time-series data is a well-known research field
-- **What about anomalies that are cross-time series?**
 
+
+    
 :::: {.columns}
 ::: {.column width="50%"}
 
-![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_er.svg?raw=true){.medium}
+- Complex sensor networks are increasingly common (e.g., transportation networks)
+- Anomaly detection in single time-series is a well-known research field
 
 :::
 ::: {.column width="50%"}
 
-![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_agro.svg?raw=true){.medium}
+- **What about topological anomalies?**
+    - Normal behavior taken individually
+    - Topological context makes it anomalous
+
+:::
+::::
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_er.svg?raw=true){.medium}
+
+:::
+::: {.column width="50%"}
+
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_agro.svg?raw=true){.medium}
 
 :::
 ::::
