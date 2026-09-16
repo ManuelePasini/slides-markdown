@@ -75,6 +75,9 @@
 
 ## Prescriptive watering: Data-driven optimization of water consumption in kiwifruit orchards
 
+![An overview of SMARTER](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter.svg?raw=true)
+
+
 ## STGraph: A Multistore for Temporal Property Graphs and Time-Series
 
 :::: {.columns}
@@ -115,7 +118,7 @@
 :::
 ::::
 
-![Querying STGraph](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/example.svg?raw=true){.stretch}
+![Querying STGraph](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/example.svg?raw=true)
 
 ## Anomaly Detection in Complex Sensor Networks
 
