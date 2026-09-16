@@ -1,3 +1,10 @@
+## [1.237.0](https://github.com/ManuelePasini/slides-markdown/compare/1.236.0...1.237.0) (2026-09-16)
+
+
+### Features
+
+* add phd 3rd yr slides ([7c78dc5](https://github.com/ManuelePasini/slides-markdown/commit/7c78dc5cfc77b15a8bd0d5b00c43057f0d5d7f28))
+
 ## [1.236.0](https://github.com/ManuelePasini/slides-markdown/compare/1.235.0...1.236.0) (2026-09-16)
 
 
