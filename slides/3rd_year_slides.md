@@ -78,7 +78,7 @@
 - Two kiwifiruit orchards in Emilia-Romagna
 - Data collected from a grid of soil moisture sensors and weather stations
 - Soil data is interpolated to obtain a 2-dimensional view of soil moisture
-- Published in [Computers and Electronics in Agriculture](https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture)
+<small> Published in [Computers and Electronics in Agriculture](https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture)</small>
 
 :::: {.columns}
 ::: {.column width="40%"}
@@ -121,7 +121,7 @@
 ::: {.column width="60%"}
 
 - A multistore solution for large spatio-temporal property graphs 
-<small>Currently on review at [53rd International Conference on Very Large Data Bases](https://vldb.org/2027/)</small>
+<small>Currently under review at [53rd International Conference on Very Large Data Bases](https://vldb.org/2027/)</small>
 
     - Graph data model on top of heterogeneous storage
         - Low-evolving data on Graph storage
@@ -200,4 +200,4 @@ test
 
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
 
-- Published at [28th International Conference on Big Data Analytics and Knowledge Discovery (DAWAK)](https://www.dexa.org/2026/dawak2026.html)
+<small>Published at [28th International Conference on Big Data Analytics and Knowledge Discovery (DAWAK)](https://www.dexa.org/2026/dawak2026.html)</small>
