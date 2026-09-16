@@ -115,6 +115,36 @@
 :::
 ::::
 
+## SMARTER: Data-driven optimization of water consumption in kiwifruit orchards
+
+- Beyond the research paper...
+    - 13 companies
+    - over 30 fields
+    - over 60 soil moisture grics
+    - 5 years of data collection
+
+:::: {.columns}
+::: {.column width="60%"}
+
+- <b> Architecture</b>
+    - Data collected and transformed through a Data Platform
+    - PID controller + simulation model to determine irrigaton amounts
+
+![SMARTER ER](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/er.png?raw=true)
+
+:::
+::: {.column width="40%"}
+- <b> Results</b>
+    - Up to <u>40%</u> in water savings
+    - Fruit quality preserved, smaller fruit but of improved quality
+
+![A more functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_graph.svg?raw=true)
+
+:::
+::::
+
+
+
 ## STGraph: A Multistore for Temporal Graphs and Time-Series
 <small>Currently under review at [53rd International Conference on Very Large Data Bases](https://vldb.org/2027/)</small>
 
