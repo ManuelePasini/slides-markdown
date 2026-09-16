@@ -121,7 +121,6 @@
 ::: {.column width="60%"}
 
 - Increasing master, static data...
-
     - 13 companies
     - over 30 fields
 
@@ -132,12 +131,9 @@
     - over 60 soil moisture grids
     - ~ overall 600 sensors
     - 5 years of data collection
-    - 
 
 :::
 ::::
-
-
 
 
 :::: {.columns}
