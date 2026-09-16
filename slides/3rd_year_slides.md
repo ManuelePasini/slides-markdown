@@ -99,6 +99,7 @@
 ::: {.column width="60%"}
 
 - <b> Architecture</b>
+    - Data collected and transformed through a Data Platform
     - PID controller + simulation model to determine irrigaton amounts
 
 ![An overview of SMARTER](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter.svg?raw=true)
@@ -207,37 +208,55 @@
 ::::
 
 ## Anomaly Detection in Complex Sensor Networks
-##### A running example
+##### A running example - Series2Graph algorithm from [P. Boniol et al.](https://arxiv.org/abs/2207.12208)
 
 ![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/1.svg?raw=true){.large}
 
 ## Anomaly Detection in Complex Sensor Networks
-##### A running example
+##### A running example - Series2Graph algorithm from [P. Boniol et al.](https://arxiv.org/abs/2207.12208)
 
 ![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/2.svg?raw=true){.large}
 
 
 ## Anomaly Detection in Complex Sensor Networks
-##### A running example
+##### A running example - Series2Graph algorithm from [P. Boniol et al.](https://arxiv.org/abs/2207.12208)
 
 ![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/3.svg?raw=true){.large}
 
 
 ## Anomaly Detection in Complex Sensor Networks
-##### A running example
+##### A running example - Series2Graph algorithm from [P. Boniol et al.](https://arxiv.org/abs/2207.12208)
 
 ![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/4.svg?raw=true){.large}
 
 
 ## Anomaly Detection in Complex Sensor Networks
-##### A running example
+##### A running example - Series2Graph algorithm from [P. Boniol et al.](https://arxiv.org/abs/2207.12208)
 
 ![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/5.svg?raw=true){.large}
 
 ## Anomaly Detection in Complex Sensor Networks
-##### A real data example
+##### A real data example - Series2Graph algorithm from [P. Boniol et al.](https://arxiv.org/abs/2207.12208)
+:::: {.columns}
+::: {.column width="50%"}
 
 ![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/n2g_real.svg?raw=true){.large}
+
+:::
+::: {.column width="50%"}
+
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/anom_top1.svg?raw=true){.medium}
+
+
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/anom_top2.svg?raw=true){.medium}
+
+
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/anom_real.svg?raw=true){.medium}
+
+:::
+::::
+
+
 
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
 <small>Published at [28th International Conference on Big Data Analytics and Knowledge Discovery (DAWAK)](https://www.dexa.org/2026/dawak2026.html)</small>
