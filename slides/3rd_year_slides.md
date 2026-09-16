@@ -120,7 +120,7 @@
 :::: {.columns}
 ::: {.column width="60%"}
 
-- Beyond the research paper...
+- Increasing master, static data...
 
     - 13 companies
     - over 30 fields
@@ -128,9 +128,11 @@
 :::
 ::: {.column width="40%"}
 
-- Growing, interconnected data
+- Exploding dynamic data
     - over 60 soil moisture grids
+    - ~ overall 600 sensors
     - 5 years of data collection
+    - 
 
 :::
 ::::
