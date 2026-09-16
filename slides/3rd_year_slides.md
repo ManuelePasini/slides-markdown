@@ -266,26 +266,31 @@
 ![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/5.svg?raw=true){.large}
 
 ## Anomaly Detection in Complex Sensor Networks
-##### A real data example - Series2Graph algorithm from [P. Boniol et al.](https://arxiv.org/abs/2207.12208)
+##### A toy example - Series2Graph algorithm from [P. Boniol et al.](https://arxiv.org/abs/2207.12208)
+
 :::: {.columns}
-::: {.column width="50%"}
-
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/n2g_real.svg?raw=true){.large}
-
-:::
-::: {.column width="50%"}
-
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/anom_top1.svg?raw=true){.medium}
-
-
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/anom_top2.svg?raw=true){.medium}
-
+::: {.column width="33%"}
 
 ![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/anom_real.svg?raw=true){.medium}
 
 :::
+::: {.column width="33%"}
+
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/anom_top2.svg?raw=true){.medium}
+
+:::
+::: {.column width="33%"}
+
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/anom_top1.svg?raw=true){.medium}
+
+:::
 ::::
 
+## Anomaly Detection in Complex Sensor Networks
+##### A real data example - Series2Graph algorithm from [P. Boniol et al.](https://arxiv.org/abs/2207.12208)
+
+
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/n2g_real.svg?raw=true){.large}
 
 
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
