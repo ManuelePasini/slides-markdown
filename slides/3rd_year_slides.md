@@ -136,5 +136,4 @@
 :::
 ::::
 
-
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
