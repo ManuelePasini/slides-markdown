@@ -94,9 +94,28 @@
 
 ## SMARTER: Data-driven optimization of water consumption in kiwifruit orchards
 
+
+
+
+:::: {.columns}
+::: {.column width="60%"}
+
 - PID controller + simulation model to determine irrigaton amounts
 
 ![An overview of SMARTER](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter.svg?raw=true)
+
+:::
+::: {.column width="40%"}
+
+- Up to 40% in water savings, fruit quality preserved
+
+![Water saving results](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_results.png?raw=true)
+
+![Fruit quality results](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_fruit_results.png?raw=true)
+
+:::
+::::
+
 
 
 ## STGraph: A Multistore for Temporal Graphs and Time-Series
