@@ -41,6 +41,12 @@ img.medium {
     height: auto !important;
 }
 
+img.large {
+    max-height: 500px !important;
+    width: auto !important;
+    height: auto !important;
+}
+
 figcaption {
     text-align: center !important;
     font-size: 0.6em !important;
