@@ -35,6 +35,15 @@ img {
     font-style: italic !important;
 }
 
+img.small {
+    max-height: 250px !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
 img.medium {
     max-height: 410px !important;
     width: auto !important;
