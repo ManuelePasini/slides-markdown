@@ -126,12 +126,14 @@
 :::: {.columns}
 ::: {.column width="50%"}
 
-![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_agro.svg?raw=true)
+![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_agro.svg?raw=true){width=100%}
+
 
 :::
 ::: {.column width="50%"}
 
-![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_er.svg?raw=true)
+![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_er.svg?raw=true){width=100%}
+
 
 :::
 ::::
