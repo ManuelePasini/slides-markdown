@@ -125,7 +125,7 @@
         - Low-evolving data on Graph storage
         - Highly-dynamic data on Time-Series storage
     - Transparent graph query interface.
-
+- <small>Submitted to [53rd International Conference on Very Large Data Bases](https://vldb.org/2027/)
 
 ![STGraph Data Model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/datamodel.svg?raw=true)
 
