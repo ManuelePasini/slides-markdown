@@ -75,6 +75,9 @@
 
 ## Prescriptive watering: Data-driven optimization of water consumption in kiwifruit orchards
 
+- Two kiwifiruit orchards in Emilia-Romagna
+- Data collected from a grid of soil moisture sensors and weather stations
+- PID controller + simulation model to determine irrigaton amounts
 ![An overview of SMARTER](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter.svg?raw=true)
 
 
@@ -89,17 +92,14 @@
     - Transparent graph query interface.
 :::
 ::: {.column width="40%"}
-![STGraph System Architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/arch.svg?raw=true)
+
+![STGraph Architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/arch.svg?raw=true)
+
 :::
 ::::
 
-:::: {.columns}
-::: {.column width="50%"}
 ![STGraph Data Model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/datamodel.svg?raw=true)
-:::
-::: {.column width="10%"}
-:::
-::::
+
 
 
 ## STGraph: A Multistore for Temporal Graphs and Time-Series
