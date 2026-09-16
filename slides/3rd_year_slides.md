@@ -100,25 +100,27 @@
 
 ![STGraph Data Model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/datamodel.svg?raw=true)
 
-
-
 ## STGraph: A Multistore for Temporal Graphs and Time-Series
 
 :::: {.columns}
 ::: {.column width="50%"}
-- <b>Property Graph data model</b>:
+- **Property Graph data model**:
     - TS events (nodes) can hold edges and properties
     - Edges built at query time
 :::
 ::: {.column width="50%"}
-- <b>Hybrid storage</b>:
+- **Hybrid storage**:
     - Dedicated Time-Series streaming ingestion of data
     - Query optimization through filter-pushdown
     - Efficient graph traversal & temporal reasoning
 :::
 ::::
 
+<div style="text-align: center; margin-top: 0.5em;">
+
 ![Querying STGraph](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/example.svg?raw=true)
+
+</div>
 
 ## Anomaly Detection in Complex Sensor Networks
 
@@ -129,14 +131,17 @@
 :::: {.columns}
 ::: {.column width="50%"}
 
-![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_agro.svg?raw=true){.medium}
+![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_er.svg?raw=true){.medium}
 
 :::
 ::: {.column width="50%"}
 
-![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_er.svg?raw=true){.medium}
+![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_agro.svg?raw=true){.medium}
 
 :::
 ::::
+
+## Anomaly Detection in Complex Sensor Networks
+
 
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
