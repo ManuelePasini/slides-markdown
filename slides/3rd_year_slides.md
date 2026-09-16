@@ -78,6 +78,7 @@
 - Two kiwifiruit orchards in Emilia-Romagna
 - Data collected from a grid of soil moisture sensors and weather stations
 - Soil data is interpolated to obtain a 2-dimensional view of soil moisture
+- Published in [Computers and Electronics in Agriculture](https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture)
 
 :::: {.columns}
 ::: {.column width="40%"}
@@ -94,8 +95,7 @@
 
 ## SMARTER: Data-driven optimization of water consumption in kiwifruit orchards
 
-
-
+- <b> Results 
 
 :::: {.columns}
 ::: {.column width="60%"}
@@ -107,7 +107,8 @@
 :::
 ::: {.column width="40%"}
 
-- Up to 40% in water savings, fruit quality preserved
+- Up to <u>40%</u> in water savings
+- Fruit quality preserved, smaller fruit but of improved quality
 
 ![Water saving results](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_results.png?raw=true)
 
@@ -115,7 +116,6 @@
 
 :::
 ::::
-
 
 
 ## STGraph: A Multistore for Temporal Graphs and Time-Series
@@ -128,6 +128,7 @@
         - Low-evolving data on Graph storage
         - Highly-dynamic data on Time-Series storage
     - Transparent graph query interface.
+- Submitted to [VLDB 2027](https://vldb.org/2027/)
 
 ![STGraph Data Model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/datamodel.svg?raw=true)
 
@@ -166,6 +167,7 @@
 - Complex sensor networks are increasingly common
 - Anomaly detection in time-series data is a well-known research field
 - **What about anomalies that are cross-time series?**
+- Hopefully to be published
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -184,3 +186,5 @@
 
 
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
+
+- Published at [28th International Conference on Big Data Analytics and Knowledge Discovery (DAWAK)](https://www.dexa.org/2026/dawak2026.html)
