@@ -122,11 +122,15 @@
 
 :::: {.columns}
 ::: {.column width="60%"}
+
 - A multistore solution for large spatio-temporal property graphs
     - Graph data model on top of heterogeneous storage
         - Low-evolving data on Graph storage
         - Highly-dynamic data on Time-Series storage
     - Transparent graph query interface.
+
+![STGraph Data Model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/datamodel.svg?raw=true)
+
 :::
 ::: {.column width="40%"}
 
@@ -135,7 +139,7 @@
 :::
 ::::
 
-![STGraph Data Model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/datamodel.svg?raw=true)
+
 
 ## STGraph: A Multistore for Temporal Graphs and Time-Series
 
@@ -145,8 +149,6 @@
     - TS events (nodes) can hold edges and properties
     - Edges built at query time
 
-![Querying STGraph](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/example.svg?raw=true)
-
 :::
 ::: {.column width="50%"}
 - <b>Hybrid storage</b>
@@ -155,6 +157,9 @@
     - Efficient graph traversal & temporal reasoning
 :::
 ::::
+
+![Querying STGraph](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/example.svg?raw=true)
+
 
 ## Anomaly Detection in Complex Sensor Networks
 
