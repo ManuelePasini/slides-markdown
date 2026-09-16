@@ -117,7 +117,6 @@
 :::
 ::::
 
-
 ## STGraph: A Multistore for Temporal Graphs and Time-Series
 
 :::: {.columns}
@@ -128,7 +127,7 @@
         - Low-evolving data on Graph storage
         - Highly-dynamic data on Time-Series storage
     - Transparent graph query interface.
-- Submitted to [VLDB 2027](https://vldb.org/2027/)
+
 
 ![STGraph Data Model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/datamodel.svg?raw=true)
 
@@ -140,18 +139,18 @@
 :::
 ::::
 
-
-
 ## STGraph: A Multistore for Temporal Graphs and Time-Series
 
 :::: {.columns}
 ::: {.column width="50%"}
+
 - <b>Property Graph data model</b>
     - TS events (nodes) can hold edges and properties
     - Edges built at query time
 
 :::
 ::: {.column width="50%"}
+
 - <b>Hybrid storage</b>
     - Dedicated Time-Series streaming ingestion of data
     - Query optimization through filter-pushdown
