@@ -120,19 +120,20 @@
 :::: {.columns}
 ::: {.column width="60%"}
 
-- A multistore solution for large spatio-temporal property graphs
+- A multistore solution for large spatio-temporal property graphs 
+<small>Currently on review at [53rd International Conference on Very Large Data Bases](https://vldb.org/2027/)</small>
+
     - Graph data model on top of heterogeneous storage
         - Low-evolving data on Graph storage
         - Highly-dynamic data on Time-Series storage
     - Transparent graph query interface.
-- <small>Submitted to [53rd International Conference on Very Large Data Bases](https://vldb.org/2027/)</small>
 
 ![STGraph Data Model](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/datamodel.svg?raw=true)
 
 :::
 ::: {.column width="40%"}
 
-![STGraph Architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/arch.svg?raw=true)
+![STGraph Architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/stgraph_results.svg?raw=true)
 
 :::
 ::::
@@ -156,7 +157,21 @@
 :::
 ::::
 
+:::: {.columns}
+::: {.column width="50%"}
+
 ![Querying STGraph](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/example.svg?raw=true)
+
+:::
+::: {.column width="50%"}
+
+- <b>Results</b>
+
+![Ingestion and query results](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/example.svg?raw=true)
+
+:::
+::::
+
 
 
 ## Anomaly Detection in Complex Sensor Networks
