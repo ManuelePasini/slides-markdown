@@ -108,9 +108,7 @@
 - Up to <u>40%</u> in water savings
 - Fruit quality preserved, smaller fruit but of improved quality
 
-![Water saving results](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_results.png?raw=true)
-
-![Fruit quality results](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_fruit_results.png?raw=true)
+![Smarter results](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_results.svg?raw=true)
 
 :::
 ::::
@@ -176,11 +174,11 @@
 
 
 ## Anomaly Detection in Complex Sensor Networks
+<small>Currently under development, in collaboration with Angela Bonifati @ Lyon1</small>
 
 - Complex sensor networks are increasingly common
 - Anomaly detection in time-series data is a well-known research field
 - **What about anomalies that are cross-time series?**
-- <small>Hopefully to be published</small>
 
 :::: {.columns}
 ::: {.column width="50%"}
