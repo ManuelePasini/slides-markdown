@@ -93,20 +93,21 @@
 :::
 ::::
 
-## SMARTER: Results
+## SMARTER: Data-driven optimization of water consumption in kiwifruit orchards
 
 :::: {.columns}
 ::: {.column width="60%"}
 
-- PID controller + simulation model to determine irrigaton amounts
+- <b> Architecture</b>
+    - PID controller + simulation model to determine irrigaton amounts
 
 ![An overview of SMARTER](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter.svg?raw=true)
 
 :::
 ::: {.column width="40%"}
-
-- Up to <u>40%</u> in water savings
-- Fruit quality preserved, smaller fruit but of improved quality
+- <b> Results</b>
+    - Up to <u>40%</u> in water savings
+    - Fruit quality preserved, smaller fruit but of improved quality
 
 ![Smarter results](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_results.svg?raw=true)
 
