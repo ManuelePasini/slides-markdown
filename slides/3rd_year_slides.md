@@ -77,7 +77,25 @@
 
 - Two kiwifiruit orchards in Emilia-Romagna
 - Data collected from a grid of soil moisture sensors and weather stations
+- Soil data is interpolated to obtain a 2-dimensional view of soil moisture
+
+:::: {.columns}
+::: {.column width="40%"}
+
+![Grid positioning](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/plant.svg?raw=true)
+
+:::
+::: {.column width="60%"}
+
+![From continuous humidity to a discrete representation](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/moisture.png?raw=true)
+
+:::
+::::
+
+## Prescriptive watering: Data-driven optimization of water consumption in kiwifruit orchards
+
 - PID controller + simulation model to determine irrigaton amounts
+
 ![An overview of SMARTER](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter.svg?raw=true)
 
 
