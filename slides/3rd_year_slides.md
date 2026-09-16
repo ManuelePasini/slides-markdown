@@ -123,23 +123,20 @@
 - Anomaly detection in time-series data is a well-known research field
 - **What about anomalies that are cross-time series?**
 
-- Complex sensor networks are increasingly common
-- Anomaly detection in time-series data is a well-known research field
-- **What about anomalies that are cross-time series?**
+<div style="display: flex; gap: 1rem; justify-content: center;">
 
-:::: {.columns}
-::: {.column width="50%"}
+<figure style="width: 48%; margin: 0; text-align: center;">
+  <img src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_agro.svg?raw=true"
+       style="max-height: none !important; width: 100% !important; height: auto !important;">
+  <figcaption><em>An example of cross-time series anomaly</em></figcaption>
+</figure>
 
-![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_agro.svg?raw=true){.full-bleed}
+<figure style="width: 48%; margin: 0; text-align: center;">
+  <img src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_er.svg?raw=true"
+       style="max-height: none !important; width: 100% !important; height: auto !important;">
+  <figcaption><em>An example of cross-time series anomaly</em></figcaption>
+</figure>
 
-
-:::
-::: {.column width="50%"}
-
-![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_er.svg?raw=true){.full-bleed}
-
-
-:::
-::::
+</div>
 
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
