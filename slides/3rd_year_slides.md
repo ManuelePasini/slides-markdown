@@ -209,36 +209,36 @@
 ## Anomaly Detection in Complex Sensor Networks
 ##### A running example
 
-<div align="center">
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/1.svg?raw=true){.medium}
+<div style="display: flex; justify-content: center; width: 100%;">
+  <img src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/1.svg?raw=true" class="large" />
 </div>
 
 ## Anomaly Detection in Complex Sensor Networks
 ##### A running example
 
-<div align="center">
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/2.svg?raw=true){.medium}
+<div style="display: flex; justify-content: center; width: 100%;">
+  <img src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/2.svg?raw=true" class="large" />
 </div>
 
 ## Anomaly Detection in Complex Sensor Networks
 ##### A running example
 
-<div align="center">
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/3.svg?raw=true){.medium}
+<div style="display: flex; justify-content: center; width: 100%;">
+  <img src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/3.svg?raw=true" class="large" />
 </div>
 
 ## Anomaly Detection in Complex Sensor Networks
 ##### A running example
 
-<div align="center">
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/4.svg?raw=true){.medium}
+<div style="display: flex; justify-content: center; width: 100%;">
+  <img src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/4.svg?raw=true" class="large" />
 </div>
 
 ## Anomaly Detection in Complex Sensor Networks
 ##### A running example
 
-<div align="center">
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/5.svg?raw=true){.medium}
+<div style="display: flex; justify-content: center; width: 100%;">
+  <img src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/5.svg?raw=true" class="large" />
 </div>
 
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
