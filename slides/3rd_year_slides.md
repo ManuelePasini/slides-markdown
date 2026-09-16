@@ -157,12 +157,14 @@
 ::::
 
 :::: {.columns}
-::: {.column width="50%"}
+::: {.column width="60%"}
+
+- <b>Toy Example</b>
 
 ![Querying STGraph](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/example.svg?raw=true)
 
 :::
-::: {.column width="50%"}
+::: {.column width="40%"}
 
 - <b>Results</b>
 

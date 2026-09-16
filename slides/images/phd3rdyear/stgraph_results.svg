@@ -31,8 +31,8 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.6023177"
-     inkscape:cx="181.61193"
-     inkscape:cy="267.42512"
+     inkscape:cx="-69.274652"
+     inkscape:cy="582.59358"
      inkscape:window-width="2560"
      inkscape:window-height="1369"
      inkscape:window-x="4472"
@@ -57,7 +57,7 @@
   <!-- ============================================================== -->
   <g
      id="formula"
-     transform="translate(53.672253,409.79732)">
+     transform="matrix(1.2074642,0,0,1.2074642,-14.690648,409.78662)">
     <!-- Parte sinistra: s_{dataset, size}(competitor) = -->
     <text
        x="215"
@@ -120,7 +120,7 @@
   <!-- SOTTOTABELLA (a): Ingestion speedup                            -->
   <!-- ============================================================== -->
   <g
-     transform="translate(20, 48)"
+     transform="matrix(1.0885712,0,0,1.0885712,2.0575706,12.760743)"
      id="g52">
     <text
        x="215"
@@ -430,7 +430,7 @@
   <!-- SOTTOTABELLA (b): Query speedup                                -->
   <!-- ============================================================== -->
   <g
-     transform="translate(20, 230)"
+     transform="matrix(1.0885712,0,0,1.0885712,2.0575706,210.8807)"
      id="g93">
     <text
        x="215"
@@ -704,9 +704,10 @@
   <!-- NOTE IN BASSO                                                  -->
   <!-- ============================================================== -->
   <g
-     transform="translate(20,412)"
+     transform="matrix(1.255509,0,0,1.255509,3.914664,402.36377)"
      id="g96"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     inkscape:label="g96">
     <text
        x="0"
        y="13"
@@ -726,5 +727,6 @@
   <text
      xml:space="preserve"
      id="text1"
-     style="fill:#000000;text-orientation:auto;text-align:start;writing-mode:lr-tb;direction:ltr;fill-opacity:0;white-space:pre;shape-inside:url(#rect1)" />
+     style="text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1);display:inline;fill:#000000;fill-opacity:0"
+     transform="matrix(1.0885712,0,0,1.0885712,-19.713852,-39.490675)" />
 </svg>
