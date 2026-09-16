@@ -271,12 +271,12 @@
 :::: {.columns}
 ::: {.column width="33%"}
 
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/anom_real.svg?raw=true){.medium}
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/anom_real.svg?raw=true){.medium}
 
 :::
 ::: {.column width="33%"}
 
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/anom_top2.svg?raw=true){.medium}
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/anom_top2.svg?raw=true){.medium}
 
 :::
 ::: {.column width="33%"}
