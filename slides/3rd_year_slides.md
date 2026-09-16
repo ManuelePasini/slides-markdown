@@ -123,6 +123,10 @@
 - Anomaly detection in time-series data is a well-known research field
 - **What about anomalies that are cross-time series?**
 
+- Complex sensor networks are increasingly common
+- Anomaly detection in time-series data is a well-known research field
+- **What about anomalies that are cross-time series?**
+
 :::: {.columns}
 ::: {.column width="50%"}
 
