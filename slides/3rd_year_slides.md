@@ -93,9 +93,7 @@
 :::
 ::::
 
-## SMARTER: Data-driven optimization of water consumption in kiwifruit orchards
-
-- <b> Results</b>
+## SMARTER: Results
 
 :::: {.columns}
 ::: {.column width="60%"}
