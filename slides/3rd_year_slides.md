@@ -74,11 +74,11 @@
   - agnostic to how a DT is implemented — as long as it respects the platform's data models
 
 ## SMARTER: Data-driven optimization of water consumption in kiwifruit orchards
+<small> Published in [Computers and Electronics in Agriculture](https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture)</small>
 
 - Two kiwifiruit orchards in Emilia-Romagna
 - Data collected from a grid of soil moisture sensors and weather stations
 - Soil data is interpolated to obtain a 2-dimensional view of soil moisture
-<small> Published in [Computers and Electronics in Agriculture](https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture)</small>
 
 :::: {.columns}
 ::: {.column width="40%"}
@@ -116,13 +116,12 @@
 ::::
 
 ## STGraph: A Multistore for Temporal Graphs and Time-Series
+<small>Currently under review at [53rd International Conference on Very Large Data Bases](https://vldb.org/2027/)</small>
 
 :::: {.columns}
 ::: {.column width="60%"}
 
 - A multistore solution for large spatio-temporal property graphs 
-<small>Currently under review at [53rd International Conference on Very Large Data Bases](https://vldb.org/2027/)</small>
-
     - Graph data model on top of heterogeneous storage
         - Low-evolving data on Graph storage
         - Highly-dynamic data on Time-Series storage
@@ -133,7 +132,7 @@
 :::
 ::: {.column width="40%"}
 
-![STGraph Architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/stgraph_results.svg?raw=true)
+![STGraph Architecture](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/arch.svg?raw=true)
 
 :::
 ::::
@@ -167,7 +166,7 @@
 
 - <b>Results</b>
 
-![Ingestion and query results](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/example.svg?raw=true)
+![Ingestion and query results](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/stgraph_results.svg?raw=true)
 
 :::
 ::::
@@ -199,5 +198,4 @@
 test
 
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
-
 <small>Published at [28th International Conference on Big Data Analytics and Knowledge Discovery (DAWAK)](https://www.dexa.org/2026/dawak2026.html)</small>
