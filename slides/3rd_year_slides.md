@@ -73,7 +73,7 @@
   - hosts DTs across their lifecycle, but organized around data
   - agnostic to how a DT is implemented — as long as it respects the platform's data models
 
-## Prescriptive watering: Data-driven optimization of water consumption in kiwifruit orchards
+## SMARTER: Data-driven optimization of water consumption in kiwifruit orchards
 
 - Two kiwifiruit orchards in Emilia-Romagna
 - Data collected from a grid of soil moisture sensors and weather stations
@@ -92,7 +92,7 @@
 :::
 ::::
 
-## Prescriptive watering: Data-driven optimization of water consumption in kiwifruit orchards
+## SMARTER: Data-driven optimization of water consumption in kiwifruit orchards
 
 - PID controller + simulation model to determine irrigaton amounts
 
@@ -122,23 +122,20 @@
 
 :::: {.columns}
 ::: {.column width="50%"}
-- **Property Graph data model**:
+- <b>Property Graph data model</b>
     - TS events (nodes) can hold edges and properties
     - Edges built at query time
+
+![Querying STGraph](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/example.svg?raw=true)
+
 :::
 ::: {.column width="50%"}
-- **Hybrid storage**:
+- <b>Hybrid storage</b>
     - Dedicated Time-Series streaming ingestion of data
     - Query optimization through filter-pushdown
     - Efficient graph traversal & temporal reasoning
 :::
 ::::
-
-<div style="text-align: center; margin-top: 0.5em;">
-
-![Querying STGraph](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/example.svg?raw=true)
-
-</div>
 
 ## Anomaly Detection in Complex Sensor Networks
 
