@@ -115,7 +115,7 @@
 :::
 ::::
 
-![Querying STGraph](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/example.svg?raw=true)
+![Querying STGraph](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/example.svg?raw=true){.stretch}
 
 ## Anomaly Detection in Complex Sensor Networks
 
@@ -126,13 +126,13 @@
 :::: {.columns}
 ::: {.column width="50%"}
 
-![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_agro.svg?raw=true){width=100%}
+![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_agro.svg?raw=true){.full-bleed}
 
 
 :::
 ::: {.column width="50%"}
 
-![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_er.svg?raw=true){width=100%}
+![An example of cross-time series anomaly](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g_er.svg?raw=true){.full-bleed}
 
 
 :::
