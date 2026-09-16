@@ -209,31 +209,35 @@
 ## Anomaly Detection in Complex Sensor Networks
 ##### A running example
 
-
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/1.svg?raw=true){.medium}
-
-## Anomaly Detection in Complex Sensor Networks
-##### A running example
-
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/2.svg?raw=true){.medium}
-
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/1.svg?raw=true){.large}
 
 ## Anomaly Detection in Complex Sensor Networks
 ##### A running example
 
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/3.svg?raw=true){.medium}
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/2.svg?raw=true){.large}
 
 
 ## Anomaly Detection in Complex Sensor Networks
 ##### A running example
 
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/4.svg?raw=true){.medium}
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/3.svg?raw=true){.large}
 
 
 ## Anomaly Detection in Complex Sensor Networks
 ##### A running example
 
-![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/5.svg?raw=true){.medium}
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/4.svg?raw=true){.large}
+
+
+## Anomaly Detection in Complex Sensor Networks
+##### A running example
+
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/5.svg?raw=true){.large}
+
+## Anomaly Detection in Complex Sensor Networks
+##### A real data example
+
+![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/n2g_real.svg?raw=true){.large}
 
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
 <small>Published at [28th International Conference on Big Data Analytics and Knowledge Discovery (DAWAK)](https://www.dexa.org/2026/dawak2026.html)</small>
