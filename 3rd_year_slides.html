@@ -441,29 +441,34 @@
 <section id="smarter-data-driven-optimization-of-water-consumption-in-kiwifruit-orchards" class="slide level2">
 <h2>SMARTER: Data-driven optimization of water consumption in kiwifruit orchards</h2>
 <p><small> Published in <a href="https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture">Computers and Electronics in Agriculture</a></small></p>
+<div class="columns">
+<div class="column" style="width:40%;">
 <ul>
 <li>Two kiwifiruit orchards in Emilia-Romagna</li>
 <li>Data collected from a grid of soil moisture sensors and weather stations</li>
 <li>Soil data is interpolated to obtain a 2-dimensional view of soil moisture</li>
 </ul>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/plant.svg?raw=true" class="small"></p>
+<figcaption>Grid positioning</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/plant.svg?raw=true"></p>
-<figcaption>Grid positioning</figcaption>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_opt.svg?raw=true" class="small"></p>
+<figcaption>Example of soil moisture profile</figcaption>
 </figure>
 </div>
 </div><div class="column" style="width:60%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/moisture.png?raw=true" class="small"></p>
-<figcaption>From continuous humidity to a discrete representation</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_opt.svg?raw=true"></p>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/moisture.png?raw=true" class="extrasmall"></p>
 <figcaption>From continuous humidity to a discrete representation</figcaption>
 </figure>
 </div>
@@ -537,7 +542,7 @@
 </div><div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_graph.svg?raw=true"></p>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_graph.svg?raw=true" class="large"></p>
 <figcaption>A more functional view</figcaption>
 </figure>
 </div>
@@ -695,27 +700,55 @@
 <h2>LLM-Assisted Metadata Query Answering on Data Warehouses</h2>
 <p><small>Published at <a href="https://www.dexa.org/2026/dawak2026.html">28th International Conference on Big Data Analytics and Knowledge Discovery (DAWAK)</a></small></p>
 <ul>
-<li>Various phases of data management can benefit LLM support</li>
-<li>Little work in terms of metadata exploration</li>
+<li>Various phases of data management can benefit LLM support, little work metadata exploration</li>
 <li>As case study, a Data Warehouse (DW) is considered</li>
+<li>Dimensional Fact Model (DFM) describing metadata</li>
 </ul>
 <p><strong>Goal</strong>: investigate the use of LLMs to support NL Q&amp;A over DW metadata</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/dfm.svg?raw=true" class="large"></p>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/dfm.svg?raw=true"></p>
 <figcaption>Example DW Schema</figcaption>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/dfm.svg?raw=true" class="large"></p>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/invoice_fact.svg?raw=true"></p>
 <figcaption>The invoice fact</figcaption>
 </figure>
 </div>
 </div>
+</div>
+</section>
+<section id="llm-assisted-metadata-query-answering-on-data-warehouses-1" class="slide level2">
+<h2>LLM-Assisted Metadata Query Answering on Data Warehouses</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li><b>Input</b>
+<ul>
+<li>DFM parsed into KG (MG)</li>
+<li>DFM modelled as KG (SG) with ad-hoc ontology</li>
+<li>Four categories of questions</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/dfm_kg.svg?raw=true"></p>
+<figcaption>SG and an excerpt of MG</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/llm4bi_results.svg?raw=true"></p>
+<figcaption>Results over question categories</figcaption>
+</figure>
 </div>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
