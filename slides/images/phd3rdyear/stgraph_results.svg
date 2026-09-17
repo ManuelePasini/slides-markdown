@@ -1,732 +1,168 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   viewBox="0 0 470 515"
-   width="100%"
-   height="100%"
-   style="background-color: #ffffff; font-family: 'Latin Modern Roman', 'Computer Modern', 'Times New Roman', Times, serif;"
-   version="1.1"
-   id="svg96"
-   sodipodi:docname="stgraph_results.svg"
-   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs96">
-    <rect
-       x="131.06015"
-       y="-2.4963839"
-       width="283.33957"
-       height="38.69395"
-       id="rect1" />
-  </defs>
-  <sodipodi:namedview
-     id="namedview96"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.6023177"
-     inkscape:cx="-69.274652"
-     inkscape:cy="582.59358"
-     inkscape:window-width="2560"
-     inkscape:window-height="1369"
-     inkscape:window-x="4472"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg96" />
-  <style
-     id="style1">
-    .math-text    { font-size: 11.5px; text-anchor: middle; fill: #111827; }
-    .caption-sub  { font-size: 11.5px; text-anchor: middle; fill: #111827; }
-    .col-head     { font-size: 11px; font-weight: 600; fill: #111827; }
-    .cell         { font-size: 11px; fill: #111827; }
-    .cell-ds      { font-family: 'Latin Modern Sans', 'Computer Modern Sans', 'Helvetica Neue', Arial, sans-serif; font-size: 10.5px; fill: #111827; }
-    .note-text    { font-size: 9.5px; fill: #374151; }
-    .rule-thick   { stroke: #111827; stroke-width: 1.3; stroke-linecap: square; }
-    .rule-thin    { stroke: #111827; stroke-width: 0.65; stroke-linecap: square; }
-    .frac-line    { stroke: #111827; stroke-width: 0.8; stroke-linecap: round; }
-    .sup          { font-size: 8px; }
-  </style>
-  <!-- ============================================================== -->
-  <!-- FORMULA SPEEDUP                                                -->
-  <!-- ============================================================== -->
-  <g
-     id="formula"
-     transform="matrix(1.2074642,0,0,1.2074642,-14.690648,409.78662)">
-    <!-- Parte sinistra: s_{dataset, size}(competitor) = -->
-    <text
-       x="215"
-       y="24"
-       class="math-text"
-       text-anchor="end"
-       id="text3"><tspan
-         font-style="italic"
-         id="tspan1">s</tspan><tspan
-         dy="3"
-         style="font-style:italic;font-size:9px"
-         id="tspan2">dataset, size</tspan><tspan
-         dy="-3"
-         font-style="normal"
-         id="tspan3">(competitor) =</tspan></text>
-    <!-- Frazione: linea divisoria -->
-    <line
-       x1="280.96689"
-       y1="21.248192"
-       x2="398.30179"
-       y2="21.248192"
-       class="frac-line"
-       id="line3" />
-    <!-- Numeratore: avg_{QID}(Competitor Time) -->
-    <text
-       x="338.49637"
-       y="14.156024"
-       class="math-text"
-       style="font-size:10.5px"
-       id="text6"><tspan
-         font-style="normal"
-         id="tspan4">avg</tspan><tspan
-         dy="2.5"
-         style="font-style:normal;font-size:8px"
-         id="tspan5">QID</tspan><tspan
-         dy="-2.5"
-         font-style="normal"
-         id="tspan6">(Competitor Time)</tspan></text>
-    <!-- Denominatore: avg_{QID}(OurApproach Time) -->
-    <text
-       x="340"
-       y="32"
-       class="math-text"
-       style="font-size:10.5px"
-       id="text11"><tspan
-         font-style="normal"
-         id="tspan7">avg</tspan><tspan
-         dy="2.5"
-         style="font-style:normal;font-size:8px"
-         id="tspan8">QID</tspan><tspan
-         dy="-2.5"
-         font-style="normal"
-         id="tspan9">(</tspan><tspan
-         font-style="italic"
-         id="tspan10">OurApproach</tspan><tspan
-         font-style="normal"
-         id="tspan11">Time)</tspan></text>
-  </g>
-  <!-- ============================================================== -->
-  <!-- SOTTOTABELLA (a): Ingestion speedup                            -->
-  <!-- ============================================================== -->
-  <g
-     transform="matrix(1.0885712,0,0,1.0885712,2.0575706,12.760743)"
-     id="g52">
-    <text
-       x="215"
-       y="13"
-       class="caption-sub"
-       id="text12"><tspan
-   font-weight="bold"
-   id="tspan12">(a)</tspan> Ingestion speedup (↑)</text>
-    <!-- Linee orizzontali Booktabs -->
-    <line
-       x1="0"
-       y1="20"
-       x2="430"
-       y2="20"
-       class="rule-thick"
-       id="line12" />
-    <line
-       x1="0"
-       y1="48"
-       x2="430"
-       y2="48"
-       class="rule-thin"
-       id="line13" />
-    <line
-       x1="0"
-       y1="106"
-       x2="430"
-       y2="106"
-       class="rule-thin"
-       id="line14" />
-    <line
-       x1="0"
-       y1="164"
-       x2="430"
-       y2="164"
-       class="rule-thick"
-       id="line15" />
-    <!-- Intestazioni colonne -->
-    <text
-       x="5"
-       y="34"
-       class="col-head"
-       text-anchor="start"
-       id="text15">Dataset</text>
-    <text
-       x="72"
-       y="34"
-       class="col-head"
-       text-anchor="middle"
-       id="text16">Size</text>
-    <text
-       x="140"
-       y="44"
-       class="col-head"
-       text-anchor="middle"
-       id="text17">AGTS</text>
-    <text
-       x="212"
-       y="44"
-       class="col-head"
-       text-anchor="middle"
-       id="text18">AeonG</text>
-    <text
-       x="295"
-       y="44"
-       class="col-head"
-       text-anchor="middle"
-       id="text19">HyGraph</text>
-    <text
-       x="382"
-       y="44"
-       class="col-head"
-       text-anchor="middle"
-       id="text20">Neo4J</text>
-    <!-- MIV -->
-    <text
-       x="5"
-       y="82"
-       class="cell-ds"
-       text-anchor="start"
-       id="text21">MIV</text>
-    <text
-       x="72"
-       y="64"
-       class="cell"
-       text-anchor="middle"
-       id="text22">S</text>
-    <text
-       x="140"
-       y="64"
-       class="cell"
-       text-anchor="middle"
-       id="text23">OOT<tspan
-   dy="-4"
-   class="sup"
-   id="tspan22">†</tspan></text>
-    <text
-       x="212"
-       y="64"
-       class="cell"
-       text-anchor="middle"
-       id="text24">161.4</text>
-    <text
-       x="295"
-       y="64"
-       class="cell"
-       text-anchor="middle"
-       id="text25">712.5</text>
-    <text
-       x="382"
-       y="64"
-       class="cell"
-       text-anchor="middle"
-       id="text26">OOT<tspan
-   dy="-4"
-   class="sup"
-   id="tspan25">†</tspan></text>
-    <text
-       x="72"
-       y="82"
-       class="cell"
-       text-anchor="middle"
-       id="text27">M</text>
-    <text
-       x="140"
-       y="82"
-       class="cell"
-       text-anchor="middle"
-       id="text28">OOT<tspan
-   dy="-4"
-   class="sup"
-   id="tspan27">†</tspan></text>
-    <text
-       x="212"
-       y="82"
-       class="cell"
-       text-anchor="middle"
-       id="text29">184.1</text>
-    <text
-       x="295"
-       y="82"
-       class="cell"
-       text-anchor="middle"
-       id="text30">812.8</text>
-    <text
-       x="382"
-       y="82"
-       class="cell"
-       text-anchor="middle"
-       id="text31">OOT<tspan
-   dy="-4"
-   class="sup"
-   id="tspan30">†</tspan></text>
-    <text
-       x="72"
-       y="100"
-       class="cell"
-       text-anchor="middle"
-       id="text32">L</text>
-    <text
-       x="140"
-       y="100"
-       class="cell"
-       text-anchor="middle"
-       id="text33">OOT<tspan
-   dy="-4"
-   class="sup"
-   id="tspan32">†</tspan></text>
-    <text
-       x="212"
-       y="100"
-       class="cell"
-       text-anchor="middle"
-       id="text34">OOT<tspan
-   dy="-4"
-   class="sup"
-   id="tspan33">‡</tspan></text>
-    <text
-       x="295"
-       y="100"
-       class="cell"
-       text-anchor="middle"
-       id="text35">OOT<tspan
-   dy="-4"
-   class="sup"
-   id="tspan34">‡</tspan></text>
-    <text
-       x="382"
-       y="100"
-       class="cell"
-       text-anchor="middle"
-       id="text36">OOT<tspan
-   dy="-4"
-   class="sup"
-   id="tspan35">†</tspan></text>
-    <!-- SB -->
-    <text
-       x="5"
-       y="140"
-       class="cell-ds"
-       text-anchor="start"
-       id="text37">SB</text>
-    <text
-       x="72"
-       y="122"
-       class="cell"
-       text-anchor="middle"
-       id="text38">S</text>
-    <text
-       x="140"
-       y="122"
-       class="cell"
-       text-anchor="middle"
-       id="text39">2.4</text>
-    <text
-       x="212"
-       y="122"
-       class="cell"
-       text-anchor="middle"
-       id="text40">241.7</text>
-    <text
-       x="295"
-       y="122"
-       class="cell"
-       text-anchor="middle"
-       id="text41">0.4</text>
-    <text
-       x="382"
-       y="122"
-       class="cell"
-       text-anchor="middle"
-       id="text42">64.8</text>
-    <text
-       x="72"
-       y="140"
-       class="cell"
-       text-anchor="middle"
-       id="text43">M</text>
-    <text
-       x="140"
-       y="140"
-       class="cell"
-       text-anchor="middle"
-       id="text44">2.9</text>
-    <text
-       x="212"
-       y="140"
-       class="cell"
-       text-anchor="middle"
-       id="text45">381.2</text>
-    <text
-       x="295"
-       y="140"
-       class="cell"
-       text-anchor="middle"
-       id="text46">0.3</text>
-    <text
-       x="382"
-       y="140"
-       class="cell"
-       text-anchor="middle"
-       id="text47">OOT<tspan
-   dy="-4"
-   class="sup"
-   id="tspan46">†</tspan></text>
-    <text
-       x="72"
-       y="158"
-       class="cell"
-       text-anchor="middle"
-       id="text48">L</text>
-    <text
-       x="140"
-       y="158"
-       class="cell"
-       text-anchor="middle"
-       id="text49">14.9</text>
-    <text
-       x="212"
-       y="158"
-       class="cell"
-       text-anchor="middle"
-       id="text50">OOT<tspan
-   dy="-4"
-   class="sup"
-   id="tspan49">‡</tspan></text>
-    <text
-       x="295"
-       y="158"
-       class="cell"
-       text-anchor="middle"
-       id="text51">OOT<tspan
-   dy="-4"
-   class="sup"
-   id="tspan50">‡</tspan></text>
-    <text
-       x="382"
-       y="158"
-       class="cell"
-       text-anchor="middle"
-       id="text52">OOT<tspan
-   dy="-4"
-   class="sup"
-   id="tspan51">†</tspan></text>
-  </g>
-  <!-- ============================================================== -->
-  <!-- SOTTOTABELLA (b): Query speedup                                -->
-  <!-- ============================================================== -->
-  <g
-     transform="matrix(1.0885712,0,0,1.0885712,2.0575706,210.8807)"
-     id="g93">
-    <text
-       x="215"
-       y="13"
-       class="caption-sub"
-       id="text53"><tspan
-   font-weight="bold"
-   id="tspan52">(b)</tspan> Query speedup (↑)</text>
-    <!-- Linee orizzontali Booktabs -->
-    <line
-       x1="0"
-       y1="20"
-       x2="430"
-       y2="20"
-       class="rule-thick"
-       id="line53" />
-    <line
-       x1="0"
-       y1="48"
-       x2="430"
-       y2="48"
-       class="rule-thin"
-       id="line54" />
-    <line
-       x1="0"
-       y1="106"
-       x2="430"
-       y2="106"
-       class="rule-thin"
-       id="line55" />
-    <line
-       x1="0"
-       y1="164"
-       x2="430"
-       y2="164"
-       class="rule-thick"
-       id="line56" />
-    <!-- Intestazioni colonne -->
-    <text
-       x="5"
-       y="34"
-       class="col-head"
-       text-anchor="start"
-       id="text56">Dataset</text>
-    <text
-       x="72"
-       y="34"
-       class="col-head"
-       text-anchor="middle"
-       id="text57">Size</text>
-    <text
-       x="140"
-       y="44"
-       class="col-head"
-       text-anchor="middle"
-       id="text58">AGTS</text>
-    <text
-       x="212"
-       y="44"
-       class="col-head"
-       text-anchor="middle"
-       id="text59">AeonG</text>
-    <text
-       x="295"
-       y="44"
-       class="col-head"
-       text-anchor="middle"
-       id="text60">HyGraph</text>
-    <text
-       x="382"
-       y="44"
-       class="col-head"
-       text-anchor="middle"
-       id="text61">Neo4J</text>
-    <!-- MIV -->
-    <text
-       x="5"
-       y="82"
-       class="cell-ds"
-       text-anchor="start"
-       id="text62">MIV</text>
-    <text
-       x="72"
-       y="64"
-       class="cell"
-       text-anchor="middle"
-       id="text63">S</text>
-    <text
-       x="140"
-       y="64"
-       class="cell"
-       text-anchor="middle"
-       id="text64">2.2</text>
-    <text
-       x="212"
-       y="64"
-       class="cell"
-       text-anchor="middle"
-       id="text65">5.7</text>
-    <text
-       x="295"
-       y="64"
-       class="cell"
-       text-anchor="middle"
-       id="text66">9445.5</text>
-    <text
-       x="382"
-       y="64"
-       class="cell"
-       text-anchor="middle"
-       id="text67">1.6</text>
-    <text
-       x="72"
-       y="82"
-       class="cell"
-       text-anchor="middle"
-       id="text68">M</text>
-    <text
-       x="140"
-       y="82"
-       class="cell"
-       text-anchor="middle"
-       id="text69">22.3</text>
-    <text
-       x="212"
-       y="82"
-       class="cell"
-       text-anchor="middle"
-       id="text70">35.3</text>
-    <text
-       x="295"
-       y="82"
-       class="cell"
-       text-anchor="middle"
-       id="text71">14205.1</text>
-    <text
-       x="382"
-       y="82"
-       class="cell"
-       text-anchor="middle"
-       id="text72">1.7</text>
-    <text
-       x="72"
-       y="100"
-       class="cell"
-       text-anchor="middle"
-       id="text73">L</text>
-    <text
-       x="140"
-       y="100"
-       class="cell"
-       text-anchor="middle"
-       id="text74">260.0</text>
-    <text
-       x="212"
-       y="100"
-       class="cell"
-       text-anchor="middle"
-       id="text75">‡</text>
-    <text
-       x="295"
-       y="100"
-       class="cell"
-       text-anchor="middle"
-       id="text76">‡</text>
-    <text
-       x="382"
-       y="100"
-       class="cell"
-       text-anchor="middle"
-       id="text77">1.7</text>
-    <!-- SB -->
-    <text
-       x="5"
-       y="140"
-       class="cell-ds"
-       text-anchor="start"
-       id="text78">SB</text>
-    <text
-       x="72"
-       y="122"
-       class="cell"
-       text-anchor="middle"
-       id="text79">S</text>
-    <text
-       x="140"
-       y="122"
-       class="cell"
-       text-anchor="middle"
-       id="text80">4.3</text>
-    <text
-       x="212"
-       y="122"
-       class="cell"
-       text-anchor="middle"
-       id="text81">37.7</text>
-    <text
-       x="295"
-       y="122"
-       class="cell"
-       text-anchor="middle"
-       id="text82">40.7</text>
-    <text
-       x="382"
-       y="122"
-       class="cell"
-       text-anchor="middle"
-       id="text83">1.8</text>
-    <text
-       x="72"
-       y="140"
-       class="cell"
-       text-anchor="middle"
-       id="text84">M</text>
-    <text
-       x="140"
-       y="140"
-       class="cell"
-       text-anchor="middle"
-       id="text85">4.5</text>
-    <text
-       x="212"
-       y="140"
-       class="cell"
-       text-anchor="middle"
-       id="text86">39.9</text>
-    <text
-       x="295"
-       y="140"
-       class="cell"
-       text-anchor="middle"
-       id="text87">41.7</text>
-    <text
-       x="382"
-       y="140"
-       class="cell"
-       text-anchor="middle"
-       id="text88">2.1</text>
-    <text
-       x="72"
-       y="158"
-       class="cell"
-       text-anchor="middle"
-       id="text89">L</text>
-    <text
-       x="140"
-       y="158"
-       class="cell"
-       text-anchor="middle"
-       id="text90">4.8</text>
-    <text
-       x="212"
-       y="158"
-       class="cell"
-       text-anchor="middle"
-       id="text91">‡</text>
-    <text
-       x="295"
-       y="158"
-       class="cell"
-       text-anchor="middle"
-       id="text92">‡</text>
-    <text
-       x="382"
-       y="158"
-       class="cell"
-       text-anchor="middle"
-       id="text93">4.8</text>
-  </g>
-  <!-- ============================================================== -->
-  <!-- NOTE IN BASSO                                                  -->
-  <!-- ============================================================== -->
-  <g
-     transform="matrix(1.255509,0,0,1.255509,3.914664,402.36377)"
-     id="g96"
-     sodipodi:insensitive="true"
-     inkscape:label="g96">
-    <text
-       x="0"
-       y="13"
-       class="note-text"
-       id="text94">OOT: &gt;500× slower than OurApproach.</text>
-    <text
-       x="0"
-       y="27"
-       class="note-text"
-       id="text95">† Bulk loading was used.</text>
-    <text
-       x="0"
-       y="41"
-       class="note-text"
-       id="text96">‡ Ingestion failed.</text>
-  </g>
-  <text
-     xml:space="preserve"
-     id="text1"
-     style="text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1);display:inline;fill:#000000;fill-opacity:0"
-     transform="matrix(1.0885712,0,0,1.0885712,-19.713852,-39.490675)" />
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" font-family="Times New Roman, serif" font-size="15" fill="black">
+    
+    <!-- ========================================== -->
+    <!-- TABELLA 1: Statistiche Dimensioni (Top)    -->
+    <!-- ========================================== -->
+    
+    <!-- Linea superiore -->
+    <line x1="30" y1="20" x2="570" y2="20" stroke="black" stroke-width="1.5" />
+    
+    <!-- Intestazioni -->
+    <text x="80" y="42" text-anchor="middle">Dataset</text>
+    <text x="170" y="42" text-anchor="middle">Size</text>
+    <text x="250" y="42" text-anchor="middle">AGTS</text>
+    <text x="330" y="42" text-anchor="middle">AeonG</text>
+    <text x="420" y="42" text-anchor="middle">HyGraph</text>
+    <text x="510" y="42" text-anchor="middle">Neo4J</text>
+
+    <!-- Linea sotto intestazione -->
+    <line x1="30" y1="52" x2="570" y2="52" stroke="black" stroke-width="1" />
+
+    <!-- Dati MIV -->
+    <text x="80" y="97" text-anchor="middle">MIV</text>
+    
+    <text x="170" y="75" text-anchor="middle">S</text>
+    <text x="250" y="75" text-anchor="middle">2.4</text>
+    <text x="330" y="75" text-anchor="middle">7.6</text>
+    <text x="420" y="75" text-anchor="middle">&#8224;</text>
+    <text x="510" y="75" text-anchor="middle">4.2</text>
+
+    <text x="170" y="97" text-anchor="middle">M</text>
+    <text x="250" y="97" text-anchor="middle">2.4</text>
+    <text x="330" y="97" text-anchor="middle">7.6</text>
+    <text x="420" y="97" text-anchor="middle">&#8224;</text>
+    <text x="510" y="97" text-anchor="middle">4.4</text>
+
+    <text x="170" y="119" text-anchor="middle">L</text>
+    <text x="250" y="119" text-anchor="middle">2.4</text>
+    <text x="330" y="119" text-anchor="middle">&#8225;</text>
+    <text x="420" y="119" text-anchor="middle">&#8225;</text>
+    <text x="510" y="119" text-anchor="middle">4.3</text>
+
+    <!-- Linea separatrice MIV / SB -->
+    <line x1="30" y1="132" x2="570" y2="132" stroke="black" stroke-width="0.75" />
+
+    <!-- Dati SB -->
+    <text x="80" y="177" text-anchor="middle">SB</text>
+    
+    <text x="170" y="155" text-anchor="middle">S</text>
+    <text x="250" y="155" text-anchor="middle">10.8</text>
+    <text x="330" y="155" text-anchor="middle">9.4</text>
+    <text x="420" y="155" text-anchor="middle">&#8224;</text>
+    <text x="510" y="155" text-anchor="middle">7.8</text>
+
+    <text x="170" y="177" text-anchor="middle">M</text>
+    <text x="250" y="177" text-anchor="middle">10.9</text>
+    <text x="330" y="177" text-anchor="middle">8.4</text>
+    <text x="420" y="177" text-anchor="middle">&#8224;</text>
+    <text x="510" y="177" text-anchor="middle">7.5</text>
+
+    <text x="170" y="199" text-anchor="middle">L</text>
+    <text x="250" y="199" text-anchor="middle">11.5</text>
+    <text x="330" y="199" text-anchor="middle">&#8225;</text>
+    <text x="420" y="199" text-anchor="middle">&#8225;</text>
+    <text x="510" y="199" text-anchor="middle">7.5</text>
+
+    <!-- Linea inferiore Tabella 1 -->
+    <line x1="30" y1="212" x2="570" y2="212" stroke="black" stroke-width="1.5" />
+
+    <!-- Legenda Tabella 1 -->
+    <text x="300" y="235" text-anchor="middle" font-size="14">&#8224; In-memory.</text>
+    <text x="300" y="255" text-anchor="middle" font-size="14">&#8225; No bulk loading is available; no data was stored (see Table 7).</text>
+
+
+    <!-- ========================================== -->
+    <!-- TABELLA 2: Query speedup (Bottom)          -->
+    <!-- ========================================== -->
+    
+    <!-- Titolo -->
+    <text x="300" y="310" text-anchor="middle" font-weight="bold">(b) Query speedup (&#8593;)</text>
+
+    <!-- Linea superiore -->
+    <line x1="30" y1="325" x2="570" y2="325" stroke="black" stroke-width="1.5" />
+    
+    <!-- Intestazioni -->
+    <text x="80" y="347" text-anchor="middle">Dataset</text>
+    <text x="170" y="347" text-anchor="middle">Size</text>
+    <text x="250" y="347" text-anchor="middle">AGTS</text>
+    <text x="330" y="347" text-anchor="middle">AeonG</text>
+    <text x="420" y="347" text-anchor="middle">HyGraph</text>
+    <text x="510" y="347" text-anchor="middle">Neo4J</text>
+
+    <!-- Linea sotto intestazione -->
+    <line x1="30" y1="357" x2="570" y2="357" stroke="black" stroke-width="1" />
+
+    <!-- Dati MIV -->
+    <text x="80" y="402" text-anchor="middle">MIV</text>
+    
+    <text x="170" y="380" text-anchor="middle">S</text>
+    <text x="250" y="380" text-anchor="middle">2.2</text>
+    <text x="330" y="380" text-anchor="middle">5.7</text>
+    <text x="420" y="380" text-anchor="middle">9445.5</text>
+    <text x="510" y="380" text-anchor="middle">1.6</text>
+
+    <text x="170" y="402" text-anchor="middle">M</text>
+    <text x="250" y="402" text-anchor="middle">22.3</text>
+    <text x="330" y="402" text-anchor="middle">35.3</text>
+    <text x="420" y="402" text-anchor="middle">14205.1</text>
+    <text x="510" y="402" text-anchor="middle">1.7</text>
+
+    <text x="170" y="424" text-anchor="middle">L</text>
+    <text x="250" y="424" text-anchor="middle">260.0</text>
+    <text x="330" y="424" text-anchor="middle">&#8225;</text>
+    <text x="420" y="424" text-anchor="middle">&#8225;</text>
+    <text x="510" y="424" text-anchor="middle">1.7</text>
+
+    <!-- Linea separatrice MIV / SB -->
+    <line x1="30" y1="437" x2="570" y2="437" stroke="black" stroke-width="0.75" />
+
+    <!-- Dati SB -->
+    <text x="80" y="482" text-anchor="middle">SB</text>
+    
+    <text x="170" y="460" text-anchor="middle">S</text>
+    <text x="250" y="460" text-anchor="middle">4.3</text>
+    <text x="330" y="460" text-anchor="middle">37.7</text>
+    <text x="420" y="460" text-anchor="middle">40.7</text>
+    <text x="510" y="460" text-anchor="middle">1.8</text>
+
+    <text x="170" y="482" text-anchor="middle">M</text>
+    <text x="250" y="482" text-anchor="middle">4.5</text>
+    <text x="330" y="482" text-anchor="middle">39.9</text>
+    <text x="420" y="482" text-anchor="middle">41.7</text>
+    <text x="510" y="482" text-anchor="middle">2.1</text>
+
+    <text x="170" y="504" text-anchor="middle">L</text>
+    <text x="250" y="504" text-anchor="middle">4.8</text>
+    <text x="330" y="504" text-anchor="middle">&#8225;</text>
+    <text x="420" y="504" text-anchor="middle">&#8225;</text>
+    <text x="510" y="504" text-anchor="middle">4.8</text>
+
+    <!-- Linea inferiore Tabella 2 -->
+    <line x1="30" y1="517" x2="570" y2="517" stroke="black" stroke-width="1.5" />
+
+    <!-- Legenda e Formula Tabella 2 -->
+    <text x="30" y="550" text-anchor="start" font-size="14">&#8225; Ingestion failed.</text>
+
+    <!-- Formula di Speedup -->
+    <text x="200" y="555" font-style="italic" font-size="15">s</text>
+    <text x="207" y="559" font-size="11">dataset, size</text>
+    <text x="272" y="555" font-size="15">(competitor) = </text>
+    
+    <!-- Linea di frazione -->
+    <line x1="370" y1="550" x2="570" y2="550" stroke="black" stroke-width="1" />
+    
+    <!-- Numeratore -->
+    <text x="470" y="542" text-anchor="middle" font-size="14">
+        <tspan font-style="italic">avg</tspan>
+        <tspan font-size="10" dy="3">QID</tspan>
+        <tspan font-size="14" dy="-3">(Competitor Time)</tspan>
+    </text>
+    
+    <!-- Denominatore -->
+    <text x="470" y="570" text-anchor="middle" font-size="14">
+        <tspan font-style="italic">avg</tspan>
+        <tspan font-size="10" dy="3">QID</tspan>
+        <tspan font-size="14" dy="-3">(OurApproachTime)</tspan>
+    </text>
+
 </svg>

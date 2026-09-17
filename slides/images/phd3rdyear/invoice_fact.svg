@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 950" width="100%" height="100%" style="background-color: #FFFFFF;">
+    <!-- Definitions for Arrowheads and special markers -->
+    <defs>
+        <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#FFFFFF" stroke="#62B5E5" stroke-width="1.5" stroke-linejoin="round"/>
+        </marker>
+        <style>
+            .blue-line { stroke: #87CEEB; stroke-width: 2.5; fill: none; }
+            .grey-line { stroke: #C0C0C0; stroke-width: 2.5; fill: none; }
+            .blue-node { fill: #FFFFFF; stroke: #87CEEB; stroke-width: 2.5; }
+            .grey-node { fill: #FFFFFF; stroke: #C0C0C0; stroke-width: 2.5; }
+            .text-main { font-family: Arial, sans-serif; font-size: 14px; fill: #000000; }
+            .text-measure { font-family: Arial, sans-serif; font-size: 13px; fill: #595959; }
+            .text-link { font-family: Arial, sans-serif; font-size: 12px; fill: #000000; }
+        </style>
+    </defs>
+
+    <!-- ==================== EDGES ==================== -->
+    
+    <!-- Top Grey Branches -->
+    <line x1="530" y1="340" x2="480" y2="190" class="grey-line" />
+    <line x1="501" y1="262" x2="517" y2="268" class="grey-line" /> <!-- Tick -->
+    
+    <line x1="600" y1="340" x2="580" y2="170" class="grey-line" />
+    <line x1="581" y1="254" x2="599" y2="256" class="grey-line" /> <!-- Tick -->
+    
+    <line x1="670" y1="340" x2="670" y2="190" class="grey-line" />
+    <line x1="662" y1="265" x2="678" y2="265" class="grey-line" /> <!-- Tick -->
+
+    <!-- Right Grey Branch -->
+    <line x1="690" y1="460" x2="850" y2="460" class="grey-line" />
+
+    <!-- Bottom Grey Branches -->
+    <line x1="650" y1="480" x2="730" y2="610" class="grey-line" />
+    <line x1="682" y1="551" x2="698" y2="539" class="grey-line" /> <!-- Tick -->
+    
+    <line x1="600" y1="480" x2="670" y2="670" class="grey-line" />
+    <line x1="627" y1="578" x2="643" y2="572" class="grey-line" /> <!-- Tick -->
+    
+    <line x1="550" y1="480" x2="580" y2="720" class="grey-line" />
+    <line x1="557" y1="599" x2="573" y2="601" class="grey-line" /> <!-- Tick -->
+
+    <!-- Date Branch -->
+    <line x1="510" y1="380" x2="410" y2="300" class="blue-line" />
+    <line x1="410" y1="300" x2="290" y2="300" class="blue-line" />
+    <line x1="410" y1="300" x2="250" y2="190" class="blue-line" />
+    <line x1="250" y1="190" x2="160" y2="190" class="blue-line" />
+    <line x1="250" y1="190" x2="180" y2="130" class="blue-line" />
+    <line x1="180" y1="130" x2="100" y2="90" class="blue-line" />
+    <line x1="250" y1="190" x2="220" y2="100" class="blue-line" />
+    <!-- Lines to Year with arrows -->
+    <line x1="100" y1="90" x2="160" y2="40" class="blue-line" marker-end="url(#arrow-blue)" />
+    <line x1="220" y1="100" x2="160" y2="40" class="blue-line" marker-end="url(#arrow-blue)" />
+
+    <!-- SKU Branch -->
+    <line x1="690" y1="380" x2="770" y2="310" class="blue-line" />
+    <line x1="770" y1="310" x2="710" y2="130" class="blue-line" />
+    <line x1="770" y1="310" x2="800" y2="230" class="blue-line" />
+    <line x1="800" y1="230" x2="820" y2="110" class="blue-line" />
+    <line x1="770" y1="310" x2="840" y2="250" class="blue-line" />
+    <line x1="770" y1="310" x2="940" y2="310" class="blue-line" />
+    <line x1="770" y1="310" x2="890" y2="370" class="blue-line" />
+    <line x1="890" y1="370" x2="1010" y2="410" class="blue-line" />
+    <line x1="770" y1="310" x2="940" y2="240" class="blue-line" />
+    <line x1="940" y1="240" x2="1040" y2="180" class="blue-line" />
+    <line x1="1040" y1="180" x2="1150" y2="120" class="blue-line" />
+    <line x1="1040" y1="180" x2="1040" y2="100" class="blue-line" />
+    <line x1="1040" y1="180" x2="980" y2="60" class="blue-line" />
+
+    <!-- Agent Branch -->
+    <line x1="690" y1="470" x2="740" y2="560" class="blue-line" />
+    <line x1="740" y1="560" x2="820" y2="640" class="blue-line" />
+    <!-- Double line for Controller -->
+    <line x1="740" y1="557" x2="970" y2="557" class="blue-line" />
+    <line x1="740" y1="563" x2="970" y2="563" class="blue-line" />
+
+    <!-- Customer Branch -->
+    <!-- Two lines connecting Invoice to Customer -->
+    <path d="M 510 430 L 440 520" class="blue-line" />
+    <path d="M 510 480 L 440 520" class="blue-line" />
+    
+    <!-- Billing & Shipping Information Lines -->
+    <path d="M 440 520 L 370 430 L 220 430" class="blue-line" />
+    <path d="M 440 520 L 350 490 L 220 490" class="blue-line" />
+
+    <line x1="440" y1="520" x2="380" y2="590" class="blue-line" />
+    <line x1="380" y1="590" x2="320" y2="660" class="blue-line" />
+    <line x1="320" y1="660" x2="260" y2="730" class="blue-line" />
+    <line x1="260" y1="730" x2="200" y2="800" class="blue-line" />
+    <line x1="200" y1="800" x2="130" y2="870" class="blue-line" />
+
+
+    <!-- ==================== NODES ==================== -->
+
+    <!-- Grey Nodes -->
+    <circle cx="480" cy="190" r="8" class="grey-node" />
+    <circle cx="580" cy="170" r="8" class="grey-node" />
+    <circle cx="670" cy="190" r="8" class="grey-node" />
+    
+    <circle cx="850" cy="460" r="8" class="grey-node" />
+    
+    <circle cx="730" cy="610" r="8" class="grey-node" />
+    <circle cx="670" cy="670" r="8" class="grey-node" />
+    <circle cx="580" cy="720" r="8" class="grey-node" />
+
+    <!-- Blue Nodes - Date Branch -->
+    <circle cx="410" cy="300" r="8" class="blue-node" />
+    <circle cx="290" cy="300" r="8" class="blue-node" />
+    <circle cx="250" cy="190" r="8" class="blue-node" />
+    <circle cx="160" cy="190" r="8" class="blue-node" />
+    <circle cx="180" cy="130" r="8" class="blue-node" />
+    <circle cx="100" cy="90" r="8" class="blue-node" />
+    <circle cx="220" cy="100" r="8" class="blue-node" />
+    <circle cx="160" cy="40" r="8" class="blue-node" />
+
+    <!-- Blue Nodes - SKU Branch -->
+    <circle cx="770" cy="310" r="8" class="blue-node" />
+    <circle cx="710" cy="130" r="8" class="blue-node" />
+    <circle cx="800" cy="230" r="8" class="blue-node" />
+    <circle cx="820" cy="110" r="8" class="blue-node" />
+    <circle cx="840" cy="250" r="8" class="blue-node" />
+    <circle cx="940" cy="310" r="8" class="blue-node" />
+    <circle cx="890" cy="370" r="8" class="blue-node" />
+    <circle cx="1010" cy="410" r="8" class="blue-node" />
+    <circle cx="940" cy="240" r="8" class="blue-node" />
+    <circle cx="1040" cy="180" r="8" class="blue-node" />
+    <circle cx="1150" cy="120" r="8" class="blue-node" />
+    <circle cx="1040" cy="100" r="8" class="blue-node" />
+    <circle cx="980" cy="60" r="8" class="blue-node" />
+
+    <!-- Blue Nodes - Agent Branch -->
+    <circle cx="740" cy="560" r="8" class="blue-node" />
+    <circle cx="820" cy="640" r="8" class="blue-node" />
+    <circle cx="970" cy="560" r="8" class="blue-node" />
+
+    <!-- Blue Nodes - Customer Branch -->
+    <circle cx="440" cy="520" r="8" class="blue-node" />
+    <circle cx="370" cy="430" r="5" fill="#FFFFFF" stroke="#87CEEB" stroke-width="2.5" />
+    <circle cx="350" cy="490" r="5" fill="#FFFFFF" stroke="#87CEEB" stroke-width="2.5" />
+    <circle cx="380" cy="590" r="8" class="blue-node" />
+    
+    <!-- Slashed Nodes (County, State) -->
+    <g>
+        <circle cx="320" cy="660" r="8" class="blue-node" />
+        <line x1="313" y1="667" x2="327" y2="653" stroke="#87CEEB" stroke-width="2" />
+    </g>
+    <g>
+        <circle cx="260" cy="730" r="8" class="blue-node" />
+        <line x1="253" y1="737" x2="267" y2="723" stroke="#87CEEB" stroke-width="2" />
+    </g>
+    
+    <circle cx="200" cy="800" r="8" class="blue-node" />
+    <circle cx="130" cy="870" r="8" class="blue-node" />
+
+
+    <!-- ==================== CENTRAL INVOICE BOX ==================== -->
+    <g>
+        <!-- Body -->
+        <rect x="510" y="340" width="180" height="205" fill="#FFFFFF" stroke="#ED7D31" stroke-width="3" />
+        <!-- Header -->
+        <rect x="510" y="340" width="180" height="30" fill="#ED7D31" />
+        <!-- Header Text -->
+        <text x="600" y="360" font-family="Arial, sans-serif" font-size="16px" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Invoice</text>
+        
+        <!-- Measures Text -->
+        <text x="515" y="390" class="text-measure"># Quantity</text>
+        <text x="515" y="410" class="text-measure"># Net Value</text>
+        <text x="515" y="430" class="text-measure"># First Commercial Discount</text>
+        <text x="515" y="450" class="text-measure"># Second Commercial Discount</text>
+        <text x="515" y="470" class="text-measure"># Sell-In Margin</text>
+        <text x="515" y="490" class="text-measure"># Net Average Price</text>
+    </g>
+
+
+    <!-- ==================== TEXT LABELS ==================== -->
+    
+    <!-- Link Labels -->
+    <text x="465" y="455" class="text-link">shipping</text>
+    <text x="480" y="505" class="text-link">billing</text>
+
+    <!-- Top & Grey Nodes Labels -->
+    <text x="465" y="180" class="text-main" text-anchor="end">Return Justification</text>
+    <text x="580" y="150" class="text-main" text-anchor="middle">Currency</text>
+    <text x="685" y="180" class="text-main" text-anchor="start">Goods On Delivery</text>
+    <text x="865" y="465" class="text-main" text-anchor="start">Season</text>
+    
+    <text x="730" y="635" class="text-main" text-anchor="end">Profit Center</text>
+    <text x="670" y="695" class="text-main" text-anchor="middle">Virtual Warehouse</text>
+    <text x="580" y="745" class="text-main" text-anchor="middle">Doc Type</text>
+
+    <!-- Date Branch Labels -->
+    <text x="390" y="305" class="text-main" text-anchor="end">Date</text>
+    <text x="270" y="305" class="text-main" text-anchor="end">Week</text>
+    <text x="235" y="180" class="text-main" text-anchor="end">Month In Year</text>
+    <text x="145" y="180" class="text-main" text-anchor="end">Month</text>
+    <text x="165" y="125" class="text-main" text-anchor="end">Quarter</text>
+    <text x="85" y="85" class="text-main" text-anchor="end">Semester</text>
+    <text x="205" y="95" class="text-main" text-anchor="end">4-Month Period</text>
+    <text x="160" y="25" class="text-main" text-anchor="middle">Year</text>
+
+    <!-- SKU Branch Labels -->
+    <text x="755" y="305" class="text-main" text-anchor="end">SKU</text>
+    <text x="710" y="110" class="text-main" text-anchor="middle">Made In</text>
+    <text x="785" y="220" class="text-main" text-anchor="end">Color</text>
+    <text x="820" y="90" class="text-main" text-anchor="middle">Macro Color</text>
+    <text x="855" y="255" class="text-main" text-anchor="start">Size</text>
+    <text x="955" y="315" class="text-main" text-anchor="start">Customer Gender</text>
+    <text x="905" y="375" class="text-main" text-anchor="start">Brand</text>
+    <text x="1025" y="415" class="text-main" text-anchor="start">Brand Group</text>
+    <text x="945" y="260" class="text-main" text-anchor="start">Subtype</text>
+    <text x="1055" y="185" class="text-main" text-anchor="start">Type</text>
+    <text x="1165" y="125" class="text-main" text-anchor="start">Category</text>
+    <text x="1055" y="105" class="text-main" text-anchor="start">Customer Type</text>
+    <text x="980" y="40" class="text-main" text-anchor="middle">Age Range</text>
+
+    <!-- Agent Branch Labels -->
+    <text x="755" y="580" class="text-main" text-anchor="start">Agent</text>
+    <text x="835" y="660" class="text-main" text-anchor="start">Area Manager</text>
+    <text x="985" y="565" class="text-main" text-anchor="start">Controller</text>
+
+    <!-- Customer Branch Labels -->
+    <text x="430" y="545" class="text-main" text-anchor="end">Customer</text>
+    
+    <!-- Billing & Shipping Information Text -->
+    <text x="220" y="425" class="text-main" text-anchor="start">Billing Information</text>
+    <text x="220" y="485" class="text-main" text-anchor="start">Shipping Address</text>
+
+    <text x="360" y="615" class="text-main" text-anchor="end">City</text>
+    <text x="300" y="685" class="text-main" text-anchor="end">County</text>
+    <text x="240" y="755" class="text-main" text-anchor="end">State</text>
+    <text x="180" y="825" class="text-main" text-anchor="end">Country</text>
+    <text x="110" y="895" class="text-main" text-anchor="end">Area</text>
+</svg>

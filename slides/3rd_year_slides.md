@@ -90,6 +90,9 @@
 
 ![From continuous humidity to a discrete representation](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/moisture.png?raw=true)
 
+![From continuous humidity to a discrete representation](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_opt.png?raw=true)
+
+
 :::
 ::::
 
@@ -99,7 +102,7 @@
 ::: {.column width="60%"}
 
 - <b> Architecture</b>
-    - Data collected and transformed through a Data Platform
+    - Optimal moisture levels defined by agronomist
     - PID controller + simulation model to determine irrigaton amounts
 
 ![An overview of SMARTER](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter.svg?raw=true)
@@ -298,3 +301,10 @@
 
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
 <small>Published at [28th International Conference on Big Data Analytics and Knowledge Discovery (DAWAK)](https://www.dexa.org/2026/dawak2026.html)</small>
+
+- Various phases of data management can benefit LLM support
+- Little work in terms of metadata exploration
+- As case study, a Data Warehouse is considered
+
+**Goal**: investigate the use of LLMs to support NL Q&A over DW metadata
+
