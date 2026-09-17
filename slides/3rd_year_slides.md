@@ -145,8 +145,7 @@
 - Exploding dynamic data
     - over 60 soil moisture grids
     - ~ overall 600 sensors
-    - 5 years of data collection
-
+    - ~ 30 GB of data
 :::
 ::::
 
@@ -337,21 +336,28 @@
 
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
 
-
 :::: {.columns}
-::: {.column width="40%"}
+::: {.column width="50%"}
 
-- <b>Input</b>
+- **Input**
     - DFM parsed into KG (MG)
     - DFM modelled as KG (SG) with ad-hoc ontology
     - Four categories of questions
 :::
-::: {.column width="60%"}
+::: {.column width="50%"}
 
-![SG and an excerpt of MG](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/dfm_kg.svg?raw=true)
+![SG and an excerpt of MG](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/dfm_kg.svg?raw=true){.small}
 
 :::
 ::::
 
+:::: {.columns}
+::: {.column width="60%"}
 
-![Results over question categories](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/llm4bi_results.svg?raw=true)
+![Results over question categories](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/llm4bi_results.svg?raw=true){.medium style="margin-top: -1.5em;"}
+
+:::
+::: {.column width="40%"}
+
+:::
+::::
