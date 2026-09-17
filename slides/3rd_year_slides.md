@@ -304,7 +304,20 @@
 
 - Various phases of data management can benefit LLM support
 - Little work in terms of metadata exploration
-- As case study, a Data Warehouse is considered
+- As case study, a Data Warehouse (DW) is considered
 
 **Goal**: investigate the use of LLMs to support NL Q&A over DW metadata
 
+:::: {.columns}
+::: {.column width="50%"}
+
+![Example DW Schema](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/dfm.svg?raw=true){.large}
+
+
+:::
+::: {.column width="50%"}
+
+![The invoice fact](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/dfm.svg?raw=true){.large}
+
+:::
+::::

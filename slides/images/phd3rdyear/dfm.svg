@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 620" width="100%" height="100%">
+    <!-- Sfondo per garantire un contrasto pulito -->
+    <rect width="100%" height="100%" fill="#FFFFFF" />
+
+    <defs>
+        <!-- Icona del Documento riutilizzabile -->
+        <g id="doc" stroke="#E36A25" stroke-width="2.5" fill="none" stroke-linejoin="round">
+            <rect x="0" y="0" width="22" height="30" rx="1.5" />
+            <line x1="0" y1="8" x2="22" y2="8" stroke-linecap="square" />
+            <line x1="5" y1="15" x2="17" y2="15" stroke-linecap="round" />
+            <line x1="5" y1="21" x2="17" y2="21" stroke-linecap="round" />
+            <line x1="5" y1="27" x2="17" y2="27" stroke-linecap="round" />
+        </g>
+    </defs>
+
+    <!-- ======================= LINEE DI CONNESSIONE ======================= -->
+    <!-- Le linee vengono disegnate per prime per rimanere "dietro" i nodi -->
+    <g stroke="#A4D3EC" stroke-width="2">
+        <!-- Connessioni Singole dai nodi dimensionali esterni a quelli centrali -->
+        <line x1="300" y1="40" x2="300" y2="150" />
+        <line x1="300" y1="40" x2="150" y2="300" />
+        <line x1="300" y1="40" x2="450" y2="300" />
+
+        <line x1="40" y1="300" x2="300" y2="150" />
+        <line x1="40" y1="300" x2="300" y2="450" />
+        
+        <line x1="300" y1="560" x2="150" y2="300" />
+        <line x1="300" y1="560" x2="300" y2="450" />
+        <line x1="300" y1="560" x2="450" y2="300" />
+
+        <line x1="560" y1="300" x2="300" y2="150" />
+        <line x1="560" y1="300" x2="300" y2="450" />
+
+        <!-- Linee interne Fact-to-Fact -->
+        <line x1="300" y1="150" x2="300" y2="450" /> <!-- Verticale Invoices - Warehouses -->
+        <line x1="150" y1="292" x2="450" y2="292" /> <!-- Orizzontale Orders - Tickets 1 -->
+        <line x1="150" y1="308" x2="450" y2="308" /> <!-- Orizzontale Orders - Tickets 2 -->
+
+        <!-- Connessioni Multiple Fanning (da Time a Orders) -->
+        <line x1="40" y1="300" x2="150" y2="255" />
+        <line x1="40" y1="300" x2="150" y2="300" />
+        <line x1="40" y1="300" x2="150" y2="345" />
+
+        <!-- Connessioni Multiple Fanning (da Customer a Tickets) -->
+        <line x1="560" y1="300" x2="450" y2="260" />
+        <line x1="560" y1="300" x2="450" y2="340" />
+    </g>
+
+    <!-- ======================= NODI ARANCIONI (FACTS) ======================= -->
+    <g>
+        <!-- Invoices (1) -->
+        <circle cx="300" cy="150" r="55" fill="#FCAE7F" />
+        <use href="#doc" x="289" y="135" />
+        <text x="300" y="225" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#000000">Invoices <tspan fill="#888888" font-weight="500">(1)</tspan></text>
+
+        <!-- Orders (2) -->
+        <circle cx="150" cy="300" r="55" fill="#FCAE7F" />
+        <use href="#doc" x="125" y="285" />
+        <use href="#doc" x="153" y="285" />
+        <text x="150" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#000000">Orders <tspan fill="#888888" font-weight="500">(2)</tspan></text>
+
+        <!-- Tickets (2) -->
+        <circle cx="450" cy="300" r="55" fill="#FCAE7F" />
+        <use href="#doc" x="425" y="285" />
+        <use href="#doc" x="453" y="285" />
+        <text x="450" y="375" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#000000">Tickets <tspan fill="#888888" font-weight="500">(2)</tspan></text>
+
+        <!-- Warehouses (3) -->
+        <circle cx="300" cy="450" r="55" fill="#FCAE7F" />
+        <use href="#doc" x="275" y="408" />
+        <use href="#doc" x="303" y="408" />
+        <use href="#doc" x="289" y="442" />
+        <text x="300" y="525" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#000000">Warehouses <tspan fill="#888888" font-weight="500">(3)</tspan></text>
+    </g>
+
+    <!-- ======================= NODI BLU (DIMENSIONS) ======================= -->
+    <g>
+        <!-- Product -->
+        <circle cx="300" cy="40" r="12" fill="#9BCEEA" />
+        <text x="300" y="68" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#000000">Product</text>
+
+        <!-- Time -->
+        <circle cx="40" cy="300" r="12" fill="#9BCEEA" />
+        <text x="40" y="328" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#000000">Time</text>
+
+        <!-- Customer -->
+        <circle cx="560" cy="300" r="12" fill="#9BCEEA" />
+        <text x="560" y="328" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#000000">Customer</text>
+
+        <!-- Agent -->
+        <circle cx="300" cy="560" r="12" fill="#9BCEEA" />
+        <text x="300" y="588" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#000000">Agent</text>
+    </g>
+</svg>
