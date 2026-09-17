@@ -88,9 +88,9 @@
 :::
 ::: {.column width="60%"}
 
-![From continuous humidity to a discrete representation](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/moisture.png?raw=true)
+![From continuous humidity to a discrete representation](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/moisture.png?raw=true){.small}
 
-![From continuous humidity to a discrete representation](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_opt.png?raw=true)
+![From continuous humidity to a discrete representation](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_opt.svg?raw=true)
 
 
 :::
