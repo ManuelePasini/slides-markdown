@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 550" width="100%" height="100%" style="background-color: white;">
+  
+  <defs>
+    <!-- Arrowhead for "Subclass of" (Hollow Triangle) -->
+    <marker id="subclass-arrow" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="12" markerHeight="12" orient="auto">
+      <polygon points="1,1 13,7 1,13" fill="white" stroke="black" stroke-width="1.5"/>
+    </marker>
+    
+    <!-- Arrowhead for "Instance of" (Hollow V) -->
+    <marker id="instance-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto">
+      <polyline points="1,1 11,6 1,11" fill="none" stroke="black" stroke-width="1.5"/>
+    </marker>
+    
+    <!-- Arrowhead for "Object property" (Solid Triangle) -->
+    <marker id="property-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+      <polygon points="1,2 11,6 1,10" fill="black"/>
+    </marker>
+  </defs>
+
+  <!-- ================= EDGES (LINES) ================= -->
+  
+  <!-- Subclass of (Solid, Hollow Triangle) -->
+  <!-- Fact -> DFMConcept -->
+  <path d="M 50,130 L 50,95 L 235,95 L 235,45" fill="none" stroke="black" stroke-width="1.5" marker-end="url(#subclass-arrow)"/>
+  <!-- Measure -> DFMConcept -->
+  <path d="M 235,130 L 235,45" fill="none" stroke="black" stroke-width="1.5" marker-end="url(#subclass-arrow)"/>
+  <!-- Attribute -> DFMConcept -->
+  <path d="M 460,130 L 460,95 L 235,95" fill="none" stroke="black" stroke-width="1.5"/>
+  <!-- ConformedAttribute -> Attribute -->
+  <path d="M 495,280 L 495,200" fill="none" stroke="black" stroke-width="1.5" marker-end="url(#subclass-arrow)"/>
+  <!-- Arc Tree -> Arc -->
+  <path d="M 90,440 L 90,300" fill="none" stroke="black" stroke-width="1.5" marker-end="url(#subclass-arrow)"/>
+  <path d="M 100,357 L 90,357" fill="none" stroke="black" stroke-width="1.5"/>
+  <path d="M 100,407 L 90,407" fill="none" stroke="black" stroke-width="1.5"/>
+  <path d="M 100,457 L 90,457" fill="none" stroke="black" stroke-width="1.5"/>
+  <path d="M 90,440 L 90,457" fill="none" stroke="black" stroke-width="1.5"/>
+
+  <!-- Instance of (Dashed, Hollow V) -->
+  <g fill="none" stroke="black" stroke-width="1.5" stroke-dasharray="6,4">
+    <!-- Invoice -> Fact -->
+    <path d="M 700,55 L 45,55 L 45,130" marker-end="url(#instance-arrow)"/>
+    <!-- Quantity -> Measure -->
+    <path d="M 485,90 L 485,115 L 300,115 L 300,130" marker-end="url(#instance-arrow)"/>
+    <!-- Currency -> Attribute -->
+    <path d="M 700,157 L 550,157" marker-end="url(#instance-arrow)"/>
+    <!-- Customer -> ConformedAttribute -->
+    <path d="M 850,200 L 640,200 L 640,290 L 590,290" marker-end="url(#instance-arrow)"/>
+    <!-- City -> ConformedAttribute -->
+    <path d="M 680,297 L 590,297" marker-end="url(#instance-arrow)"/>
+    <!-- Address -> ConformedAttribute -->
+    <path d="M 700,377 L 495,377 L 495,320" marker-end="url(#instance-arrow)"/>
+    <!-- Billing -> RollUpArc -->
+    <path d="M 260,357 L 210,357" marker-end="url(#instance-arrow)"/>
+  </g>
+
+  <!-- Object property (Solid, Solid Triangle) -->
+  <g fill="none" stroke="black" stroke-width="1.5">
+    <!-- Arc -> Fact -->
+    <path d="M 50,285 L 20,285 L 20,150 L 10,150" marker-end="url(#property-arrow)"/>
+    <!-- Arc -> Measure -->
+    <path d="M 90,270 L 90,240 L 235,240 L 235,190" marker-end="url(#property-arrow)"/>
+    <!-- Arc -> Attribute -->
+    <path d="M 130,285 L 370,285 L 370,180" marker-end="url(#property-arrow)"/>
+    <!-- Invoice -> Quantity -->
+    <path d="M 700,35 L 610,35" marker-end="url(#property-arrow)"/>
+    <!-- Invoice -> Currency -->
+    <path d="M 750,70 L 750,140" marker-end="url(#property-arrow)"/>
+    <!-- Invoice -> Customer -->
+    <path d="M 800,40 L 905,40 L 905,180" marker-end="url(#property-arrow)"/>
+    <!-- Customer -> City -->
+    <path d="M 870,220 L 870,240 L 740,240 L 740,270" marker-end="url(#property-arrow)"/>
+    <!-- Customer -> Address -->
+    <path d="M 920,220 L 920,377 L 830,377" marker-end="url(#property-arrow)"/>
+  </g>
+
+  <!-- ================= EDGE LABELS ================= -->
+  <g font-family="sans-serif" font-size="12" fill="black">
+    <text x="25" y="210">rdfs:domain</text>
+    <text x="160" y="235" text-anchor="middle">rdfs:range</text>
+    <text x="250" y="275">rdfs:domain,</text>
+    <text x="250" y="290">rdfs:range</text>
+    <text x="655" y="28">Arc</text>
+    <text x="755" y="105">RollUpArc</text>
+    <text x="910" y="105">Billing</text>
+    <text x="745" y="255">RollUpArc</text>
+    <text x="925" y="300">Arc</text>
+  </g>
+
+  <!-- ================= NODES ================= -->
+
+  <!-- DFMConcept -->
+  <rect x="160" y="5" width="150" height="40" fill="white" stroke="#F2A900" stroke-width="2"/>
+  <text x="235" y="25" font-family="sans-serif" font-size="16" fill="black" text-anchor="middle" alignment-baseline="central">DFMConcept</text>
+
+  <!-- Fact -->
+  <rect x="10" y="130" width="80" height="40" fill="#F2A900" stroke="black" stroke-width="1"/>
+  <text x="50" y="150" font-family="sans-serif" font-size="14" fill="black" text-anchor="middle" alignment-baseline="central">Fact</text>
+
+  <!-- Measure -->
+  <rect x="130" y="130" width="200" height="30" fill="#F2A900" stroke="black" stroke-width="1"/>
+  <text x="230" y="145" font-family="sans-serif" font-size="14" fill="black" text-anchor="middle" alignment-baseline="central">Measure</text>
+  <rect x="130" y="160" width="200" height="30" fill="white" stroke="black" stroke-width="1"/>
+  <text x="135" y="175" font-family="sans-serif" font-size="12" fill="black" alignment-baseline="central">AggregationOperator: string</text>
+
+  <!-- Attribute -->
+  <rect x="370" y="130" width="180" height="30" fill="#F2A900" stroke="black" stroke-width="1"/>
+  <text x="460" y="145" font-family="sans-serif" font-size="14" fill="black" text-anchor="middle" alignment-baseline="central">Attribute</text>
+  <rect x="370" y="160" width="180" height="40" fill="white" stroke="black" stroke-width="1"/>
+  <text x="375" y="175" font-family="sans-serif" font-size="12" fill="black" alignment-baseline="central">isShared: Boolean</text>
+  <text x="375" y="190" font-family="sans-serif" font-size="12" fill="black" alignment-baseline="central">isDescriptive: Boolean</text>
+
+  <!-- ConformedAttribute -->
+  <rect x="400" y="280" width="190" height="40" fill="#F2A900" stroke="black" stroke-width="1"/>
+  <text x="495" y="300" font-family="sans-serif" font-size="14" fill="black" text-anchor="middle" alignment-baseline="central">ConformedAttribute</text>
+
+  <!-- Arc -->
+  <rect x="50" y="270" width="80" height="30" fill="#DCE9FA" stroke="#6B9AE2" stroke-width="2"/>
+  <text x="90" y="285" font-family="sans-serif" font-size="14" fill="black" text-anchor="middle" alignment-baseline="central">Arc</text>
+
+  <!-- RollUpArc -->
+  <rect x="100" y="340" width="110" height="35" fill="#0055A4" stroke="black" stroke-width="1"/>
+  <text x="155" y="357" font-family="sans-serif" font-size="14" fill="white" text-anchor="middle" alignment-baseline="central">RollUpArc</text>
+
+  <!-- MultipleArc -->
+  <rect x="100" y="390" width="110" height="35" fill="#0055A4" stroke="black" stroke-width="1"/>
+  <text x="155" y="407" font-family="sans-serif" font-size="14" fill="white" text-anchor="middle" alignment-baseline="central">MultipleArc</text>
+
+  <!-- OptionalArc -->
+  <rect x="100" y="440" width="110" height="35" fill="#0055A4" stroke="black" stroke-width="1"/>
+  <text x="155" y="457" font-family="sans-serif" font-size="14" fill="white" text-anchor="middle" alignment-baseline="central">OptionalArc</text>
+
+  <!-- Quantity -->
+  <rect x="360" y="30" width="250" height="30" fill="#595959" stroke="black" stroke-width="1"/>
+  <text x="485" y="45" font-family="sans-serif" font-size="16" fill="white" text-anchor="middle" alignment-baseline="central">Quantity</text>
+  <rect x="360" y="60" width="250" height="30" fill="white" stroke="black" stroke-width="1"/>
+  <text x="365" y="75" font-family="sans-serif" font-size="12" fill="black" alignment-baseline="central">AggregationOperator: "SUM", "AVG"</text>
+
+  <!-- Invoice -->
+  <rect x="700" y="30" width="100" height="40" fill="#595959" stroke="black" stroke-width="1"/>
+  <text x="750" y="50" font-family="sans-serif" font-size="14" fill="white" text-anchor="middle" alignment-baseline="central">Invoice</text>
+
+  <!-- Currency -->
+  <rect x="700" y="140" width="100" height="35" fill="#595959" stroke="black" stroke-width="1"/>
+  <text x="750" y="157" font-family="sans-serif" font-size="14" fill="white" text-anchor="middle" alignment-baseline="central">Currency</text>
+
+  <!-- Customer -->
+  <rect x="850" y="180" width="110" height="40" fill="#595959" stroke="black" stroke-width="1"/>
+  <text x="905" y="200" font-family="sans-serif" font-size="14" fill="white" text-anchor="middle" alignment-baseline="central">Customer</text>
+
+  <!-- City -->
+  <rect x="680" y="270" width="120" height="30" fill="#595959" stroke="black" stroke-width="1"/>
+  <text x="740" y="285" font-family="sans-serif" font-size="16" fill="white" text-anchor="middle" alignment-baseline="central">City</text>
+  <rect x="680" y="300" width="120" height="25" fill="white" stroke="black" stroke-width="1"/>
+  <text x="685" y="312" font-family="sans-serif" font-size="12" fill="black" alignment-baseline="central">isShared: True</text>
+
+  <!-- Address -->
+  <rect x="700" y="350" width="130" height="30" fill="#595959" stroke="black" stroke-width="1"/>
+  <text x="765" y="365" font-family="sans-serif" font-size="16" fill="white" text-anchor="middle" alignment-baseline="central">Address</text>
+  <rect x="700" y="380" width="130" height="25" fill="white" stroke="black" stroke-width="1"/>
+  <text x="705" y="392" font-family="sans-serif" font-size="12" fill="black" alignment-baseline="central">isDescriptive: True</text>
+
+  <!-- Billing -->
+  <rect x="260" y="340" width="90" height="35" fill="#F2F2F2" stroke="black" stroke-width="1"/>
+  <text x="305" y="357" font-family="sans-serif" font-size="14" fill="black" text-anchor="middle" alignment-baseline="central">Billing</text>
+
+  <!-- ================= LEGEND ================= -->
+  <rect x="360" y="420" width="480" height="110" fill="white" stroke="black" stroke-width="1"/>
+  <text x="370" y="520" font-family="sans-serif" font-size="12" fill="black">Legend</text>
+
+  <!-- Class Box -->
+  <rect x="380" y="435" width="60" height="25" fill="white" stroke="#F2A900" stroke-width="2"/>
+  <text x="410" y="447" font-family="sans-serif" font-size="12" fill="black" text-anchor="middle" alignment-baseline="central">Class</text>
+  
+  <!-- Property Box -->
+  <rect x="450" y="435" width="70" height="25" fill="#DCE9FA" stroke="#6B9AE2" stroke-width="2"/>
+  <text x="485" y="447" font-family="sans-serif" font-size="12" fill="black" text-anchor="middle" alignment-baseline="central">Property</text>
+  
+  <!-- Model graph Brace -->
+  <path d="M 380,465 L 380,472 L 520,472 L 520,465 M 450,472 L 450,477" fill="none" stroke="black" stroke-width="2"/>
+  <text x="450" y="490" font-family="sans-serif" font-size="12" fill="black" text-anchor="middle">Model graph</text>
+
+  <!-- Instance Box -->
+  <rect x="560" y="435" width="70" height="25" fill="white" stroke="#333333" stroke-width="2"/>
+  <text x="595" y="447" font-family="sans-serif" font-size="12" fill="black" text-anchor="middle" alignment-baseline="central">Instance</text>
+
+  <!-- Schema graph Brace -->
+  <path d="M 560,465 L 560,472 L 630,472 L 630,465 M 595,472 L 595,477" fill="none" stroke="black" stroke-width="2"/>
+  <text x="595" y="490" font-family="sans-serif" font-size="12" fill="black" text-anchor="middle">Schema graph</text>
+
+  <!-- Legend Arrows -->
+  <g stroke="black" stroke-width="1.5">
+    <path d="M 700,440 L 650,440" fill="none" marker-end="url(#subclass-arrow)"/>
+    <path d="M 700,470 L 650,470" fill="none" stroke-dasharray="6,4" marker-end="url(#instance-arrow)"/>
+    <path d="M 700,500 L 650,500" fill="none" marker-end="url(#property-arrow)"/>
+  </g>
+  <g font-family="sans-serif" font-size="12" fill="black" alignment-baseline="central">
+    <text x="710" y="440">Subclass of</text>
+    <text x="710" y="470">Instance of</text>
+    <text x="710" y="500">Object property</text>
+  </g>
+
+</svg>

@@ -1,0 +1,145 @@
+<svg width="800" height="430" viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg" font-family="Times New Roman, serif">
+
+    <!-- ==================== SFONDO E LINEE DI GRIGLIA ==================== -->
+    <rect width="100%" height="100%" fill="white" />
+
+    <g stroke="#EAEAEA" stroke-width="1">
+        <line x1="60" y1="273.5" x2="780" y2="273.5" />
+        <line x1="60" y1="247" x2="780" y2="247" />
+        <line x1="60" y1="220.5" x2="780" y2="220.5" />
+        <line x1="60" y1="194" x2="780" y2="194" />
+        <line x1="60" y1="167.5" x2="780" y2="167.5" />
+        <line x1="60" y1="141" x2="780" y2="141" />
+        <line x1="60" y1="114.5" x2="780" y2="114.5" />
+        <line x1="60" y1="88" x2="780" y2="88" />
+        <line x1="60" y1="61.5" x2="780" y2="61.5" />
+        <line x1="60" y1="35" x2="780" y2="35" />
+    </g>
+
+    <!-- ==================== BARRE ==================== -->
+    <!-- Colori -->
+    <defs>
+        <style>
+            .c-all { fill: #1F77B4; }
+            .c-bus { fill: #FFBB78; }
+            .c-ola { fill: #98DF8A; }
+            .c-sea { fill: #E69595; }
+            .c-tes { fill: #C5B0D5; }
+            .data-lbl { font-size: 14px; text-anchor: middle; fill: #000000; }
+        </style>
+    </defs>
+
+    <!-- Gruppo 1: MG^bas, SG^bas -->
+    <g>
+        <rect x="105" y="127.75" width="30" height="172.25" class="c-all" />
+        <rect x="135" y="172.8" width="30" height="127.2" class="c-bus" />
+        <rect x="165" y="135.7" width="30" height="164.3" class="c-ola" />
+        <rect x="195" y="50.9" width="30" height="249.1" class="c-sea" />
+        <rect x="225" y="196.65" width="30" height="103.35" class="c-tes" />
+
+        <text x="120" y="122.75" class="data-lbl">0.65</text>
+        <text x="150" y="167.8" class="data-lbl">0.48</text>
+        <text x="180" y="130.7" class="data-lbl">0.62</text>
+        <text x="210" y="45.9" class="data-lbl">0.94</text>
+        <text x="240" y="191.65" class="data-lbl">0.39</text>
+    </g>
+
+    <!-- Gruppo 2: MG^enr, SG^bas -->
+    <g>
+        <rect x="345" y="93.3" width="30" height="206.7" class="c-all" />
+        <rect x="375" y="77.4" width="30" height="222.6" class="c-bus" />
+        <rect x="405" y="106.55" width="30" height="193.45" class="c-ola" />
+        <rect x="435" y="45.6" width="30" height="254.4" class="c-sea" />
+        <rect x="465" y="172.8" width="30" height="127.2" class="c-tes" />
+
+        <text x="360" y="88.3" class="data-lbl">0.78</text>
+        <text x="390" y="72.4" class="data-lbl">0.84</text>
+        <text x="420" y="101.55" class="data-lbl">0.73</text>
+        <text x="450" y="40.6" class="data-lbl">0.96</text>
+        <text x="480" y="167.8" class="data-lbl">0.48</text>
+    </g>
+
+    <!-- Gruppo 3: MG^enr, SG^enr -->
+    <g>
+        <rect x="585" y="90.65" width="30" height="209.35" class="c-all" />
+        <rect x="615" y="103.9" width="30" height="196.1" class="c-bus" />
+        <rect x="645" y="106.55" width="30" height="193.45" class="c-ola" />
+        <rect x="675" y="45.6" width="30" height="254.4" class="c-sea" />
+        <rect x="705" y="95.95" width="30" height="204.05" class="c-tes" />
+
+        <text x="600" y="85.65" class="data-lbl">0.79</text>
+        <text x="630" y="98.9" class="data-lbl">0.74</text>
+        <text x="660" y="101.55" class="data-lbl">0.73</text>
+        <text x="690" y="40.6" class="data-lbl">0.96</text>
+        <text x="720" y="90.95" class="data-lbl">0.77</text>
+    </g>
+
+    <!-- ==================== BOX E ASSI ==================== -->
+    <rect x="60" y="35" width="720" height="265" fill="none" stroke="black" stroke-width="1" />
+
+    <!-- Etichetta Asse Y -->
+    <text x="-167.5" y="22" transform="rotate(-90)" text-anchor="middle" font-size="20">Accuracy</text>
+
+    <!-- Valori Asse Y e Tick Marks -->
+    <g font-size="16" text-anchor="end" alignment-baseline="middle">
+        <!-- Minor Ticks -->
+        <line x1="57" y1="273.5" x2="60" y2="273.5" stroke="black" stroke-width="1"/>
+        <line x1="57" y1="220.5" x2="60" y2="220.5" stroke="black" stroke-width="1"/>
+        <line x1="57" y1="167.5" x2="60" y2="167.5" stroke="black" stroke-width="1"/>
+        <line x1="57" y1="114.5" x2="60" y2="114.5" stroke="black" stroke-width="1"/>
+        <line x1="57" y1="61.5" x2="60" y2="61.5" stroke="black" stroke-width="1"/>
+
+        <!-- Major Ticks -->
+        <line x1="54" y1="300" x2="60" y2="300" stroke="black" stroke-width="1"/>
+        <text x="48" y="300">0.0</text>
+
+        <line x1="54" y1="247" x2="60" y2="247" stroke="black" stroke-width="1"/>
+        <text x="48" y="247">0.2</text>
+
+        <line x1="54" y1="194" x2="60" y2="194" stroke="black" stroke-width="1"/>
+        <text x="48" y="194">0.4</text>
+
+        <line x1="54" y1="141" x2="60" y2="141" stroke="black" stroke-width="1"/>
+        <text x="48" y="141">0.6</text>
+
+        <line x1="54" y1="88" x2="60" y2="88" stroke="black" stroke-width="1"/>
+        <text x="48" y="88">0.8</text>
+
+        <line x1="54" y1="35" x2="60" y2="35" stroke="black" stroke-width="1"/>
+        <text x="48" y="35">1.0</text>
+    </g>
+
+    <!-- Etichette Asse X -->
+    <g font-size="18" text-anchor="middle">
+        <text x="180" y="325">MG<tspan baseline-shift="super" font-size="0.75em">bas</tspan>, SG<tspan baseline-shift="super" font-size="0.75em">bas</tspan></text>
+        <text x="420" y="325">MG<tspan baseline-shift="super" font-size="0.75em">enr</tspan>, SG<tspan baseline-shift="super" font-size="0.75em">bas</tspan></text>
+        <text x="660" y="325">MG<tspan baseline-shift="super" font-size="0.75em">enr</tspan>, SG<tspan baseline-shift="super" font-size="0.75em">enr</tspan></text>
+    </g>
+
+    <!-- ==================== LEGENDA ==================== -->
+    <rect x="60" y="340" width="720" height="60" rx="3" ry="3" fill="none" stroke="#CDCDCD" stroke-width="1" />
+    <text x="420" y="360" text-anchor="middle" font-size="17">Category</text>
+
+    <!-- Elementi Legenda -->
+    <g font-size="17" alignment-baseline="middle">
+        <!-- ALL -->
+        <rect x="68" y="377" width="38" height="14" class="c-all" />
+        <text x="116" y="385">ALL</text>
+
+        <!-- Business -->
+        <rect x="180" y="377" width="38" height="14" class="c-bus" />
+        <text x="228" y="385">Business</text>
+
+        <!-- OLAP-related -->
+        <rect x="330" y="377" width="38" height="14" class="c-ola" />
+        <text x="378" y="385">OLAP-related</text>
+
+        <!-- Search -->
+        <rect x="525" y="377" width="38" height="14" class="c-sea" />
+        <text x="573" y="385">Search</text>
+
+        <!-- Test -->
+        <rect x="660" y="377" width="38" height="14" class="c-tes" />
+        <text x="708" y="385">Test</text>
+    </g>
+</svg>

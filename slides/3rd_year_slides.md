@@ -76,21 +76,33 @@
 ## SMARTER: Data-driven optimization of water consumption in kiwifruit orchards
 <small> Published in [Computers and Electronics in Agriculture](https://www.sciencedirect.com/journal/computers-and-electronics-in-agriculture)</small>
 
-- Two kiwifiruit orchards in Emilia-Romagna
-- Data collected from a grid of soil moisture sensors and weather stations
-- Soil data is interpolated to obtain a 2-dimensional view of soil moisture
 
 :::: {.columns}
 ::: {.column width="40%"}
 
-![Grid positioning](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/plant.svg?raw=true)
+- Two kiwifiruit orchards in Emilia-Romagna
+- Data collected from a grid of soil moisture sensors and weather stations
+- Soil data is interpolated to obtain a 2-dimensional view of soil moisture
 
 :::
 ::: {.column width="60%"}
 
-![From continuous humidity to a discrete representation](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/moisture.png?raw=true){.small}
+![Grid positioning](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/plant.svg?raw=true){.small}
 
-![From continuous humidity to a discrete representation](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_opt.svg?raw=true)
+:::
+::::
+
+
+:::: {.columns}
+::: {.column width="40%"}
+
+![Example of soil moisture profile](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_opt.svg?raw=true){.small}
+
+:::
+::: {.column width="60%"}
+
+![From continuous humidity to a discrete representation](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/moisture.png?raw=true){.extrasmall}
+
 
 
 :::
@@ -147,7 +159,7 @@
 :::
 ::: {.column width="40%"}
 
-![A more functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_graph.svg?raw=true)
+![A more functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_graph.svg?raw=true){.large}
 
 :::
 ::::
@@ -302,22 +314,44 @@
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
 <small>Published at [28th International Conference on Big Data Analytics and Knowledge Discovery (DAWAK)](https://www.dexa.org/2026/dawak2026.html)</small>
 
-- Various phases of data management can benefit LLM support
-- Little work in terms of metadata exploration
+- Various phases of data management can benefit LLM support, little work metadata exploration
 - As case study, a Data Warehouse (DW) is considered
+- Dimensional Fact Model (DFM) describing metadata
 
 **Goal**: investigate the use of LLMs to support NL Q&A over DW metadata
 
 :::: {.columns}
 ::: {.column width="50%"}
 
-![Example DW Schema](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/dfm.svg?raw=true){.large}
+![Example DW Schema](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/dfm.svg?raw=true)
 
 
 :::
 ::: {.column width="50%"}
 
-![The invoice fact](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/dfm.svg?raw=true){.large}
+![The invoice fact](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/invoice_fact.svg?raw=true)
 
 :::
 ::::
+
+
+## LLM-Assisted Metadata Query Answering on Data Warehouses
+
+
+:::: {.columns}
+::: {.column width="40%"}
+
+- <b>Input</b>
+    - DFM parsed into KG (MG)
+    - DFM modelled as KG (SG) with ad-hoc ontology
+    - Four categories of questions
+:::
+::: {.column width="60%"}
+
+![SG and an excerpt of MG](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/dfm_kg.svg?raw=true)
+
+:::
+::::
+
+
+![Results over question categories](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/llm4bi_results.svg?raw=true)
