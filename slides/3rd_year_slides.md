@@ -67,7 +67,7 @@
 - A Digital Twin is a <b>data-intensive application</b>
 - **Divide et impera**: separate the <u>software</u> and <u>data</u> dimensions
   - Software dimension → substantial work, increasingly mature
-  - Data dimension → far less mature ⇐ <b>focus of my research</b>
+  - Data management dimension → far less mature ⇐ <b>focus of my research</b>
 - **Standardization should start from data**
 - <b>Digital Twin Platform (DTP)</b>:
   - hosts DTs across their lifecycle, but organized around data
@@ -304,7 +304,7 @@
 ::::
 
 ## Anomaly Detection in Complex Sensor Networks
-##### A real data example - Series2Graph algorithm from [P. Boniol et al.](https://arxiv.org/abs/2207.12208)
+##### A toy example - Series2Graph algorithm from [P. Boniol et al.](https://arxiv.org/abs/2207.12208)
 
 
 ![](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/n2g/n2g_real.svg?raw=true){.large}
@@ -337,27 +337,20 @@
 ## LLM-Assisted Metadata Query Answering on Data Warehouses
 
 :::: {.columns}
-::: {.column width="50%"}
+::: {.column width="60%"}
 
 - **Input**
     - DFM parsed into KG (MG)
     - DFM modelled as KG (SG) with ad-hoc ontology
     - Four categories of questions
+    - Tests with enriched versions
 :::
-::: {.column width="50%"}
+::: {.column width="40%"}
 
 ![SG and an excerpt of MG](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/dfm_kg.svg?raw=true){.small}
 
 :::
 ::::
 
-:::: {.columns}
-::: {.column width="60%"}
-
 ![Results over question categories](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/llm4bi_results.svg?raw=true){.medium style="margin-top: -1.5em;"}
 
-:::
-::: {.column width="40%"}
-
-:::
-::::
