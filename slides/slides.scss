@@ -68,6 +68,16 @@ img.large {
     margin-right: auto !important;
 }
 
+img.extralarge {
+    max-height: 900px !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
 figcaption {
     text-align: center !important;
     font-size: 0.6em !important;

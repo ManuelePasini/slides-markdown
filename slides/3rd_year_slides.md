@@ -133,19 +133,28 @@
 ## SMARTER: Data-driven optimization of water consumption in kiwifruit orchards
 
 :::: {.columns}
-::: {.column width="60%"}
+::: {.column width="33%"}
 
 - Increasing master, static data...
     - 13 companies
     - over 30 fields
 
 :::
-::: {.column width="40%"}
+::: {.column width="33%"}
 
 - Exploding dynamic data
     - over 60 soil moisture grids
     - ~ overall 600 sensors
     - ~ 30 GB of data
+
+:::
+::: {.column width="33%"}
+
+- <b>Problems</b>
+    - Schema rigidity
+    - Transcoding tables
+    - Growing project
+
 :::
 ::::
 
@@ -158,7 +167,7 @@
 :::
 ::: {.column width="40%"}
 
-![A more functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_graph.svg?raw=true){.large}
+![A more functional view](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/smarter_graph.svg?raw=true){.extralarge}
 
 :::
 ::::
@@ -352,5 +361,5 @@
 :::
 ::::
 
-![Results over question categories](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/llm4bi_results.svg?raw=true){.medium style="margin-top: -1.5em;"}
+![Results over question categories](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/llm4bi_results.svg?raw=true){.small style="margin-top: -1.5em;"}
 
