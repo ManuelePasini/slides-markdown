@@ -363,3 +363,7 @@
 
 ![Results over question categories](https://github.com/ManuelePasini/slides-markdown/blob/master/slides/images/phd3rdyear/llm4bi_results.svg?raw=true){.small style="margin-top: -1.5em;"}
 
+
+# *Thanks!*
+
+Questions?
