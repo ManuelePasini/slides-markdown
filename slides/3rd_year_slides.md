@@ -349,8 +349,8 @@
 ::: {.column width="60%"}
 
 - **Input**
-    - DFM parsed into KG (MG)
     - DFM modelled as KG (SG) with ad-hoc ontology
+    - DWH Schema as KG (MG) described with SG 
     - Four categories of questions
     - Tests with enriched versions
 :::
